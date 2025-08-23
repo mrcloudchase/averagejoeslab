@@ -6,7 +6,7 @@
 /* Import modern fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* Light mode - Clean and readable */
+/* Light mode - Clean and readable (Default) */
 :root {
   /* Primary colors - Dark navy/charcoal from logo for text */
   --ifm-color-primary: #2c3e50;
@@ -68,6 +68,36 @@
   --ifm-button-border-radius: 6px;
 }
 
+/* Explicit light mode overrides to ensure consistency */
+[data-theme='light'],
+html:not([data-theme='dark']) {
+  /* Force light theme colors */
+  --ifm-background-color: #ffffff !important;
+  --ifm-background-surface-color: #f8f9fa !important;
+  --ifm-color-content: #2c3e50 !important;
+  --ifm-color-content-secondary: #5a6c7d !important;
+  
+  /* Force light theme surfaces */
+  --ifm-card-background-color: #ffffff !important;
+  --ifm-navbar-background-color: #ffffff !important;
+  --ifm-footer-background-color: #ffffff !important;
+  
+  /* Light theme borders */
+  --ifm-color-emphasis-100: #e9ecef !important;
+  --ifm-color-emphasis-200: #dee2e6 !important;
+  --ifm-color-emphasis-300: #ced4da !important;
+  --ifm-color-emphasis-400: #adb5bd !important;
+  
+  /* Light theme code styling */
+  --ifm-code-background: #f8f9fa !important;
+  --ifm-pre-background: #f1f3f4 !important;
+  
+  /* Light theme shadows */
+  --ifm-box-shadow-sm: 0 2px 4px rgba(44, 62, 80, 0.1) !important;
+  --ifm-box-shadow-md: 0 4px 8px rgba(44, 62, 80, 0.15) !important;
+  --ifm-box-shadow-lg: 0 8px 16px rgba(44, 62, 80, 0.2) !important;
+}
+
 /* Dark theme overrides - White text on dark backgrounds */
 [data-theme='dark'] {
   /* Dark backgrounds */
@@ -117,6 +147,19 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   box-shadow: var(--ifm-box-shadow-sm);
+}
+
+/* Light mode navbar - explicit overrides */
+[data-theme='light'] .navbar,
+html:not([data-theme='dark']) .navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+/* Dark mode navbar - explicit overrides */
+[data-theme='dark'] .navbar {
+  background: #141414 !important;
+  border-bottom: 1px solid #2c3e50 !important;
 }
 
 .navbar__title {
@@ -266,17 +309,44 @@ code {
   color: var(--ifm-color-primary);
 }
 
+/* Light mode footer - explicit overrides */
+[data-theme='light'] .footer,
+html:not([data-theme='dark']) .footer {
+  background: #ffffff !important;
+  border-top: 1px solid #dee2e6 !important;
+}
+
+[data-theme='light'] .footer__title,
+html:not([data-theme='dark']) .footer__title {
+  color: #2c3e50 !important;
+}
+
+[data-theme='light'] .footer__link-item,
+html:not([data-theme='dark']) .footer__link-item {
+  color: #34495e !important;
+}
+
+[data-theme='light'] .footer__link-item:hover,
+html:not([data-theme='dark']) .footer__link-item:hover {
+  color: #2c3e50 !important;
+}
+
 /* Dark mode footer overrides for proper contrast */
+[data-theme='dark'] .footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid #2c3e50 !important;
+}
+
 [data-theme='dark'] .footer__title {
-  color: var(--ifm-color-content);
+  color: #ffffff !important;
 }
 
 [data-theme='dark'] .footer__link-item {
-  color: var(--ifm-color-content-secondary);
+  color: #b0bec5 !important;
 }
 
 [data-theme='dark'] .footer__link-item:hover {
-  color: var(--ifm-color-primary-lighter);
+  color: #ffffff !important;
 }
 
 /* Sidebar */
