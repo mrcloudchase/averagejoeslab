@@ -42,7 +42,7 @@ const FeatureList: FeatureItem[] = [
         should be accessible to everyone, not locked behind paywalls.
       </>
     ),
-    link: '/papers',
+    link: '/about',
   },
 ];
 
@@ -65,7 +65,9 @@ function Feature({title, icon, description, link}: FeatureItem) {
               rel: 'noopener noreferrer'
             })}
           >
-            {link.startsWith('http') ? 'Join Community →' : 'Learn More →'}
+            {link.startsWith('http') ? 'Join Community →' : 
+             link === '/docs/intro' ? 'Start Research Path →' :
+             link === '/about' ? 'Learn About Us →' : 'Learn More →'}
           </a>
         )}
       </div>
