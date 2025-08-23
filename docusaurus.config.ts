@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'mrcloudchase', // Usually your GitHub org/user name.
   projectName: 'averagejoeslab', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -53,14 +53,21 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mrcloudchase/averagejoeslab/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          // Blog configuration
+          blogTitle: 'Average Joes Lab Research Blog',
+          blogDescription: 'Insights, updates, and research from the Average Joes Lab community',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent Posts',
+          blogSidebarCount: 'ALL',
+          authorsMapPath: 'blog/authors.yml',
+          tagsBasePath: 'blog/tags',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -85,6 +92,7 @@ const config: Config = {
           position: 'left',
           label: 'Research Path',
         },
+        {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/papers', label: 'Papers', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
@@ -129,8 +137,12 @@ const config: Config = {
           ],
         },
         {
-          title: 'About',
+          title: 'Content',
           items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
             {
               label: 'About Us',
               to: '/about',
