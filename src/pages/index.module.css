@@ -1,0 +1,265 @@
+/* Average Joes Lab Homepage Styles */
+
+.heroBanner {
+  padding: 6rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);
+  border-bottom: 1px solid rgba(44, 62, 80, 0.2);
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.heroStats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary-lighter);
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heroVisual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 400px;
+}
+
+.floatingElements {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.floatingElement {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.floatingElement:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.floatingElement:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.floatingElement:nth-child(2) {
+  top: 20%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.floatingElement:nth-child(3) {
+  bottom: 30%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.floatingElement:nth-child(4) {
+  bottom: 10%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.floatingElement:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+  font-size: 2.5rem;
+}
+
+.floatingElement:nth-child(6) {
+  top: 70%;
+  right: 40%;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Call to Action Section */
+.ctaSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid rgba(44, 62, 80, 0.2);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .heroStats {
+    justify-content: center;
+  }
+
+  .heroVisual {
+    min-height: 250px;
+  }
+
+  .floatingElements {
+    width: 250px;
+    height: 250px;
+  }
+
+  .floatingElement {
+    font-size: 1.5rem;
+  }
+
+  .floatingElement:nth-child(5) {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroBanner {
+    padding: 3rem 0;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .heroStats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .heroVisual {
+    min-height: 200px;
+  }
+
+  .floatingElements {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButtons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .heroBanner {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}

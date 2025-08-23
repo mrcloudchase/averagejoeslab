@@ -1,0 +1,102 @@
+/* Average Joes Lab Homepage Features Styles */
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background: var(--ifm-background-color);
+}
+
+/* Research Feature Cards */
+.features .research-feature-card {
+  background: var(--gradient-subtle);
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.features .research-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-box-shadow-lg);
+  border-color: var(--ifm-color-primary);
+}
+
+.features .research-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.features .text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Column spacing for feature cards */
+.features .col {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.features .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .features .research-feature-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features .col {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  .features .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .features .research-feature-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    padding: 2rem 0;
+  }
+  
+  .features .research-feature-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .features .col {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  .features .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .features .research-feature-icon {
+    font-size: 2rem;
+  }
+}
