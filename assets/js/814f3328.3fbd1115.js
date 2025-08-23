@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaveragejoeslab=self.webpackChunkaveragejoeslab||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent Posts","items":[{"title":"Welcome to Average Joes Lab - Democratizing Research for Everyone","permalink":"/averagejoeslab/blog/welcome-to-average-joes-lab","unlisted":false,"date":"2025-01-15T00:00:00.000Z"}]}')}}]);
