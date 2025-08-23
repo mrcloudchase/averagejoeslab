@@ -66,8 +66,7 @@ const config: Config = {
           postsPerPage: 10,
           blogSidebarTitle: 'Recent Posts',
           blogSidebarCount: 'ALL',
-          authorsMapPath: 'blog/authors.yml',
-          tagsBasePath: 'blog/tags',
+          authorsMapPath: 'authors.yml',
         },
         theme: {
           customCss: './src/css/custom.css',

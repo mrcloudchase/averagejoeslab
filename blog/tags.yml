@@ -1,0 +1,66 @@
+# Research-focused tags for Average Joes Lab
+
+research-engineering:
+  label: Research Engineering
+  permalink: /research-engineering
+  description: Posts about research engineering practices and methodologies
+
+citizen-science:
+  label: Citizen Science
+  permalink: /citizen-science
+  description: Democratizing research for ordinary citizens
+
+open-research:
+  label: Open Research
+  permalink: /open-research
+  description: Open access research and transparent methodologies
+
+ai-research:
+  label: AI Research
+  permalink: /ai-research
+  description: Artificial intelligence and machine learning research
+
+community:
+  label: Community
+  permalink: /community
+  description: Building and growing the research community
+
+methodology:
+  label: Methodology
+  permalink: /methodology
+  description: Research methods and best practices
+
+collaboration:
+  label: Collaboration
+  permalink: /collaboration
+  description: Collaborative research and teamwork
+
+democratization:
+  label: Democratization
+  permalink: /democratization
+  description: Making research accessible to everyone
+
+innovation:
+  label: Innovation
+  permalink: /innovation
+  description: Innovative approaches to research and technology
+
+peer-review:
+  label: Peer Review
+  permalink: /peer-review
+  description: Community-driven peer review processes
+
+reproducibility:
+  label: Reproducibility
+  permalink: /reproducibility
+  description: Reproducible research practices and tools
+
+getting-started:
+  label: Getting Started
+  permalink: /getting-started
+  description: Guides for newcomers to research
+
+announcements:
+  label: Announcements
+  permalink: /announcements
+  description: Important updates and news from Average Joes Lab
