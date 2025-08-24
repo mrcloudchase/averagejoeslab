@@ -293,8 +293,8 @@ function SubmitResearchCTA() {
                 </a>
                 <Link
                   className="button button--outline button--lg"
-                  to="/about">
-                  Learn About Us
+                  to="/">
+                  Our Mission
                 </Link>
               </div>
             </div>

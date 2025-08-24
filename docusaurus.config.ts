@@ -85,7 +85,7 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        {to: '/about', label: 'About', position: 'left'},
+
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -146,11 +146,11 @@ const config: Config = {
             },
             {
               label: 'About Us',
-              to: '/about',
+              to: '/',
             },
             {
               label: 'Mission',
-              to: '/about#mission',
+              to: '/',
             },
           ],
         },
