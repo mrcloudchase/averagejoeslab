@@ -1,97 +1,9 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-type FeatureItem = {
-  title: string;
-  icon: string;
-  description: ReactNode;
-  link?: string;
-};
 
-const FeatureList: FeatureItem[] = [
-  {
-    title: '🔬 Open Research',
-    icon: '🔬',
-    description: (
-      <>
-        Conduct meaningful research outside traditional academic institutions.
-        No gatekeeping, no barriers - just pure scientific curiosity and collaboration.
-      </>
-    ),
-    link: '/docs/intro',
-  },
-  {
-    title: '🤝 Community Driven',
-    icon: '🤝',
-    description: (
-      <>
-        Join a global community of citizen researchers. Collaborate, learn, and
-        contribute to projects that advance human knowledge.
-      </>
-    ),
-    link: 'https://discord.gg/averagejoeslab',
-  },
-  {
-    title: '📚 Democratized Knowledge',
-    icon: '📚',
-    description: (
-      <>
-        All research is open access and freely available. We believe knowledge
-        should be accessible to everyone, not locked behind paywalls.
-      </>
-    ),
-    link: '/about',
-  },
-];
-
-function Feature({title, icon, description, link}: FeatureItem) {
-  const cardContent = (
-    <>
-      <div className="text--center padding-horiz--md research-card-content">
-        <Heading as="h3" className="text-gradient">{title}</Heading>
-        <p>{description}</p>
-        <div className="button button--primary button--sm" style={{marginTop: '1rem'}}>
-          {link === '/docs/intro' ? 'Start Research Path →' : 
-           link?.startsWith('http') ? 'Join Community →' : 
-           link === '/about' ? 'Learn About Us →' : 'Learn More →'}
-        </div>
-      </div>
-    </>
-  );
-
-  return (
-    <div className={clsx('col col--4')}>
-      {link ? (
-        link.startsWith('http') ? (
-          <a 
-            href={link}
-            className="research-feature-card research-feature-card--clickable"
-            style={{textDecoration: 'none', color: 'inherit'}}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {cardContent}
-          </a>
-        ) : (
-          <Link 
-            to={link}
-            className="research-feature-card research-feature-card--clickable"
-            style={{textDecoration: 'none', color: 'inherit'}}
-          >
-            {cardContent}
-          </Link>
-        )
-      ) : (
-        <div className="research-feature-card">
-          {cardContent}
-        </div>
-      )}
-    </div>
-  );
-}
 
 export default function HomepageFeatures(): ReactNode {
   return (
@@ -137,31 +49,18 @@ export default function HomepageFeatures(): ReactNode {
                   Our comprehensive program takes you from research foundations to community leadership. 
                   No PhD required - just curiosity and dedication.
                 </p>
-                <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem'}}>
+                <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
                   <Link 
                     to="/docs/intro" 
                     className="button button--primary button--lg"
                   >
                     Begin Learning Path →
                   </Link>
-                  <a 
-                    href="https://discord.gg/averagejoeslab" 
+                  <Link 
+                    to="/about" 
                     className="button button--secondary button--lg"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    Join Community
-                  </a>
-                </div>
-                <div style={{display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', fontSize: '0.9rem', color: 'var(--ifm-color-content-secondary)'}}>
-                  <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>
-                    📚 Learn About Us
-                  </Link>
-                  <Link to="/papers" style={{textDecoration: 'none', color: 'inherit'}}>
-                    📄 Browse Papers
-                  </Link>
-                  <Link to="/projects" style={{textDecoration: 'none', color: 'inherit'}}>
-                    🔬 View Projects
+                    Learn More About Us
                   </Link>
                 </div>
               </div>
