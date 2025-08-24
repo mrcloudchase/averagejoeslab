@@ -85,15 +85,16 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
+        {to: '/about', label: 'About', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Research Path',
+          label: 'Research',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/projects', label: 'Projects', position: 'left'},
         {to: '/papers', label: 'Papers', position: 'left'},
-        {to: '/about', label: 'About', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://discord.gg/averagejoeslab',
           label: 'Discord',
@@ -115,6 +116,10 @@ const config: Config = {
             {
               label: 'Research Engineering Path',
               to: '/docs/intro',
+            },
+            {
+              label: 'Current Projects',
+              to: '/projects',
             },
             {
               label: 'Papers',
