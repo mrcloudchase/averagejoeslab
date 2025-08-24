@@ -238,6 +238,13 @@
   text-align: center;
 }
 
+.noLinksMessage {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
 /* Empty State */
 .emptyState {
   text-align: center;

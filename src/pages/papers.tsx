@@ -72,21 +72,21 @@ function FilterTabs({ activeFilter, onFilterChange }) {
 }
 
 function PaperCard({ paper }) {
-  const status = PAPER_STATUS[paper.status];
+  const status = PAPER_STATUS[paper.status] || PAPER_STATUS.proposed;
   
-  // Get paper and code links
+  // Get paper and code links with null safety
   const getPaperLink = () => {
-    if (paper.arxivId) {
+    if (paper.arxivId && paper.arxivId.trim()) {
       return `https://arxiv.org/abs/${paper.arxivId.replace('arXiv:', '')}`;
     }
-    if (paper.doi) {
+    if (paper.doi && paper.doi.trim()) {
       return `https://doi.org/${paper.doi}`;
     }
     return null;
   };
 
   const paperLink = getPaperLink();
-  const codeLink = paper.githubRepo;
+  const codeLink = paper.githubRepo && paper.githubRepo.trim() ? paper.githubRepo : null;
   
   return (
     <div className={styles.paperCard}>
@@ -99,15 +99,15 @@ function PaperCard({ paper }) {
             {status.label}
           </span>
           <span className={styles.paperDate}>
-            {new Date(paper.date).toLocaleDateString('en-US', { 
+            {paper.date ? new Date(paper.date).toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 
               day: 'numeric' 
-            })}
+            }) : 'Date not available'}
           </span>
         </div>
         <div className={styles.paperTags}>
-          {paper.tags.map((tag) => {
+          {(paper.tags || []).map((tag) => {
             const focusArea = FOCUS_AREAS.find(area => area.id === tag);
             return (
               <span 
@@ -125,15 +125,15 @@ function PaperCard({ paper }) {
       {/* Paper content area - not clickable */}
       <div className={styles.paperContent}>
         <Heading as="h3" className={styles.paperTitle}>
-          {paper.title}
+          {paper.title || 'Untitled Paper'}
         </Heading>
         
         <div className={styles.paperAuthors}>
-          By {paper.authors.join(', ')}
+          By {(paper.authors || []).join(', ') || 'Unknown Authors'}
         </div>
         
         <p className={styles.paperAbstract}>
-          {paper.abstract}
+          {paper.abstract || 'No abstract available.'}
         </p>
       </div>
       
@@ -158,6 +158,11 @@ function PaperCard({ paper }) {
           >
             View Code
           </a>
+        )}
+        {!paperLink && !codeLink && (
+          <span className={styles.noLinksMessage}>
+            Links will be available when published
+          </span>
         )}
       </div>
     </div>
@@ -185,10 +190,11 @@ function PapersGrid({ papers }) {
 }
 
 function ResearchStats() {
+  const safeData = papersData || [];
   const stats = [
-    { label: 'Total Papers', value: papersData.length, icon: '📄' },
-    { label: 'Published', value: papersData.filter(p => p.status === 'published').length, icon: '✅' },
-    { label: 'In Progress', value: papersData.filter(p => p.status === 'inProgress').length, icon: '🔬' },
+    { label: 'Total Papers', value: safeData.length, icon: '📄' },
+    { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
+    { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
     { label: 'Focus Areas', value: FOCUS_AREAS.length - 1, icon: '🎯' }
   ];
 
@@ -257,9 +263,10 @@ export default function Papers(): ReactNode {
   const [activeFilter, setActiveFilter] = useState('all');
 
   // Filter papers based on active filter
+  const safeData = papersData || [];
   const filteredPapers = activeFilter === 'all' 
-    ? papersData 
-    : papersData.filter(paper => paper.tags.includes(activeFilter));
+    ? safeData 
+    : safeData.filter(paper => paper?.tags?.includes(activeFilter));
 
   return (
     <Layout
