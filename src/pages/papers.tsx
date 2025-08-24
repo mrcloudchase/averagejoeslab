@@ -123,8 +123,8 @@ function FilterTabs({ activeFilter, onFilterChange }) {
 function PaperCard({ paper }) {
   const status = PAPER_STATUS[paper.status];
   
-  // Determine the primary link for the card
-  const getPrimaryLink = () => {
+  // Get paper and code links
+  const getPaperLink = () => {
     if (paper.arxivId) {
       return `https://arxiv.org/abs/${paper.arxivId.replace('arXiv:', '')}`;
     }
@@ -134,10 +134,11 @@ function PaperCard({ paper }) {
     return null;
   };
 
-  const primaryLink = getPrimaryLink();
+  const paperLink = getPaperLink();
+  const codeLink = paper.githubRepo;
   
-  const cardContent = (
-    <>
+  return (
+    <div className={styles.paperCard}>
       <div className={styles.paperHeader}>
         <div className={styles.paperMeta}>
           <span 
@@ -170,20 +171,50 @@ function PaperCard({ paper }) {
         </div>
       </div>
       
-      <div className={styles.paperContent}>
-        <Heading as="h3" className={styles.paperTitle}>
-          {paper.title}
-        </Heading>
-        
-        <div className={styles.paperAuthors}>
-          By {paper.authors.join(', ')}
+      {/* Paper content area - clickable to view paper */}
+      {paperLink ? (
+        <a 
+          href={paperLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.paperContentClickable}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <div className={styles.paperContent}>
+            <Heading as="h3" className={styles.paperTitle}>
+              {paper.title}
+            </Heading>
+            
+            <div className={styles.paperAuthors}>
+              By {paper.authors.join(', ')}
+            </div>
+            
+            <p className={styles.paperAbstract}>
+              {paper.abstract}
+            </p>
+            
+            <div className={styles.viewPaperHint}>
+              Click to view paper →
+            </div>
+          </div>
+        </a>
+      ) : (
+        <div className={styles.paperContent}>
+          <Heading as="h3" className={styles.paperTitle}>
+            {paper.title}
+          </Heading>
+          
+          <div className={styles.paperAuthors}>
+            By {paper.authors.join(', ')}
+          </div>
+          
+          <p className={styles.paperAbstract}>
+            {paper.abstract}
+          </p>
         </div>
-        
-        <p className={styles.paperAbstract}>
-          {paper.abstract}
-        </p>
-      </div>
+      )}
       
+      {/* Action buttons area */}
       <div className={styles.paperActions}>
         {paper.arxivId && (
           <a 
@@ -191,9 +222,18 @@ function PaperCard({ paper }) {
             className="button button--primary button--sm"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()} // Prevent card click when clicking button
           >
-            View on arXiv
+            View Paper
+          </a>
+        )}
+        {paper.doi && !paper.arxivId && (
+          <a 
+            href={`https://doi.org/${paper.doi}`}
+            className="button button--primary button--sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Paper
           </a>
         )}
         {paper.githubRepo && (
@@ -202,18 +242,16 @@ function PaperCard({ paper }) {
             className="button button--secondary button--sm"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
           >
-            Code & Data
+            View Code
           </a>
         )}
-        {paper.doi && (
+        {paper.doi && paper.arxivId && (
           <a 
             href={`https://doi.org/${paper.doi}`}
             className="button button--outline button--sm"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
           >
             DOI
           </a>
@@ -224,34 +262,11 @@ function PaperCard({ paper }) {
             className="button button--outline button--sm"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
           >
             Join Research
           </a>
         )}
       </div>
-    </>
-  );
-
-  // If there's a primary link (arXiv or DOI), make the whole card clickable
-  if (primaryLink) {
-    return (
-      <a 
-        href={primaryLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${styles.paperCard} ${styles.paperCardClickable}`}
-        style={{ textDecoration: 'none', color: 'inherit' }}
-      >
-        {cardContent}
-      </a>
-    );
-  }
-
-  // Otherwise, render as a regular div
-  return (
-    <div className={styles.paperCard}>
-      {cardContent}
     </div>
   );
 }
