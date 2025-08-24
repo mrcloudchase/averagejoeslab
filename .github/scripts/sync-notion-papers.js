@@ -19,7 +19,8 @@ const FOCUS_AREA_MAPPING = {
 const STATUS_MAPPING = {
   'Published': 'published',
   'In Review': 'inReview',
-  'In Progress': 'inProgress', 
+  'In Progress': 'inProgress',
+  'In progress': 'inProgress', // Handle lowercase variant
   'Proposed': 'proposed'
 };
 
@@ -42,8 +43,9 @@ async function syncPapersFromNotion() {
     const papers = response.results.map((page, index) => {
       const properties = page.properties;
       
-      // Extract title
-      const title = properties.Title?.title?.[0]?.plain_text || 'Untitled Paper';
+      // Extract title (handle both 'Name' and 'Title' properties)
+      const title = properties.Name?.title?.[0]?.plain_text || 
+                   properties.Title?.title?.[0]?.plain_text || 'Untitled Paper';
       
       // Extract authors
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
@@ -62,14 +64,26 @@ async function syncPapersFromNotion() {
       // Extract DOI
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract GitHub repo
-      const githubRepo = properties['GitHub Repo']?.url || null;
+      // Extract GitHub repo (handle both URL and rich text formats)
+      const githubRepo = properties['GitHub Repo']?.url || 
+                        properties['GitHub Repo']?.rich_text?.[0]?.plain_text || null;
       
-      // Extract focus areas
-      const focusAreasNotion = properties['Focus Areas']?.multi_select || [];
-      const tags = focusAreasNotion
-        .map(area => FOCUS_AREA_MAPPING[area.name.toLowerCase()])
-        .filter(Boolean);
+      // Extract focus areas (handle both multi-select and rich text formats)
+      let tags = [];
+      if (properties['Focus Areas']?.multi_select) {
+        // Multi-select format
+        tags = properties['Focus Areas'].multi_select
+          .map(area => FOCUS_AREA_MAPPING[area.name.toLowerCase()])
+          .filter(Boolean);
+      } else if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
+        // Rich text format (comma-separated)
+        const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
+        tags = focusAreasText
+          .split(',')
+          .map(area => area.trim().toLowerCase())
+          .map(area => FOCUS_AREA_MAPPING[area])
+          .filter(Boolean);
+      }
       
       // Extract publication date
       const publicationDate = properties['Publication Date']?.date?.start || 
