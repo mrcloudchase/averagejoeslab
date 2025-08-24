@@ -55,5 +55,7 @@ jobs:
 
       - name: Trigger deployment
         if: steps.verify-changed-files.outputs.changed == 'true'
-        run: |
-          echo "Papers updated! Deployment will be triggered automatically."
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: papers-updated
