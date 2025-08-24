@@ -97,6 +97,7 @@ function FilterTabs({ activeFilter, onFilterChange }) {
 }
 
 function PaperCard({ paper }) {
+  console.log('🔍 Paper:', paper.title, 'Status:', paper.status, 'Mapped to:', PAPER_STATUS[paper.status]?.label);
   const status = PAPER_STATUS[paper.status] || PAPER_STATUS.proposed;
   
   // Get paper and code links with null safety
@@ -216,6 +217,15 @@ function PapersGrid({ papers }) {
 
 function ResearchStats() {
   const safeData = papersData || [];
+  console.log('📊 ResearchStats - Papers data:', safeData);
+  console.log('📈 Status counts:', {
+    total: safeData.length,
+    published: safeData.filter(p => p?.status === 'published').length,
+    inProgress: safeData.filter(p => p?.status === 'inProgress').length,
+    proposed: safeData.filter(p => p?.status === 'proposed').length,
+    focusAreas: FOCUS_AREAS.length - 1
+  });
+  
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
     { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
