@@ -55,6 +55,9 @@ jobs:
       - name: Check for changes
         id: verify-changed-files
         run: |
+          # Restore package files that were modified by npm install
+          git checkout -- package.json package-lock.json 2>/dev/null || true
+          
           if [ -n "$(git status --porcelain)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
