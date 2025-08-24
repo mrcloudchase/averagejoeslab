@@ -123,8 +123,21 @@ function FilterTabs({ activeFilter, onFilterChange }) {
 function PaperCard({ paper }) {
   const status = PAPER_STATUS[paper.status];
   
-  return (
-    <div className={styles.paperCard}>
+  // Determine the primary link for the card
+  const getPrimaryLink = () => {
+    if (paper.arxivId) {
+      return `https://arxiv.org/abs/${paper.arxivId.replace('arXiv:', '')}`;
+    }
+    if (paper.doi) {
+      return `https://doi.org/${paper.doi}`;
+    }
+    return null;
+  };
+
+  const primaryLink = getPrimaryLink();
+  
+  const cardContent = (
+    <>
       <div className={styles.paperHeader}>
         <div className={styles.paperMeta}>
           <span 
@@ -178,6 +191,7 @@ function PaperCard({ paper }) {
             className="button button--primary button--sm"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()} // Prevent card click when clicking button
           >
             View on arXiv
           </a>
@@ -188,6 +202,7 @@ function PaperCard({ paper }) {
             className="button button--secondary button--sm"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
             Code & Data
           </a>
@@ -198,6 +213,7 @@ function PaperCard({ paper }) {
             className="button button--outline button--sm"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
             DOI
           </a>
@@ -208,11 +224,34 @@ function PaperCard({ paper }) {
             className="button button--outline button--sm"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
             Join Research
           </a>
         )}
       </div>
+    </>
+  );
+
+  // If there's a primary link (arXiv or DOI), make the whole card clickable
+  if (primaryLink) {
+    return (
+      <a 
+        href={primaryLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.paperCard} ${styles.paperCardClickable}`}
+        style={{ textDecoration: 'none', color: 'inherit' }}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  // Otherwise, render as a regular div
+  return (
+    <div className={styles.paperCard}>
+      {cardContent}
     </div>
   );
 }

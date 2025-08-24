@@ -153,6 +153,21 @@
   border-color: var(--ifm-color-primary);
 }
 
+.paperCardClickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paperCardClickable:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ifm-box-shadow-lg);
+  border-color: var(--ifm-color-primary);
+}
+
+.paperCardClickable:active {
+  transform: translateY(-2px);
+}
+
 /* Paper Header */
 .paperHeader {
   margin-bottom: 1.5rem;
