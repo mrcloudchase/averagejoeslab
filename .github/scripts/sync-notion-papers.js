@@ -119,21 +119,6 @@ async function syncPapersFromNotion() {
       };
     });
 
-    // Generate dynamic focus areas from papers data
-    const allTags = new Set();
-    papers.forEach(paper => {
-      paper.tags.forEach(tag => allTags.add(tag));
-    });
-
-    const focusAreas = [
-      { id: 'all', label: 'All Papers', color: '#6c757d' },
-      ...Array.from(allTags).sort().map(tag => ({
-        id: tag,
-        label: tag.charAt(0).toUpperCase() + tag.slice(1),
-        color: FOCUS_AREA_COLORS[tag] || FOCUS_AREA_COLORS.default
-      }))
-    ];
-
     // Ensure data directory exists
     const dataDir = path.join(process.cwd(), 'src', 'data');
     if (!fs.existsSync(dataDir)) {
@@ -143,13 +128,8 @@ async function syncPapersFromNotion() {
     // Write papers to JSON file
     const papersOutputPath = path.join(dataDir, 'papers.json');
     fs.writeFileSync(papersOutputPath, JSON.stringify(papers, null, 2));
-
-    // Write focus areas to JSON file
-    const focusAreasOutputPath = path.join(dataDir, 'focus-areas.json');
-    fs.writeFileSync(focusAreasOutputPath, JSON.stringify(focusAreas, null, 2));
     
     console.log(`✅ Successfully synced ${papers.length} papers to ${papersOutputPath}`);
-    console.log(`✅ Generated ${focusAreas.length} focus areas to ${focusAreasOutputPath}`);
     console.log('📊 Paper breakdown:');
     
     // Log summary

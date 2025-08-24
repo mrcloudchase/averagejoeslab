@@ -16,9 +16,40 @@ const PAPER_STATUS = {
   proposed: { label: 'Proposed', color: '#6c757d' }
 };
 
-// Import data from JSON files (auto-synced from Notion)
+// Import papers data from JSON file (auto-synced from Notion)
 import papersData from '../data/papers.json';
-import focusAreasData from '../data/focus-areas.json';
+
+// Dynamic focus area colors
+const FOCUS_AREA_COLORS = {
+  'optimization': '#007bff',
+  'behavioral': '#28a745', 
+  'interpretability': '#ffc107',
+  'security': '#dc3545',
+  'interoperability': '#6f42c1',
+  'behavior': '#28a745', // Alias for behavioral
+  'default': '#6c757d'
+};
+
+// Generate focus areas dynamically from papers data
+const generateFocusAreas = () => {
+  const safeData = papersData || [];
+  const allTags = new Set();
+  
+  safeData.forEach(paper => {
+    (paper.tags || []).forEach(tag => allTags.add(tag));
+  });
+
+  return [
+    { id: 'all', label: 'All Papers', color: '#6c757d' },
+    ...Array.from(allTags).sort().map(tag => ({
+      id: tag,
+      label: tag.charAt(0).toUpperCase() + tag.slice(1),
+      color: FOCUS_AREA_COLORS[tag] || FOCUS_AREA_COLORS.default
+    }))
+  ];
+};
+
+const FOCUS_AREAS = generateFocusAreas();
 
 function PapersHero() {
   return (
@@ -42,11 +73,9 @@ function PapersHero() {
 }
 
 function FilterTabs({ activeFilter, onFilterChange }) {
-  const safeFocusAreas = focusAreasData || [{ id: 'all', label: 'All Papers', color: '#6c757d' }];
-  
   return (
     <div className={styles.filterTabs}>
-      {safeFocusAreas.map((area) => (
+      {FOCUS_AREAS.map((area) => (
         <button
           key={area.id}
           className={clsx(
@@ -102,8 +131,7 @@ function PaperCard({ paper }) {
         </div>
         <div className={styles.paperTags}>
           {(paper.tags || []).map((tag) => {
-            const safeFocusAreas = focusAreasData || [];
-            const focusArea = safeFocusAreas.find(area => area.id === tag);
+            const focusArea = FOCUS_AREAS.find(area => area.id === tag);
             return (
               <span 
                 key={tag}
@@ -190,7 +218,7 @@ function ResearchStats() {
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
     { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
     { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
-    { label: 'Focus Areas', value: Math.max(0, (focusAreasData?.length || 1) - 1), icon: '🎯' }
+    { label: 'Focus Areas', value: Math.max(0, FOCUS_AREAS.length - 1), icon: '🎯' }
   ];
 
   return (
