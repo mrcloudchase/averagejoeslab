@@ -171,54 +171,26 @@ function PaperCard({ paper }) {
         </div>
       </div>
       
-      {/* Paper content area - clickable to view paper */}
-      {paperLink ? (
-        <a 
-          href={paperLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.paperContentClickable}
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <div className={styles.paperContent}>
-            <Heading as="h3" className={styles.paperTitle}>
-              {paper.title}
-            </Heading>
-            
-            <div className={styles.paperAuthors}>
-              By {paper.authors.join(', ')}
-            </div>
-            
-            <p className={styles.paperAbstract}>
-              {paper.abstract}
-            </p>
-            
-            <div className={styles.viewPaperHint}>
-              Click to view paper →
-            </div>
-          </div>
-        </a>
-      ) : (
-        <div className={styles.paperContent}>
-          <Heading as="h3" className={styles.paperTitle}>
-            {paper.title}
-          </Heading>
-          
-          <div className={styles.paperAuthors}>
-            By {paper.authors.join(', ')}
-          </div>
-          
-          <p className={styles.paperAbstract}>
-            {paper.abstract}
-          </p>
+      {/* Paper content area - not clickable */}
+      <div className={styles.paperContent}>
+        <Heading as="h3" className={styles.paperTitle}>
+          {paper.title}
+        </Heading>
+        
+        <div className={styles.paperAuthors}>
+          By {paper.authors.join(', ')}
         </div>
-      )}
+        
+        <p className={styles.paperAbstract}>
+          {paper.abstract}
+        </p>
+      </div>
       
-      {/* Action buttons area */}
+      {/* Action buttons - only View Paper and View Code */}
       <div className={styles.paperActions}>
-        {paper.arxivId && (
+        {paperLink && (
           <a 
-            href={`https://arxiv.org/abs/${paper.arxivId.replace('arXiv:', '')}`}
+            href={paperLink}
             className="button button--primary button--sm"
             target="_blank"
             rel="noopener noreferrer"
@@ -226,44 +198,14 @@ function PaperCard({ paper }) {
             View Paper
           </a>
         )}
-        {paper.doi && !paper.arxivId && (
+        {codeLink && (
           <a 
-            href={`https://doi.org/${paper.doi}`}
-            className="button button--primary button--sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Paper
-          </a>
-        )}
-        {paper.githubRepo && (
-          <a 
-            href={paper.githubRepo}
+            href={codeLink}
             className="button button--secondary button--sm"
             target="_blank"
             rel="noopener noreferrer"
           >
             View Code
-          </a>
-        )}
-        {paper.doi && paper.arxivId && (
-          <a 
-            href={`https://doi.org/${paper.doi}`}
-            className="button button--outline button--sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DOI
-          </a>
-        )}
-        {paper.status === 'proposed' && (
-          <a 
-            href="https://discord.gg/averagejoeslab"
-            className="button button--outline button--sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join Research
           </a>
         )}
       </div>
