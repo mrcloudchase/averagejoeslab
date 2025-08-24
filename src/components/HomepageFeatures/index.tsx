@@ -7,23 +7,8 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        {/* Mission Statement */}
+        {/* Hero Section - Learning Path + Discord */}
         <div className="text--center margin-bottom--xl">
-          <p style={{
-            fontSize: '1.5rem',
-            maxWidth: '900px',
-            margin: '0 auto 3rem auto',
-            color: 'var(--ifm-color-content)',
-            lineHeight: '1.6',
-            fontWeight: '400'
-          }}>
-            We believe enabling broader participation and open science is key to increase transparency 
-            and reduce potential harms from emerging research technologies.
-          </p>
-        </div>
-
-        {/* Primary Learning Path - Single Prominent Section */}
-        <div className="text--center">
           <div className="row">
             <div className="col col--8 col--offset-2">
               <div style={{
@@ -51,15 +36,48 @@ export default function HomepageFeatures(): ReactNode {
                   >
                     Begin Learning Path →
                   </Link>
-                  <Link 
-                    to="/about" 
+                  <a 
+                    href="https://discord.gg/averagejoeslab" 
                     className="button button--secondary button--lg"
                     style={{fontSize: '1.1rem', padding: '0.8rem 2rem'}}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Learn About Us
-                  </Link>
+                    Join Discord Community
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mission Statement Section */}
+        <div className="text--center">
+          <div className="row">
+            <div className="col col--10 col--offset-1">
+              <Heading as="h2" style={{marginBottom: '2rem', fontSize: '2rem', color: 'var(--ifm-color-content)'}}>
+                Our Mission
+              </Heading>
+              <p style={{
+                fontSize: '1.3rem',
+                lineHeight: '1.6',
+                color: 'var(--ifm-color-content)',
+                fontWeight: '400',
+                marginBottom: '2rem'
+              }}>
+                We believe enabling broader participation and open science is key to increase transparency 
+                and reduce potential harms from emerging research technologies.
+              </p>
+              <p style={{
+                fontSize: '1.1rem',
+                lineHeight: '1.7',
+                color: 'var(--ifm-color-content-secondary)',
+                maxWidth: '800px',
+                margin: '0 auto'
+              }}>
+                Join thousands of citizen researchers who are advancing human knowledge outside traditional institutions. 
+                Together, we're democratizing research and making science accessible to everyone.
+              </p>
             </div>
           </div>
         </div>
