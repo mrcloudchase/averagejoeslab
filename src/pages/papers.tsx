@@ -39,13 +39,7 @@ const generateFocusAreas = () => {
     (paper.tags || []).forEach(tag => allTags.add(tag));
   });
 
-  console.log('🎯 Generated focus areas from tags:', Array.from(allTags));
-  console.log('📊 Papers data:', safeData.length, 'papers');
-  console.log('📈 Status breakdown:', {
-    published: safeData.filter(p => p?.status === 'published').length,
-    inProgress: safeData.filter(p => p?.status === 'inProgress').length,
-    proposed: safeData.filter(p => p?.status === 'proposed').length
-  });
+
 
   return [
     { id: 'all', label: 'All Papers', color: '#6c757d' },

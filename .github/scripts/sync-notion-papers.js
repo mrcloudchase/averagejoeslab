@@ -50,9 +50,9 @@ async function syncPapersFromNotion() {
       const title = properties.Name?.title?.[0]?.plain_text || 
                    properties.Title?.title?.[0]?.plain_text || 'Untitled Paper';
       
-      // Extract authors
+      // Extract authors (handle empty authors)
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
-      const authors = authorsText.split(',').map(author => author.trim()).filter(Boolean);
+      const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
       
       // Extract abstract
       const abstract = properties.Abstract?.rich_text?.[0]?.plain_text || '';
@@ -74,8 +74,22 @@ async function syncPapersFromNotion() {
       // Extract focus areas (handle multiple formats and new Focus Area column)
       let tags = [];
       
-      // First try the new "Focus Area" column (single select or rich text)
-      if (properties['Focus Area']?.select?.name) {
+      // Handle Focus Areas from CSV format (comma-separated in rich text)
+      if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
+        const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
+        tags = focusAreasText
+          .split(',')
+          .map(area => area.trim().toLowerCase())
+          .filter(Boolean);
+      }
+      // Try multi-select format
+      else if (properties['Focus Areas']?.multi_select) {
+        tags = properties['Focus Areas'].multi_select
+          .map(area => area.name.toLowerCase())
+          .filter(Boolean);
+      }
+      // Try new "Focus Area" column (single select or rich text)
+      else if (properties['Focus Area']?.select?.name) {
         const focusAreaText = properties['Focus Area'].select.name;
         tags = focusAreaText
           .split(',')
@@ -84,18 +98,6 @@ async function syncPapersFromNotion() {
       } else if (properties['Focus Area']?.rich_text?.[0]?.plain_text) {
         const focusAreaText = properties['Focus Area'].rich_text[0].plain_text;
         tags = focusAreaText
-          .split(',')
-          .map(area => area.trim().toLowerCase())
-          .filter(Boolean);
-      }
-      // Fallback to old "Focus Areas" column for backward compatibility
-      else if (properties['Focus Areas']?.multi_select) {
-        tags = properties['Focus Areas'].multi_select
-          .map(area => area.name.toLowerCase())
-          .filter(Boolean);
-      } else if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
-        const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
-        tags = focusAreasText
           .split(',')
           .map(area => area.trim().toLowerCase())
           .filter(Boolean);
