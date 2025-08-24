@@ -8,27 +8,13 @@
   background: var(--ifm-background-color);
 }
 
-/* Research Feature Cards */
-.features .research-feature-card {
-  background: var(--gradient-subtle);
-  border: 1px solid rgba(44, 62, 80, 0.2);
-  border-radius: var(--ifm-card-border-radius);
-  padding: 2rem;
-  transition: all 0.3s ease;
-  height: 100%;
-  margin-bottom: 2rem;
+/* Features section layout */
+.features .row {
+  align-items: stretch;
 }
 
-.features .research-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--ifm-box-shadow-lg);
-  border-color: var(--ifm-color-primary);
-}
-
-.features .research-feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
+.features .col {
+  display: flex;
 }
 
 .features .text-gradient {
@@ -56,11 +42,6 @@
     padding: 3rem 0;
   }
   
-  .features .research-feature-card {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
   .features .col {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -69,10 +50,6 @@
   .features .row {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
-  }
-  
-  .features .research-feature-icon {
-    font-size: 2.5rem;
   }
 }
 
@@ -81,11 +58,6 @@
     padding: 2rem 0;
   }
   
-  .features .research-feature-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
   .features .col {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -94,9 +66,5 @@
   .features .row {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
-  }
-  
-  .features .research-feature-icon {
-    font-size: 2rem;
   }
 }

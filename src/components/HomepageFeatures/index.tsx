@@ -50,10 +50,7 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, icon, description, link}: FeatureItem) {
   const cardContent = (
     <>
-      <div className="text--center">
-        <span className="research-feature-icon">{icon}</span>
-      </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--md research-card-content">
         <Heading as="h3" className="text-gradient">{title}</Heading>
         <p>{description}</p>
         <div className="button button--primary button--sm" style={{marginTop: '1rem'}}>
