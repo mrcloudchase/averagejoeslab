@@ -92,7 +92,7 @@ const config: Config = {
           position: 'left',
           label: 'Research',
         },
-        {to: '/projects', label: 'Projects', position: 'left'},
+
         {to: '/papers', label: 'Papers', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -117,10 +117,7 @@ const config: Config = {
               label: 'Research Engineering Path',
               to: '/docs/intro',
             },
-            {
-              label: 'Current Projects',
-              to: '/projects',
-            },
+
             {
               label: 'Papers',
               to: '/papers',

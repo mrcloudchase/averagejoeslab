@@ -291,13 +291,11 @@ function SubmitResearchCTA() {
                   rel="noopener noreferrer">
                   Join Community
                 </a>
-                <a
+                <Link
                   className="button button--outline button--lg"
-                  href="https://github.com/mrcloudchase/averagejoeslab"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  View Projects
-                </a>
+                  to="/about">
+                  Learn About Us
+                </Link>
               </div>
             </div>
           </div>
