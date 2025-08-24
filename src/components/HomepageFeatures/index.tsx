@@ -47,36 +47,42 @@ const FeatureList: FeatureItem[] = [
 ];
 
 function Feature({title, icon, description, link}: FeatureItem) {
-  const content = (
-    <div className="research-feature-card">
+  const cardContent = (
+    <>
       <div className="text--center">
         <span className="research-feature-icon">{icon}</span>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3" className="text-gradient">{title}</Heading>
         <p>{description}</p>
-        {link && (
-          <a 
-            href={link} 
-            className="button button--primary button--sm"
-            style={{marginTop: '1rem'}}
-            {...(link.startsWith('http') && {
-              target: '_blank',
-              rel: 'noopener noreferrer'
-            })}
-          >
-            {link.startsWith('http') ? 'Join Community →' : 
-             link === '/docs/intro' ? 'Start Research Path →' :
-             link === '/about' ? 'Learn About Us →' : 'Learn More →'}
-          </a>
-        )}
+        <div className="button button--primary button--sm" style={{marginTop: '1rem'}}>
+          {link === '/docs/intro' ? 'Start Research Path →' : 
+           link?.startsWith('http') ? 'Join Community →' : 
+           link === '/about' ? 'Learn About Us →' : 'Learn More →'}
+        </div>
       </div>
-    </div>
+    </>
   );
 
   return (
     <div className={clsx('col col--4')}>
-      {content}
+      {link ? (
+        <a 
+          href={link}
+          className="research-feature-card research-feature-card--clickable"
+          style={{textDecoration: 'none', color: 'inherit'}}
+          {...(link.startsWith('http') && {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          })}
+        >
+          {cardContent}
+        </a>
+      ) : (
+        <div className="research-feature-card">
+          {cardContent}
+        </div>
+      )}
     </div>
   );
 }
