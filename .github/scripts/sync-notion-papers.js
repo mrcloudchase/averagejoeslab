@@ -7,12 +7,15 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-// Focus area mapping
-const FOCUS_AREA_MAPPING = {
-  'optimization': 'optimization',
-  'behavioral': 'behavioral', 
-  'interpretability': 'interpretability',
-  'security': 'security'
+// Dynamic focus area colors (fallback colors for consistency)
+const FOCUS_AREA_COLORS = {
+  'optimization': '#007bff',
+  'behavioral': '#28a745', 
+  'interpretability': '#ffc107',
+  'security': '#dc3545',
+  'interoperability': '#6f42c1',
+  'behavior': '#28a745', // Alias for behavioral
+  'default': '#6c757d'
 };
 
 // Status mapping
@@ -68,20 +71,33 @@ async function syncPapersFromNotion() {
       const githubRepo = properties['GitHub Repo']?.url || 
                         properties['GitHub Repo']?.rich_text?.[0]?.plain_text || null;
       
-      // Extract focus areas (handle both multi-select and rich text formats)
+      // Extract focus areas (handle multiple formats and new Focus Area column)
       let tags = [];
-      if (properties['Focus Areas']?.multi_select) {
-        // Multi-select format
+      
+      // First try the new "Focus Area" column (single select or rich text)
+      if (properties['Focus Area']?.select?.name) {
+        const focusAreaText = properties['Focus Area'].select.name;
+        tags = focusAreaText
+          .split(',')
+          .map(area => area.trim().toLowerCase())
+          .filter(Boolean);
+      } else if (properties['Focus Area']?.rich_text?.[0]?.plain_text) {
+        const focusAreaText = properties['Focus Area'].rich_text[0].plain_text;
+        tags = focusAreaText
+          .split(',')
+          .map(area => area.trim().toLowerCase())
+          .filter(Boolean);
+      }
+      // Fallback to old "Focus Areas" column for backward compatibility
+      else if (properties['Focus Areas']?.multi_select) {
         tags = properties['Focus Areas'].multi_select
-          .map(area => FOCUS_AREA_MAPPING[area.name.toLowerCase()])
+          .map(area => area.name.toLowerCase())
           .filter(Boolean);
       } else if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
-        // Rich text format (comma-separated)
         const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
         tags = focusAreasText
           .split(',')
           .map(area => area.trim().toLowerCase())
-          .map(area => FOCUS_AREA_MAPPING[area])
           .filter(Boolean);
       }
       
@@ -103,6 +119,21 @@ async function syncPapersFromNotion() {
       };
     });
 
+    // Generate dynamic focus areas from papers data
+    const allTags = new Set();
+    papers.forEach(paper => {
+      paper.tags.forEach(tag => allTags.add(tag));
+    });
+
+    const focusAreas = [
+      { id: 'all', label: 'All Papers', color: '#6c757d' },
+      ...Array.from(allTags).sort().map(tag => ({
+        id: tag,
+        label: tag.charAt(0).toUpperCase() + tag.slice(1),
+        color: FOCUS_AREA_COLORS[tag] || FOCUS_AREA_COLORS.default
+      }))
+    ];
+
     // Ensure data directory exists
     const dataDir = path.join(process.cwd(), 'src', 'data');
     if (!fs.existsSync(dataDir)) {
@@ -110,10 +141,15 @@ async function syncPapersFromNotion() {
     }
 
     // Write papers to JSON file
-    const outputPath = path.join(dataDir, 'papers.json');
-    fs.writeFileSync(outputPath, JSON.stringify(papers, null, 2));
+    const papersOutputPath = path.join(dataDir, 'papers.json');
+    fs.writeFileSync(papersOutputPath, JSON.stringify(papers, null, 2));
+
+    // Write focus areas to JSON file
+    const focusAreasOutputPath = path.join(dataDir, 'focus-areas.json');
+    fs.writeFileSync(focusAreasOutputPath, JSON.stringify(focusAreas, null, 2));
     
-    console.log(`✅ Successfully synced ${papers.length} papers to ${outputPath}`);
+    console.log(`✅ Successfully synced ${papers.length} papers to ${papersOutputPath}`);
+    console.log(`✅ Generated ${focusAreas.length} focus areas to ${focusAreasOutputPath}`);
     console.log('📊 Paper breakdown:');
     
     // Log summary

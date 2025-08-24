@@ -1,14 +1,11 @@
 [
   {
     "id": 1,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
+    "authors": ["Chase Dovey", "Community Contributors"],
     "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
-    "tags": [
-      "optimization",
-      "behavioral"
-    ],
-    "status": "proposed",
+    "tags": ["behavioral", "optimization"],
+    "status": "inProgress",
     "date": "2024-12-15",
     "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
@@ -16,13 +13,10 @@
   },
   {
     "id": 2,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Interpretable Machine Learning for Independent Researchers",
+    "authors": ["Average Joes Lab Community"],
     "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
-    "tags": [
-      "interpretability",
-      "optimization"
-    ],
+    "tags": ["interpretability", "optimization"],
     "status": "proposed",
     "date": "2024-11-20",
     "arxivId": null,
@@ -31,13 +25,10 @@
   },
   {
     "id": 3,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Security Considerations in Open Research Environments",
+    "authors": ["Security Research Group"],
     "abstract": "This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.",
-    "tags": [
-      "security",
-      "behavioral"
-    ],
+    "tags": ["behavioral", "security", "behavior", "interoperability"],
     "status": "proposed",
     "date": "2024-10-05",
     "arxivId": null,
@@ -46,14 +37,11 @@
   },
   {
     "id": 4,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Behavioral Analysis of Collaborative Research Networks",
+    "authors": ["Network Analysis Team"],
     "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
-    "tags": [
-      "behavioral",
-      "optimization"
-    ],
-    "status": "proposed",
+    "tags": ["behavioral", "optimization", "interoperability"],
+    "status": "published",
     "date": "2024-09-12",
     "arxivId": "arXiv:2409.12345",
     "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
@@ -61,13 +49,11 @@
   },
   {
     "id": 5,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Optimization Techniques for Distributed AI Training",
+    "authors": ["Distributed Systems Group"],
     "abstract": "Novel approaches to training machine learning models across distributed networks with limited bandwidth and computational resources. Focus on techniques accessible to independent researchers.",
-    "tags": [
-      "optimization"
-    ],
-    "status": "proposed",
+    "tags": ["optimization", "security"],
+    "status": "inProgress",
     "date": "2024-08-30",
     "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
@@ -75,13 +61,10 @@
   },
   {
     "id": 6,
-    "title": "Untitled Paper",
-    "authors": [],
+    "title": "Ethical Frameworks for Citizen Science Research",
+    "authors": ["Ethics Committee"],
     "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
-    "tags": [
-      "behavioral",
-      "security"
-    ],
+    "tags": ["behavioral", "security", "optimization"],
     "status": "proposed",
     "date": "2024-07-15",
     "arxivId": null,

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "label": "All Papers",
+    "color": "#6c757d"
+  },
+  {
+    "id": "behavioral",
+    "label": "Behavioral",
+    "color": "#28a745"
+  },
+  {
+    "id": "behavior",
+    "label": "Behavior",
+    "color": "#28a745"
+  },
+  {
+    "id": "interoperability",
+    "label": "Interoperability",
+    "color": "#6f42c1"
+  },
+  {
+    "id": "interpretability",
+    "label": "Interpretability",
+    "color": "#ffc107"
+  },
+  {
+    "id": "optimization",
+    "label": "Optimization",
+    "color": "#007bff"
+  },
+  {
+    "id": "security",
+    "label": "Security",
+    "color": "#dc3545"
+  }
+]

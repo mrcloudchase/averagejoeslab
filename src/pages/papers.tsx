@@ -8,15 +8,6 @@ import Heading from '@theme/Heading';
 
 import styles from './papers.module.css';
 
-// Focus area tags
-const FOCUS_AREAS = [
-  { id: 'all', label: 'All Papers', color: '#6c757d' },
-  { id: 'optimization', label: 'Optimization', color: '#007bff' },
-  { id: 'behavioral', label: 'Behavioral', color: '#28a745' },
-  { id: 'interpretability', label: 'Interpretability', color: '#ffc107' },
-  { id: 'security', label: 'Security', color: '#dc3545' }
-];
-
 // Paper status types
 const PAPER_STATUS = {
   published: { label: 'Published', color: '#28a745' },
@@ -25,8 +16,9 @@ const PAPER_STATUS = {
   proposed: { label: 'Proposed', color: '#6c757d' }
 };
 
-// Import papers data from JSON file (auto-synced from Notion)
+// Import data from JSON files (auto-synced from Notion)
 import papersData from '../data/papers.json';
+import focusAreasData from '../data/focus-areas.json';
 
 function PapersHero() {
   return (
@@ -50,9 +42,11 @@ function PapersHero() {
 }
 
 function FilterTabs({ activeFilter, onFilterChange }) {
+  const safeFocusAreas = focusAreasData || [{ id: 'all', label: 'All Papers', color: '#6c757d' }];
+  
   return (
     <div className={styles.filterTabs}>
-      {FOCUS_AREAS.map((area) => (
+      {safeFocusAreas.map((area) => (
         <button
           key={area.id}
           className={clsx(
@@ -108,14 +102,15 @@ function PaperCard({ paper }) {
         </div>
         <div className={styles.paperTags}>
           {(paper.tags || []).map((tag) => {
-            const focusArea = FOCUS_AREAS.find(area => area.id === tag);
+            const safeFocusAreas = focusAreasData || [];
+            const focusArea = safeFocusAreas.find(area => area.id === tag);
             return (
               <span 
                 key={tag}
                 className={styles.paperTag}
                 style={{ backgroundColor: focusArea?.color || '#6c757d' }}
               >
-                {focusArea?.label || tag}
+                {focusArea?.label || tag.charAt(0).toUpperCase() + tag.slice(1)}
               </span>
             );
           })}
@@ -195,7 +190,7 @@ function ResearchStats() {
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
     { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
     { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
-    { label: 'Focus Areas', value: FOCUS_AREAS.length - 1, icon: '🎯' }
+    { label: 'Focus Areas', value: Math.max(0, (focusAreasData?.length || 1) - 1), icon: '🎯' }
   ];
 
   return (
