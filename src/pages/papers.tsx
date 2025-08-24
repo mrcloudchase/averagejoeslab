@@ -25,57 +25,8 @@ const PAPER_STATUS = {
   proposed: { label: 'Proposed', color: '#6c757d' }
 };
 
-// Sample papers data (replace with real data later)
-const PAPERS_DATA = [
-  {
-    id: 1,
-    title: 'Democratizing AI Research Methodologies: A Framework for Citizen Scientists',
-    authors: ['Chase Dovey', 'Community Contributors'],
-    abstract: 'This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.',
-    tags: ['optimization', 'behavioral'],
-    status: 'inProgress',
-    date: '2024-12-15',
-    arxivId: null,
-    githubRepo: 'https://github.com/mrcloudchase/democratizing-ai-research',
-    doi: null
-  },
-  {
-    id: 2,
-    title: 'Interpretable Machine Learning for Independent Researchers',
-    authors: ['Average Joes Lab Community'],
-    abstract: 'An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.',
-    tags: ['interpretability', 'optimization'],
-    status: 'proposed',
-    date: '2024-11-20',
-    arxivId: null,
-    githubRepo: null,
-    doi: null
-  },
-  {
-    id: 3,
-    title: 'Security Considerations in Open Research Environments',
-    authors: ['Security Research Group'],
-    abstract: 'This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.',
-    tags: ['security', 'behavioral'],
-    status: 'inReview',
-    date: '2024-10-05',
-    arxivId: null,
-    githubRepo: 'https://github.com/mrcloudchase/open-research-security',
-    doi: null
-  },
-  {
-    id: 4,
-    title: 'Behavioral Analysis of Collaborative Research Networks',
-    authors: ['Network Analysis Team'],
-    abstract: 'A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.',
-    tags: ['behavioral', 'optimization'],
-    status: 'published',
-    date: '2024-09-12',
-    arxivId: 'arXiv:2409.12345',
-    githubRepo: 'https://github.com/mrcloudchase/collaborative-networks',
-    doi: '10.1000/182'
-  }
-];
+// Import papers data from JSON file (auto-synced from Notion)
+import papersData from '../data/papers.json';
 
 function PapersHero() {
   return (
@@ -235,9 +186,9 @@ function PapersGrid({ papers }) {
 
 function ResearchStats() {
   const stats = [
-    { label: 'Total Papers', value: PAPERS_DATA.length, icon: '📄' },
-    { label: 'Published', value: PAPERS_DATA.filter(p => p.status === 'published').length, icon: '✅' },
-    { label: 'In Progress', value: PAPERS_DATA.filter(p => p.status === 'inProgress').length, icon: '🔬' },
+    { label: 'Total Papers', value: papersData.length, icon: '📄' },
+    { label: 'Published', value: papersData.filter(p => p.status === 'published').length, icon: '✅' },
+    { label: 'In Progress', value: papersData.filter(p => p.status === 'inProgress').length, icon: '🔬' },
     { label: 'Focus Areas', value: FOCUS_AREAS.length - 1, icon: '🎯' }
   ];
 
@@ -307,8 +258,8 @@ export default function Papers(): ReactNode {
 
   // Filter papers based on active filter
   const filteredPapers = activeFilter === 'all' 
-    ? PAPERS_DATA 
-    : PAPERS_DATA.filter(paper => paper.tags.includes(activeFilter));
+    ? papersData 
+    : papersData.filter(paper => paper.tags.includes(activeFilter));
 
   return (
     <Layout
