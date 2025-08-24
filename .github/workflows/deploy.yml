@@ -6,8 +6,6 @@ on:
       - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
-  repository_dispatch:
-    types: [papers-updated]
 
 permissions:
   contents: write  # Needed to push to gh-pages branch
@@ -42,14 +40,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Sync papers from Notion (build step)
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: |
-          npm install @notionhq/client
-          node .github/scripts/sync-notion-papers.js
 
       - name: Build website
         run: npm run build
