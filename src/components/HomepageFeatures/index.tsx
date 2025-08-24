@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -67,17 +68,25 @@ function Feature({title, icon, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       {link ? (
-        <a 
-          href={link}
-          className="research-feature-card research-feature-card--clickable"
-          style={{textDecoration: 'none', color: 'inherit'}}
-          {...(link.startsWith('http') && {
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          })}
-        >
-          {cardContent}
-        </a>
+        link.startsWith('http') ? (
+          <a 
+            href={link}
+            className="research-feature-card research-feature-card--clickable"
+            style={{textDecoration: 'none', color: 'inherit'}}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {cardContent}
+          </a>
+        ) : (
+          <Link 
+            to={link}
+            className="research-feature-card research-feature-card--clickable"
+            style={{textDecoration: 'none', color: 'inherit'}}
+          >
+            {cardContent}
+          </Link>
+        )
       ) : (
         <div className="research-feature-card">
           {cardContent}
@@ -129,13 +138,13 @@ export default function HomepageFeatures(): ReactNode {
                   and should be conducted by ordinary citizens - the "average joes" of the world.
                 </p>
                 <div className="margin-top--lg">
-                  <a 
-                    href="/about" 
+                  <Link 
+                    to="/about" 
                     className="button button--secondary button--lg"
                     style={{marginRight: '1rem'}}
                   >
                     Learn About Us
-                  </a>
+                  </Link>
                   <a 
                     href="https://discord.gg/averagejoeslab" 
                     className="button button--primary button--lg"
