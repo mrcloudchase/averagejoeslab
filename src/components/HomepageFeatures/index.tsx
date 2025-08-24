@@ -137,18 +137,31 @@ export default function HomepageFeatures(): ReactNode {
                   Our comprehensive program takes you from research foundations to community leadership. 
                   No PhD required - just curiosity and dedication.
                 </p>
-                <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
+                <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem'}}>
                   <Link 
                     to="/docs/intro" 
                     className="button button--primary button--lg"
                   >
                     Begin Learning Path →
                   </Link>
-                  <Link 
-                    to="/about" 
+                  <a 
+                    href="https://discord.gg/averagejoeslab" 
                     className="button button--secondary button--lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Learn More About Us
+                    Join Community
+                  </a>
+                </div>
+                <div style={{display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', fontSize: '0.9rem', color: 'var(--ifm-color-content-secondary)'}}>
+                  <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>
+                    📚 Learn About Us
+                  </Link>
+                  <Link to="/papers" style={{textDecoration: 'none', color: 'inherit'}}>
+                    📄 Browse Papers
+                  </Link>
+                  <Link to="/projects" style={{textDecoration: 'none', color: 'inherit'}}>
+                    🔬 View Projects
                   </Link>
                 </div>
               </div>
@@ -156,20 +169,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
         </div>
 
-        {/* Quick Access Cards */}
-        <div className="text--center margin-bottom--lg">
-          <Heading as="h2" className="text-gradient">
-            🚀 Get Involved
-          </Heading>
-          <p className="hero__subtitle" style={{color: 'var(--ifm-color-content-secondary)'}}>
-            Multiple ways to participate in democratized research
-          </p>
-        </div>
-        <div className="row margin-bottom--xl">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+
 
         {/* Research Focus Areas - Detailed like EleutherAI */}
         <div className="margin-top--xl">
