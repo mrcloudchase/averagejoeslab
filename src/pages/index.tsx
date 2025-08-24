@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -25,11 +25,13 @@ function HomepageHeader() {
                 to="/docs/intro">
                 Start Research Path 🔬
               </Link>
-              <Link
+              <a
                 className="button button--secondary button--lg"
-                to="/about">
-                Learn About Us
-              </Link>
+                href="https://discord.gg/averagejoeslab"
+                target="_blank"
+                rel="noopener noreferrer">
+                Join Community
+              </a>
             </div>
             <div className={styles.heroStats}>
               <div className={styles.statItem}>
@@ -70,35 +72,36 @@ export default function Home(): ReactNode {
       description="Open research laboratory for citizen researchers. Democratizing research and pulling it out of traditional academia.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
-        
-        {/* Call to Action Section */}
-        <section className={styles.ctaSection}>
+        {/* Mission Statement Section */}
+        <section className={styles.missionSection}>
           <div className="container">
             <div className="text--center">
-              <Heading as="h2" className="text-gradient">
-                Ready to Start Your Research Journey?
-              </Heading>
-              <p style={{
-                fontSize: '1.2rem',
-                color: 'var(--ifm-color-content-secondary)',
-                maxWidth: '600px',
-                margin: '0 auto 2rem'
-              }}>
-                Join thousands of citizen researchers who are advancing human knowledge 
-                outside traditional institutions.
-              </p>
-              <div className={styles.ctaButtons}>
-                <Link
-                  className="button button--primary button--lg"
-                  to="https://discord.gg/averagejoeslab">
-                  Join Discord Community
-                </Link>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/docs/intro">
-                  View Research Path
-                </Link>
+              <div className="row">
+                <div className="col col--10 col--offset-1">
+                  <Heading as="h2" style={{marginBottom: '2rem', fontSize: '2rem', color: 'var(--ifm-color-content)'}}>
+                    Our Mission
+                  </Heading>
+                  <p style={{
+                    fontSize: '1.3rem',
+                    lineHeight: '1.6',
+                    color: 'var(--ifm-color-content)',
+                    fontWeight: '400',
+                    marginBottom: '2rem'
+                  }}>
+                    We believe enabling broader participation and open science is key to increase transparency 
+                    and reduce potential harms from emerging research technologies.
+                  </p>
+                  <p style={{
+                    fontSize: '1.1rem',
+                    lineHeight: '1.7',
+                    color: 'var(--ifm-color-content-secondary)',
+                    maxWidth: '800px',
+                    margin: '0 auto'
+                  }}>
+                    Join thousands of citizen researchers who are advancing human knowledge outside traditional institutions. 
+                    Together, we're democratizing research and making science accessible to everyone.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

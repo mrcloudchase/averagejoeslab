@@ -255,6 +255,12 @@
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
 }
 
+/* Mission Section */
+.missionSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-color);
+}
+
 /* Utility classes */
 .text-gradient {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
