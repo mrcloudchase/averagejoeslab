@@ -61,6 +61,12 @@ async function syncPapersFromNotion() {
       const statusNotion = properties.Status?.select?.name || 'proposed';
       const status = STATUS_MAPPING[statusNotion] || 'proposed';
       
+      // Debug logging
+      console.log(`📋 Paper: ${title}`);
+      console.log(`   Status from Notion: "${statusNotion}"`);
+      console.log(`   Mapped status: "${status}"`);
+      console.log(`   Status property:`, properties.Status);
+      
       // Extract arXiv ID
       const arxivId = properties['arXiv ID']?.rich_text?.[0]?.plain_text || null;
       
