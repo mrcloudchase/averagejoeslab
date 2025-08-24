@@ -24,7 +24,7 @@
       "behavioral",
       "sota"
     ],
-    "status": "proposed",
+    "status": "inProgress",
     "date": "2024-12-15",
     "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
@@ -39,7 +39,7 @@
       "interoperability",
       "optimization"
     ],
-    "status": "proposed",
+    "status": "published",
     "date": "2024-11-20",
     "arxivId": null,
     "githubRepo": null,
@@ -69,7 +69,7 @@
       "behavioral",
       "optimization"
     ],
-    "status": "proposed",
+    "status": "published",
     "date": "2024-09-12",
     "arxivId": "arXiv:2409.12345",
     "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
@@ -83,7 +83,7 @@
     "tags": [
       "optimization"
     ],
-    "status": "proposed",
+    "status": "inProgress",
     "date": "2024-08-30",
     "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
