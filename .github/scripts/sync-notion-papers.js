@@ -51,8 +51,24 @@ async function syncInternalPapersFromNotion() {
       const title = properties.Name?.title?.[0]?.plain_text || 'Untitled Paper';
       
       // Extract authors (CSV format: comma-separated string)
-      const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
+      // Try multiple field types: rich_text, title, or multi_select
+      let authorsText = '';
+      if (properties.Authors?.rich_text?.[0]?.plain_text) {
+        authorsText = properties.Authors.rich_text[0].plain_text;
+      } else if (properties.Authors?.title?.[0]?.plain_text) {
+        authorsText = properties.Authors.title[0].plain_text;
+      } else if (properties.Authors?.multi_select) {
+        authorsText = properties.Authors.multi_select.map(author => author.name).join(', ');
+      }
+      
       const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
+      
+      console.log(`📝 Paper: "${title}" - Authors field:`, {
+        richText: properties.Authors?.rich_text?.[0]?.plain_text,
+        title: properties.Authors?.title?.[0]?.plain_text,
+        multiSelect: properties.Authors?.multi_select?.map(a => a.name),
+        finalAuthors: authors
+      });
       
       // Extract abstract (matches CSV schema)
       const abstract = properties.Abstract?.rich_text?.[0]?.plain_text || '';
