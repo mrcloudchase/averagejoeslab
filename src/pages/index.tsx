@@ -15,10 +15,10 @@ function HomepageHeader() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <Heading as="h1" className={styles.heroTitle}>
+            <Heading as="h1" className="hero-title hero-title--large">
               {siteConfig.title}
             </Heading>
-            <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
+            <p className="hero-subtitle hero-subtitle--homepage">{siteConfig.tagline}</p>
             <div className={styles.buttons}>
               <Link
                 className="button button--primary button--lg"
@@ -35,16 +35,16 @@ function HomepageHeader() {
             </div>
             <div className={styles.heroStats}>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>Open</div>
-                <div className={styles.statLabel}>Research</div>
+                <div className="stat-number">Open</div>
+                <div className="stat-label stat-label--homepage">Research</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>100%</div>
-                <div className={styles.statLabel}>Free Access</div>
+                <div className="stat-number">100%</div>
+                <div className="stat-label stat-label--homepage">Free Access</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>Global</div>
-                <div className={styles.statLabel}>Community</div>
+                <div className="stat-number">Global</div>
+                <div className="stat-label stat-label--homepage">Community</div>
               </div>
             </div>
           </div>
@@ -238,7 +238,7 @@ function CommunitySection() {
         </div>
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <div className={styles.ctaCard}>
+            <div className="cta-card">
               <Heading as="h3" style={{marginBottom: '1.5rem'}}>
                 Ready to Start Your Research Journey?
               </Heading>
@@ -246,7 +246,7 @@ function CommunitySection() {
                 Whether you're an experienced researcher or just getting started, 
                 there's a place for you in our community.
               </p>
-              <div className={styles.ctaButtons}>
+              <div className="cta-buttons">
                 <Link
                   className="button button--primary button--lg"
                   to="/docs/intro">

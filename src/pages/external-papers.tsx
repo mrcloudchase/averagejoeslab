@@ -77,10 +77,10 @@ function ExternalPapersHero() {
         <div className="row">
           <div className="col col--8 col--offset-2">
             <div className="text--center">
-              <Heading as="h1" className={styles.heroTitle}>
+              <Heading as="h1" className="hero-title">
                 External Papers & Reproductions
               </Heading>
-              <p className={styles.heroSubtitle}>
+              <p className="hero-subtitle">
                 Tracking, reviewing, and reproducing important research papers from the broader scientific community. 
                 Our commitment to validating and building upon existing research.
               </p>
@@ -278,15 +278,15 @@ function ExternalResearchStats() {
   ];
 
   return (
-    <section className={styles.statsSection}>
+    <section className="section-stats">
       <div className="container">
         <div className="row">
           {stats.map((stat, idx) => (
             <div key={idx} className="col col--3">
-              <div className={styles.statCard}>
-                <div className={styles.statIcon}>{stat.icon}</div>
-                <div className={styles.statValue}>{stat.value}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
+              <div className="stat-card">
+                <div className="stat-icon">{stat.icon}</div>
+                <div className="stat-value">{stat.value}</div>
+                <div className="stat-label">{stat.label}</div>
               </div>
             </div>
           ))}
@@ -298,11 +298,11 @@ function ExternalResearchStats() {
 
 function SubmitExternalCTA() {
   return (
-    <section className={styles.ctaSection}>
+    <section className="section-hero">
       <div className="container">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <div className={styles.ctaCard}>
+            <div className="cta-card">
               <Heading as="h2" style={{marginBottom: '1rem'}}>
                 Suggest Papers for Reproduction
               </Heading>
@@ -310,7 +310,7 @@ function SubmitExternalCTA() {
                 Found an interesting paper that should be reproduced? Help us validate and build upon 
                 existing research by suggesting papers for our reproduction pipeline.
               </p>
-              <div className={styles.ctaButtons}>
+              <div className="cta-buttons">
                 <a
                   className="button button--primary button--lg"
                   href="https://discord.gg/averagejoeslab"
@@ -355,13 +355,13 @@ export default function ExternalPapers(): ReactNode {
       <main>
         <ExternalResearchStats />
         
-        <section className={styles.papersSection}>
+        <section className="section-hero">
           <div className="container">
             <div className="text--center margin-bottom--lg">
               <Heading as="h2" className="text-gradient">
                 Browse Papers by Research Area
               </Heading>
-              <p className={styles.sectionDescription}>
+              <p className="section-description">
                 Filter external papers by research area to find work relevant to your interests
               </p>
             </div>

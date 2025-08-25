@@ -59,10 +59,10 @@ function PapersHero() {
         <div className="row">
           <div className="col col--8 col--offset-2">
             <div className="text--center">
-              <Heading as="h1" className={styles.heroTitle}>
+              <Heading as="h1" className="hero-title">
                 Internal Research Papers
               </Heading>
-              <p className={styles.heroSubtitle}>
+              <p className="hero-subtitle">
                 Original research papers and publications from the Average Joes Lab community, advancing knowledge through democratized science and citizen research
               </p>
             </div>
@@ -256,15 +256,15 @@ function ResearchStats() {
   ];
 
   return (
-    <section className={styles.statsSection}>
+    <section className="section-stats">
       <div className="container">
         <div className="row">
           {stats.map((stat, idx) => (
             <div key={idx} className="col col--3">
-              <div className={styles.statCard}>
-                <div className={styles.statIcon}>{stat.icon}</div>
-                <div className={styles.statValue}>{stat.value}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
+              <div className="stat-card">
+                <div className="stat-icon">{stat.icon}</div>
+                <div className="stat-value">{stat.value}</div>
+                <div className="stat-label">{stat.label}</div>
               </div>
             </div>
           ))}
@@ -340,11 +340,11 @@ function SubmitPaperIdeaForm() {
 
   if (submitStatus === 'success') {
     return (
-      <section className={styles.ctaSection}>
+      <section className="section-hero">
         <div className="container">
           <div className="row">
             <div className="col col--8 col--offset-2">
-              <div className={styles.ctaCard}>
+              <div className="cta-card">
                 <div className={styles.successMessage}>
                   <div className={styles.successIcon}>✅</div>
                   <Heading as="h2" style={{marginBottom: '1rem', color: '#28a745'}}>
@@ -371,11 +371,11 @@ function SubmitPaperIdeaForm() {
   }
 
   return (
-    <section className={styles.ctaSection}>
+    <section className="section-hero">
       <div className="container">
         <div className="row">
           <div className="col col--10 col--offset-1">
-            <div className={styles.ctaCard}>
+            <div className="cta-card">
               <Heading as="h2" style={{marginBottom: '1rem'}}>
                 Submit a Novel Paper Idea
               </Heading>
@@ -566,13 +566,13 @@ export default function Papers(): ReactNode {
       <main>
         <ResearchStats />
         
-        <section className={styles.papersSection}>
+        <section className="section-hero">
           <div className="container">
             <div className="text--center margin-bottom--lg">
               <Heading as="h2" className="text-gradient">
                 Browse Research by Focus Area
               </Heading>
-              <p className={styles.sectionDescription}>
+              <p className="section-description">
                 Select one or more focus areas to filter papers. Papers must match ALL selected areas.
               </p>
             </div>

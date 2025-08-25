@@ -20,75 +20,13 @@
   opacity: 0.3;
 }
 
-.heroTitle {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.heroSubtitle {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
+/* Using global .hero-title and .hero-subtitle classes */
 
 /* Stats Section */
-.statsSection {
-  padding: 3rem 0;
-  background: var(--ifm-background-surface-color);
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-}
-
-.statCard {
-  text-align: center;
-  padding: 1.5rem;
-  background: var(--ifm-card-background-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: var(--ifm-card-border-radius);
-  transition: all 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-box-shadow-md);
-  border-color: var(--ifm-color-primary);
-}
-
-.statIcon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.statValue {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--ifm-color-primary);
-  margin-bottom: 0.5rem;
-}
-
-.statLabel {
-  color: var(--ifm-color-content-secondary);
-  font-weight: 500;
-}
+/* Using global .section-stats, .stat-card, .stat-icon, .stat-value, .stat-label classes */
 
 /* Papers Section */
-.papersSection {
-  padding: 4rem 0;
-  background: var(--ifm-background-color);
-}
-
-.sectionDescription {
-  font-size: 1.1rem;
-  color: var(--ifm-color-content-secondary);
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-}
+/* Using global .section-hero and .section-description classes */
 
 /* Filter Tabs */
 .filterTabs {
@@ -389,39 +327,12 @@
 }
 
 /* CTA Section */
-.ctaSection {
-  padding: 4rem 0;
-  background: var(--ifm-background-surface-color);
-}
-
-.ctaCard {
-  background: var(--gradient-subtle);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: var(--ifm-card-border-radius);
-  padding: 3rem;
-  text-align: center;
-  box-shadow: var(--ifm-box-shadow-lg);
-}
-
-.ctaButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* Using global .section-hero, .cta-card, .cta-buttons classes */
 
 
 
-/* Responsive Design */
+/* Responsive Design - Papers specific only */
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2.2rem;
-  }
-  
-  .heroSubtitle {
-    font-size: 1.1rem;
-  }
-  
   .papersGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -448,16 +359,6 @@
   
   .paperActions .button {
     width: 100%;
-  }
-  
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .ctaButtons .button {
-    width: 100%;
-    max-width: 300px;
   }
   
   .statsSection .row {
