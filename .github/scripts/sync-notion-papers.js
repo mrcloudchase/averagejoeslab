@@ -63,13 +63,6 @@ async function syncInternalPapersFromNotion() {
       
       const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
       
-      console.log(`📝 Paper: "${title}" - Authors field:`, {
-        richText: properties.Authors?.rich_text?.[0]?.plain_text,
-        title: properties.Authors?.title?.[0]?.plain_text,
-        multiSelect: properties.Authors?.multi_select?.map(a => a.name),
-        finalAuthors: authors
-      });
-      
       // Extract abstract (matches CSV schema)
       const abstract = properties.Abstract?.rich_text?.[0]?.plain_text || '';
       
