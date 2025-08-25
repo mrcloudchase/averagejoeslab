@@ -1,113 +1,113 @@
 [
   {
     "id": 1,
-    "title": "Test Paper",
-    "authors": [],
+    "name": "Test Paper",
     "abstract": "This is a test paper abstract",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "behavioral"
     ],
-    "status": "proposed",
-    "date": "2025-08-24",
-    "arxivId": null,
     "githubRepo": null,
-    "doi": null,
-    "notes": "Some fake notes"
+    "notes": "Some fake notes",
+    "publicationDate": "2025-08-24",
+    "status": "proposed",
+    "arxivId": null
   },
   {
     "id": 2,
-    "title": "Ethical Frameworks for Citizen Science Research",
-    "authors": [],
+    "name": "Ethical Frameworks for Citizen Science Research",
     "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "behavioral",
       "security"
     ],
-    "status": "proposed",
-    "date": "2025-07-15",
-    "arxivId": null,
     "githubRepo": null,
-    "doi": null,
-    "notes": "Important foundational work needed"
+    "notes": "Important foundational work needed",
+    "publicationDate": "2025-07-15",
+    "status": "proposed",
+    "arxivId": null
   },
   {
     "id": 3,
-    "title": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
-    "authors": [],
+    "name": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
     "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "optimization",
       "behavioral",
       "sota"
     ],
-    "status": "inProgress",
-    "date": "2024-12-15",
-    "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
-    "doi": null,
-    "notes": "Ongoing community research project"
+    "notes": "Ongoing community research project",
+    "publicationDate": "2024-12-15",
+    "status": "inProgress",
+    "arxivId": null
   },
   {
     "id": 4,
-    "title": "Interpretable Machine Learning for Independent Researchers",
-    "authors": [],
+    "name": "Interpretable Machine Learning for Independent Researchers",
     "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "interoperability",
       "optimization"
     ],
-    "status": "published",
-    "date": "2024-11-20",
-    "arxivId": null,
     "githubRepo": null,
-    "doi": null,
-    "notes": "Seeking collaborators for this research"
+    "notes": "Seeking collaborators for this research",
+    "publicationDate": "2024-11-20",
+    "status": "published",
+    "arxivId": null
   },
   {
     "id": 5,
-    "title": "Security Considerations in Open Research Environments",
-    "authors": [],
+    "name": "Security Considerations in Open Research Environments",
     "abstract": "This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "security",
       "behavioral"
     ],
-    "status": "proposed",
-    "date": "2024-10-05",
-    "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/open-research-security",
-    "doi": null,
-    "notes": "Under community peer review"
+    "notes": "Under community peer review",
+    "publicationDate": "2024-10-05",
+    "status": "proposed",
+    "arxivId": null
   },
   {
     "id": 6,
-    "title": "Behavioral Analysis of Collaborative Research Networks",
-    "authors": [],
+    "name": "Behavioral Analysis of Collaborative Research Networks",
     "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
-    "tags": [
+    "authors": [],
+    "doi": "10.1000/182",
+    "focusAreas": [
       "behavioral",
       "optimization"
     ],
-    "status": "published",
-    "date": "2024-09-12",
-    "arxivId": "arXiv:2409.12345",
     "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
-    "doi": "10.1000/182",
-    "notes": "First published paper from the lab"
+    "notes": "First published paper from the lab",
+    "publicationDate": "2024-09-12",
+    "status": "published",
+    "arxivId": "arXiv:2409.12345"
   },
   {
     "id": 7,
-    "title": "Optimization Techniques for Distributed AI Training",
-    "authors": [],
+    "name": "Optimization Techniques for Distributed AI Training",
     "abstract": "Novel approaches to training machine learning models across distributed networks with limited bandwidth and computational resources. Focus on techniques accessible to independent researchers.",
-    "tags": [
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
       "optimization"
     ],
-    "status": "inProgress",
-    "date": "2024-08-30",
-    "arxivId": null,
     "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
-    "doi": null,
-    "notes": "Active development with 5 contributors"
+    "notes": "Active development with 5 contributors",
+    "publicationDate": "2024-08-30",
+    "status": "inProgress",
+    "arxivId": null
   }
 ]
