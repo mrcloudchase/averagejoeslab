@@ -252,7 +252,7 @@ function ResearchStats() {
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
     { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
     { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
-    { label: 'Focus Areas', value: Math.max(0, FOCUS_AREAS.length - 1), icon: '🎯' }
+    { label: 'Proposed', value: safeData.filter(p => p?.status === 'proposed').length, icon: '💡' }
   ];
 
   return (
