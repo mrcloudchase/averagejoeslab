@@ -215,8 +215,15 @@ async function syncExternalPapersFromNotion() {
       const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
       
       // Extract research area (CSV: Research_Area - values: "Attention Mechanisms", "Efficient Training", etc.)
+      // Debug: Log all property names to see what's available
+      if (index === 0) {
+        console.log('🔍 Available Notion properties:', Object.keys(properties));
+      }
+      
       const researchArea = properties.Research_Area?.rich_text?.[0]?.plain_text || 
-                          properties['Research_Area']?.rich_text?.[0]?.plain_text || '';
+                          properties['Research_Area']?.rich_text?.[0]?.plain_text ||
+                          properties.Research_Area?.select?.name ||
+                          properties['Research_Area']?.select?.name || '';
       
       // Extract reproduction status (CSV: Reproduction_Status - values: "Not Started", "In Progress", etc.)
       const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 
