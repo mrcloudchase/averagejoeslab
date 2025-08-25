@@ -23,7 +23,7 @@ function HomepageHeader() {
               <Link
                 className="button button--primary button--lg"
                 to="/docs/intro">
-                Start Research Path 🔬
+                Start Research Path
               </Link>
               <a
                 className="button button--secondary button--lg"
@@ -50,12 +50,12 @@ function HomepageHeader() {
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.floatingElements}>
-              <div className={styles.floatingElement}>🔬</div>
-              <div className={styles.floatingElement}>🤖</div>
-              <div className={styles.floatingElement}>📊</div>
-              <div className={styles.floatingElement}>🌐</div>
-              <div className={styles.floatingElement}>🧠</div>
-              <div className={styles.floatingElement}>⚡</div>
+              <div className={styles.floatingElement}></div>
+              <div className={styles.floatingElement}></div>
+              <div className={styles.floatingElement}></div>
+              <div className={styles.floatingElement}></div>
+              <div className={styles.floatingElement}></div>
+              <div className={styles.floatingElement}></div>
             </div>
           </div>
         </div>
@@ -113,19 +113,19 @@ function FounderStory() {
 function MissionValues() {
   const values = [
     {
-      title: '🎯 Accessibility First',
+      title: 'Accessibility First',
       description: 'Research should be accessible to anyone with curiosity and dedication, regardless of their educational background or institutional affiliation.'
     },
     {
-      title: '🔓 Open by Default',
+      title: 'Open by Default',
       description: 'All our research, methodologies, and findings are open-source and freely available to the global community.'
     },
     {
-      title: '⭐ Merit-Based',
+      title: 'Merit-Based',
       description: 'We evaluate ideas and contributions based on their quality and potential impact, not on the credentials of their authors.'
     },
     {
-      title: '🤝 Collaborative Spirit',
+      title: 'Collaborative Spirit',
       description: 'The best research happens when diverse minds work together, bringing different perspectives and experiences to complex problems.'
     }
   ];

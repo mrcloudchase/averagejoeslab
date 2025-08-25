@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Welcome to the **Average Joes Lab Research Engineering Learning Path** - your comprehensive guide to becoming a research engineer and contributing to democratized research.
 
-## 🎯 What is Research Engineering?
+## What is Research Engineering?
 
 Research Engineering is the bridge between cutting-edge research and practical implementation. As a research engineer, you'll:
 
@@ -16,7 +16,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - **Contribute to open science** through reproducible research practices
 - **Democratize research** by making it accessible outside traditional institutions
 
-## 🚀 Why Research Engineering at Average Joes Lab?
+## Why Research Engineering at Average Joes Lab?
 
 ### **Open and Accessible**
 - No gatekeeping based on credentials or institutional affiliation
@@ -33,7 +33,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Build a portfolio of actual research contributions
 - Develop skills that translate directly to career opportunities
 
-## 📋 Learning Path Overview
+## Learning Path Overview
 
 ### Phase 1: Research Foundations (Weeks 1-4)
 **Build your research methodology foundation**
@@ -50,7 +50,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Research tools and software
 - Documentation and version control
 
-**🎯 Milestone**: Complete your first literature review on a topic of interest
+**Milestone**: Complete your first literature review on a topic of interest
 
 ### Phase 2: Technical Skills (Weeks 5-8)
 **Develop the technical skills for research engineering**
@@ -67,7 +67,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Model evaluation and validation
 - Research reproducibility tools
 
-**🎯 Milestone**: Implement and reproduce a research paper
+**Milestone**: Implement and reproduce a research paper
 
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
@@ -84,7 +84,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Results documentation and presentation
 - Peer review and feedback incorporation
 
-**🎯 Milestone**: Complete an original research project
+**Milestone**: Complete an original research project
 
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
@@ -101,9 +101,9 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Contributing to research tools and frameworks
 - Building research communities
 
-**🎯 Milestone**: Publish your research and mentor another community member
+**Milestone**: Publish your research and mentor another community member
 
-## 🛠️ Core Skills You'll Develop
+## Core Skills You'll Develop
 
 ### **Research Methodology**
 - Experimental design and hypothesis testing
@@ -129,7 +129,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Community-driven peer review
 - Democratized research methodologies
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### **Free Online Resources**
 - [Papers with Code](https://paperswithcode.com/) - Latest ML papers with implementations
@@ -149,7 +149,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - **Research Papers**: Community publications and findings
 - **Mentorship Program**: Connect with experienced researchers
 
-## 🏗️ Hands-on Projects
+## Hands-on Projects
 
 ### **Beginner Projects**
 1. **Literature Review**: Comprehensive review of a research area
@@ -169,7 +169,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 3. **Mentorship**: Guide newcomers through their research journey
 4. **Innovation**: Develop new methodologies or frameworks
 
-## 🤝 Community Integration
+## Community Integration
 
 ### **Average Joes Lab Community**
 - **Monthly Research Meetups**: Virtual sessions on latest research
@@ -183,7 +183,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 3. **Read our [research papers](/papers)** - See what the community is working on
 4. **Start your first project** - Begin with a literature review or paper reproduction
 
-## 🎯 Career Paths
+## Career Paths
 
 Research Engineering opens doors to:
 
@@ -194,11 +194,11 @@ Research Engineering opens doors to:
 - **Open Source Research Contributor** to global projects
 - **Research Consultant** for emerging technologies
 
-## 🌟 Success Stories
+## Success Stories
 
 *Coming soon: Stories from our community members who have successfully transitioned into research engineering roles through our program.*
 
-## 🎯 Next Steps
+## Next Steps
 
 Ready to start your research engineering journey?
 
@@ -211,4 +211,4 @@ Ready to start your research engineering journey?
 
 **"Research is not just for academics. Every curious mind can contribute to human knowledge."**
 
-Welcome to Average Joes Lab - where ordinary people do extraordinary research! 🔬✨
+Welcome to Average Joes Lab - where ordinary people do extraordinary research!
