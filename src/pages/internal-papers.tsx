@@ -73,24 +73,49 @@ function PapersHero() {
   );
 }
 
-function FilterTabs({ activeFilter, onFilterChange }) {
+function FilterTabs({ selectedFilters, onFilterChange }) {
+  const handleFilterToggle = (filterId: string) => {
+    if (filterId === 'all') {
+      // Clear all filters when "All Papers" is clicked
+      onFilterChange([]);
+    } else {
+      // Toggle the filter
+      if (selectedFilters.includes(filterId)) {
+        // Remove filter if already selected
+        onFilterChange(selectedFilters.filter(f => f !== filterId));
+      } else {
+        // Add filter if not selected
+        onFilterChange([...selectedFilters, filterId]);
+      }
+    }
+  };
+
   return (
     <div className={styles.filterTabs}>
-      {FOCUS_AREAS.map((area) => (
-        <button
-          key={area.id}
-          className={clsx(
-            styles.filterTab,
-            activeFilter === area.id && styles.filterTabActive
-          )}
-          onClick={() => onFilterChange(area.id)}
-          style={{
-            '--filter-color': area.color
-          } as React.CSSProperties}
-        >
-          {area.label}
-        </button>
-      ))}
+      {FOCUS_AREAS.map((area) => {
+        const isSelected = area.id === 'all' 
+          ? selectedFilters.length === 0 
+          : selectedFilters.includes(area.id);
+        
+        return (
+          <button
+            key={area.id}
+            className={clsx(
+              styles.filterTab,
+              isSelected && styles.filterTabActive
+            )}
+            onClick={() => handleFilterToggle(area.id)}
+            style={{
+              '--filter-color': area.color
+            } as React.CSSProperties}
+          >
+            {area.label}
+            {area.id !== 'all' && selectedFilters.includes(area.id) && (
+              <span className={styles.filterCheckmark}> ✓</span>
+            )}
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -290,13 +315,18 @@ function SubmitResearchCTA() {
 
 export default function Papers(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-  // Filter papers based on active filter (CSV schema: focusAreas)
+  // Multi-select filter logic: show papers that contain ALL selected focus areas
   const safeData = papersData || [];
-  const filteredPapers = activeFilter === 'all' 
+  const filteredPapers = selectedFilters.length === 0 
     ? safeData 
-    : safeData.filter(paper => paper?.focusAreas?.includes(activeFilter));
+    : safeData.filter(paper => {
+        // Check if paper has all selected focus areas
+        return selectedFilters.every(filter => 
+          paper?.focusAreas?.includes(filter)
+        );
+      });
 
   return (
     <Layout
@@ -313,13 +343,13 @@ export default function Papers(): ReactNode {
                 Browse Research by Focus Area
               </Heading>
               <p className={styles.sectionDescription}>
-                Filter our internal research papers by focus area to find work relevant to your interests
+                Select one or more focus areas to filter papers. Papers must match ALL selected areas.
               </p>
             </div>
             
             <FilterTabs 
-              activeFilter={activeFilter} 
-              onFilterChange={setActiveFilter} 
+              selectedFilters={selectedFilters} 
+              onFilterChange={setSelectedFilters} 
             />
             
             <PapersGrid papers={filteredPapers} />

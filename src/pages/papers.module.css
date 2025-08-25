@@ -128,6 +128,11 @@
   box-shadow: var(--ifm-box-shadow-md);
 }
 
+.filterCheckmark {
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+
 /* Papers Grid */
 .papersGrid {
   display: grid;
