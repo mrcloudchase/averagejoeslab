@@ -80,7 +80,7 @@ Our comprehensive **16-week program** takes you from research novice to contribu
 ### **📄 Open Research Papers**
 Explore our growing collection of **community-generated research** - all freely available and openly licensed.
 
-[**Browse Our Papers →**](/papers)
+[**Browse Our Papers →**](/internal-papers)
 
 ### **🤝 Join Our Community**
 Connect with fellow citizen researchers, find collaborators, and get support for your projects.

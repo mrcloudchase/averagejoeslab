@@ -180,7 +180,7 @@ Research Engineering is the bridge between cutting-edge research and practical i
 ### **Getting Started**
 1. **Join our [Discord](https://discord.gg/averagejoeslab)** - Connect with the community
 2. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
-3. **Read our [research papers](/papers)** - See what the community is working on
+3. **Read our [research papers](/internal-papers)** - See what the community is working on
 4. **Start your first project** - Begin with a literature review or paper reproduction
 
 ## Career Paths
