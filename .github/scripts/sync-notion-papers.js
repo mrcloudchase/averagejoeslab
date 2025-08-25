@@ -7,23 +7,24 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-// Dynamic focus area colors (fallback colors for consistency)
+// Dynamic focus area colors (matches CSV schema focus areas)
 const FOCUS_AREA_COLORS = {
   'optimization': '#007bff',
   'behavioral': '#28a745', 
   'interpretability': '#ffc107',
   'security': '#dc3545',
   'interoperability': '#6f42c1',
+  'sota': '#17a2b8', // State of the Art
   'behavior': '#28a745', // Alias for behavioral
   'default': '#6c757d'
 };
 
-// Status mapping
+// Status mapping (matches CSV schema exactly)
 const STATUS_MAPPING = {
   'Published': 'published',
-  'In Review': 'inReview',
+  'In Review': 'inReview', 
   'In Progress': 'inProgress',
-  'In progress': 'inProgress', // Handle lowercase variant
+  'In progress': 'inProgress', // Handle lowercase variant from CSV
   'Proposed': 'proposed'
 };
 
@@ -46,9 +47,8 @@ async function syncInternalPapersFromNotion() {
     const papers = response.results.map((page, index) => {
       const properties = page.properties;
       
-      // Extract title (handle both 'Name' and 'Title' properties)
-      const title = properties.Name?.title?.[0]?.plain_text || 
-                   properties.Title?.title?.[0]?.plain_text || 'Untitled Paper';
+      // Extract title from 'Name' property (matches CSV schema)
+      const title = properties.Name?.title?.[0]?.plain_text || 'Untitled Paper';
       
       // Extract authors (handle empty authors)
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
@@ -67,11 +67,11 @@ async function syncInternalPapersFromNotion() {
       // Extract DOI
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract GitHub repo (handle both URL and rich text formats)
+      // Extract GitHub repo (matches CSV schema: 'GitHub Repo')
       const githubRepo = properties['GitHub Repo']?.url || 
                         properties['GitHub Repo']?.rich_text?.[0]?.plain_text || null;
       
-      // Extract focus areas (handle multiple formats and new Focus Area column)
+      // Extract focus areas (matches CSV schema: 'Focus Areas' comma-separated)
       let tags = [];
       
       // Handle Focus Areas from CSV format (comma-separated in rich text)
@@ -82,30 +82,19 @@ async function syncInternalPapersFromNotion() {
           .map(area => area.trim().toLowerCase())
           .filter(Boolean);
       }
-      // Try multi-select format
+      // Try multi-select format as fallback
       else if (properties['Focus Areas']?.multi_select) {
         tags = properties['Focus Areas'].multi_select
           .map(area => area.name.toLowerCase())
-          .filter(Boolean);
-      }
-      // Try new "Focus Area" column (single select or rich text)
-      else if (properties['Focus Area']?.select?.name) {
-        const focusAreaText = properties['Focus Area'].select.name;
-        tags = focusAreaText
-          .split(',')
-          .map(area => area.trim().toLowerCase())
-          .filter(Boolean);
-      } else if (properties['Focus Area']?.rich_text?.[0]?.plain_text) {
-        const focusAreaText = properties['Focus Area'].rich_text[0].plain_text;
-        tags = focusAreaText
-          .split(',')
-          .map(area => area.trim().toLowerCase())
           .filter(Boolean);
       }
       
       // Extract publication date
       const publicationDate = properties['Publication Date']?.date?.start || 
         new Date().toISOString().split('T')[0];
+      
+      // Extract notes (matches CSV schema)
+      const notes = properties.Notes?.rich_text?.[0]?.plain_text || '';
 
       return {
         id: index + 1,
@@ -117,7 +106,8 @@ async function syncInternalPapersFromNotion() {
         date: publicationDate,
         arxivId,
         githubRepo,
-        doi
+        doi,
+        notes
       };
     });
 

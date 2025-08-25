@@ -19,14 +19,13 @@ const PAPER_STATUS = {
 // Import internal papers data from JSON file (auto-synced from Notion)
 import papersData from '../data/internal-papers.json';
 
-// Dynamic focus area colors (matches CSV schema focus areas)
+// Dynamic focus area colors
 const FOCUS_AREA_COLORS = {
   'optimization': '#007bff',
   'behavioral': '#28a745', 
   'interpretability': '#ffc107',
   'security': '#dc3545',
   'interoperability': '#6f42c1',
-  'sota': '#17a2b8', // State of the Art
   'behavior': '#28a745', // Alias for behavioral
   'default': '#6c757d'
 };
@@ -159,12 +158,6 @@ function PaperCard({ paper }) {
         <p className={styles.paperAbstract}>
           {paper.abstract || 'No abstract available.'}
         </p>
-        
-        {paper.notes && (
-          <p className={styles.paperAbstract}>
-            <strong>Notes:</strong> {paper.notes}
-          </p>
-        )}
       </div>
       
       {/* Action buttons - only View Paper and View Code */}
