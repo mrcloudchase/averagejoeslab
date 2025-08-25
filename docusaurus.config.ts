@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Average Joes Lab',
   tagline: 'Democratizing research for citizen researchers - Open science by ordinary people',
-  favicon: 'img/logo.png',
+  favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -77,12 +77,13 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/logo.png',
+    image: 'img/ajlabs-logo-light.png',
     navbar: {
       title: 'Average Joes Lab',
       logo: {
         alt: 'Average Joes Lab Logo',
-        src: 'img/logo.png',
+        src: 'img/ajlabs-logo-light.png',
+        srcDark: 'img/ajlabs-logo-dark.png',
       },
       items: [
 
