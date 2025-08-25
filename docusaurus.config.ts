@@ -99,7 +99,7 @@ const config: Config = {
           position: 'left',
           items: [
             {
-              label: 'Our Papers',
+              label: 'Internal Papers',
               to: '/papers',
             },
             {
@@ -133,7 +133,7 @@ const config: Config = {
             },
 
             {
-              label: 'Our Papers',
+              label: 'Internal Papers',
               to: '/papers',
             },
             {

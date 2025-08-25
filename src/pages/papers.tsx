@@ -61,10 +61,10 @@ function PapersHero() {
           <div className="col col--8 col--offset-2">
             <div className="text--center">
               <Heading as="h1" className={styles.heroTitle}>
-                Research Papers & Publications
+                Internal Research Papers
               </Heading>
               <p className={styles.heroSubtitle}>
-                Open access research from the Average Joes Lab community, advancing knowledge through democratized science
+                Original research papers and publications from the Average Joes Lab community, advancing knowledge through democratized science and citizen research
               </p>
             </div>
           </div>
@@ -295,8 +295,8 @@ export default function Papers(): ReactNode {
 
   return (
     <Layout
-      title="Research Papers"
-      description="Open access research papers and publications from the Average Joes Lab community, advancing knowledge through democratized science.">
+      title="Internal Research Papers"
+      description="Original research papers and publications from the Average Joes Lab community, advancing knowledge through democratized science and citizen research.">
       <PapersHero />
       <main>
         <ResearchStats />
@@ -308,7 +308,7 @@ export default function Papers(): ReactNode {
                 Browse Research by Focus Area
               </Heading>
               <p className={styles.sectionDescription}>
-                Filter our research papers by focus area to find work relevant to your interests
+                Filter our internal research papers by focus area to find work relevant to your interests
               </p>
             </div>
             
