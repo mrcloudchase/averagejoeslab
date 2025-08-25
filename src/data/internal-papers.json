@@ -1,6 +1,39 @@
 [
   {
     "id": 1,
+    "name": "Behavioral Analysis of Collaborative Research Networks",
+    "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
+    "authors": [],
+    "doi": "10.1000/182",
+    "focusAreas": [
+      "behavioral",
+      "optimization"
+    ],
+    "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
+    "notes": "First published paper from the lab",
+    "publicationDate": "2025-09-12",
+    "status": "published",
+    "arxivId": "arXiv:2409.12345"
+  },
+  {
+    "id": 2,
+    "name": "Optimization Techniques for Distributed AI Training",
+    "abstract": "Novel approaches to training machine learning models across distributed networks with limited bandwidth and computational resources. Focus on techniques accessible to independent researchers.",
+    "authors": [
+      "Emma Schwarz"
+    ],
+    "doi": null,
+    "focusAreas": [
+      "optimization"
+    ],
+    "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
+    "notes": "Active development with 5 contributors",
+    "publicationDate": "2025-08-30",
+    "status": "inProgress",
+    "arxivId": null
+  },
+  {
+    "id": 3,
     "name": "Test Paper",
     "abstract": "This is a test paper abstract",
     "authors": [
@@ -8,9 +41,7 @@
       "Emma Schwarz"
     ],
     "doi": null,
-    "focusAreas": [
-      "behavioral"
-    ],
+    "focusAreas": [],
     "githubRepo": null,
     "notes": "Some fake notes",
     "publicationDate": "2025-08-24",
@@ -18,7 +49,7 @@
     "arxivId": null
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "Ethical Frameworks for Citizen Science Research",
     "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
     "authors": [
@@ -36,7 +67,7 @@
     "arxivId": null
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
     "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
     "authors": [
@@ -51,11 +82,11 @@
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
     "notes": "Ongoing community research project",
     "publicationDate": "2024-12-15",
-    "status": "inProgress",
+    "status": "published",
     "arxivId": null
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "Interpretable Machine Learning for Independent Researchers",
     "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
     "authors": [],
@@ -68,13 +99,16 @@
     "notes": "Seeking collaborators for this research",
     "publicationDate": "2024-11-20",
     "status": "published",
-    "arxivId": null
+    "arxivId": "arXiv:2409.12345"
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "Security Considerations in Open Research Environments",
     "abstract": "This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.",
-    "authors": [],
+    "authors": [
+      "Emma Schwarz",
+      "Chase Dovey"
+    ],
     "doi": null,
     "focusAreas": [
       "security",
@@ -82,39 +116,8 @@
     ],
     "githubRepo": "https://github.com/mrcloudchase/open-research-security",
     "notes": "Under community peer review",
-    "publicationDate": "2024-10-05",
-    "status": "proposed",
-    "arxivId": null
-  },
-  {
-    "id": 6,
-    "name": "Behavioral Analysis of Collaborative Research Networks",
-    "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
-    "authors": [],
-    "doi": "10.1000/182",
-    "focusAreas": [
-      "behavioral",
-      "optimization"
-    ],
-    "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
-    "notes": "First published paper from the lab",
-    "publicationDate": "2024-09-12",
+    "publicationDate": "2024-10-24",
     "status": "published",
-    "arxivId": "arXiv:2409.12345"
-  },
-  {
-    "id": 7,
-    "name": "Optimization Techniques for Distributed AI Training",
-    "abstract": "Novel approaches to training machine learning models across distributed networks with limited bandwidth and computational resources. Focus on techniques accessible to independent researchers.",
-    "authors": [],
-    "doi": null,
-    "focusAreas": [
-      "optimization"
-    ],
-    "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
-    "notes": "Active development with 5 contributors",
-    "publicationDate": "2024-08-30",
-    "status": "inProgress",
     "arxivId": null
   }
 ]
