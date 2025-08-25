@@ -261,7 +261,7 @@ function CommunitySection() {
                 </a>
                 <Link
                   className="button button--outline button--lg"
-                  to="/papers">
+                  to="/internal-papers">
                   Browse Research
                 </Link>
               </div>

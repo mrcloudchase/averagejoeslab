@@ -75,7 +75,7 @@ function ExternalPapersHero() {
             <div className={styles.heroButtons}>
               <Link
                 className="button button--primary button--lg"
-                to="/papers">
+                to="/internal-papers">
                 View Our Research
               </Link>
               <a
@@ -314,7 +314,7 @@ function ContributeExternalCTA() {
               </a>
               <Link
                 className="button button--secondary button--lg"
-                to="/papers">
+                to="/internal-papers">
                 View Our Research
               </Link>
             </div>

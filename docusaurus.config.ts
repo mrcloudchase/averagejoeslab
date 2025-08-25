@@ -100,7 +100,7 @@ const config: Config = {
           items: [
             {
               label: 'Internal Papers',
-              to: '/papers',
+              to: '/internal-papers',
             },
             {
               label: 'External Papers',
@@ -134,7 +134,7 @@ const config: Config = {
 
             {
               label: 'Internal Papers',
-              to: '/papers',
+              to: '/internal-papers',
             },
             {
               label: 'External Papers',

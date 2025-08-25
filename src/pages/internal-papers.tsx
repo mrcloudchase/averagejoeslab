@@ -33,17 +33,15 @@ const FOCUS_AREA_COLORS = {
 // Generate focus areas dynamically from papers data
 const generateFocusAreas = () => {
   const safeData = papersData || [];
-  const allTags = new Set();
+  const allTags = new Set<string>();
   
   safeData.forEach(paper => {
     (paper.tags || []).forEach(tag => allTags.add(tag));
   });
 
-
-
   return [
     { id: 'all', label: 'All Papers', color: '#6c757d' },
-    ...Array.from(allTags).sort().map(tag => ({
+    ...Array.from(allTags).sort().map((tag: string) => ({
       id: tag,
       label: tag.charAt(0).toUpperCase() + tag.slice(1),
       color: FOCUS_AREA_COLORS[tag] || FOCUS_AREA_COLORS.default
