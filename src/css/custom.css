@@ -169,6 +169,34 @@ html:not([data-theme='dark']) .navbar {
   margin-right: 12px;
 }
 
+/* Mobile menu fixes - ensure visibility */
+@media screen and (max-width: 996px) {
+  .navbar-sidebar {
+    background: var(--ifm-navbar-background-color) !important;
+  }
+  
+  .navbar-sidebar .navbar__item {
+    color: var(--ifm-color-content) !important;
+  }
+  
+  .navbar-sidebar .navbar__link {
+    color: var(--ifm-color-content) !important;
+    font-weight: 500;
+  }
+  
+  .navbar-sidebar .navbar__link:hover {
+    color: var(--ifm-color-primary) !important;
+  }
+  
+  .menu__list .menu__link {
+    color: var(--ifm-color-content) !important;
+  }
+  
+  .menu__list .menu__link:hover {
+    color: var(--ifm-color-primary) !important;
+  }
+}
+
 .navbar__title {
   font-weight: 700;
   background: var(--gradient-primary);
