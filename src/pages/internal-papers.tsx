@@ -98,22 +98,22 @@ function FilterTabs({ selectedFilters, onFilterChange }) {
           : selectedFilters.includes(area.id);
         
         return (
-          <button
-            key={area.id}
-            className={clsx(
-              styles.filterTab,
+        <button
+          key={area.id}
+          className={clsx(
+            styles.filterTab,
               isSelected && styles.filterTabActive
-            )}
+          )}
             onClick={() => handleFilterToggle(area.id)}
-            style={{
-              '--filter-color': area.color
-            } as React.CSSProperties}
-          >
-            {area.label}
+          style={{
+            '--filter-color': area.color
+          } as React.CSSProperties}
+        >
+          {area.label}
             {area.id !== 'all' && selectedFilters.includes(area.id) && (
               <span className={styles.filterCheckmark}> ✓</span>
             )}
-          </button>
+        </button>
         );
       })}
     </div>
@@ -178,7 +178,9 @@ function PaperCard({ paper }) {
         </Heading>
         
         <div className={styles.paperAuthors}>
-          By {(paper.authors || []).join(', ') || 'Authors TBD'}
+          {(paper.authors || []).length > 0 
+            ? `By ${paper.authors.join(', ')}` 
+            : 'Authors TBD'}
         </div>
         
         <p className={styles.paperAbstract}>
@@ -520,7 +522,7 @@ function SubmitPaperIdeaForm() {
                 <div className={styles.formActions}>
                   <button
                     type="submit"
-                    className="button button--primary button--lg"
+                  className="button button--primary button--lg"
                     disabled={isSubmitting || formData.focusAreas.length === 0}
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit Paper Idea'}
@@ -531,7 +533,7 @@ function SubmitPaperIdeaForm() {
                       There was an error submitting your idea. Please try again or contact us on Discord.
                     </div>
                   )}
-                </div>
+              </div>
               </form>
             </div>
           </div>
