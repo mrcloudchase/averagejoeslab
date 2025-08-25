@@ -36,12 +36,12 @@ const PRIORITY_COLORS = {
 // Import external papers data from JSON file (auto-synced from Notion)
 import externalPapersData from '../data/external-papers.json';
 
-// Dynamic research area colors (matching internal papers style)
+// Dynamic research area colors (matches CSV schema research areas)
 const RESEARCH_AREA_COLORS = {
   'attention mechanisms': '#007bff',
   'efficient training': '#28a745', 
   'rag systems': '#ffc107',
-  'multimodal learning': '#dc3545',
+  'multimodal': '#dc3545',
   'interpretability': '#6f42c1',
   'optimization': '#17a2b8',
   'default': '#6c757d'
