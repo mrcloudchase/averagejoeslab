@@ -337,6 +337,12 @@
   font-size: 0.95rem;
 }
 
+.paperVenue {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
 .paperAbstract {
   color: var(--ifm-color-content-secondary);
   line-height: 1.6;

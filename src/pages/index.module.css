@@ -146,12 +146,7 @@
   }
 }
 
-/* Call to Action Section */
-.ctaSection {
-  padding: 4rem 0;
-  background: var(--ifm-background-surface-color);
-  border-top: 1px solid rgba(44, 62, 80, 0.2);
-}
+
 
 .ctaButtons {
   display: flex;
@@ -255,11 +250,7 @@
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
 }
 
-/* Mission Section */
-.missionSection {
-  padding: 4rem 0;
-  background: var(--ifm-background-color);
-}
+
 
 /* Founder Story Section */
 .founderSection {
