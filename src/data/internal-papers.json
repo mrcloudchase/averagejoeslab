@@ -3,7 +3,10 @@
     "id": 1,
     "name": "Test Paper",
     "abstract": "This is a test paper abstract",
-    "authors": [],
+    "authors": [
+      "Chase Dovey",
+      "Emma Schwarz"
+    ],
     "doi": null,
     "focusAreas": [
       "behavioral"
@@ -18,7 +21,9 @@
     "id": 2,
     "name": "Ethical Frameworks for Citizen Science Research",
     "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
-    "authors": [],
+    "authors": [
+      "Emma Schwarz"
+    ],
     "doi": null,
     "focusAreas": [
       "behavioral",
@@ -34,7 +39,9 @@
     "id": 3,
     "name": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
     "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
-    "authors": [],
+    "authors": [
+      "Chase Dovey"
+    ],
     "doi": null,
     "focusAreas": [
       "optimization",
