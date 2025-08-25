@@ -153,7 +153,7 @@ async function syncInternalPapersFromNotion() {
   }
 }
 
-// External papers status mapping
+// External papers status mapping (matches CSV schema exactly)
 const EXTERNAL_STATUS_MAPPING = {
   'Inbox': 'inbox',
   'Triaged': 'triaged', 
@@ -195,19 +195,11 @@ async function syncExternalPapersFromNotion() {
       // Extract DOI (CSV: DOI)
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract arXiv ID (CSV: arXiv_ID) - handle both rich_text and number formats
-      let arxivId = null;
-      if (properties.arXiv_ID?.rich_text?.[0]?.plain_text) {
-        arxivId = properties.arXiv_ID.rich_text[0].plain_text;
-      } else if (properties.arXiv_ID?.number) {
-        arxivId = properties.arXiv_ID.number.toString();
-      }
-      // Handle "0" as null (from CSV)
-      if (arxivId === '0' || arxivId === 0) {
-        arxivId = null;
-      }
+      // Extract arXiv ID (CSV: arXiv_ID) - handle both formats
+      const arxivId = properties.arXiv_ID?.rich_text?.[0]?.plain_text || 
+                     properties['arXiv_ID']?.rich_text?.[0]?.plain_text || null;
       
-      // Extract authors (CSV: Authors)
+      // Extract authors (CSV: Authors) - comma-separated string
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
       const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
       
@@ -215,55 +207,56 @@ async function syncExternalPapersFromNotion() {
       const journal = properties.Journal?.rich_text?.[0]?.plain_text || '';
       
       // Extract publication year (CSV: Publication_Year)
-      const publicationYear = properties.Publication_Year?.number || new Date().getFullYear();
+      const publicationYear = properties.Publication_Year?.number || 
+                             properties['Publication_Year']?.number || new Date().getFullYear();
       
-      // Extract status (CSV: Status)
+      // Extract status (CSV: Status - values: "Inbox", "Triaged", "Archive", "In Progress")
       const statusNotion = properties.Status?.select?.name || 'Inbox';
       const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
       
-      // Extract research area (CSV: Research_Area) - try both rich_text and select
-      let researchArea = '';
-      if (properties.Research_Area?.rich_text?.[0]?.plain_text) {
-        researchArea = properties.Research_Area.rich_text[0].plain_text;
-      } else if (properties.Research_Area?.select?.name) {
-        researchArea = properties.Research_Area.select.name;
-      }
+      // Extract research area (CSV: Research_Area - values: "Attention Mechanisms", "Efficient Training", etc.)
+      const researchArea = properties.Research_Area?.rich_text?.[0]?.plain_text || 
+                          properties['Research_Area']?.rich_text?.[0]?.plain_text || '';
       
-      // Extract reproduction status (CSV: Reproduction_Status)
-      const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 'Not Started';
+      // Extract reproduction status (CSV: Reproduction_Status - values: "Not Started", "In Progress", etc.)
+      const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 
+                                      properties['Reproduction_Status']?.select?.name || 'Not Started';
       const reproductionStatus = REPRODUCTION_STATUS_MAPPING[reproductionStatusNotion] || 'notStarted';
       
-      // Extract priority (CSV: Priority)
+      // Extract priority (CSV: Priority - values: "P0", "P1", "P2", "P3")
       const priority = properties.Priority?.select?.name || 'P3';
       
       // Extract URLs (CSV: Abstract_URL, PDF_URL, Repository)
-      const abstractUrl = properties.Abstract_URL?.url || null;
-      const pdfUrl = properties.PDF_URL?.url || null;
+      const abstractUrl = properties.Abstract_URL?.url || 
+                         properties['Abstract_URL']?.url || null;
+      const pdfUrl = properties.PDF_URL?.url || 
+                    properties['PDF_URL']?.url || null;
       const repository = properties.Repository?.url || null;
       
       // Extract attribution text (CSV: Attribution_Text)
-      const attributionText = properties.Attribution_Text?.rich_text?.[0]?.plain_text || '';
+      const attributionText = properties.Attribution_Text?.rich_text?.[0]?.plain_text || 
+                             properties['Attribution_Text']?.rich_text?.[0]?.plain_text || '';
       
       // Extract notes (CSV: Notes)
       const notes = properties.Notes?.rich_text?.[0]?.plain_text || '';
 
       return {
         id: index + 1,
-        title,                    // CSV: Title
-        doi,                      // CSV: DOI
-        arxivId,                  // CSV: arXiv_ID
-        authors,                  // CSV: Authors
-        journal,                  // CSV: Journal
-        publicationYear,          // CSV: Publication_Year
-        status,                   // CSV: Status
-        researchArea,             // CSV: Research_Area
-        reproductionStatus,       // CSV: Reproduction_Status
-        priority,                 // CSV: Priority
-        abstractUrl,              // CSV: Abstract_URL
-        pdfUrl,                   // CSV: PDF_URL
-        repository,               // CSV: Repository
-        attributionText,          // CSV: Attribution_Text
-        notes                     // CSV: Notes
+        title: title,                    // CSV: Title
+        doi: doi,                        // CSV: DOI
+        arxivId: arxivId,               // CSV: arXiv_ID
+        authors: authors,                // CSV: Authors
+        journal: journal,                // CSV: Journal
+        publicationYear: publicationYear, // CSV: Publication_Year
+        status: status,                  // CSV: Status
+        researchArea: researchArea,      // CSV: Research_Area
+        reproductionStatus: reproductionStatus, // CSV: Reproduction_Status
+        priority: priority,              // CSV: Priority
+        abstractUrl: abstractUrl,        // CSV: Abstract_URL
+        pdfUrl: pdfUrl,                 // CSV: PDF_URL
+        repository: repository,          // CSV: Repository
+        attributionText: attributionText, // CSV: Attribution_Text
+        notes: notes                     // CSV: Notes
       };
     });
 

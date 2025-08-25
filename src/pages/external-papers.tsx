@@ -36,7 +36,7 @@ const PRIORITY_COLORS = {
 // Import external papers data from JSON file (auto-synced from Notion)
 import externalPapersData from '../data/external-papers.json';
 
-// Dynamic research area colors (matches CSV schema research areas)
+// Dynamic research area colors (matches CSV schema research areas exactly)
 const RESEARCH_AREA_COLORS = {
   'attention mechanisms': '#007bff',
   'efficient training': '#28a745', 
@@ -182,7 +182,9 @@ function ExternalPaperCard({ paper }) {
         </Heading>
         
         <div className={styles.paperAuthors}>
-          By {(paper.authors || []).join(', ') || 'Unknown Authors'}
+          {(paper.authors || []).length > 0 
+            ? `By ${paper.authors.join(', ')}` 
+            : 'Authors TBD'}
         </div>
         
         {paper.journal && (
