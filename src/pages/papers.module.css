@@ -410,14 +410,7 @@
   flex-wrap: wrap;
 }
 
-/* Utility Classes */
-.text-gradient {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

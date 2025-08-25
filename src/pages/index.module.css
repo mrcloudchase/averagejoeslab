@@ -271,6 +271,10 @@
   box-shadow: var(--ifm-box-shadow-md);
 }
 
+.founderText {
+  text-align: left;
+}
+
 .founderQuote {
   font-size: 1.4rem;
   font-style: italic;
@@ -419,11 +423,3 @@
   flex-wrap: wrap;
 }
 
-/* Utility classes */
-.text-gradient {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-}
