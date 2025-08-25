@@ -48,7 +48,8 @@ jobs:
       - name: Sync papers from Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          NOTION_INTERNAL_PAPERS_DB_ID: ${{ secrets.NOTION_INTERNAL_PAPERS_DB_ID }}
+          NOTION_EXTERNAL_PAPERS_DB_ID: ${{ secrets.NOTION_EXTERNAL_PAPERS_DB_ID }}
         run: |
           node .github/scripts/sync-notion-papers.js
 
@@ -69,7 +70,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add src/data/papers.json
+          git add src/data/internal-papers.json src/data/external-papers.json
           git commit -m "🤖 Auto-sync papers from Notion database"
           git push
 

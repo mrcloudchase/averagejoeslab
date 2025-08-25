@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "XAttention: Block Sparse Attention with Antidiagonal Scoring",
+    "doi": "10.48550/arXiv.2503.16428",
+    "arxivId": "2503.16428",
+    "authors": ["Xu R", "Xiao G", "Huang H", "Guo J", "Han S"],
+    "journal": "arXiv",
+    "publicationYear": 2025,
+    "status": "triaged",
+    "researchArea": "Attention Mechanisms",
+    "reproductionStatus": "notStarted",
+    "priority": "P0",
+    "abstractUrl": "https://arxiv.org/abs/2503.16428",
+    "pdfUrl": "https://arxiv.org/pdf/2503.16428.pdf",
+    "repository": "https://github.com/mit-han-lab/x-attention",
+    "attributionText": "Xu R et al. (2025). XAttention: Block Sparse Attention with Antidiagonal Scoring. arXiv:2503.16428",
+    "notes": "High priority reproduction target"
+  }
+]

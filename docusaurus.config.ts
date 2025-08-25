@@ -90,10 +90,24 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Research',
+          label: 'Learning Path',
         },
 
-        {to: '/papers', label: 'Papers', position: 'left'},
+        {
+          type: 'dropdown',
+          label: 'Research',
+          position: 'left',
+          items: [
+            {
+              label: 'Our Papers',
+              to: '/papers',
+            },
+            {
+              label: 'External Papers',
+              to: '/external-papers',
+            },
+          ],
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://discord.gg/averagejoeslab',
@@ -119,8 +133,12 @@ const config: Config = {
             },
 
             {
-              label: 'Papers',
+              label: 'Our Papers',
               to: '/papers',
+            },
+            {
+              label: 'External Papers',
+              to: '/external-papers',
             },
           ],
         },

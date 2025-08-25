@@ -16,8 +16,8 @@ const PAPER_STATUS = {
   proposed: { label: 'Proposed', color: '#6c757d' }
 };
 
-// Import papers data from JSON file (auto-synced from Notion)
-import papersData from '../data/papers.json';
+// Import internal papers data from JSON file (auto-synced from Notion)
+import papersData from '../data/internal-papers.json';
 
 // Dynamic focus area colors
 const FOCUS_AREA_COLORS = {
