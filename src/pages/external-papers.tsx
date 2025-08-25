@@ -39,7 +39,7 @@ import externalPapersData from '../data/external-papers.json';
 // Generate research areas dynamically from papers data
 const generateResearchAreas = () => {
   const safeData = externalPapersData || [];
-  const allAreas = new Set();
+  const allAreas = new Set<string>();
   
   safeData.forEach(paper => {
     if (paper.researchArea && paper.researchArea.trim()) {
@@ -49,7 +49,7 @@ const generateResearchAreas = () => {
 
   return [
     { id: 'all', label: 'All Papers', color: '#6c757d' },
-    ...Array.from(allAreas).sort().map(area => ({
+    ...Array.from(allAreas).sort().map((area: string) => ({
       id: area,
       label: area,
       color: '#007bff'
