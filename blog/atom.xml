@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrcloudchase.github.io/averagejoeslab/blog"/>
     <subtitle>Average Joes Lab Blog</subtitle>
-    <icon>https://mrcloudchase.github.io/averagejoeslab/img/logo.png</icon>
+    <icon>https://mrcloudchase.github.io/averagejoeslab/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to Average Joes Lab - Democratizing Research for Everyone]]></title>
         <id>https://mrcloudchase.github.io/averagejoeslab/blog/welcome-to-average-joes-lab</id>
