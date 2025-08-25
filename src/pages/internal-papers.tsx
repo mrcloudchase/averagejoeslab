@@ -178,7 +178,7 @@ function PaperCard({ paper }) {
         </Heading>
         
         <div className={styles.paperAuthors}>
-          By {(paper.authors || []).join(', ') || 'Unknown Authors'}
+          By {(paper.authors || []).join(', ') || 'Authors TBD'}
         </div>
         
         <p className={styles.paperAbstract}>
