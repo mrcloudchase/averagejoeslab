@@ -1,6 +1,20 @@
 [
   {
     "id": 1,
+    "title": "Test Paper",
+    "authors": [],
+    "abstract": "This is a test paper abstract",
+    "tags": [
+      "behavioral"
+    ],
+    "status": "proposed",
+    "date": "2025-08-24",
+    "arxivId": null,
+    "githubRepo": null,
+    "doi": "10.1000/183"
+  },
+  {
+    "id": 2,
     "title": "Ethical Frameworks for Citizen Science Research",
     "authors": [],
     "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
@@ -15,7 +29,7 @@
     "doi": null
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
     "authors": [],
     "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
@@ -31,7 +45,7 @@
     "doi": null
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Interpretable Machine Learning for Independent Researchers",
     "authors": [],
     "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
@@ -46,7 +60,7 @@
     "doi": null
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Security Considerations in Open Research Environments",
     "authors": [],
     "abstract": "This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.",
@@ -61,7 +75,7 @@
     "doi": null
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Behavioral Analysis of Collaborative Research Networks",
     "authors": [],
     "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
@@ -76,7 +90,7 @@
     "doi": "10.1000/182"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Optimization Techniques for Distributed AI Training",
     "authors": [],
     "abstract": "Novel approaches to training machine learning models across distributed networks with limited bandwidth and computational resources. Focus on techniques accessible to independent researchers.",
