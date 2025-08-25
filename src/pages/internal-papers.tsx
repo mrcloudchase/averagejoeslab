@@ -250,9 +250,9 @@ function ResearchStats() {
   const safeData = papersData || [];
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' },
+    { label: 'Proposed', value: safeData.filter(p => p?.status === 'proposed').length, icon: '💡' },
     { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
-    { label: 'Proposed', value: safeData.filter(p => p?.status === 'proposed').length, icon: '💡' }
+    { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' }
   ];
 
   return (
