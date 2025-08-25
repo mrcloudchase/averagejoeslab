@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkaveragejoeslab=self.webpackChunkaveragejoeslab||[]).push([[903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/averagejoeslab/blog","blogTitle":"Average Joes Lab Research Blog","authorsListPath":"/averagejoeslab/blog/authors"}')}}]);
