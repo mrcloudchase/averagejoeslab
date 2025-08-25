@@ -214,17 +214,25 @@ async function syncExternalPapersFromNotion() {
       const statusNotion = properties.Status?.select?.name || 'Inbox';
       const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
       
-      // Extract research area (CSV: Research_Area - values: "Attention Mechanisms", "Efficient Training", etc.)
-      // Debug: Log all property names and Research_Area structure
-      if (index === 0) {
-        console.log('🔍 Available Notion properties:', Object.keys(properties));
-        console.log('🔍 Research_Area property structure:', JSON.stringify(properties.Research_Area, null, 2));
+      // Extract research area (CSV: Research_Area - multi-select field with values like "Attention Mechanisms", "Efficient Training", etc.)
+      let researchArea = '';
+      if (properties.Research_Area?.multi_select) {
+        // Multi-select field - join all selected values with comma
+        researchArea = properties.Research_Area.multi_select
+          .map(area => area.name)
+          .join(', ');
+      } else if (properties['Research_Area']?.multi_select) {
+        // Fallback with bracket notation
+        researchArea = properties['Research_Area'].multi_select
+          .map(area => area.name)
+          .join(', ');
+      } else if (properties.Research_Area?.select?.name) {
+        // Fallback to select field
+        researchArea = properties.Research_Area.select.name;
+      } else if (properties.Research_Area?.rich_text?.[0]?.plain_text) {
+        // Fallback to rich text
+        researchArea = properties.Research_Area.rich_text[0].plain_text;
       }
-      
-      const researchArea = properties.Research_Area?.select?.name ||
-                          properties['Research_Area']?.select?.name ||
-                          properties.Research_Area?.rich_text?.[0]?.plain_text || 
-                          properties['Research_Area']?.rich_text?.[0]?.plain_text || '';
       
       // Extract reproduction status (CSV: Reproduction_Status - values: "Not Started", "In Progress", etc.)
       const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 
