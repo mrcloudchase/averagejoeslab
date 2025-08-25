@@ -189,67 +189,81 @@ async function syncExternalPapersFromNotion() {
     const externalPapers = response.results.map((page, index) => {
       const properties = page.properties;
       
-      // Extract title
+      // Extract title (CSV: Title)
       const title = properties.Title?.title?.[0]?.plain_text || 'Untitled Paper';
       
-      // Extract DOI
+      // Extract DOI (CSV: DOI)
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract arXiv ID
-      const arxivId = properties.arXiv_ID?.rich_text?.[0]?.plain_text || null;
+      // Extract arXiv ID (CSV: arXiv_ID) - handle both rich_text and number formats
+      let arxivId = null;
+      if (properties.arXiv_ID?.rich_text?.[0]?.plain_text) {
+        arxivId = properties.arXiv_ID.rich_text[0].plain_text;
+      } else if (properties.arXiv_ID?.number) {
+        arxivId = properties.arXiv_ID.number.toString();
+      }
+      // Handle "0" as null (from CSV)
+      if (arxivId === '0' || arxivId === 0) {
+        arxivId = null;
+      }
       
-      // Extract authors
+      // Extract authors (CSV: Authors)
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
       const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
       
-      // Extract journal/venue
+      // Extract journal/venue (CSV: Journal)
       const journal = properties.Journal?.rich_text?.[0]?.plain_text || '';
       
-      // Extract publication year
+      // Extract publication year (CSV: Publication_Year)
       const publicationYear = properties.Publication_Year?.number || new Date().getFullYear();
       
-      // Extract status
-      const statusNotion = properties.Status?.select?.name || 'inbox';
+      // Extract status (CSV: Status)
+      const statusNotion = properties.Status?.select?.name || 'Inbox';
       const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
       
-      // Extract research area
-      const researchArea = properties.Research_Area?.rich_text?.[0]?.plain_text || '';
+      // Extract research area (CSV: Research_Area) - try both rich_text and select
+      let researchArea = '';
+      if (properties.Research_Area?.rich_text?.[0]?.plain_text) {
+        researchArea = properties.Research_Area.rich_text[0].plain_text;
+      } else if (properties.Research_Area?.select?.name) {
+        researchArea = properties.Research_Area.select.name;
+      }
       
-      // Extract reproduction status
-      const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 'notStarted';
+      // Extract reproduction status (CSV: Reproduction_Status)
+      const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 'Not Started';
       const reproductionStatus = REPRODUCTION_STATUS_MAPPING[reproductionStatusNotion] || 'notStarted';
       
-      // Extract priority
+      // Extract priority (CSV: Priority)
       const priority = properties.Priority?.select?.name || 'P3';
       
-      // Extract URLs
+      // Extract URLs (CSV: Abstract_URL, PDF_URL, Repository)
       const abstractUrl = properties.Abstract_URL?.url || null;
       const pdfUrl = properties.PDF_URL?.url || null;
       const repository = properties.Repository?.url || null;
       
-      // Extract attribution text
+      // Extract attribution text (CSV: Attribution_Text)
       const attributionText = properties.Attribution_Text?.rich_text?.[0]?.plain_text || '';
       
-      // Extract notes
+      // Extract notes (CSV: Notes)
       const notes = properties.Notes?.rich_text?.[0]?.plain_text || '';
 
       return {
         id: index + 1,
-        title,
-        doi,
-        arxivId,
-        authors,
-        journal,
-        publicationYear,
-        status,
-        researchArea,
-        reproductionStatus,
-        priority,
-        abstractUrl,
-        pdfUrl,
-        repository,
-        attributionText,
-        notes
+        title,                    // CSV: Title
+        doi,                      // CSV: DOI
+        arxivId,                  // CSV: arXiv_ID
+        authors,                  // CSV: Authors
+        journal,                  // CSV: Journal
+        publicationYear,          // CSV: Publication_Year
+        status,                   // CSV: Status
+        researchArea,             // CSV: Research_Area
+        reproductionStatus,       // CSV: Reproduction_Status
+        priority,                 // CSV: Priority
+        abstractUrl,              // CSV: Abstract_URL
+        pdfUrl,                   // CSV: PDF_URL
+        repository,               // CSV: Repository
+        attributionText,          // CSV: Attribution_Text
+        notes                     // CSV: Notes
       };
     });
 
