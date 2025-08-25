@@ -31,21 +31,21 @@ const FOCUS_AREA_COLORS = {
   'default': '#6c757d'
 };
 
-// Generate focus areas dynamically from papers data
+// Generate focus areas dynamically from papers data (CSV schema: focusAreas)
 const generateFocusAreas = () => {
   const safeData = papersData || [];
-  const allTags = new Set<string>();
+  const allFocusAreas = new Set<string>();
   
   safeData.forEach(paper => {
-    (paper.tags || []).forEach(tag => allTags.add(tag));
+    (paper.focusAreas || []).forEach(area => allFocusAreas.add(area));
   });
 
   return [
     { id: 'all', label: 'All Papers', color: '#6c757d' },
-    ...Array.from(allTags).sort().map((tag: string) => ({
-      id: tag,
-      label: tag.charAt(0).toUpperCase() + tag.slice(1),
-      color: FOCUS_AREA_COLORS[tag] || FOCUS_AREA_COLORS.default
+    ...Array.from(allFocusAreas).sort().map((area: string) => ({
+      id: area,
+      label: area.charAt(0).toUpperCase() + area.slice(1),
+      color: FOCUS_AREA_COLORS[area] || FOCUS_AREA_COLORS.default
     }))
   ];
 };
@@ -98,7 +98,7 @@ function FilterTabs({ activeFilter, onFilterChange }) {
 function PaperCard({ paper }) {
   const status = PAPER_STATUS[paper.status] || PAPER_STATUS.proposed;
   
-  // Get paper and code links with null safety
+  // Get paper and code links with null safety (CSV schema fields)
   const getPaperLink = () => {
     if (paper.arxivId && paper.arxivId.trim()) {
       return `https://arxiv.org/abs/${paper.arxivId.replace('arXiv:', '')}`;
@@ -123,7 +123,7 @@ function PaperCard({ paper }) {
             {status.label}
           </span>
           <span className={styles.paperDate}>
-            {paper.date ? new Date(paper.date).toLocaleDateString('en-US', { 
+            {paper.publicationDate ? new Date(paper.publicationDate).toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 
               day: 'numeric' 
@@ -131,15 +131,15 @@ function PaperCard({ paper }) {
           </span>
         </div>
         <div className={styles.paperTags}>
-          {(paper.tags || []).map((tag) => {
-            const focusArea = FOCUS_AREAS.find(area => area.id === tag);
+          {(paper.focusAreas || []).map((area) => {
+            const focusArea = FOCUS_AREAS.find(fa => fa.id === area);
             return (
               <span 
-                key={tag}
+                key={area}
                 className={styles.paperTag}
                 style={{ backgroundColor: focusArea?.color || '#6c757d' }}
               >
-                {focusArea?.label || tag.charAt(0).toUpperCase() + tag.slice(1)}
+                {focusArea?.label || area.charAt(0).toUpperCase() + area.slice(1)}
               </span>
             );
           })}
@@ -149,7 +149,7 @@ function PaperCard({ paper }) {
       {/* Paper content area - not clickable */}
       <div className={styles.paperContent}>
         <Heading as="h3" className={styles.paperTitle}>
-          {paper.title || 'Untitled Paper'}
+          {paper.name || 'Untitled Paper'}
         </Heading>
         
         <div className={styles.paperAuthors}>
@@ -292,11 +292,11 @@ export default function Papers(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const [activeFilter, setActiveFilter] = useState('all');
 
-  // Filter papers based on active filter
+  // Filter papers based on active filter (CSV schema: focusAreas)
   const safeData = papersData || [];
   const filteredPapers = activeFilter === 'all' 
     ? safeData 
-    : safeData.filter(paper => paper?.tags?.includes(activeFilter));
+    : safeData.filter(paper => paper?.focusAreas?.includes(activeFilter));
 
   return (
     <Layout

@@ -47,67 +47,70 @@ async function syncInternalPapersFromNotion() {
     const papers = response.results.map((page, index) => {
       const properties = page.properties;
       
-      // Extract title from 'Name' property (matches CSV schema)
+      // Extract title from 'Name' property (matches CSV schema exactly)
       const title = properties.Name?.title?.[0]?.plain_text || 'Untitled Paper';
       
-      // Extract authors (handle empty authors)
+      // Extract authors (CSV format: comma-separated string)
       const authorsText = properties.Authors?.rich_text?.[0]?.plain_text || '';
       const authors = authorsText ? authorsText.split(',').map(author => author.trim()).filter(Boolean) : [];
       
-      // Extract abstract
+      // Extract abstract (matches CSV schema)
       const abstract = properties.Abstract?.rich_text?.[0]?.plain_text || '';
       
-      // Extract status (Notion uses 'status' field, not 'select')
-      const statusNotion = properties.Status?.status?.name || 'proposed';
-      const status = STATUS_MAPPING[statusNotion] || 'proposed';
-      
-      // Extract arXiv ID
-      const arxivId = properties['arXiv ID']?.rich_text?.[0]?.plain_text || null;
-      
-      // Extract DOI
+      // Extract DOI (matches CSV schema)
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract GitHub repo (matches CSV schema: 'GitHub Repo')
-      const githubRepo = properties['GitHub Repo']?.url || 
-                        properties['GitHub Repo']?.rich_text?.[0]?.plain_text || null;
-      
-      // Extract focus areas (matches CSV schema: 'Focus Areas' comma-separated)
-      let tags = [];
-      
-      // Handle Focus Areas from CSV format (comma-separated in rich text)
+      // Extract Focus Areas (CSV format: comma-separated string like "Behavioral, Security")
+      let focusAreas = [];
       if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
         const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
-        tags = focusAreasText
+        focusAreas = focusAreasText
           .split(',')
           .map(area => area.trim().toLowerCase())
           .filter(Boolean);
       }
       // Try multi-select format as fallback
       else if (properties['Focus Areas']?.multi_select) {
-        tags = properties['Focus Areas'].multi_select
+        focusAreas = properties['Focus Areas'].multi_select
           .map(area => area.name.toLowerCase())
           .filter(Boolean);
       }
       
-      // Extract publication date
-      const publicationDate = properties['Publication Date']?.date?.start || 
-        new Date().toISOString().split('T')[0];
+      // Extract GitHub Repo (matches CSV schema exactly)
+      const githubRepo = properties['GitHub Repo']?.url || 
+                        properties['GitHub Repo']?.rich_text?.[0]?.plain_text || null;
       
-      // Extract notes (matches CSV schema)
+      // Extract Notes (matches CSV schema)
       const notes = properties.Notes?.rich_text?.[0]?.plain_text || '';
+      
+      // Extract Publication Date (CSV format: "July 15, 2025" or "August 30, 2024")
+      let publicationDate;
+      if (properties['Publication Date']?.date?.start) {
+        publicationDate = properties['Publication Date'].date.start;
+      } else {
+        publicationDate = new Date().toISOString().split('T')[0];
+      }
+      
+      // Extract Status (CSV values: "Proposed", "In progress", "Published")
+      const statusNotion = properties.Status?.status?.name || 
+                          properties.Status?.select?.name || 'Proposed';
+      const status = STATUS_MAPPING[statusNotion] || 'proposed';
+      
+      // Extract arXiv ID (CSV format: "arXiv:2409.12345" or empty)
+      const arxivId = properties['arXiv ID']?.rich_text?.[0]?.plain_text || null;
 
       return {
         id: index + 1,
-        title,
-        authors,
-        abstract,
-        tags,
-        status,
-        date: publicationDate,
-        arxivId,
-        githubRepo,
-        doi,
-        notes
+        name: title,                    // CSV: Name
+        abstract: abstract,             // CSV: Abstract  
+        authors: authors,               // CSV: Authors
+        doi: doi,                       // CSV: DOI
+        focusAreas: focusAreas,         // CSV: Focus Areas
+        githubRepo: githubRepo,         // CSV: GitHub Repo
+        notes: notes,                   // CSV: Notes
+        publicationDate: publicationDate, // CSV: Publication Date
+        status: status,                 // CSV: Status
+        arxivId: arxivId               // CSV: arXiv ID
       };
     });
 
