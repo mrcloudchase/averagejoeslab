@@ -10,27 +10,27 @@ import styles from './papers.module.css';
 
 // External paper status types
 const EXTERNAL_STATUS = {
-  inbox: { label: 'Inbox', color: '#6c757d' },
-  triaged: { label: 'Triaged', color: '#007bff' },
-  archive: { label: 'Archive', color: '#dc3545' },
-  inProgress: { label: 'In Progress', color: '#ffc107' }
+  inbox: { label: 'Inbox', color: '#718096' },
+  triaged: { label: 'Triaged', color: '#4299e1' },
+  archive: { label: 'Archive', color: '#f56565' },
+  inProgress: { label: 'In Progress', color: '#ed8936' }
 };
 
 // Reproduction status types
 const REPRODUCTION_STATUS = {
-  notStarted: { label: 'Not Started', color: '#6c757d' },
-  inProgress: { label: 'In Progress', color: '#007bff' },
-  completed: { label: 'Completed', color: '#28a745' },
-  failed: { label: 'Failed', color: '#dc3545' },
-  notApplicable: { label: 'Not Applicable', color: '#6c757d' }
+  notStarted: { label: 'Not Started', color: '#718096' },
+  inProgress: { label: 'In Progress', color: '#4299e1' },
+  completed: { label: 'Completed', color: '#48bb78' },
+  failed: { label: 'Failed', color: '#f56565' },
+  notApplicable: { label: 'Not Applicable', color: '#718096' }
 };
 
 // Priority colors
 const PRIORITY_COLORS = {
-  'P0': '#dc3545',
-  'P1': '#fd7e14', 
-  'P2': '#ffc107',
-  'P3': '#6c757d'
+  'P0': '#f56565',
+  'P1': '#ed8936', 
+  'P2': '#ed8936',
+  'P3': '#718096'
 };
 
 // Import external papers data from JSON file (auto-synced from Notion)
@@ -38,13 +38,13 @@ import externalPapersData from '../data/external-papers.json';
 
 // Dynamic research area colors (matches CSV schema research areas exactly)
 const RESEARCH_AREA_COLORS = {
-  'attention mechanisms': '#007bff',
-  'efficient training': '#28a745', 
-  'rag systems': '#ffc107',
-  'multimodal': '#dc3545',
-  'interpretability': '#6f42c1',
-  'optimization': '#17a2b8',
-  'default': '#6c757d'
+  'attention mechanisms': '#4299e1',
+  'efficient training': '#48bb78', 
+  'rag systems': '#ed8936',
+  'multimodal': '#f56565',
+  'interpretability': '#9f7aea',
+  'optimization': '#38b2ac',
+  'default': '#718096'
 };
 
 // Generate research areas dynamically from papers data
@@ -59,7 +59,7 @@ const generateResearchAreas = () => {
   });
 
   return [
-    { id: 'all', label: 'All Papers', color: '#6c757d' },
+    { id: 'all', label: 'All Papers', color: '#718096' },
     ...Array.from(allAreas).sort().map((area: string) => ({
       id: area,
       label: area,

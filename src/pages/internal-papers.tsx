@@ -10,10 +10,10 @@ import styles from './papers.module.css';
 
 // Paper status types
 const PAPER_STATUS = {
-  published: { label: 'Published', color: '#28a745' },
-  inReview: { label: 'In Review', color: '#ffc107' },
-  inProgress: { label: 'In Progress', color: '#007bff' },
-  proposed: { label: 'Proposed', color: '#6c757d' }
+  published: { label: 'Published', color: '#48bb78' },
+  inReview: { label: 'In Review', color: '#ed8936' },
+  inProgress: { label: 'In Progress', color: '#4299e1' },
+  proposed: { label: 'Proposed', color: '#718096' }
 };
 
 // Import internal papers data from JSON file (auto-synced from Notion)
@@ -21,14 +21,14 @@ import papersData from '../data/internal-papers.json';
 
 // Dynamic focus area colors (matches CSV schema focus areas)
 const FOCUS_AREA_COLORS = {
-  'optimization': '#007bff',
-  'behavioral': '#28a745', 
-  'interpretability': '#ffc107',
-  'security': '#dc3545',
-  'interoperability': '#6f42c1',
-  'sota': '#17a2b8', // State of the Art
-  'behavior': '#28a745', // Alias for behavioral
-  'default': '#6c757d'
+  'optimization': '#4299e1',
+  'behavioral': '#48bb78', 
+  'interpretability': '#ed8936',
+  'security': '#f56565',
+  'interoperability': '#9f7aea',
+  'sota': '#38b2ac', // State of the Art
+  'behavior': '#48bb78', // Alias for behavioral
+  'default': '#718096'
 };
 
 // Generate focus areas dynamically from papers data (CSV schema: focusAreas)
@@ -41,7 +41,7 @@ const generateFocusAreas = () => {
   });
 
   return [
-    { id: 'all', label: 'All Papers', color: '#6c757d' },
+    { id: 'all', label: 'All Papers', color: '#718096' },
     ...Array.from(allFocusAreas).sort().map((area: string) => ({
       id: area,
       label: area.charAt(0).toUpperCase() + area.slice(1),
@@ -162,7 +162,7 @@ function PaperCard({ paper }) {
               <span 
                 key={area}
                 className={styles.paperTag}
-                style={{ backgroundColor: focusArea?.color || '#6c757d' }}
+                style={{ backgroundColor: focusArea?.color || '#718096' }}
               >
                 {focusArea?.label || area.charAt(0).toUpperCase() + area.slice(1)}
               </span>
@@ -347,7 +347,7 @@ function SubmitPaperIdeaForm() {
               <div className="cta-card">
                 <div className={styles.successMessage}>
                   <div className={styles.successIcon}>✅</div>
-                  <Heading as="h2" style={{marginBottom: '1rem', color: '#28a745'}}>
+                  <Heading as="h2" style={{marginBottom: '1rem', color: '#48bb78'}}>
                     Paper Idea Submitted Successfully!
                   </Heading>
                   <p style={{marginBottom: '2rem', fontSize: '1.1rem'}}>
