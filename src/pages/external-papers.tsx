@@ -36,6 +36,17 @@ const PRIORITY_COLORS = {
 // Import external papers data from JSON file (auto-synced from Notion)
 import externalPapersData from '../data/external-papers.json';
 
+// Dynamic research area colors (matching internal papers style)
+const RESEARCH_AREA_COLORS = {
+  'attention mechanisms': '#007bff',
+  'efficient training': '#28a745', 
+  'rag systems': '#ffc107',
+  'multimodal learning': '#dc3545',
+  'interpretability': '#6f42c1',
+  'optimization': '#17a2b8',
+  'default': '#6c757d'
+};
+
 // Generate research areas dynamically from papers data
 const generateResearchAreas = () => {
   const safeData = externalPapersData || [];
@@ -52,7 +63,7 @@ const generateResearchAreas = () => {
     ...Array.from(allAreas).sort().map((area: string) => ({
       id: area,
       label: area,
-      color: '#007bff'
+      color: RESEARCH_AREA_COLORS[area.toLowerCase()] || RESEARCH_AREA_COLORS.default
     }))
   ];
 };
@@ -61,35 +72,23 @@ const RESEARCH_AREAS = generateResearchAreas();
 
 function ExternalPapersHero() {
   return (
-    <section className={styles.heroSection}>
+    <header className={clsx('hero', styles.papersHero)}>
       <div className="container">
         <div className="row">
-          <div className="col col--8 col--offset-2 text--center">
-            <Heading as="h1" className={styles.heroTitle}>
-              External Papers & Reproductions
-            </Heading>
-            <p className={styles.heroSubtitle}>
-              Tracking, reviewing, and reproducing important research papers from the broader scientific community. 
-              Our commitment to validating and building upon existing research.
-            </p>
-            <div className={styles.heroButtons}>
-              <Link
-                className="button button--primary button--lg"
-                to="/internal-papers">
-                View Our Research
-              </Link>
-              <a
-                className="button button--secondary button--lg"
-                href="https://discord.gg/averagejoeslab"
-                target="_blank"
-                rel="noopener noreferrer">
-                Join Community
-              </a>
+          <div className="col col--8 col--offset-2">
+            <div className="text--center">
+              <Heading as="h1" className={styles.heroTitle}>
+                External Papers & Reproductions
+              </Heading>
+              <p className={styles.heroSubtitle}>
+                Tracking, reviewing, and reproducing important research papers from the broader scientific community. 
+                Our commitment to validating and building upon existing research.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
 
@@ -148,21 +147,31 @@ function ExternalPaperCard({ paper }) {
           >
             {status.label}
           </span>
+          <span className={styles.paperDate}>
+            {paper.publicationYear || 'Unknown Year'}
+          </span>
+        </div>
+        <div className={styles.paperTags}>
           <span 
-            className={styles.statusBadge}
+            className={styles.paperTag}
             style={{ backgroundColor: reproductionStatus.color }}
           >
             Reproduction: {reproductionStatus.label}
           </span>
           <span 
-            className={styles.statusBadge}
+            className={styles.paperTag}
             style={{ backgroundColor: priorityColor }}
           >
             {paper.priority || 'P3'}
           </span>
-        </div>
-        <div className={styles.paperYear}>
-          {paper.publicationYear || 'Unknown Year'}
+          {paper.researchArea && (
+            <span 
+              className={styles.paperTag}
+              style={{ backgroundColor: RESEARCH_AREA_COLORS[paper.researchArea.toLowerCase()] || RESEARCH_AREA_COLORS.default }}
+            >
+              {paper.researchArea}
+            </span>
+          )}
         </div>
       </div>
       
@@ -182,20 +191,14 @@ function ExternalPaperCard({ paper }) {
           </div>
         )}
         
-        {paper.researchArea && (
-          <div className={styles.paperArea}>
-            Research Area: <strong>{paper.researchArea}</strong>
-          </div>
-        )}
-        
         {paper.attributionText && (
-          <div className={styles.paperCitation}>
+          <p className={styles.paperAbstract}>
             <strong>Citation:</strong> {paper.attributionText}
-          </div>
+          </p>
         )}
         
         {paper.notes && (
-          <p className={styles.paperNotes}>
+          <p className={styles.paperAbstract}>
             <strong>Notes:</strong> {paper.notes}
           </p>
         )}
@@ -269,7 +272,7 @@ function ExternalResearchStats() {
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
     { label: 'Triaged', value: safeData.filter(p => p?.status === 'triaged').length, icon: '🔍' },
     { label: 'In Progress', value: safeData.filter(p => p?.reproductionStatus === 'inProgress').length, icon: '🔬' },
-    { label: 'Completed', value: safeData.filter(p => p?.reproductionStatus === 'completed').length, icon: '✅' }
+    { label: 'Research Areas', value: Math.max(0, RESEARCH_AREAS.length - 1), icon: '🎯' }
   ];
 
   return (
@@ -291,32 +294,39 @@ function ExternalResearchStats() {
   );
 }
 
-function ContributeExternalCTA() {
+function SubmitExternalCTA() {
   return (
     <section className={styles.ctaSection}>
       <div className="container">
         <div className="row">
-          <div className="col col--8 col--offset-2 text--center">
-            <Heading as="h2" className="text-gradient">
-              Suggest Papers for Review
-            </Heading>
-            <p className={styles.ctaDescription}>
-              Found an interesting paper that should be on our radar? Help us build our external papers database 
-              by suggesting papers for review and reproduction.
-            </p>
-            <div className={styles.ctaButtons}>
-              <a
-                className="button button--primary button--lg"
-                href="https://discord.gg/averagejoeslab"
-                target="_blank"
-                rel="noopener noreferrer">
-                Suggest Papers
-              </a>
-              <Link
-                className="button button--secondary button--lg"
-                to="/internal-papers">
-                View Our Research
-              </Link>
+          <div className="col col--8 col--offset-2">
+            <div className={styles.ctaCard}>
+              <Heading as="h2" style={{marginBottom: '1rem'}}>
+                Suggest Papers for Reproduction
+              </Heading>
+              <p style={{marginBottom: '2rem', fontSize: '1.1rem'}}>
+                Found an interesting paper that should be reproduced? Help us validate and build upon 
+                existing research by suggesting papers for our reproduction pipeline.
+              </p>
+              <div className={styles.ctaButtons}>
+                <a
+                  className="button button--primary button--lg"
+                  href="https://discord.gg/averagejoeslab"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Suggest Papers
+                </a>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/internal-papers">
+                  View Our Research
+                </Link>
+                <Link
+                  className="button button--outline button--lg"
+                  to="/">
+                  Our Mission
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -363,7 +373,7 @@ export default function ExternalPapers(): ReactNode {
           </div>
         </section>
         
-        <ContributeExternalCTA />
+        <SubmitExternalCTA />
       </main>
     </Layout>
   );
