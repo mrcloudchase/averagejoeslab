@@ -167,6 +167,10 @@ html:not([data-theme='dark']) .navbar {
   height: 48px !important;
   width: auto;
   margin-right: 12px;
+  /* Ensure logo clarity and prevent blur effects */
+  filter: none !important;
+  opacity: 1 !important;
+  -webkit-filter: none !important;
 }
 
 /* Mobile menu fixes - ensure visibility */
