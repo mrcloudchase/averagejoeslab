@@ -198,17 +198,8 @@ async function syncExternalPapersFromNotion() {
       }
       
       // Extract reproduction status - use raw Notion value
-      // Debug: Log the property structure
-      if (index === 0) {
-        console.log('🔍 Debugging Reproduction_Status property structure:');
-        console.log('properties.Reproduction_Status:', JSON.stringify(properties.Reproduction_Status, null, 2));
-        console.log('properties["Reproduction_Status"]:', JSON.stringify(properties['Reproduction_Status'], null, 2));
-        console.log('All property names:', Object.keys(properties));
-      }
-      
-      const reproductionStatus = properties.Reproduction_Status?.select?.name || 
-                                 properties['Reproduction_Status']?.select?.name || 
-                                 properties.Reproduction_Status?.status?.name ||
+      // Fixed: Notion uses 'status' field type, not 'select'
+      const reproductionStatus = properties.Reproduction_Status?.status?.name || 
                                  properties['Reproduction_Status']?.status?.name || null;
       
       // Extract priority - use raw Notion value
