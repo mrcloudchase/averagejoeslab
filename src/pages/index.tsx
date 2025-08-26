@@ -81,22 +81,21 @@ function FounderStory() {
                   <div className={styles.founderCard}>
                     <div className={styles.founderText}>
                       <p className={styles.founderQuote}>
-                        "I started Average Joes Lab as a personal project because I felt that institutions via academia 
-                        had a stronghold over cutting-edge research, and I wanted to democratize it."
+                        "I founded Average Joes Lab because I witnessed how academic gatekeepers were restricting access to 
+                        cutting-edge research. I wanted to tear down those walls and open science to everyone."
                       </p>
                       <div className={styles.founderAttribution}>
                         <strong>Chase Dovey</strong>, Founder
                       </div>
                       <p className={styles.founderDescription}>
-                        I believe that science and learning should be democratized so that even autodidacts can participate. 
-                        Many prominent figures throughout history came from non-academic backgrounds and were self-taught in their fields. 
-                        It is now more important than ever to keep this spirit alive and prove that ordinary people, 
-                        following scientific rigor, can do extraordinary things.
+                        Throughout history, transformative discoveries have emerged from unexpected places. Darwin was a theology student. 
+                        Faraday was a bookbinder's apprentice. Ramanujan was a clerk. These pioneers shared one trait: 
+                        relentless curiosity paired with rigorous methodology.
                       </p>
                       <p className={styles.founderDescription}>
-                        Average Joes Lab exists to break down the barriers that prevent brilliant minds from contributing 
-                        to human knowledge simply because they lack the "right" credentials or institutional affiliations. 
-                        We're changing that, one researcher at a time.
+                        Today's research landscape has become increasingly insular, demanding institutional credentials over intellectual merit. 
+                        Average Joes Lab challenges this paradigm by empowering citizen researchers to contribute meaningfully to human knowledge. 
+                        We provide the tools, community, and recognition that brilliant minds deserve—regardless of their academic pedigree.
                       </p>
                     </div>
                   </div>
