@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -296,12 +296,27 @@ function ExternalResearchStats() {
   );
 }
 
-function SubmitExternalCTA() {
+function SubmitExternalPaperForm() {
+  useEffect(() => {
+    // Load Typeform embed script
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section className="section-hero">
       <div className="container">
         <div className="row">
-          <div className="col col--8 col--offset-2">
+          <div className="col col--10 col--offset-1">
             <div className="cta-card">
               <Heading as="h2" style={{marginBottom: '1rem'}}>
                 Suggest Papers for Reproduction
@@ -310,25 +325,12 @@ function SubmitExternalCTA() {
                 Found an interesting paper that should be reproduced? Help us validate and build upon 
                 existing research by suggesting papers for our reproduction pipeline.
               </p>
-              <div className="cta-buttons">
-                <a
-                  className="button button--primary button--lg"
-                  href="https://discord.gg/averagejoeslab"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Suggest Papers
-                </a>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/internal-papers">
-                  View Our Research
-                </Link>
-                <Link
-                  className="button button--outline button--lg"
-                  to="/">
-                  Our Mission
-                </Link>
-              </div>
+              
+              {/* Typeform Embed */}
+              <div 
+                data-tf-live="01K3KYXX0T6VWNG0C3DJB44DWF"
+                style={{ minHeight: '600px', width: '100%' }}
+              ></div>
             </div>
           </div>
         </div>
@@ -375,7 +377,7 @@ export default function ExternalPapers(): ReactNode {
           </div>
         </section>
         
-        <SubmitExternalCTA />
+        <SubmitExternalPaperForm />
       </main>
     </Layout>
   );
