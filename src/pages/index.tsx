@@ -80,22 +80,24 @@ function FounderStory() {
                 <div className="col col--10 col--offset-1">
                   <div className={styles.founderCard}>
                     <div className={styles.founderText}>
-                      <p className={styles.founderQuote}>
-                        "I founded Average Joes Lab because I witnessed how academic gatekeepers were restricting access to 
-                        cutting-edge research. I wanted to tear down those walls and open science to everyone."
-                      </p>
                       <div className={styles.founderAttribution}>
-                        <strong>Chase Dovey</strong>, Founder
+                        <strong>Chase Dovey</strong>, Founder & Head Researcher
                       </div>
                       <p className={styles.founderDescription}>
-                        Throughout history, transformative discoveries have emerged from unexpected places. Darwin was a theology student. 
-                        Faraday was a bookbinder's apprentice. Ramanujan was a clerk. These pioneers shared one trait: 
-                        relentless curiosity paired with rigorous methodology.
+                        I founded Average Joes Lab because I saw how traditional academic pathways often limit who gets to contribute to scientific discovery. 
+                        My journey is a bit unconventional: I'm entirely self-taught, with a deep love for learning that led me to explore computer science, 
+                        physics, and beyond, all on my own. I never worked in academia, but I've always believed that curiosity and a passion for knowledge 
+                        are more important than formal credentials.
                       </p>
                       <p className={styles.founderDescription}>
-                        Today's research landscape has become increasingly insular, demanding institutional credentials over intellectual merit. 
-                        Average Joes Lab challenges this paradigm by empowering citizen researchers to contribute meaningfully to human knowledge. 
-                        We provide the tools, community, and recognition that brilliant minds deserve—regardless of their academic pedigree.
+                        Average Joes Lab was born out of this belief and the desire to create a space where anyone, regardless of their background, 
+                        can engage in meaningful research. We aim to break down the barriers that have traditionally kept brilliant minds out of the 
+                        conversation and instead foster a community that values intellectual curiosity and scientific rigor above all else.
+                      </p>
+                      <p className={styles.founderDescription}>
+                        Our mission is simple: to empower ordinary people to do extraordinary things in the world of science. We provide the tools, 
+                        resources, and community support needed to explore new ideas, validate them through rigorous methods, and ultimately contribute 
+                        to the advancement of human knowledge. That's the driving force behind Average Joes Lab, and I'm excited to see what we can achieve together.
                       </p>
                     </div>
                   </div>
