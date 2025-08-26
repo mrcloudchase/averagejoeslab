@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -275,100 +275,20 @@ function ResearchStats() {
 }
 
 function SubmitPaperIdeaForm() {
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    focusAreas: [],
-    submitterName: '',
-    submitterEmail: '',
-    motivation: '',
-    expectedOutcome: ''
-  });
+  useEffect(() => {
+    // Load Typeform embed script
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleFocusAreaChange = (areaId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      focusAreas: prev.focusAreas.includes(areaId)
-        ? prev.focusAreas.filter(id => id !== areaId)
-        : [...prev.focusAreas, areaId]
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // For now, we'll just simulate submission and redirect to Discord
-      // In the future, this could integrate with a backend service
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Create a formatted message for Discord
-      const discordMessage = `**New Paper Idea Submission**\n\n` +
-        `**Title:** ${formData.title}\n` +
-        `**Submitted by:** ${formData.submitterName} (${formData.submitterEmail})\n` +
-        `**Focus Areas:** ${formData.focusAreas.join(', ')}\n\n` +
-        `**Description:**\n${formData.description}\n\n` +
-        `**Motivation:**\n${formData.motivation}\n\n` +
-        `**Expected Outcome:**\n${formData.expectedOutcome}`;
-      
-      // Encode for URL
-      const encodedMessage = encodeURIComponent(discordMessage);
-      const discordUrl = `https://discord.gg/averagejoeslab`;
-      
-      setSubmitStatus('success');
-      
-      // Open Discord in new tab after a brief delay
-      setTimeout(() => {
-        window.open(discordUrl, '_blank');
-      }, 1500);
-      
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  if (submitStatus === 'success') {
-    return (
-      <section className="section-hero">
-        <div className="container">
-          <div className="row">
-            <div className="col col--8 col--offset-2">
-              <div className="cta-card">
-                <div className={styles.successMessage}>
-                  <div className={styles.successIcon}>✅</div>
-                  <Heading as="h2" style={{marginBottom: '1rem', color: '#48bb78'}}>
-                    Paper Idea Submitted Successfully!
-                  </Heading>
-                  <p style={{marginBottom: '2rem', fontSize: '1.1rem'}}>
-                    Thank you for your submission! We're redirecting you to our Discord community 
-                    where you can discuss your idea with other researchers.
-                  </p>
-                  <a
-                    className="button button--primary button--lg"
-                    href="https://discord.gg/averagejoeslab"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Join Discord Discussion
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <section className="section-hero">
@@ -384,157 +304,11 @@ function SubmitPaperIdeaForm() {
                 We welcome novel concepts that advance open science and democratize research.
               </p>
               
-              <form onSubmit={handleSubmit} className={styles.paperIdeaForm}>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="title" className={styles.formLabel}>
-                      Paper Title *
-                    </label>
-                    <input
-                      type="text"
-                      id="title"
-                      name="title"
-                      value={formData.title}
-                      onChange={handleInputChange}
-                      className={styles.formInput}
-                      placeholder="Enter your proposed paper title"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="description" className={styles.formLabel}>
-                      Research Description *
-                    </label>
-                    <textarea
-                      id="description"
-                      name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      className={styles.formTextarea}
-                      placeholder="Describe your research idea, methodology, and approach..."
-                      rows={4}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label className={styles.formLabel}>
-                      Focus Areas *
-                    </label>
-                    <div className={styles.focusAreaCheckboxes}>
-                      {FOCUS_AREAS.filter(area => area.id !== 'all').map((area) => (
-                        <label key={area.id} className={styles.checkboxLabel}>
-                          <input
-                            type="checkbox"
-                            checked={formData.focusAreas.includes(area.id)}
-                            onChange={() => handleFocusAreaChange(area.id)}
-                            className={styles.checkbox}
-                          />
-                          <span 
-                            className={styles.checkboxText}
-                            style={{ color: area.color }}
-                          >
-                            {area.label}
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="motivation" className={styles.formLabel}>
-                      Research Motivation *
-                    </label>
-                    <textarea
-                      id="motivation"
-                      name="motivation"
-                      value={formData.motivation}
-                      onChange={handleInputChange}
-                      className={styles.formTextarea}
-                      placeholder="Why is this research important? What problem does it solve?"
-                      rows={3}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="expectedOutcome" className={styles.formLabel}>
-                      Expected Outcome *
-                    </label>
-                    <textarea
-                      id="expectedOutcome"
-                      name="expectedOutcome"
-                      value={formData.expectedOutcome}
-                      onChange={handleInputChange}
-                      className={styles.formTextarea}
-                      placeholder="What do you expect to achieve? How will this contribute to the field?"
-                      rows={3}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="submitterName" className={styles.formLabel}>
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="submitterName"
-                      name="submitterName"
-                      value={formData.submitterName}
-                      onChange={handleInputChange}
-                      className={styles.formInput}
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="submitterEmail" className={styles.formLabel}>
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="submitterEmail"
-                      name="submitterEmail"
-                      value={formData.submitterEmail}
-                      onChange={handleInputChange}
-                      className={styles.formInput}
-                      placeholder="Enter your email address"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formActions}>
-                  <button
-                    type="submit"
-                  className="button button--primary button--lg"
-                    disabled={isSubmitting || formData.focusAreas.length === 0}
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Submit Paper Idea'}
-                  </button>
-                  
-                  {submitStatus === 'error' && (
-                    <div className={styles.errorMessage}>
-                      There was an error submitting your idea. Please try again or contact us on Discord.
-                    </div>
-                  )}
-              </div>
-              </form>
+              {/* Typeform Embed */}
+              <div 
+                data-tf-live="01K3KW7AJ1PZ6EPKVZ11NPJCA5"
+                style={{ minHeight: '600px', width: '100%' }}
+              ></div>
             </div>
           </div>
         </div>
