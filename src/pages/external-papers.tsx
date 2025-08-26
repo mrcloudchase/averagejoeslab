@@ -306,11 +306,23 @@ function ExternalPapersGrid({ papers }) {
 
 function ExternalResearchStats() {
   const safeData = externalPapersData || [];
+  
+  // Case-insensitive reproduction status filtering
+  const getReproductionStatusCount = (targetStatus: string) => {
+    return safeData.filter(p => 
+      p?.reproductionStatus?.toLowerCase() === targetStatus.toLowerCase()
+    ).length;
+  };
+  
+  // Count papers with null/undefined reproduction status
+  const unknownCount = safeData.filter(p => !p?.reproductionStatus).length;
+  
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Triaged', value: safeData.filter(p => p?.reproductionStatus === 'Triaged').length, icon: '🔍' },
-    { label: 'In Progress', value: safeData.filter(p => p?.reproductionStatus === 'In Progress').length, icon: '🔬' },
-    { label: 'Reproduced', value: safeData.filter(p => p?.reproductionStatus === 'Reproduced').length, icon: '✅' }
+    { label: 'Triaged', value: getReproductionStatusCount('Triaged'), icon: '🔍' },
+    { label: 'In Progress', value: getReproductionStatusCount('In Progress'), icon: '🔬' },
+    { label: 'Reproduced', value: getReproductionStatusCount('Reproduced'), icon: '✅' },
+    ...(unknownCount > 0 ? [{ label: 'Unknown Status', value: unknownCount, icon: '❓' }] : [])
   ];
 
   return (

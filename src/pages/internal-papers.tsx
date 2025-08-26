@@ -259,11 +259,19 @@ function PapersGrid({ papers }) {
 
 function ResearchStats() {
   const safeData = papersData || [];
+  
+  // Case-insensitive status filtering
+  const getStatusCount = (targetStatus: string) => {
+    return safeData.filter(p => 
+      p?.status?.toLowerCase() === targetStatus.toLowerCase()
+    ).length;
+  };
+  
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Proposed', value: safeData.filter(p => p?.status === 'Proposed').length, icon: '💡' },
-    { label: 'In Progress', value: safeData.filter(p => p?.status === 'In Progress').length, icon: '🔬' },
-    { label: 'Published', value: safeData.filter(p => p?.status === 'Published').length, icon: '✅' }
+    { label: 'Proposed', value: getStatusCount('Proposed'), icon: '💡' },
+    { label: 'In Progress', value: getStatusCount('In Progress'), icon: '🔬' },
+    { label: 'Published', value: getStatusCount('Published'), icon: '✅' }
   ];
 
   return (
