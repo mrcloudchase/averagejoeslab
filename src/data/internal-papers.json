@@ -6,13 +6,13 @@
     "authors": [],
     "doi": "10.1000/182",
     "focusAreas": [
-      "behavioral",
-      "optimization"
+      "Behavioral",
+      "Optimization"
     ],
     "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
     "notes": "First published paper from the lab",
     "publicationDate": "2025-09-12",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": "arXiv:2409.12345"
   },
   {
@@ -24,12 +24,12 @@
     ],
     "doi": null,
     "focusAreas": [
-      "optimization"
+      "Optimization"
     ],
     "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
     "notes": "Active development with 5 contributors",
     "publicationDate": "2025-08-30",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": null
   },
   {
@@ -45,7 +45,7 @@
     "githubRepo": null,
     "notes": "Some fake notes",
     "publicationDate": "2025-08-24",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": null
   },
   {
@@ -57,13 +57,13 @@
     ],
     "doi": null,
     "focusAreas": [
-      "behavioral",
-      "security"
+      "Behavioral",
+      "Security"
     ],
     "githubRepo": null,
     "notes": "Important foundational work needed",
     "publicationDate": "2025-07-15",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": null
   },
   {
@@ -75,14 +75,14 @@
     ],
     "doi": null,
     "focusAreas": [
-      "optimization",
-      "behavioral",
-      "sota"
+      "Optimization",
+      "Behavioral",
+      "SOTA"
     ],
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
     "notes": "Ongoing community research project",
     "publicationDate": "2024-12-15",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": null
   },
   {
@@ -92,13 +92,13 @@
     "authors": [],
     "doi": null,
     "focusAreas": [
-      "interoperability",
-      "optimization"
+      "Interoperability",
+      "Optimization"
     ],
     "githubRepo": null,
     "notes": "Seeking collaborators for this research",
     "publicationDate": "2024-11-20",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": "arXiv:2409.12345"
   },
   {
@@ -111,13 +111,13 @@
     ],
     "doi": null,
     "focusAreas": [
-      "security",
-      "behavioral"
+      "Security",
+      "Behavioral"
     ],
     "githubRepo": "https://github.com/mrcloudchase/open-research-security",
     "notes": "Under community peer review",
     "publicationDate": "2024-10-24",
-    "status": "proposed",
+    "status": "Proposed",
     "arxivId": null
   }
 ]

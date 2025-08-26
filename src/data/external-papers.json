@@ -9,11 +9,11 @@
     ],
     "journal": "Transformer Circuits",
     "publicationYear": 2025,
-    "status": "inbox",
+    "status": "Inbox",
     "researchArea": [
-      "interpretability"
+      "Interpretability"
     ],
-    "reproductionStatus": "notStarted",
+    "reproductionStatus": "Not Started",
     "priority": "P2",
     "abstractUrl": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
     "pdfUrl": null,
@@ -31,11 +31,11 @@
     ],
     "journal": "Anthropic",
     "publicationYear": 2025,
-    "status": "inbox",
+    "status": "Inbox",
     "researchArea": [
-      "interpretability"
+      "Interpretability"
     ],
-    "reproductionStatus": "notStarted",
+    "reproductionStatus": "Not Started",
     "priority": "P2",
     "abstractUrl": "https://www.anthropic.com/research/tracing-thoughts-language-model",
     "pdfUrl": null,
@@ -54,11 +54,11 @@
     ],
     "journal": "arXiv",
     "publicationYear": 2025,
-    "status": "triaged",
+    "status": "Triaged",
     "researchArea": [
-      "rag systems"
+      "RAG Systems"
     ],
-    "reproductionStatus": "notStarted",
+    "reproductionStatus": "Not Started",
     "priority": "P2",
     "abstractUrl": "https://arxiv.org/abs/2501.01234",
     "pdfUrl": "https://arxiv.org/pdf/2501.01234.pdf",
@@ -80,12 +80,12 @@
     ],
     "journal": "arXiv",
     "publicationYear": 2025,
-    "status": "triaged",
+    "status": "Triaged",
     "researchArea": [
-      "attention mechanisms",
-      "efficient training"
+      "Attention Mechanisms",
+      "Efficient Training"
     ],
-    "reproductionStatus": "notStarted",
+    "reproductionStatus": "Not Started",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2503.16428",
     "pdfUrl": "https://arxiv.org/pdf/2503.16428.pdf",
@@ -103,11 +103,11 @@
     ],
     "journal": "ICLR",
     "publicationYear": 2024,
-    "status": "archive",
+    "status": "Archive",
     "researchArea": [
-      "multimodal"
+      "Multimodal"
     ],
-    "reproductionStatus": "notApplicable",
+    "reproductionStatus": "Not Applicable",
     "priority": "P3",
     "abstractUrl": "https://arxiv.org/abs/2312.22222",
     "pdfUrl": "https://arxiv.org/pdf/2312.22222.pdf",
@@ -126,11 +126,11 @@
     ],
     "journal": "NeurIPS",
     "publicationYear": 2024,
-    "status": "triaged",
+    "status": "Triaged",
     "researchArea": [
-      "efficient training"
+      "Efficient Training"
     ],
-    "reproductionStatus": "notStarted",
+    "reproductionStatus": "Not Started",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2406.12345",
     "pdfUrl": "https://arxiv.org/pdf/2406.12345.pdf",
