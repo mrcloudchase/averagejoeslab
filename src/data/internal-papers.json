@@ -45,7 +45,7 @@
     "githubRepo": null,
     "notes": "Some fake notes",
     "publicationDate": "2025-08-24",
-    "status": "Proposed",
+    "status": "In progress",
     "arxivId": null
   },
   {
@@ -98,7 +98,7 @@
     "githubRepo": null,
     "notes": "Seeking collaborators for this research",
     "publicationDate": "2024-11-20",
-    "status": "Proposed",
+    "status": "Published",
     "arxivId": "arXiv:2409.12345"
   },
   {
