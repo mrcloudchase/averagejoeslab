@@ -7,26 +7,7 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-// Dynamic focus area colors (matches CSV schema focus areas)
-const FOCUS_AREA_COLORS = {
-  'optimization': '#007bff',
-  'behavioral': '#28a745', 
-  'interpretability': '#ffc107',
-  'security': '#dc3545',
-  'interoperability': '#6f42c1',
-  'sota': '#17a2b8', // State of the Art
-  'behavior': '#28a745', // Alias for behavioral
-  'default': '#6c757d'
-};
-
-// Status mapping (matches CSV schema exactly)
-const STATUS_MAPPING = {
-  'Published': 'published',
-  'In Review': 'inReview', 
-  'In Progress': 'inProgress',
-  'In progress': 'inProgress', // Handle lowercase variant from CSV
-  'Proposed': 'proposed'
-};
+// No more manual mappings - extract raw data from Notion
 
 async function syncInternalPapersFromNotion() {
   try {
@@ -69,19 +50,19 @@ async function syncInternalPapersFromNotion() {
       // Extract DOI (matches CSV schema)
       const doi = properties.DOI?.rich_text?.[0]?.plain_text || null;
       
-      // Extract Focus Areas (CSV format: comma-separated string like "Behavioral, Security")
+      // Extract Focus Areas - use raw Notion values
       let focusAreas = [];
       if (properties['Focus Areas']?.rich_text?.[0]?.plain_text) {
         const focusAreasText = properties['Focus Areas'].rich_text[0].plain_text;
         focusAreas = focusAreasText
           .split(',')
-          .map(area => area.trim().toLowerCase())
+          .map(area => area.trim())
           .filter(Boolean);
       }
       // Try multi-select format as fallback
       else if (properties['Focus Areas']?.multi_select) {
         focusAreas = properties['Focus Areas'].multi_select
-          .map(area => area.name.toLowerCase())
+          .map(area => area.name)
           .filter(Boolean);
       }
       
@@ -100,10 +81,9 @@ async function syncInternalPapersFromNotion() {
         publicationDate = new Date().toISOString().split('T')[0];
       }
       
-      // Extract Status (CSV values: "Proposed", "In progress", "Published")
-      const statusNotion = properties.Status?.status?.name || 
-                          properties.Status?.select?.name || 'Proposed';
-      const status = STATUS_MAPPING[statusNotion] || 'proposed';
+      // Extract Status - use raw Notion value
+      const status = properties.Status?.status?.name || 
+                    properties.Status?.select?.name || null;
       
       // Extract arXiv ID (CSV format: "arXiv:2409.12345" or empty)
       const arxivId = properties['arXiv ID']?.rich_text?.[0]?.plain_text || null;
@@ -153,22 +133,7 @@ async function syncInternalPapersFromNotion() {
   }
 }
 
-// External papers status mapping (matches CSV schema exactly)
-const EXTERNAL_STATUS_MAPPING = {
-  'Inbox': 'inbox',
-  'Triaged': 'triaged', 
-  'Archive': 'archive',
-  'In Progress': 'inProgress'
-};
-
-// External papers reproduction status mapping
-const REPRODUCTION_STATUS_MAPPING = {
-  'Not Started': 'notStarted',
-  'In Progress': 'inProgress',
-  'Completed': 'completed',
-  'Failed': 'failed',
-  'Not Applicable': 'notApplicable'
-};
+// Extract raw values from external papers - no mappings
 
 async function syncExternalPapersFromNotion() {
   try {
@@ -210,37 +175,35 @@ async function syncExternalPapersFromNotion() {
       const publicationYear = properties.Publication_Year?.number || 
                              properties['Publication_Year']?.number || new Date().getFullYear();
       
-      // Extract status (CSV: Status - values: "Inbox", "Triaged", "Archive", "In Progress")
-      const statusNotion = properties.Status?.select?.name || 'Inbox';
-      const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
+      // Extract status - use raw Notion value
+      const status = properties.Status?.select?.name || null;
       
       // Extract research area (CSV: Research_Area - multi-select field with values like "Attention Mechanisms", "Efficient Training", etc.)
       let researchArea = [];
       if (properties.Research_Area?.multi_select) {
-        // Multi-select field - store as array for proper filtering
+        // Multi-select field - store as array with raw values
         researchArea = properties.Research_Area.multi_select
-          .map(area => area.name.toLowerCase())
+          .map(area => area.name)
           .filter(Boolean);
       } else if (properties['Research_Area']?.multi_select) {
         // Fallback with bracket notation
         researchArea = properties['Research_Area'].multi_select
-          .map(area => area.name.toLowerCase())
+          .map(area => area.name)
           .filter(Boolean);
       } else if (properties.Research_Area?.select?.name) {
         // Fallback to select field - convert to array
-        researchArea = [properties.Research_Area.select.name.toLowerCase()];
+        researchArea = [properties.Research_Area.select.name];
       } else if (properties.Research_Area?.rich_text?.[0]?.plain_text) {
         // Fallback to rich text - convert to array
-        researchArea = [properties.Research_Area.rich_text[0].plain_text.toLowerCase()];
+        researchArea = [properties.Research_Area.rich_text[0].plain_text];
       }
       
-      // Extract reproduction status (CSV: Reproduction_Status - values: "Not Started", "In Progress", etc.)
-      const reproductionStatusNotion = properties.Reproduction_Status?.select?.name || 
-                                      properties['Reproduction_Status']?.select?.name || 'Not Started';
-      const reproductionStatus = REPRODUCTION_STATUS_MAPPING[reproductionStatusNotion] || 'notStarted';
+      // Extract reproduction status - use raw Notion value
+      const reproductionStatus = properties.Reproduction_Status?.select?.name || 
+                                 properties['Reproduction_Status']?.select?.name || null;
       
-      // Extract priority (CSV: Priority - values: "P0", "P1", "P2", "P3")
-      const priority = properties.Priority?.select?.name || 'P3';
+      // Extract priority - use raw Notion value
+      const priority = properties.Priority?.select?.name || null;
       
       // Extract URLs (CSV: Abstract_URL, PDF_URL, Repository)
       const abstractUrl = properties.Abstract_URL?.url || 

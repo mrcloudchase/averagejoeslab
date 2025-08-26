@@ -8,43 +8,62 @@ import Heading from '@theme/Heading';
 
 import styles from './papers.module.css';
 
-// External paper status types
-const EXTERNAL_STATUS = {
-  inbox: { label: 'Inbox', color: '#718096' },
-  triaged: { label: 'Triaged', color: '#4299e1' },
-  archive: { label: 'Archive', color: '#f56565' },
-  inProgress: { label: 'In Progress', color: '#ed8936' }
+// Status display functions - handle raw Notion values
+const getExternalStatusDisplay = (rawStatus: string) => {
+  const statusMap = {
+    'Inbox': { label: 'Inbox', color: '#718096' },
+    'Triaged': { label: 'Triaged', color: '#4299e1' },
+    'Archive': { label: 'Archive', color: '#f56565' },
+    'In Progress': { label: 'In Progress', color: '#ed8936' }
+  };
+  
+  return statusMap[rawStatus] || { label: rawStatus || 'Unknown', color: '#718096' };
 };
 
-// Reproduction status types
-const REPRODUCTION_STATUS = {
-  notStarted: { label: 'Not Started', color: '#718096' },
-  inProgress: { label: 'In Progress', color: '#4299e1' },
-  completed: { label: 'Completed', color: '#48bb78' },
-  failed: { label: 'Failed', color: '#f56565' },
-  notApplicable: { label: 'Not Applicable', color: '#718096' }
+const getReproductionStatusDisplay = (rawStatus: string) => {
+  const statusMap = {
+    'Not Started': { label: 'Not Started', color: '#718096' },
+    'In Progress': { label: 'In Progress', color: '#4299e1' },
+    'Completed': { label: 'Completed', color: '#48bb78' },
+    'Failed': { label: 'Failed', color: '#f56565' },
+    'Not Applicable': { label: 'Not Applicable', color: '#718096' }
+  };
+  
+  return statusMap[rawStatus] || { label: rawStatus || 'Unknown', color: '#718096' };
 };
 
-// Priority colors
-const PRIORITY_COLORS = {
-  'P0': '#f56565',
-  'P1': '#ed8936', 
-  'P2': '#ed8936',
-  'P3': '#718096'
+const getPriorityColor = (priority: string) => {
+  const colorMap = {
+    'P0': '#f56565',
+    'P1': '#ed8936', 
+    'P2': '#ed8936',
+    'P3': '#718096'
+  };
+  
+  return colorMap[priority] || '#718096';
 };
 
 // Import external papers data from JSON file (auto-synced from Notion)
 import externalPapersData from '../data/external-papers.json';
 
-// Dynamic research area colors (matches CSV schema research areas exactly)
-const RESEARCH_AREA_COLORS = {
-  'attention mechanisms': '#4299e1',
-  'efficient training': '#48bb78', 
-  'rag systems': '#ed8936',
-  'multimodal': '#f56565',
-  'interpretability': '#9f7aea',
-  'optimization': '#38b2ac',
-  'default': '#718096'
+// Research area colors - handles raw Notion values with fallback
+const getResearchAreaColor = (area: string) => {
+  const colorMap = {
+    'attention mechanisms': '#4299e1',
+    'Attention Mechanisms': '#4299e1',
+    'efficient training': '#48bb78',
+    'Efficient Training': '#48bb78', 
+    'rag systems': '#ed8936',
+    'RAG Systems': '#ed8936',
+    'multimodal': '#f56565',
+    'Multimodal': '#f56565',
+    'interpretability': '#9f7aea',
+    'Interpretability': '#9f7aea',
+    'optimization': '#38b2ac',
+    'Optimization': '#38b2ac'
+  };
+  
+  return colorMap[area] || '#718096'; // Default color
 };
 
 // Generate research areas dynamically from papers data
@@ -67,7 +86,7 @@ const generateResearchAreas = () => {
     ...Array.from(allAreas).sort().map((area: string) => ({
       id: area,
       label: area,
-      color: RESEARCH_AREA_COLORS[area.toLowerCase()] || RESEARCH_AREA_COLORS.default
+      color: getResearchAreaColor(area)
     }))
   ];
 };
@@ -144,9 +163,9 @@ function FilterTabs({ selectedFilters, onFilterChange }) {
 }
 
 function ExternalPaperCard({ paper }) {
-  const status = EXTERNAL_STATUS[paper.status] || EXTERNAL_STATUS.inbox;
-  const reproductionStatus = REPRODUCTION_STATUS[paper.reproductionStatus] || REPRODUCTION_STATUS.notStarted;
-  const priorityColor = PRIORITY_COLORS[paper.priority] || PRIORITY_COLORS.P3;
+  const status = getExternalStatusDisplay(paper.status);
+  const reproductionStatus = getReproductionStatusDisplay(paper.reproductionStatus);
+  const priorityColor = getPriorityColor(paper.priority);
   
   // Get paper links with null safety
   const getPaperLink = () => {
@@ -191,14 +210,14 @@ function ExternalPaperCard({ paper }) {
             className={styles.paperTag}
             style={{ backgroundColor: priorityColor }}
           >
-            {paper.priority || 'P3'}
+            {paper.priority || 'Unknown'}
           </span>
           {paper.researchArea && Array.isArray(paper.researchArea) && paper.researchArea.length > 0 && (
             paper.researchArea.map((area, index) => (
               <span 
                 key={index}
                 className={styles.paperTag}
-                style={{ backgroundColor: RESEARCH_AREA_COLORS[area.toLowerCase()] || RESEARCH_AREA_COLORS.default }}
+                style={{ backgroundColor: getResearchAreaColor(area) }}
               >
                 {area}
               </span>
@@ -304,8 +323,8 @@ function ExternalResearchStats() {
   const safeData = externalPapersData || [];
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Triaged', value: safeData.filter(p => p?.status === 'triaged').length, icon: '🔍' },
-    { label: 'In Progress', value: safeData.filter(p => p?.reproductionStatus === 'inProgress').length, icon: '🔬' },
+    { label: 'Triaged', value: safeData.filter(p => p?.status === 'Triaged').length, icon: '🔍' },
+    { label: 'In Progress', value: safeData.filter(p => p?.reproductionStatus === 'In Progress').length, icon: '🔬' },
     { label: 'Research Areas', value: Math.max(0, RESEARCH_AREAS.length - 1), icon: '🎯' }
   ];
 

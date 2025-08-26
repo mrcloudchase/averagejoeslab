@@ -8,27 +8,41 @@ import Heading from '@theme/Heading';
 
 import styles from './papers.module.css';
 
-// Paper status types
-const PAPER_STATUS = {
-  published: { label: 'Published', color: '#48bb78' },
-  inReview: { label: 'In Review', color: '#ed8936' },
-  inProgress: { label: 'In Progress', color: '#4299e1' },
-  proposed: { label: 'Proposed', color: '#718096' }
+// Paper status display - handles raw Notion values
+const getStatusDisplay = (rawStatus: string) => {
+  // Handle common status values with fallback
+  const statusMap = {
+    'Published': { label: 'Published', color: '#48bb78' },
+    'In Review': { label: 'In Review', color: '#ed8936' },
+    'In Progress': { label: 'In Progress', color: '#4299e1' },
+    'Proposed': { label: 'Proposed', color: '#718096' }
+  };
+  
+  return statusMap[rawStatus] || { label: rawStatus || 'Unknown', color: '#718096' };
 };
 
 // Import internal papers data from JSON file (auto-synced from Notion)
 import papersData from '../data/internal-papers.json';
 
-// Dynamic focus area colors (matches CSV schema focus areas)
-const FOCUS_AREA_COLORS = {
-  'optimization': '#4299e1',
-  'behavioral': '#48bb78', 
-  'interpretability': '#ed8936',
-  'security': '#f56565',
-  'interoperability': '#9f7aea',
-  'sota': '#38b2ac', // State of the Art
-  'behavior': '#48bb78', // Alias for behavioral
-  'default': '#718096'
+// Focus area colors - handles raw Notion values with fallback
+const getFocusAreaColor = (area: string) => {
+  const colorMap = {
+    'optimization': '#4299e1',
+    'Optimization': '#4299e1',
+    'behavioral': '#48bb78',
+    'Behavioral': '#48bb78', 
+    'interpretability': '#ed8936',
+    'Interpretability': '#ed8936',
+    'security': '#f56565',
+    'Security': '#f56565',
+    'interoperability': '#9f7aea',
+    'Interoperability': '#9f7aea',
+    'sota': '#38b2ac',
+    'SOTA': '#38b2ac',
+    'State of the Art': '#38b2ac'
+  };
+  
+  return colorMap[area] || '#718096'; // Default color
 };
 
 // Generate focus areas dynamically from papers data (CSV schema: focusAreas)
@@ -44,8 +58,8 @@ const generateFocusAreas = () => {
     { id: 'all', label: 'All Papers', color: '#718096' },
     ...Array.from(allFocusAreas).sort().map((area: string) => ({
       id: area,
-      label: area.charAt(0).toUpperCase() + area.slice(1),
-      color: FOCUS_AREA_COLORS[area] || FOCUS_AREA_COLORS.default
+      label: area,
+      color: getFocusAreaColor(area)
     }))
   ];
 };
@@ -121,7 +135,7 @@ function FilterTabs({ selectedFilters, onFilterChange }) {
 }
 
 function PaperCard({ paper }) {
-  const status = PAPER_STATUS[paper.status] || PAPER_STATUS.proposed;
+  const status = getStatusDisplay(paper.status);
   
   // Get paper and code links with null safety (CSV schema fields)
   const getPaperLink = () => {
@@ -156,18 +170,15 @@ function PaperCard({ paper }) {
           </span>
         </div>
         <div className={styles.paperTags}>
-          {(paper.focusAreas || []).map((area) => {
-            const focusArea = FOCUS_AREAS.find(fa => fa.id === area);
-            return (
-              <span 
-                key={area}
-                className={styles.paperTag}
-                style={{ backgroundColor: focusArea?.color || '#718096' }}
-              >
-                {focusArea?.label || area.charAt(0).toUpperCase() + area.slice(1)}
-              </span>
-            );
-          })}
+          {(paper.focusAreas || []).map((area) => (
+            <span 
+              key={area}
+              className={styles.paperTag}
+              style={{ backgroundColor: getFocusAreaColor(area) }}
+            >
+              {area}
+            </span>
+          ))}
         </div>
       </div>
       
@@ -250,9 +261,9 @@ function ResearchStats() {
   const safeData = papersData || [];
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Proposed', value: safeData.filter(p => p?.status === 'proposed').length, icon: '💡' },
-    { label: 'In Progress', value: safeData.filter(p => p?.status === 'inProgress').length, icon: '🔬' },
-    { label: 'Published', value: safeData.filter(p => p?.status === 'published').length, icon: '✅' }
+    { label: 'Proposed', value: safeData.filter(p => p?.status === 'Proposed').length, icon: '💡' },
+    { label: 'In Progress', value: safeData.filter(p => p?.status === 'In Progress').length, icon: '🔬' },
+    { label: 'Published', value: safeData.filter(p => p?.status === 'Published').length, icon: '✅' }
   ];
 
   return (
