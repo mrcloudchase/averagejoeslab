@@ -53,8 +53,12 @@ const generateResearchAreas = () => {
   const allAreas = new Set<string>();
   
   safeData.forEach(paper => {
-    if (paper.researchArea && paper.researchArea.trim()) {
-      allAreas.add(paper.researchArea.trim());
+    if (paper.researchArea && Array.isArray(paper.researchArea)) {
+      paper.researchArea.forEach(area => {
+        if (area && area.trim()) {
+          allAreas.add(area.trim());
+        }
+      });
     }
   });
 
@@ -92,24 +96,49 @@ function ExternalPapersHero() {
   );
 }
 
-function FilterTabs({ activeFilter, onFilterChange }) {
+function FilterTabs({ selectedFilters, onFilterChange }) {
+  const handleFilterToggle = (filterId: string) => {
+    if (filterId === 'all') {
+      // Clear all filters when "All Papers" is clicked
+      onFilterChange([]);
+    } else {
+      // Toggle the filter
+      if (selectedFilters.includes(filterId)) {
+        // Remove filter if already selected
+        onFilterChange(selectedFilters.filter(f => f !== filterId));
+      } else {
+        // Add filter if not selected
+        onFilterChange([...selectedFilters, filterId]);
+      }
+    }
+  };
+
   return (
     <div className={styles.filterTabs}>
-      {RESEARCH_AREAS.map((area) => (
+      {RESEARCH_AREAS.map((area) => {
+        const isSelected = area.id === 'all' 
+          ? selectedFilters.length === 0 
+          : selectedFilters.includes(area.id);
+        
+        return (
         <button
           key={area.id}
           className={clsx(
             styles.filterTab,
-            activeFilter === area.id && styles.filterTabActive
+            isSelected && styles.filterTabActive
           )}
-          onClick={() => onFilterChange(area.id)}
+          onClick={() => handleFilterToggle(area.id)}
           style={{
             '--filter-color': area.color
           } as React.CSSProperties}
         >
           {area.label}
+          {area.id !== 'all' && selectedFilters.includes(area.id) && (
+            <span className={styles.filterCheckmark}> ✓</span>
+          )}
         </button>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -164,13 +193,16 @@ function ExternalPaperCard({ paper }) {
           >
             {paper.priority || 'P3'}
           </span>
-          {paper.researchArea && (
-            <span 
-              className={styles.paperTag}
-              style={{ backgroundColor: RESEARCH_AREA_COLORS[paper.researchArea.toLowerCase()] || RESEARCH_AREA_COLORS.default }}
-            >
-              {paper.researchArea}
-            </span>
+          {paper.researchArea && Array.isArray(paper.researchArea) && paper.researchArea.length > 0 && (
+            paper.researchArea.map((area, index) => (
+              <span 
+                key={index}
+                className={styles.paperTag}
+                style={{ backgroundColor: RESEARCH_AREA_COLORS[area.toLowerCase()] || RESEARCH_AREA_COLORS.default }}
+              >
+                {area}
+              </span>
+            ))
           )}
         </div>
       </div>
@@ -341,13 +373,17 @@ function SubmitExternalPaperForm() {
 
 export default function ExternalPapers(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-  // Filter papers based on active filter
+  // Filter papers based on selected filters (multi-select with AND logic)
   const safeData = externalPapersData || [];
-  const filteredPapers = activeFilter === 'all' 
+  const filteredPapers = selectedFilters.length === 0 
     ? safeData 
-    : safeData.filter(paper => paper?.researchArea === activeFilter);
+    : safeData.filter(paper => 
+        paper?.researchArea && 
+        Array.isArray(paper.researchArea) &&
+        selectedFilters.every(filter => paper.researchArea.includes(filter))
+      );
 
   return (
     <Layout
@@ -364,13 +400,13 @@ export default function ExternalPapers(): ReactNode {
                 Browse Papers by Research Area
               </Heading>
               <p className="section-description">
-                Filter external papers by research area to find work relevant to your interests
+                Select one or more research areas to filter papers. Papers must match ALL selected areas.
               </p>
             </div>
             
             <FilterTabs 
-              activeFilter={activeFilter} 
-              onFilterChange={setActiveFilter} 
+              selectedFilters={selectedFilters} 
+              onFilterChange={setSelectedFilters} 
             />
             
             <ExternalPapersGrid papers={filteredPapers} />

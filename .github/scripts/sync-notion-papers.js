@@ -215,23 +215,23 @@ async function syncExternalPapersFromNotion() {
       const status = EXTERNAL_STATUS_MAPPING[statusNotion] || 'inbox';
       
       // Extract research area (CSV: Research_Area - multi-select field with values like "Attention Mechanisms", "Efficient Training", etc.)
-      let researchArea = '';
+      let researchArea = [];
       if (properties.Research_Area?.multi_select) {
-        // Multi-select field - join all selected values with comma
+        // Multi-select field - store as array for proper filtering
         researchArea = properties.Research_Area.multi_select
-          .map(area => area.name)
-          .join(', ');
+          .map(area => area.name.toLowerCase())
+          .filter(Boolean);
       } else if (properties['Research_Area']?.multi_select) {
         // Fallback with bracket notation
         researchArea = properties['Research_Area'].multi_select
-          .map(area => area.name)
-          .join(', ');
+          .map(area => area.name.toLowerCase())
+          .filter(Boolean);
       } else if (properties.Research_Area?.select?.name) {
-        // Fallback to select field
-        researchArea = properties.Research_Area.select.name;
+        // Fallback to select field - convert to array
+        researchArea = [properties.Research_Area.select.name.toLowerCase()];
       } else if (properties.Research_Area?.rich_text?.[0]?.plain_text) {
-        // Fallback to rich text
-        researchArea = properties.Research_Area.rich_text[0].plain_text;
+        // Fallback to rich text - convert to array
+        researchArea = [properties.Research_Area.rich_text[0].plain_text.toLowerCase()];
       }
       
       // Extract reproduction status (CSV: Reproduction_Status - values: "Not Started", "In Progress", etc.)
