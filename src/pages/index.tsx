@@ -85,8 +85,7 @@ function FounderStory() {
                       </div>
                       <p className={styles.founderDescription}>
                         I founded Average Joes Lab because I saw how traditional academic pathways often limit who gets to contribute to scientific discovery. 
-                        My journey is a bit unconventional: I'm entirely self-taught, with a deep love for learning that led me to explore computer science, 
-                        physics, and beyond, all on my own. I never worked in academia, but I've always believed that curiosity and a passion for knowledge 
+                        My journey is a bit unconventional: I'm entirely self-taught, with a deep love for learning that led me to explore areas such as cloud computing and now AI. I've worked as an engineer and technical educator and I've always believed that curiosity and a passion for knowledge 
                         are more important than formal credentials.
                       </p>
                       <p className={styles.founderDescription}>
