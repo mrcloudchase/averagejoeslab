@@ -604,6 +604,23 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
 }
 
+/* Secondary button styling for "Join Community" */
+.cta-buttons .button--secondary {
+  background: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .button--secondary:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #4299e1 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Global Section Components */
 .section-hero {
   padding: 4rem 0;
