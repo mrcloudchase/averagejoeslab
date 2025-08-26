@@ -66,7 +66,7 @@ function HomepageHeader() {
 
 function FounderStory() {
   return (
-    <section className={styles.founderSection}>
+    <section className={styles.founderSection} id="story">
       <div className="container">
         <div className="row">
           <div className="col col--12">

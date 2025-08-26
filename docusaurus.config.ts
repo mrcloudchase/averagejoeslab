@@ -20,6 +20,9 @@ const config: Config = {
   // For custom domain, use root path
   baseUrl: '/',
 
+  // Ignore broken anchors for footer links that only exist on homepage
+  onBrokenAnchors: 'warn',
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'mrcloudchase', // Usually your GitHub org/user name.
@@ -165,11 +168,11 @@ const config: Config = {
             },
             {
               label: 'About Us',
-              to: '/',
+              href: '/#story',
             },
             {
               label: 'Mission',
-              to: '/',
+              href: '/#mission',
             },
           ],
         },
