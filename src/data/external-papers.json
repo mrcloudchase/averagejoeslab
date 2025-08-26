@@ -10,7 +10,9 @@
     "journal": "Transformer Circuits",
     "publicationYear": 2025,
     "status": "inbox",
-    "researchArea": "Interpretability",
+    "researchArea": [
+      "interpretability"
+    ],
     "reproductionStatus": "notStarted",
     "priority": "P2",
     "abstractUrl": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
@@ -30,7 +32,9 @@
     "journal": "Anthropic",
     "publicationYear": 2025,
     "status": "inbox",
-    "researchArea": "Interpretability",
+    "researchArea": [
+      "interpretability"
+    ],
     "reproductionStatus": "notStarted",
     "priority": "P2",
     "abstractUrl": "https://www.anthropic.com/research/tracing-thoughts-language-model",
@@ -51,7 +55,9 @@
     "journal": "arXiv",
     "publicationYear": 2025,
     "status": "triaged",
-    "researchArea": "RAG Systems",
+    "researchArea": [
+      "rag systems"
+    ],
     "reproductionStatus": "notStarted",
     "priority": "P2",
     "abstractUrl": "https://arxiv.org/abs/2501.01234",
@@ -75,7 +81,10 @@
     "journal": "arXiv",
     "publicationYear": 2025,
     "status": "triaged",
-    "researchArea": "Attention Mechanisms, Efficient Training",
+    "researchArea": [
+      "attention mechanisms",
+      "efficient training"
+    ],
     "reproductionStatus": "notStarted",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2503.16428",
@@ -95,7 +104,9 @@
     "journal": "ICLR",
     "publicationYear": 2024,
     "status": "archive",
-    "researchArea": "Multimodal",
+    "researchArea": [
+      "multimodal"
+    ],
     "reproductionStatus": "notApplicable",
     "priority": "P3",
     "abstractUrl": "https://arxiv.org/abs/2312.22222",
@@ -116,7 +127,9 @@
     "journal": "NeurIPS",
     "publicationYear": 2024,
     "status": "triaged",
-    "researchArea": "Efficient Training",
+    "researchArea": [
+      "efficient training"
+    ],
     "reproductionStatus": "notStarted",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2406.12345",
