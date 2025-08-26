@@ -69,7 +69,7 @@ function FounderStory() {
     <section className={styles.founderSection}>
       <div className="container">
         <div className="row">
-          <div className="col col--10 col--offset-1">
+          <div className="col col--12">
             <div className="text--center margin-bottom--lg">
               <Heading as="h2" className="text-gradient">
                 Our Story
@@ -77,7 +77,7 @@ function FounderStory() {
             </div>
             <div className={styles.founderContent}>
               <div className="row">
-                <div className="col col--8 col--offset-2">
+                <div className="col col--10 col--offset-1">
                   <div className={styles.founderCard}>
                     <div className={styles.founderText}>
                       <p className={styles.founderQuote}>
