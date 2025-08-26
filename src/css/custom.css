@@ -550,6 +550,15 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   font-weight: 500;
 }
 
+/* Dark mode stat styling for papers pages */
+[data-theme='dark'] .stat-value {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .stat-label {
+  color: #e2e8f0;
+}
+
 /* Homepage specific stat styling */
 .stat-item {
   text-align: center;
