@@ -393,6 +393,11 @@
   font-weight: bold;
 }
 
+/* Dark mode checkmarks should be white */
+[data-theme='dark'] .initiativeList li::before {
+  color: #ffffff;
+}
+
 /* Community Section */
 .communitySection {
   padding: 5rem 0;
