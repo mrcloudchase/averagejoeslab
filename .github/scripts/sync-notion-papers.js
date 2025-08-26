@@ -175,8 +175,7 @@ async function syncExternalPapersFromNotion() {
       const publicationYear = properties.Publication_Year?.number || 
                              properties['Publication_Year']?.number || new Date().getFullYear();
       
-      // Extract status - use raw Notion value
-      const status = properties.Status?.select?.name || null;
+      // Status column removed from database - no longer extracted
       
       // Extract research area (CSV: Research_Area - multi-select field with values like "Attention Mechanisms", "Efficient Training", etc.)
       let researchArea = [];
@@ -227,7 +226,6 @@ async function syncExternalPapersFromNotion() {
         authors: authors,                // CSV: Authors
         journal: journal,                // CSV: Journal
         publicationYear: publicationYear, // CSV: Publication_Year
-        status: status,                  // CSV: Status
         researchArea: researchArea,      // CSV: Research_Area
         reproductionStatus: reproductionStatus, // CSV: Reproduction_Status
         priority: priority,              // CSV: Priority

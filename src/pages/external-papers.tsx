@@ -8,22 +8,14 @@ import Heading from '@theme/Heading';
 
 import styles from './papers.module.css';
 
-// Status display functions - handle raw Notion values
-const getExternalStatusDisplay = (rawStatus: string) => {
-  const statusMap = {
-    'Inbox': { label: 'Inbox', color: '#718096' },
-    'Triaged': { label: 'Triaged', color: '#4299e1' },
-    'Archive': { label: 'Archive', color: '#f56565' },
-    'In Progress': { label: 'In Progress', color: '#ed8936' }
-  };
-  
-  return statusMap[rawStatus] || { label: rawStatus || 'Unknown', color: '#718096' };
-};
-
+// Reproduction status display - handle new raw Notion values
 const getReproductionStatusDisplay = (rawStatus: string) => {
   const statusMap = {
+    'Triaged': { label: 'Triaged', color: '#4299e1' },
+    'In Progress': { label: 'In Progress', color: '#ed8936' },
+    'Reproduced': { label: 'Reproduced', color: '#48bb78' },
+    // Legacy values for backward compatibility
     'Not Started': { label: 'Not Started', color: '#718096' },
-    'In Progress': { label: 'In Progress', color: '#4299e1' },
     'Completed': { label: 'Completed', color: '#48bb78' },
     'Failed': { label: 'Failed', color: '#f56565' },
     'Not Applicable': { label: 'Not Applicable', color: '#718096' }
@@ -163,7 +155,6 @@ function FilterTabs({ selectedFilters, onFilterChange }) {
 }
 
 function ExternalPaperCard({ paper }) {
-  const status = getExternalStatusDisplay(paper.status);
   const reproductionStatus = getReproductionStatusDisplay(paper.reproductionStatus);
   const priorityColor = getPriorityColor(paper.priority);
   
@@ -189,12 +180,6 @@ function ExternalPaperCard({ paper }) {
     <div className={styles.paperCard}>
       <div className={styles.paperHeader}>
         <div className={styles.paperMeta}>
-          <span 
-            className={styles.statusBadge}
-            style={{ backgroundColor: status.color }}
-          >
-            {status.label}
-          </span>
           <span className={styles.paperDate}>
             {paper.publicationYear || 'Unknown Year'}
           </span>
@@ -323,9 +308,9 @@ function ExternalResearchStats() {
   const safeData = externalPapersData || [];
   const stats = [
     { label: 'Total Papers', value: safeData.length, icon: '📄' },
-    { label: 'Triaged', value: safeData.filter(p => p?.status === 'Triaged').length, icon: '🔍' },
+    { label: 'Triaged', value: safeData.filter(p => p?.reproductionStatus === 'Triaged').length, icon: '🔍' },
     { label: 'In Progress', value: safeData.filter(p => p?.reproductionStatus === 'In Progress').length, icon: '🔬' },
-    { label: 'Research Areas', value: Math.max(0, RESEARCH_AREAS.length - 1), icon: '🎯' }
+    { label: 'Reproduced', value: safeData.filter(p => p?.reproductionStatus === 'Reproduced').length, icon: '✅' }
   ];
 
   return (
