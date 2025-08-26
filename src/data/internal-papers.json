@@ -119,5 +119,18 @@
     "publicationDate": "2024-10-24",
     "status": "Proposed",
     "arxivId": null
+  },
+  {
+    "id": 8,
+    "name": "Another paper",
+    "abstract": "another abstract",
+    "authors": [],
+    "doi": null,
+    "focusAreas": [],
+    "githubRepo": null,
+    "notes": "",
+    "publicationDate": "2025-08-26",
+    "status": "Proposed",
+    "arxivId": null
   }
 ]
