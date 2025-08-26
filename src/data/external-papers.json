@@ -12,7 +12,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "Reproduced",
     "priority": "P2",
     "abstractUrl": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
     "pdfUrl": null,
@@ -33,7 +33,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "Reproduced",
     "priority": "P2",
     "abstractUrl": "https://www.anthropic.com/research/tracing-thoughts-language-model",
     "pdfUrl": null,
@@ -55,7 +55,7 @@
     "researchArea": [
       "RAG Systems"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "Triaged",
     "priority": "P2",
     "abstractUrl": "https://arxiv.org/abs/2501.01234",
     "pdfUrl": "https://arxiv.org/pdf/2501.01234.pdf",
@@ -81,7 +81,7 @@
       "Attention Mechanisms",
       "Efficient Training"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "Triaged",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2503.16428",
     "pdfUrl": "https://arxiv.org/pdf/2503.16428.pdf",
@@ -102,7 +102,7 @@
     "researchArea": [
       "Multimodal"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "In Progress",
     "priority": "P3",
     "abstractUrl": "https://arxiv.org/abs/2312.22222",
     "pdfUrl": "https://arxiv.org/pdf/2312.22222.pdf",
@@ -124,7 +124,7 @@
     "researchArea": [
       "Efficient Training"
     ],
-    "reproductionStatus": null,
+    "reproductionStatus": "In Progress",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2406.12345",
     "pdfUrl": "https://arxiv.org/pdf/2406.12345.pdf",
@@ -141,7 +141,7 @@
     "journal": "",
     "publicationYear": 2025,
     "researchArea": [],
-    "reproductionStatus": null,
+    "reproductionStatus": "Triaged",
     "priority": null,
     "abstractUrl": null,
     "pdfUrl": null,

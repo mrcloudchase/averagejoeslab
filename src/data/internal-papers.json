@@ -45,7 +45,7 @@
     "githubRepo": null,
     "notes": "Some fake notes",
     "publicationDate": "2025-08-24",
-    "status": "In progress",
+    "status": "In Progress",
     "arxivId": null
   },
   {
@@ -76,8 +76,7 @@
     "doi": null,
     "focusAreas": [
       "Optimization",
-      "Behavioral",
-      "SOTA"
+      "Behavioral"
     ],
     "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
     "notes": "Ongoing community research project",
