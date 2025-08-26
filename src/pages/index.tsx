@@ -94,11 +94,7 @@ function FounderStory() {
                         can engage in meaningful research. We aim to break down the barriers that have traditionally kept brilliant minds out of the 
                         conversation and instead foster a community that values intellectual curiosity and scientific rigor above all else.
                       </p>
-                      <p className={styles.founderDescription}>
-                        Our mission is simple: to empower ordinary people to do extraordinary things in the world of science. We provide the tools, 
-                        resources, and community support needed to explore new ideas, validate them through rigorous methods, and ultimately contribute 
-                        to the advancement of human knowledge. That's the driving force behind Average Joes Lab, and I'm excited to see what we can achieve together.
-                      </p>
+
                     </div>
                   </div>
                 </div>
@@ -139,9 +135,9 @@ function MissionValues() {
             Our Mission & Values
           </Heading>
           <p className={styles.missionStatement}>
-            We believe that groundbreaking research can and should be conducted by ordinary citizens - 
-            the "average joes" of the world. Research has become increasingly gatekept by institutions, 
-            creating barriers that prevent brilliant minds from contributing to human knowledge.
+            Our mission is simple: to empower ordinary people to do extraordinary things in the world of science. We provide the tools, 
+            resources, and community support needed to explore new ideas, validate them through rigorous methods, and ultimately contribute 
+            to the advancement of human knowledge. That's the driving force behind Average Joes Lab, and I'm excited to see what we can achieve together.
           </p>
         </div>
         <div className="row">
