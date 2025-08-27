@@ -893,6 +893,24 @@ a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-l
   color: #63b3ed !important;
 }
 
+/* AGGRESSIVE OVERRIDE - Blog sidebar active post in dark mode */
+[data-theme='dark'] .theme-blog-sidebar [aria-current="page"],
+[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module [aria-current="page"],
+[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module [aria-current="page"],
+[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module [aria-current="page"],
+[data-theme='dark'] aside [aria-current="page"],
+[data-theme='dark'] .col--3 [aria-current="page"] {
+  color: #63b3ed !important;
+  text-decoration: none !important;
+}
+
+/* Even more aggressive - target any link in blog sidebar area with aria-current */
+[data-theme='dark'] .theme-blog-sidebar *[aria-current="page"],
+[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module *[aria-current="page"],
+[data-theme='dark'] aside *[aria-current="page"] {
+  color: #63b3ed !important;
+}
+
 /* Selection styling */
 ::selection {
   background: var(--ifm-color-primary);
