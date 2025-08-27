@@ -4,211 +4,337 @@ sidebar_position: 1
 
 # Research Engineering Learning Path
 
-Welcome to the **Average Joes Lab Research Engineering Learning Path** - your comprehensive guide to becoming a research engineer and contributing to democratized research.
+*A Beginner-Friendly Guide for Citizen Researchers at Average Joes Lab*
 
-## What is Research Engineering?
+------------------------------------------------------------------------
 
-Research Engineering is the bridge between cutting-edge research and practical implementation. As a research engineer, you'll:
+## 1. Introduction
 
-- **Design and conduct original research** in AI, ML, and emerging technologies
-- **Implement research findings** into working prototypes and systems
-- **Collaborate with researchers** to translate ideas into reality
-- **Contribute to open science** through reproducible research practices
-- **Democratize research** by making it accessible outside traditional institutions
+**Research Engineering** is about taking ideas from research papers or
+new scientific concepts and turning them into something that works:
+code, experiments, and reproducible results.
 
-## Why Research Engineering at Average Joes Lab?
+At **Average Joes Lab (AJL)**, we believe:
+- You don't need a degree or credentials to contribute to science.
+- You just need curiosity, persistence, and the right guidance.
+- This Learning Path gives you **structure, resources, and projects** to
+start from zero.
 
-### **Open and Accessible**
-- No gatekeeping based on credentials or institutional affiliation
-- Learn from real practitioners and community experts
-- Contribute to meaningful research from day one
+This path assumes:
+❌ You don't know programming.
+❌ You don't know math or statistics.
+❌ You've never read a research paper.
+✅ But you're curious and willing to learn.
 
-### **Community-Driven**
-- Collaborate with fellow citizen researchers
-- Get mentorship from experienced research engineers
-- Participate in real research projects with global impact
+We'll take you from "What is a variable?" → "I published my first
+open-source research project."
 
-### **Practical Focus**
-- Learn by doing real research, not just theory
-- Build a portfolio of actual research contributions
-- Develop skills that translate directly to career opportunities
+⚠️ **Important Note on Reproducibility**: Not all famous papers can
+realistically be trained from scratch by beginners (many require massive
+datasets and hardware). That's okay. In this path, we carefully select
+**popular, beginner-friendly papers** and explain **exactly what you
+should do**:
+- Some papers you will **train from scratch** (small datasets).
+- Some papers you will **fine-tune** a pretrained model.
+- Some papers you will only **run inference** (use an existing model to
+generate outputs).
 
-## Learning Path Overview
+This way you don't get stuck trying to do something unreasonable --- and
+you still learn the core concepts.
 
-### Phase 1: Research Foundations (Weeks 1-4)
-**Build your research methodology foundation**
+------------------------------------------------------------------------
 
-#### Week 1-2: Research Fundamentals
-- Scientific method and research design
-- Literature review techniques
-- Research ethics and open science principles
-- Introduction to reproducible research
+## 2. Prerequisites (Zero Knowledge Start)
 
-#### Week 3-4: Data and Analysis
-- Data collection methodologies
-- Statistical analysis fundamentals
-- Research tools and software
-- Documentation and version control
+Here's what you'll need to learn before diving into research. Every
+concept has **two free resources** to learn from and an **example
+practice task**.
 
-**Milestone**: Complete your first literature review on a topic of interest
+### A. Programming (Python)
 
-### Phase 2: Technical Skills (Weeks 5-8)
-**Develop the technical skills for research engineering**
+**What is Python?**
+Python is a programming language used to tell computers what to do. It's
+simple, powerful, and the standard for AI/ML.
 
-#### Week 5-6: Programming for Research
-- Python for research and data analysis
-- Jupyter notebooks and research workflows
-- Version control with Git for research
-- Collaborative coding practices
+-   Learn: [Python for Everybody --
+    FreeCodeCamp](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
+-   Learn: [Python.org Beginner's
+    Guide](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
 
-#### Week 7-8: AI/ML Research Tools
-- Machine learning frameworks (PyTorch, TensorFlow)
-- Experiment tracking and management
-- Model evaluation and validation
-- Research reproducibility tools
+**Practice Task:**
+Write a Python program that prints: `Hello Average Joes Lab!`
 
-**Milestone**: Implement and reproduce a research paper
+------------------------------------------------------------------------
 
-### Phase 3: Research Practice (Weeks 9-12)
-**Apply your skills to real research projects**
+### B. Jupyter Notebooks
 
-#### Week 9-10: Research Project Design
-- Formulating research questions
-- Experimental design and methodology
-- Project planning and management
-- Collaboration and team research
+**What is Jupyter?**
+Jupyter lets you write code, run it, and explain it all in one place.
+It's the standard tool for reproducible research.
 
-#### Week 11-12: Research Execution
-- Conducting original research
-- Data analysis and interpretation
-- Results documentation and presentation
-- Peer review and feedback incorporation
+-   Learn: [Jupyter Docs -- Try Jupyter](https://jupyter.org/try)
+-   Learn: [Jupyter Notebook Tutorial --
+    FreeCodeCamp](https://www.youtube.com/watch?v=HW29067qVWk)
 
-**Milestone**: Complete an original research project
+**Practice Task:**
+Open a Jupyter Notebook and write code that adds 2 + 2.
 
-### Phase 4: Community Contribution (Weeks 13-16)
-**Contribute to the research community**
+------------------------------------------------------------------------
 
-#### Week 13-14: Research Communication
-- Writing research papers and reports
-- Creating research presentations
-- Open science publication practices
-- Community engagement and networking
+### C. Math & Statistics
 
-#### Week 15-16: Research Leadership
-- Mentoring new researchers
-- Leading collaborative projects
-- Contributing to research tools and frameworks
-- Building research communities
+**What is Statistics?**
+Statistics helps us describe and analyze data.
 
-**Milestone**: Publish your research and mentor another community member
+-   Learn: [Khan Academy: Statistics &
+    Probability](https://www.khanacademy.org/math/statistics-probability)
+-   Learn: [Crash Course Statistics (YouTube
+    Playlist)](https://www.youtube.com/playlist?list=PL8dPuuaLjXtOfse2ncvffeelTrqvHR8kE)
 
-## Core Skills You'll Develop
+**What is Linear Algebra?**
+Linear algebra is math for working with vectors (lists of numbers) and
+matrices (tables of numbers).
 
-### **Research Methodology**
-- Experimental design and hypothesis testing
-- Literature review and synthesis
-- Data collection and analysis
-- Research ethics and integrity
+-   Learn: [Khan Academy Linear
+    Algebra](https://www.khanacademy.org/math/linear-algebra)
+-   Learn: [3Blue1Brown: Essence of Linear
+    Algebra](https://www.3blue1brown.com/topics/linear-algebra)
 
-### **Technical Implementation**
-- Programming in Python, R, and other research languages
-- Machine learning and AI frameworks
-- Data visualization and analysis tools
-- Research infrastructure and tools
+**Practice Task:**
+- Calculate mean and variance of a dataset (e.g., student scores).
+- Represent images as matrices and understand that each pixel is a
+number.
 
-### **Collaboration and Communication**
-- Working in distributed research teams
-- Presenting research findings effectively
-- Writing clear and compelling research papers
-- Engaging with the research community
+------------------------------------------------------------------------
 
-### **Open Science Practices**
-- Reproducible research workflows
-- Open data and code sharing
-- Community-driven peer review
-- Democratized research methodologies
+### D. Machine Learning Basics
 
-## Learning Resources
+**What is Machine Learning?**
+Machine learning is teaching computers to learn patterns from data
+instead of being programmed with rules.
 
-### **Free Online Resources**
-- [Papers with Code](https://paperswithcode.com/) - Latest ML papers with implementations
-- [ArXiv](https://arxiv.org/) - Open access research papers
-- [Google Research](https://research.google/) - Research methodologies and papers
-- [Distill](https://distill.pub/) - Interactive machine learning research
+-   Learn: [Google's ML Crash
+    Course](https://developers.google.com/machine-learning/crash-course)
+-   Learn: [fast.ai Practical Deep Learning](https://course.fast.ai/)
 
-### **Research Tools**
-- [Jupyter Notebooks](https://jupyter.org/) - Interactive research environment
-- [Weights & Biases](https://wandb.ai/) - Experiment tracking
-- [Hugging Face](https://huggingface.co/) - ML models and datasets
-- [Google Colab](https://colab.research.google.com/) - Free GPU/TPU access
+**What is Overfitting?**
+Overfitting is when a model memorizes the training data instead of
+generalizing.
 
-### **Community Resources**
-- **Discord Server**: Real-time collaboration and support
-- **GitHub Organization**: Open research projects and code
-- **Research Papers**: Community publications and findings
-- **Mentorship Program**: Connect with experienced researchers
+-   Learn: [Overfitting Explained
+    Simply](https://towardsdatascience.com/underfitting-and-overfitting-2f9f1f77f7a9)
+-   Learn: [Supervised vs Unsupervised --
+    GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-supervised-and-unsupervised-learning/)
 
-## Hands-on Projects
+**Practice Task:**
+Train a simple linear regression model to predict house prices using a
+tutorial.
 
-### **Beginner Projects**
-1. **Literature Review**: Comprehensive review of a research area
-2. **Paper Reproduction**: Implement and validate published research
-3. **Dataset Analysis**: Explore and analyze open datasets
-4. **Research Proposal**: Design an original research project
+------------------------------------------------------------------------
 
-### **Intermediate Projects**
-1. **Original Research**: Conduct novel research in your area of interest
-2. **Tool Development**: Build tools to support research workflows
-3. **Collaborative Project**: Work with team members on complex research
-4. **Community Contribution**: Contribute to open research initiatives
+### E. Research Mindset
 
-### **Advanced Projects**
-1. **Research Leadership**: Lead a multi-person research project
-2. **Publication**: Publish research in open access venues
-3. **Mentorship**: Guide newcomers through their research journey
-4. **Innovation**: Develop new methodologies or frameworks
+**What is the Scientific Method?**
+The scientific method is testing ideas with experiments.
 
-## Community Integration
+-   Learn: [Khan Academy -- Scientific
+    Method](https://www.khanacademy.org/test-prep/mcat/scientific-inquiry/scientific-method-mcat/a/the-scientific-method-and-experimental-design)
+-   Learn: [Science Buddies --
+    Hypotheses](https://www.sciencebuddies.org/science-fair-projects/science-fair/hypothesis)
 
-### **Average Joes Lab Community**
-- **Monthly Research Meetups**: Virtual sessions on latest research
-- **Project Collaboration**: Team up on meaningful research initiatives
-- **Skill Sharing**: Learn from and teach community members
-- **Open Source Focus**: All research is open and community-driven
+**What is a Research Paper?**
+A paper is a report that explains a scientific question, method, and
+results.
 
-### **Getting Started**
-1. **Join our [Discord](https://discord.gg/averagejoeslab)** - Connect with the community
-2. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
-3. **Read our [research papers](/internal-papers)** - See what the community is working on
-4. **Start your first project** - Begin with a literature review or paper reproduction
+-   Learn: [MIT Libraries -- Primary vs Secondary
+    Sources](https://libraries.mit.edu/distinctive-collections/research-guide/primary-vs-secondary/)
+-   Learn: [How to Read a Paper
+    (Keshav)](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
 
-## Career Paths
+**Practice Task:**
+Read an abstract of a paper and identify: problem, method, result.
 
-Research Engineering opens doors to:
+------------------------------------------------------------------------
 
-- **Research Scientist** at technology companies
-- **Applied Research Engineer** in industry R&D
-- **Independent Researcher** in citizen science initiatives
-- **Research & Development Lead** at innovative companies
-- **Open Source Research Contributor** to global projects
-- **Research Consultant** for emerging technologies
+## 3. The Learning Path Framework
 
-## Success Stories
+This Learning Path is divided into **4 phases (16 weeks suggested)**.
 
-*Coming soon: Stories from our community members who have successfully transitioned into research engineering roles through our program.*
+Each phase includes:
+- **Concepts** → what you should learn.
+- **Skills** → what you should be able to do.
+- **Deliverables** → what you must produce.
+- **Example Papers** → famous, beginner-friendly, reproducible with
+clear instructions.
 
-## Next Steps
+------------------------------------------------------------------------
 
-Ready to start your research engineering journey?
+### Phase 1: Research Foundations (Weeks 1--4)
 
-1. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
-2. **Choose your first project** - Start with a literature review or paper reproduction
-3. **Find a mentor** - Connect with experienced community members
-4. **Start contributing** - Begin your journey in democratized research
+**Concepts:**
+- Scientific method, reproducibility, ethics.
+- How to find papers (arXiv, Google Scholar, Papers With Code).
 
----
+**Skills:**
+- Read and summarize papers.
+- Write a short literature review.
 
-**"Research is not just for academics. Every curious mind can contribute to human knowledge."**
+**Deliverables:**
+- Literature review of 3--5 papers.
 
-Welcome to Average Joes Lab - where ordinary people do extraordinary research!
+**Beginner-Friendly Papers:**
+1. **LeNet (1998)** -- Digit recognition on MNIST
+([Paper](https://paperswithcode.com/paper/gradient-based-learning-applied-to-document))
+- ✅ Trainable from scratch on MNIST (runs in minutes on Colab).
+- Great "first research reproduction."
+2. **AlexNet (2012)** -- ImageNet classification
+([Paper](https://paperswithcode.com/paper/imagenet-classification-with-deep))
+- ⚠️ ImageNet is too large for beginners. Instead: **use pretrained
+AlexNet** from PyTorch and run inference on sample images.
+
+------------------------------------------------------------------------
+
+### Phase 2: Technical Skills (Weeks 5--8)
+
+**Concepts:**
+- GitHub, Jupyter, PyTorch/TensorFlow, Hugging Face, W&B.
+
+**Skills:**
+- Clone repos, push code, run notebooks.
+- Train and fine-tune models.
+- Track experiments.
+
+**Deliverables:**
+- Reproduce results from one paper.
+- Publish your notebook on GitHub.
+
+**Beginner-Friendly Papers:**
+1. **ResNet (2015)** -- Residual networks
+([Paper](https://paperswithcode.com/paper/deep-residual-learning-for-image-recognition))
+- ⚠️ ImageNet training is too large. Instead: **train ResNet on
+CIFAR-10** (a small dataset). This runs on Colab.
+2. **DistilBERT (2019)** -- Lightweight NLP model
+([Paper](https://paperswithcode.com/paper/distilbert-a-distilled-version-of-bert))
+- ✅ Fine-tune on IMDB sentiment dataset in under an hour on Colab. Very
+beginner-friendly.
+
+------------------------------------------------------------------------
+
+### Phase 3: Research Practice (Weeks 9--12)
+
+**Concepts:**
+- Hypotheses, experimental design, dataset usage, evaluation metrics.
+
+**Skills:**
+- Write research proposals.
+- Design controlled experiments.
+- Evaluate models.
+
+**Deliverables:**
+- Research proposal (1--2 pages).
+- Complete an experiment with results in GitHub repo.
+
+**Beginner-Friendly Papers:**
+1. **Simple CNN on CIFAR-10** -- Reproduce baseline CNN performance.
+Many tutorials exist.
+2. **BERT (2018)**
+([Paper](https://paperswithcode.com/paper/bert-pre-training-of-deep-bidirectional))
+- ⚠️ Full BERT training is impossible for beginners. Instead:
+**fine-tune pretrained BERT** on a small dataset (SST-2 or IMDB).
+
+------------------------------------------------------------------------
+
+### Phase 4: Community Contribution (Weeks 13--16)
+
+**Concepts:**
+- Open science, peer review, arXiv, Zenodo.
+
+**Skills:**
+- Publish repos.
+- Write tutorials/blogs.
+- Mentor others.
+
+**Deliverables:**
+- Publish research repo.
+- Write blog/tutorial.
+- Present in AJL Discord.
+
+**Beginner-Friendly Papers:**
+1. **GPT-2 (2019)**
+([Paper](https://paperswithcode.com/paper/language-models-are-unsupervised-multitask))
+- ⚠️ Full GPT-2 training is huge. Instead: **use small GPT-2 models**
+(117M) from Hugging Face to generate text.
+2. **Stable Diffusion (2022)**
+([Paper](https://paperswithcode.com/paper/high-resolution-image-synthesis-with-latent))
+- ⚠️ Full training requires heavy GPUs. Instead: **run inference with
+pretrained Stable Diffusion models** on Colab.
+
+------------------------------------------------------------------------
+
+## 4. Tools You'll Use
+
+Here are the tools to practice with (not just learn about):
+
+-   **GitHub** -- [GitHub](https://github.com/) -- version control &
+    collaboration.
+    -   Learn: [GitHub Hello World
+        Guide](https://docs.github.com/en/get-started/quickstart/hello-world)
+    -   Learn: [Atlassian Git
+        Tutorial](https://www.atlassian.com/git/tutorials)
+-   **Jupyter** -- [Jupyter](https://jupyter.org/) -- coding +
+    documentation.
+    -   Learn: [Jupyter Docs](https://docs.jupyter.org/en/latest/)
+    -   Learn: [FreeCodeCamp
+        Tutorial](https://www.youtube.com/watch?v=HW29067qVWk)
+-   **PyTorch** -- [PyTorch](https://pytorch.org/) -- ML framework.
+    -   Learn: [PyTorch
+        Quickstart](https://pytorch.org/tutorials/beginner/basics/intro.html)
+    -   Learn: [Learn PyTorch for Deep Learning --
+        FreeCodeCamp](https://www.youtube.com/watch?v=V_xro1bcAuA)
+-   **Hugging Face** -- [Hugging Face Hub](https://huggingface.co/) --
+    models & datasets.
+    -   Learn: [HF Course](https://huggingface.co/course/chapter1)
+    -   Learn: [Intro
+        Tutorial](https://huggingface.co/docs/transformers/index)
+-   **Weights & Biases (W&B)** -- [W&B](https://wandb.ai/site) --
+    experiment tracking.
+    -   Learn: [Quickstart Guide](https://docs.wandb.ai/quickstart)
+    -   Learn: [W&B Intro
+        Video](https://www.youtube.com/watch?v=4qUXcX9v8Zc)
+-   **Google Colab** -- [Colab](https://colab.research.google.com/) --
+    free cloud notebooks.
+    -   Learn: [Colab
+        Overview](https://research.google.com/colaboratory/)
+    -   Learn: [Colab Tutorial -- Towards Data
+        Science](https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c)
+-   **Kaggle** -- [Kaggle](https://www.kaggle.com/) -- datasets + free
+    GPUs.
+    -   Learn: [Kaggle Learn -- Free
+        Courses](https://www.kaggle.com/learn)
+    -   Learn: [Kaggle Getting Started](https://www.kaggle.com/docs)
+-   **Zenodo** -- [Zenodo](https://zenodo.org/) -- research archiving.
+-   **arXiv** -- [arXiv](https://arxiv.org/) -- preprint publishing.
+
+------------------------------------------------------------------------
+
+## 5. Next Steps Checklist
+
+1.  Join the [AJL Discord](https://discord.gg/averagejoeslab).
+2.  Install Python and Jupyter.
+3.  Run your first notebook: `print("Hello AJL!")`
+4.  Read LeNet and AlexNet papers (LeNet: train from scratch, AlexNet:
+    inference only).
+5.  Write your first literature review.
+6.  Fork the AJL starter repo on GitHub.
+7.  Reproduce ResNet on CIFAR-10 or fine-tune DistilBERT.
+8.  Write your first research proposal.
+9.  Publish your experiment repo.
+10. Share in Discord & mentor a newcomer.
+
+------------------------------------------------------------------------
+
+🔥 By completing this Learning Path, you'll have:
+- A **portfolio of 3--5 projects**.
+- A **network of collaborators**.
+- The skills to be a **research engineer** ready for industry, open
+science, or independent work.
