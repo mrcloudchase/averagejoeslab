@@ -810,35 +810,13 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #e2e8f0 !important;
 }
 
-/* Blog sidebar styling - consolidated and simplified */
-[data-theme='dark'] .theme-blog-sidebar h3,
-[data-theme='dark'] aside h3 {
-  color: #ffffff !important;
-}
-
-/* Blog sidebar links - simplified selectors */
-[data-theme='dark'] aside a:not([aria-current="page"]) {
-  color: #e2e8f0 !important;
-}
-
-aside a:not([aria-current="page"]) {
-  color: #4a5568 !important;
-}
-
-[data-theme='dark'] aside a:hover {
-  color: #ffffff !important;
-}
-
-/* Blog sidebar active post - handled by JavaScript */
-/* Note: Active post styling is now managed by /js/blogSidebarFix.js */
+/* Blog sidebar styling removed - handled by JavaScript (/js/blogSidebarFix.js) */
 
 /* Selection styling */
 ::selection {
   background: var(--ifm-color-primary);
   color: white;
 }
-
-/* Active blog post styling handled by JavaScript (/js/blogSidebarFix.js) */
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
