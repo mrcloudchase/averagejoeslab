@@ -690,6 +690,90 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   outline-offset: 2px;
 }
 
+/* ========================================
+   BLOG PAGE DARK MODE FIXES
+   ======================================== */
+
+/* Blog post titles */
+[data-theme='dark'] .blog-list-page article h2 a,
+[data-theme='dark'] .blog-list-page .margin-bottom--lg h2 a,
+[data-theme='dark'] .blog-wrapper h1,
+[data-theme='dark'] .blog-wrapper h2 {
+  color: #ffffff !important;
+}
+
+/* Blog post content and excerpts */
+[data-theme='dark'] .blog-list-page article .margin-bottom--sm,
+[data-theme='dark'] .blog-list-page .margin-bottom--lg p,
+[data-theme='dark'] .blog-wrapper .margin-bottom--sm,
+[data-theme='dark'] .blog-wrapper p {
+  color: #e2e8f0 !important;
+}
+
+/* Blog post metadata (date, read time, author) */
+[data-theme='dark'] .blog-list-page .margin-bottom--sm,
+[data-theme='dark'] .blog-list-page .avatar__intro,
+[data-theme='dark'] .blog-list-page .avatar__name,
+[data-theme='dark'] .blog-list-page .avatar__subtitle,
+[data-theme='dark'] .blog-wrapper .avatar__name,
+[data-theme='dark'] .blog-wrapper .avatar__subtitle,
+[data-theme='dark'] .blog-wrapper .margin-bottom--sm {
+  color: #cbd5e0 !important;
+}
+
+/* Blog post author names specifically */
+[data-theme='dark'] .avatar__name {
+  color: #ffffff !important;
+}
+
+/* Blog post tags */
+[data-theme='dark'] .blog-tags-container .badge,
+[data-theme='dark'] .blog-tags .badge,
+[data-theme='dark'] .tag,
+[data-theme='dark'] .tags .badge {
+  background-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #718096 !important;
+}
+
+[data-theme='dark'] .blog-tags-container .badge:hover,
+[data-theme='dark'] .blog-tags .badge:hover,
+[data-theme='dark'] .tag:hover,
+[data-theme='dark'] .tags .badge:hover {
+  background-color: #718096 !important;
+  color: #ffffff !important;
+}
+
+/* "Read more" links */
+[data-theme='dark'] .blog-list-page a[href*="/blog/"],
+[data-theme='dark'] .blog-wrapper a:not(.avatar__photo):not(.badge) {
+  color: #63b3ed !important;
+}
+
+[data-theme='dark'] .blog-list-page a[href*="/blog/"]:hover,
+[data-theme='dark'] .blog-wrapper a:not(.avatar__photo):not(.badge):hover {
+  color: #90cdf4 !important;
+}
+
+/* Blog post cards/containers */
+[data-theme='dark'] .blog-list-page article,
+[data-theme='dark'] .blog-wrapper article {
+  background-color: var(--ifm-card-background-color) !important;
+  border: 1px solid #4a5568 !important;
+  border-radius: var(--ifm-card-border-radius) !important;
+}
+
+/* Blog pagination */
+[data-theme='dark'] .pagination-nav__link {
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  color: #ffffff !important;
+  background-color: #374151 !important;
+}
+
 /* Selection styling */
 ::selection {
   background: var(--ifm-color-primary);
