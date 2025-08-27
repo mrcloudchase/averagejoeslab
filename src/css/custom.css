@@ -795,7 +795,8 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   background-color: #374151 !important;
 }
 
-/* Additional fallback selectors for blog elements */
+/* Blog content styling - simplified */
+[data-theme='dark'] .theme-blog-list-page h1,
 [data-theme='dark'] .theme-blog-list-page h2,
 [data-theme='dark'] .theme-blog-list-page h3,
 [data-theme='dark'] .theme-blog-post-page h1,
@@ -804,112 +805,32 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #ffffff !important;
 }
 
-/* Ensure all blog text is visible */
-[data-theme='dark'] .blog-list-page,
-[data-theme='dark'] .blog-wrapper,
 [data-theme='dark'] .theme-blog-list-page,
 [data-theme='dark'] .theme-blog-post-page {
   color: #e2e8f0 !important;
 }
 
-/* Blog sidebar title - fix contrast in dark mode */
+/* Blog sidebar styling - consolidated and simplified */
 [data-theme='dark'] .theme-blog-sidebar h3,
-[data-theme='dark'] .sidebar h3,
-[data-theme='dark'] .blog-sidebar h3,
-[data-theme='dark'] .blogSidebarTitle_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
-[data-theme='dark'] .sidebarItemTitle_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+[data-theme='dark'] aside h3 {
   color: #ffffff !important;
 }
 
-/* Blog sidebar links and content - comprehensive selectors (excluding active states) */
-[data-theme='dark'] .theme-blog-sidebar a:not([aria-current="page"]),
-[data-theme='dark'] .sidebar a:not([aria-current="page"]),
-[data-theme='dark'] .blog-sidebar a:not([aria-current="page"]),
-[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:not([aria-current="page"]),
-[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:not([aria-current="page"]),
-[data-theme='dark'] .theme-blog-sidebar .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:not([aria-current="page"]),
-[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a:not([aria-current="page"]),
-[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:not([aria-current="page"]),
-[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a:not([aria-current="page"]) {
+/* Blog sidebar links - simplified selectors */
+[data-theme='dark'] aside a:not([aria-current="page"]) {
   color: #e2e8f0 !important;
 }
 
-/* Light mode blog sidebar links (excluding active states) */
-.theme-blog-sidebar a:not([aria-current="page"]),
-.sidebar a:not([aria-current="page"]),
-.blog-sidebar a:not([aria-current="page"]),
-.blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:not([aria-current="page"]),
-.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:not([aria-current="page"]),
-.theme-blog-sidebar .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:not([aria-current="page"]),
-.blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a:not([aria-current="page"]),
-.blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:not([aria-current="page"]),
-.blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a:not([aria-current="page"]) {
+aside a:not([aria-current="page"]) {
   color: #4a5568 !important;
 }
 
-[data-theme='dark'] .theme-blog-sidebar a:hover,
-[data-theme='dark'] .sidebar a:hover,
-[data-theme='dark'] .blog-sidebar a:hover,
-[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:hover,
-[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:hover {
+[data-theme='dark'] aside a:hover {
   color: #ffffff !important;
 }
 
-/* Blog sidebar active/selected post - light blue in both modes - COMPREHENSIVE */
-.theme-blog-sidebar a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
-.sidebar a.active,
-.blog-sidebar a.active,
-.blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"],
-.blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
-.blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-.blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
-a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
-.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
-  color: #63b3ed !important;
-  font-weight: 600 !important;
-}
-
-[data-theme='dark'] .theme-blog-sidebar a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
-[data-theme='dark'] .sidebar a.active,
-[data-theme='dark'] .blog-sidebar a.active,
-[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"],
-[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
-[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
-[data-theme='dark'] a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
-[data-theme='dark'] .sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
-  color: #63b3ed !important;
-  font-weight: 600 !important;
-}
-
-/* Additional fallback selectors for active blog post */
-[aria-current="page"] {
-  color: #63b3ed !important;
-}
-
-[data-theme='dark'] [aria-current="page"] {
-  color: #63b3ed !important;
-}
-
-/* AGGRESSIVE OVERRIDE - Blog sidebar active post in dark mode */
-[data-theme='dark'] .theme-blog-sidebar [aria-current="page"],
-[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module [aria-current="page"],
-[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module [aria-current="page"],
-[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module [aria-current="page"],
-[data-theme='dark'] aside [aria-current="page"],
-[data-theme='dark'] .col--3 [aria-current="page"] {
-  color: #63b3ed !important;
-  text-decoration: none !important;
-}
-
-/* Even more aggressive - target any link in blog sidebar area with aria-current */
-[data-theme='dark'] .theme-blog-sidebar *[aria-current="page"],
-[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module *[aria-current="page"],
-[data-theme='dark'] aside *[aria-current="page"] {
-  color: #63b3ed !important;
-}
+/* Blog sidebar active post - handled by JavaScript */
+/* Note: Active post styling is now managed by /js/blogSidebarFix.js */
 
 /* Selection styling */
 ::selection {
@@ -917,8 +838,7 @@ a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-l
   color: white;
 }
 
-/* JavaScript-based blog sidebar active post fix */
-/* This script runs after DOM is loaded to directly set active post color */
+/* Active blog post styling handled by JavaScript (/js/blogSidebarFix.js) */
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
@@ -938,7 +858,7 @@ a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-l
   background: var(--ifm-color-primary-lighter);
 }
 
-/* Research Feature Cards - Global Styles */
+/* Research Feature Cards - Used in homepage components */
 .research-feature-card {
   background: var(--gradient-subtle);
   border: 1px solid var(--ifm-color-emphasis-200);
@@ -949,44 +869,12 @@ a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-l
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .research-feature-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--ifm-box-shadow-lg);
   border-color: var(--ifm-color-primary);
-}
-
-.research-feature-card--clickable {
-  cursor: pointer;
-}
-
-.research-feature-card--clickable:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--ifm-box-shadow-lg);
-  border-color: var(--ifm-color-primary);
-}
-
-.research-feature-card--clickable:active {
-  transform: translateY(-2px);
-}
-
-/* Research card content alignment */
-.research-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.research-card-content h3 {
-  margin-bottom: 1rem;
-}
-
-.research-card-content p {
-  flex-grow: 1;
-  margin-bottom: 1rem;
 }
 
 /* Responsive adjustments for research cards */

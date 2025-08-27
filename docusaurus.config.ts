@@ -188,7 +188,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2023-${new Date().getFullYear()} Average Joes Lab.`,
+      copyright: `Copyright © 2025 Average Joes Lab - All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
