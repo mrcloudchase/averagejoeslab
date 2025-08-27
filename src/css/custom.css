@@ -838,6 +838,25 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #ffffff !important;
 }
 
+/* Blog sidebar active/selected post - light blue in both modes */
+.theme-blog-sidebar a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+.sidebar a.active,
+.blog-sidebar a.active,
+.blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
+.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"] {
+  color: #63b3ed !important;
+  font-weight: 600 !important;
+}
+
+[data-theme='dark'] .theme-blog-sidebar a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+[data-theme='dark'] .sidebar a.active,
+[data-theme='dark'] .blog-sidebar a.active,
+[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
+[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"] {
+  color: #63b3ed !important;
+  font-weight: 600 !important;
+}
+
 /* Selection styling */
 ::selection {
   background: var(--ifm-color-primary);
