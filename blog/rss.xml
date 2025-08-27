@@ -4,10 +4,171 @@
         <title>Average Joes Lab Blog</title>
         <link>https://averagejoeslab.com/blog</link>
         <description>Average Joes Lab Blog</description>
-        <lastBuildDate>Wed, 15 Jan 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Research Methodology Basics for Cloud Engineers]]></title>
+            <link>https://averagejoeslab.com/blog/research-methodology-basics</link>
+            <guid>https://averagejoeslab.com/blog/research-methodology-basics</guid>
+            <pubDate>Thu, 16 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[As cloud engineers, we often find ourselves needing to research new technologies, troubleshoot complex issues, or evaluate different solutions. Having a solid research methodology can make the difference between spending hours going in circles and efficiently finding the answers we need.]]></description>
+            <content:encoded><![CDATA[<p>As cloud engineers, we often find ourselves needing to research new technologies, troubleshoot complex issues, or evaluate different solutions. Having a solid research methodology can make the difference between spending hours going in circles and efficiently finding the answers we need.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-research-methodology-matters-in-cloud-engineering">Why Research Methodology Matters in Cloud Engineering<a href="https://averagejoeslab.com/blog/research-methodology-basics#why-research-methodology-matters-in-cloud-engineering" class="hash-link" aria-label="Direct link to Why Research Methodology Matters in Cloud Engineering" title="Direct link to Why Research Methodology Matters in Cloud Engineering">​</a></h2>
+<p>In the fast-paced world of cloud technology, new services, tools, and best practices emerge constantly. Whether you're:</p>
+<ul>
+<li><strong>Evaluating a new AWS service</strong> for your architecture</li>
+<li><strong>Troubleshooting a production issue</strong> that you've never seen before</li>
+<li><strong>Comparing different container orchestration platforms</strong></li>
+<li><strong>Understanding the security implications</strong> of a new deployment pattern</li>
+</ul>
+<p>Having a structured approach to research will save you time and lead to better decisions.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-search-framework">The SEARCH Framework<a href="https://averagejoeslab.com/blog/research-methodology-basics#the-search-framework" class="hash-link" aria-label="Direct link to The SEARCH Framework" title="Direct link to The SEARCH Framework">​</a></h2>
+<p>I've developed a simple framework called <strong>SEARCH</strong> that works well for technical research:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="s---scope-the-problem"><strong>S</strong> - Scope the Problem<a href="https://averagejoeslab.com/blog/research-methodology-basics#s---scope-the-problem" class="hash-link" aria-label="Direct link to s---scope-the-problem" title="Direct link to s---scope-the-problem">​</a></h3>
+<ul>
+<li><strong>Define your question clearly</strong>: What exactly are you trying to learn or solve?</li>
+<li><strong>Set boundaries</strong>: What's in scope and what's out of scope?</li>
+<li><strong>Identify success criteria</strong>: How will you know when you have enough information?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="e---explore-multiple-sources"><strong>E</strong> - Explore Multiple Sources<a href="https://averagejoeslab.com/blog/research-methodology-basics#e---explore-multiple-sources" class="hash-link" aria-label="Direct link to e---explore-multiple-sources" title="Direct link to e---explore-multiple-sources">​</a></h3>
+<ul>
+<li><strong>Official documentation</strong>: Always start here for authoritative information</li>
+<li><strong>Community forums</strong>: Stack Overflow, Reddit, GitHub discussions</li>
+<li><strong>Expert blogs</strong>: AWS blogs, Google Cloud blogs, vendor documentation</li>
+<li><strong>Academic papers</strong>: For deeper theoretical understanding</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a---analyze-and-synthesize"><strong>A</strong> - Analyze and Synthesize<a href="https://averagejoeslab.com/blog/research-methodology-basics#a---analyze-and-synthesize" class="hash-link" aria-label="Direct link to a---analyze-and-synthesize" title="Direct link to a---analyze-and-synthesize">​</a></h3>
+<ul>
+<li><strong>Compare different perspectives</strong>: Don't rely on a single source</li>
+<li><strong>Look for patterns</strong>: What do multiple sources agree on?</li>
+<li><strong>Identify gaps</strong>: What questions remain unanswered?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="r---record-your-findings"><strong>R</strong> - Record Your Findings<a href="https://averagejoeslab.com/blog/research-methodology-basics#r---record-your-findings" class="hash-link" aria-label="Direct link to r---record-your-findings" title="Direct link to r---record-your-findings">​</a></h3>
+<ul>
+<li><strong>Document your process</strong>: What sources did you check?</li>
+<li><strong>Summarize key insights</strong>: What are the main takeaways?</li>
+<li><strong>Note open questions</strong>: What still needs investigation?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="c---cross-reference-and-validate"><strong>C</strong> - Cross-Reference and Validate<a href="https://averagejoeslab.com/blog/research-methodology-basics#c---cross-reference-and-validate" class="hash-link" aria-label="Direct link to c---cross-reference-and-validate" title="Direct link to c---cross-reference-and-validate">​</a></h3>
+<ul>
+<li><strong>Verify claims</strong>: Can you reproduce examples or test scenarios?</li>
+<li><strong>Check dates</strong>: Is the information current and relevant?</li>
+<li><strong>Validate with peers</strong>: Get a second opinion when possible</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="h---hypothesize-and-test"><strong>H</strong> - Hypothesize and Test<a href="https://averagejoeslab.com/blog/research-methodology-basics#h---hypothesize-and-test" class="hash-link" aria-label="Direct link to h---hypothesize-and-test" title="Direct link to h---hypothesize-and-test">​</a></h3>
+<ul>
+<li><strong>Form hypotheses</strong>: Based on your research, what do you think will work?</li>
+<li><strong>Design experiments</strong>: How can you test your assumptions safely?</li>
+<li><strong>Measure results</strong>: What metrics will tell you if you're on the right track?</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-example-choosing-a-database-for-microservices">Practical Example: Choosing a Database for Microservices<a href="https://averagejoeslab.com/blog/research-methodology-basics#practical-example-choosing-a-database-for-microservices" class="hash-link" aria-label="Direct link to Practical Example: Choosing a Database for Microservices" title="Direct link to Practical Example: Choosing a Database for Microservices">​</a></h2>
+<p>Let's apply the SEARCH framework to a common scenario: choosing between DynamoDB and RDS for a new microservice.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scope-s">Scope (S)<a href="https://averagejoeslab.com/blog/research-methodology-basics#scope-s" class="hash-link" aria-label="Direct link to Scope (S)" title="Direct link to Scope (S)">​</a></h3>
+<ul>
+<li><strong>Question</strong>: Should we use DynamoDB or RDS PostgreSQL for our user profile service?</li>
+<li><strong>Constraints</strong>: Must handle 10k+ concurrent users, sub-100ms response times, cost-effective</li>
+<li><strong>Success criteria</strong>: Clear recommendation with pros/cons and cost estimates</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="explore-e">Explore (E)<a href="https://averagejoeslab.com/blog/research-methodology-basics#explore-e" class="hash-link" aria-label="Direct link to Explore (E)" title="Direct link to Explore (E)">​</a></h3>
+<ul>
+<li>AWS documentation for both services</li>
+<li>Performance benchmarks from AWS re<!-- -->:Invent<!-- --> talks</li>
+<li>Community discussions about NoSQL vs SQL trade-offs</li>
+<li>Case studies from similar companies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="analyze-a">Analyze (A)<a href="https://averagejoeslab.com/blog/research-methodology-basics#analyze-a" class="hash-link" aria-label="Direct link to Analyze (A)" title="Direct link to Analyze (A)">​</a></h3>
+<ul>
+<li>DynamoDB: Better for scale, higher cost per operation, limited query flexibility</li>
+<li>RDS: More familiar, better for complex queries, requires more operational overhead</li>
+<li>Both can meet performance requirements with proper design</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="record-r">Record (R)<a href="https://averagejoeslab.com/blog/research-methodology-basics#record-r" class="hash-link" aria-label="Direct link to Record (R)" title="Direct link to Record (R)">​</a></h3>
+<ul>
+<li>Created comparison matrix with features, costs, operational complexity</li>
+<li>Documented key decision factors and assumptions</li>
+<li>Listed remaining questions about data access patterns</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cross-reference-c">Cross-Reference (C)<a href="https://averagejoeslab.com/blog/research-methodology-basics#cross-reference-c" class="hash-link" aria-label="Direct link to Cross-Reference (C)" title="Direct link to Cross-Reference (C)">​</a></h3>
+<ul>
+<li>Validated performance claims with AWS calculator</li>
+<li>Checked with team about query complexity requirements</li>
+<li>Reviewed similar decisions made by other teams</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hypothesize-h">Hypothesize (H)<a href="https://averagejoeslab.com/blog/research-methodology-basics#hypothesize-h" class="hash-link" aria-label="Direct link to Hypothesize (H)" title="Direct link to Hypothesize (H)">​</a></h3>
+<ul>
+<li>Hypothesis: DynamoDB will be better for our read-heavy, simple query patterns</li>
+<li>Test: Build prototype with both options using sample data</li>
+<li>Measure: Compare latency, cost, and development velocity</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-research-pitfalls-to-avoid">Common Research Pitfalls to Avoid<a href="https://averagejoeslab.com/blog/research-methodology-basics#common-research-pitfalls-to-avoid" class="hash-link" aria-label="Direct link to Common Research Pitfalls to Avoid" title="Direct link to Common Research Pitfalls to Avoid">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-confirmation-bias">1. <strong>Confirmation Bias</strong><a href="https://averagejoeslab.com/blog/research-methodology-basics#1-confirmation-bias" class="hash-link" aria-label="Direct link to 1-confirmation-bias" title="Direct link to 1-confirmation-bias">​</a></h3>
+<ul>
+<li>Don't just look for sources that confirm what you already believe</li>
+<li>Actively seek out contrarian viewpoints and edge cases</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-outdated-information">2. <strong>Outdated Information</strong><a href="https://averagejoeslab.com/blog/research-methodology-basics#2-outdated-information" class="hash-link" aria-label="Direct link to 2-outdated-information" title="Direct link to 2-outdated-information">​</a></h3>
+<ul>
+<li>Cloud services evolve rapidly - always check publication dates</li>
+<li>Prefer recent sources, especially for performance and pricing data</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-over-engineering">3. <strong>Over-Engineering</strong><a href="https://averagejoeslab.com/blog/research-methodology-basics#3-over-engineering" class="hash-link" aria-label="Direct link to 3-over-engineering" title="Direct link to 3-over-engineering">​</a></h3>
+<ul>
+<li>Don't get lost in theoretical perfection</li>
+<li>Sometimes "good enough" is actually good enough</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-analysis-paralysis">4. <strong>Analysis Paralysis</strong><a href="https://averagejoeslab.com/blog/research-methodology-basics#4-analysis-paralysis" class="hash-link" aria-label="Direct link to 4-analysis-paralysis" title="Direct link to 4-analysis-paralysis">​</a></h3>
+<ul>
+<li>Set time limits for research phases</li>
+<li>Make decisions with incomplete information when necessary</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tools-for-effective-research">Tools for Effective Research<a href="https://averagejoeslab.com/blog/research-methodology-basics#tools-for-effective-research" class="hash-link" aria-label="Direct link to Tools for Effective Research" title="Direct link to Tools for Effective Research">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="documentation-and-search">Documentation and Search<a href="https://averagejoeslab.com/blog/research-methodology-basics#documentation-and-search" class="hash-link" aria-label="Direct link to Documentation and Search" title="Direct link to Documentation and Search">​</a></h3>
+<ul>
+<li><strong>AWS Documentation</strong>: Comprehensive but sometimes dense</li>
+<li><strong>Google Cloud Docs</strong>: Often more example-heavy</li>
+<li><strong>GitHub</strong>: Real-world implementations and issues</li>
+<li><strong>Stack Overflow</strong>: Practical problems and solutions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="staying-current">Staying Current<a href="https://averagejoeslab.com/blog/research-methodology-basics#staying-current" class="hash-link" aria-label="Direct link to Staying Current" title="Direct link to Staying Current">​</a></h3>
+<ul>
+<li><strong>AWS What's New</strong>: Latest service updates</li>
+<li><strong>Cloud provider blogs</strong>: Deep dives and best practices</li>
+<li><strong>Twitter/LinkedIn</strong>: Quick updates from cloud experts</li>
+<li><strong>Conferences</strong>: re<!-- -->:Invent<!-- -->, Google Next, KubeCon</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="organization">Organization<a href="https://averagejoeslab.com/blog/research-methodology-basics#organization" class="hash-link" aria-label="Direct link to Organization" title="Direct link to Organization">​</a></h3>
+<ul>
+<li><strong>Notion/Obsidian</strong>: For building a personal knowledge base</li>
+<li><strong>Bookmarking tools</strong>: Save useful resources for later</li>
+<li><strong>Note-taking apps</strong>: Capture insights during research</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="building-your-research-muscle">Building Your Research Muscle<a href="https://averagejoeslab.com/blog/research-methodology-basics#building-your-research-muscle" class="hash-link" aria-label="Direct link to Building Your Research Muscle" title="Direct link to Building Your Research Muscle">​</a></h2>
+<p>Like any skill, research gets better with practice:</p>
+<ol>
+<li><strong>Start small</strong>: Apply the framework to simple questions first</li>
+<li><strong>Share your process</strong>: Teach others and get feedback</li>
+<li><strong>Build templates</strong>: Create checklists for common research scenarios</li>
+<li><strong>Reflect and improve</strong>: What worked well? What could be better?</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://averagejoeslab.com/blog/research-methodology-basics#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>Effective research is a superpower for cloud engineers. By following a structured approach like the SEARCH framework, you can:</p>
+<ul>
+<li><strong>Make better technical decisions</strong> with confidence</li>
+<li><strong>Solve problems faster</strong> by knowing where to look</li>
+<li><strong>Stay current</strong> with rapidly evolving technology</li>
+<li><strong>Build expertise</strong> systematically over time</li>
+</ul>
+<p>The next time you're faced with a technical question or decision, try applying this framework. You might be surprised at how much more efficient and thorough your research becomes.</p>
+<hr>
+<p><em>What research methodologies have worked well for you? Share your thoughts and experiences in the comments below!</em></p>]]></content:encoded>
+            <author>chase@averagejoeslab.com (Chase Dovey)</author>
+            <category>research</category>
+            <category>Methodology</category>
+            <category>cloud-engineering</category>
+            <category>best-practices</category>
+        </item>
         <item>
             <title><![CDATA[Welcome to Average Joes Lab - Democratizing Research for Everyone]]></title>
             <link>https://averagejoeslab.com/blog/welcome-to-average-joes-lab</link>
