@@ -387,9 +387,66 @@ function SubmitExternalPaperForm() {
   );
 }
 
+// Sorting options for external papers
+const EXTERNAL_SORT_OPTIONS = [
+  { id: 'year-desc', label: 'Year (Newest First)', field: 'publicationYear', order: 'desc' },
+  { id: 'year-asc', label: 'Year (Oldest First)', field: 'publicationYear', order: 'asc' },
+  { id: 'title-asc', label: 'Title (A-Z)', field: 'title', order: 'asc' },
+  { id: 'title-desc', label: 'Title (Z-A)', field: 'title', order: 'desc' }
+];
+
+// Sorting function for external papers
+const sortExternalPapers = (papers: any[], sortOption: string) => {
+  const option = EXTERNAL_SORT_OPTIONS.find(opt => opt.id === sortOption);
+  if (!option) return papers;
+
+  return [...papers].sort((a, b) => {
+    let aValue, bValue;
+
+    if (option.field === 'publicationYear') {
+      // Handle year sorting with null safety
+      aValue = a.publicationYear || 0;
+      bValue = b.publicationYear || 0;
+    } else if (option.field === 'title') {
+      // Handle title sorting with null safety
+      aValue = (a.title || '').toLowerCase();
+      bValue = (b.title || '').toLowerCase();
+    }
+
+    if (option.order === 'desc') {
+      return bValue > aValue ? 1 : bValue < aValue ? -1 : 0;
+    } else {
+      return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+    }
+  });
+};
+
+function ExternalSortDropdown({ selectedSort, onSortChange }) {
+  return (
+    <div className={styles.sortDropdown}>
+      <label htmlFor="external-sort-select" className={styles.sortLabel}>
+        Sort by:
+      </label>
+      <select
+        id="external-sort-select"
+        value={selectedSort}
+        onChange={(e) => onSortChange(e.target.value)}
+        className={styles.sortSelect}
+      >
+        {EXTERNAL_SORT_OPTIONS.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
 export default function ExternalPapers(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [selectedSort, setSelectedSort] = useState<string>('year-desc');
 
   // Filter papers based on selected filters (multi-select with AND logic)
   const safeData = externalPapersData || [];
@@ -400,6 +457,9 @@ export default function ExternalPapers(): ReactNode {
         Array.isArray(paper.researchArea) &&
         selectedFilters.every(filter => paper.researchArea.includes(filter))
       );
+
+  // Apply sorting to filtered papers
+  const sortedAndFilteredPapers = sortExternalPapers(filteredPapers, selectedSort);
 
   return (
     <Layout
@@ -425,7 +485,14 @@ export default function ExternalPapers(): ReactNode {
               onFilterChange={setSelectedFilters} 
             />
             
-            <ExternalPapersGrid papers={filteredPapers} />
+            <div className={styles.controlsRow}>
+              <ExternalSortDropdown 
+                selectedSort={selectedSort}
+                onSortChange={setSelectedSort}
+              />
+            </div>
+            
+            <ExternalPapersGrid papers={sortedAndFilteredPapers} />
           </div>
         </section>
         

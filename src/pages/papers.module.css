@@ -71,6 +71,98 @@
   margin-left: 0.25rem;
 }
 
+/* Controls row for sorting and other controls */
+.controlsRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Sort dropdown styling */
+.sortDropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sortLabel {
+  font-weight: 500;
+  color: var(--ifm-color-content);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.sortSelect {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 180px;
+}
+
+.sortSelect:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(45, 55, 72, 0.1);
+}
+
+/* Dark mode styles for sort controls */
+[data-theme='dark'] .controlsRow {
+  border-top-color: #4a5568;
+  border-bottom-color: #4a5568;
+}
+
+[data-theme='dark'] .sortLabel {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .sortSelect {
+  background-color: #374151;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .sortSelect:hover {
+  border-color: #63b3ed;
+}
+
+[data-theme='dark'] .sortSelect:focus {
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .controlsRow {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sortDropdown {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .sortSelect {
+    min-width: 200px;
+  }
+}
+
 /* Paper Idea Form Styles */
 .paperIdeaForm {
   max-width: 800px;

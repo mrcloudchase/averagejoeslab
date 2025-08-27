@@ -336,9 +336,66 @@ function SubmitPaperIdeaForm() {
   );
 }
 
+// Sorting options
+const SORT_OPTIONS = [
+  { id: 'date-desc', label: 'Date (Newest First)', field: 'publicationDate', order: 'desc' },
+  { id: 'date-asc', label: 'Date (Oldest First)', field: 'publicationDate', order: 'asc' },
+  { id: 'title-asc', label: 'Title (A-Z)', field: 'name', order: 'asc' },
+  { id: 'title-desc', label: 'Title (Z-A)', field: 'name', order: 'desc' }
+];
+
+// Sorting function
+const sortPapers = (papers: any[], sortOption: string) => {
+  const option = SORT_OPTIONS.find(opt => opt.id === sortOption);
+  if (!option) return papers;
+
+  return [...papers].sort((a, b) => {
+    let aValue, bValue;
+
+    if (option.field === 'publicationDate') {
+      // Handle date sorting with null safety
+      aValue = a.publicationDate ? new Date(a.publicationDate).getTime() : 0;
+      bValue = b.publicationDate ? new Date(b.publicationDate).getTime() : 0;
+    } else if (option.field === 'name') {
+      // Handle title sorting with null safety
+      aValue = (a.name || '').toLowerCase();
+      bValue = (b.name || '').toLowerCase();
+    }
+
+    if (option.order === 'desc') {
+      return bValue > aValue ? 1 : bValue < aValue ? -1 : 0;
+    } else {
+      return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+    }
+  });
+};
+
+function SortDropdown({ selectedSort, onSortChange }) {
+  return (
+    <div className={styles.sortDropdown}>
+      <label htmlFor="sort-select" className={styles.sortLabel}>
+        Sort by:
+      </label>
+      <select
+        id="sort-select"
+        value={selectedSort}
+        onChange={(e) => onSortChange(e.target.value)}
+        className={styles.sortSelect}
+      >
+        {SORT_OPTIONS.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
 export default function Papers(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [selectedSort, setSelectedSort] = useState<string>('date-desc');
 
   // Multi-select filter logic: show papers that contain ALL selected focus areas
   const safeData = papersData || [];
@@ -350,6 +407,9 @@ export default function Papers(): ReactNode {
           paper?.focusAreas?.includes(filter)
         );
       });
+
+  // Apply sorting to filtered papers
+  const sortedAndFilteredPapers = sortPapers(filteredPapers, selectedSort);
 
   return (
     <Layout
@@ -375,7 +435,14 @@ export default function Papers(): ReactNode {
               onFilterChange={setSelectedFilters} 
             />
             
-            <PapersGrid papers={filteredPapers} />
+            <div className={styles.controlsRow}>
+              <SortDropdown 
+                selectedSort={selectedSort}
+                onSortChange={setSelectedSort}
+              />
+            </div>
+            
+            <PapersGrid papers={sortedAndFilteredPapers} />
           </div>
         </section>
         
