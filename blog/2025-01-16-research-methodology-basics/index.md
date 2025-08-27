@@ -1,7 +1,7 @@
 ---
 slug: research-methodology-basics
 title: Research Methodology Basics for Cloud Engineers
-authors: [cloudchase]
+authors: [chasedovey]
 tags: [research, methodology, cloud-engineering, best-practices]
 ---
 
