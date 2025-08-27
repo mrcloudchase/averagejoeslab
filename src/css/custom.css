@@ -812,6 +812,32 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #e2e8f0 !important;
 }
 
+/* Blog sidebar title - fix contrast in dark mode */
+[data-theme='dark'] .theme-blog-sidebar h3,
+[data-theme='dark'] .sidebar h3,
+[data-theme='dark'] .blog-sidebar h3,
+[data-theme='dark'] .blogSidebarTitle_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+[data-theme='dark'] .sidebarItemTitle_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+  color: #ffffff !important;
+}
+
+/* Blog sidebar links and content */
+[data-theme='dark'] .theme-blog-sidebar a,
+[data-theme='dark'] .sidebar a,
+[data-theme='dark'] .blog-sidebar a,
+[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a,
+[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+  color: #e2e8f0 !important;
+}
+
+[data-theme='dark'] .theme-blog-sidebar a:hover,
+[data-theme='dark'] .sidebar a:hover,
+[data-theme='dark'] .blog-sidebar a:hover,
+[data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a:hover,
+[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module:hover {
+  color: #ffffff !important;
+}
+
 /* Selection styling */
 ::selection {
   background: var(--ifm-color-primary);
