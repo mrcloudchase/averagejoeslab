@@ -6,136 +6,163 @@ sidebar_position: 1
 
 *A Beginner-Friendly Guide for Citizen Researchers at Average Joes Lab*
 
-------------------------------------------------------------------------
+---
 
 ## 1. Introduction
 
-**Research Engineering** is about taking ideas from research papers or
-new scientific concepts and turning them into something that works:
-code, experiments, and reproducible results.
+**Research Engineering** is about taking ideas from research papers or new scientific concepts and turning them into something that works: code, experiments, and reproducible results.
 
-At **Average Joes Lab (AJL)**, we believe:
-- You don't need a degree or credentials to contribute to science.
-- You just need curiosity, persistence, and the right guidance.
-- This Learning Path gives you **structure, resources, and projects** to
-start from zero.
+### What We Believe at Average Joes Lab (AJL)
 
-This path assumes:
-❌ You don't know programming.
-❌ You don't know math or statistics.
-❌ You've never read a research paper.
-✅ But you're curious and willing to learn.
+- 🎓 **No credentials required** - You don't need a degree to contribute to science
+- 🔥 **Just bring curiosity** - Persistence and the right guidance are all you need
+- 🛠️ **Structure matters** - This Learning Path gives you structure, resources, and projects to start from zero
 
-We'll take you from "What is a variable?" → "I published my first
-open-source research project."
+### Starting Assumptions
 
-⚠️ **Important Note on Reproducibility**: Not all famous papers can
-realistically be trained from scratch by beginners (many require massive
-datasets and hardware). That's okay. In this path, we carefully select
-**popular, beginner-friendly papers** and explain **exactly what you
-should do**:
-- Some papers you will **train from scratch** (small datasets).
-- Some papers you will **fine-tune** a pretrained model.
-- Some papers you will only **run inference** (use an existing model to
-generate outputs).
+| What We Assume | Status |
+|---|---|
+| You don't know programming | ❌ That's fine! |
+| You don't know math or statistics | ❌ We'll cover basics! |
+| You've never read a research paper | ❌ We'll teach you! |
+| You're curious and willing to learn | ✅ **This is essential!** |
 
-This way you don't get stuck trying to do something unreasonable --- and
-you still learn the core concepts.
+### Your Journey
+
+**From:** "What is a variable?"  
+**To:** "I published my first open-source research project!"
+
+### 🎯 Realistic Expectations
+
+> ⚠️ **Important Note on Reproducibility**  
+> Not all famous papers can realistically be trained from scratch by beginners (many require massive datasets and hardware). That's okay!
+
+In this path, we carefully select **popular, beginner-friendly papers** and explain **exactly what you should do**:
+
+| Paper Type | What You'll Do | Examples |
+|---|---|---|
+| 🟢 **Train from scratch** | Small datasets, quick training | LeNet on MNIST |
+| 🟡 **Fine-tune** | Use pretrained model, adapt to new task | DistilBERT sentiment |
+| 🔵 **Run inference** | Use existing model to generate outputs | GPT-2 text generation |
+
+This way you don't get stuck trying to do something unreasonable — and you still learn the core concepts!
 
 ------------------------------------------------------------------------
 
 ## 🚀 Quick Start (Your First 30 Minutes)
 
-**Feeling overwhelmed?** Start here for immediate wins:
+> **Feeling overwhelmed?** Start here for immediate wins!
 
-### **Step 1: Get Your First Victory (5 minutes)**
-1. Open [Google Colab](https://colab.research.google.com/) (no installation needed)
-2. Create a new notebook
-3. Type: `print("Hello Average Joes Lab! I'm starting my research journey!")`
-4. Press Shift+Enter to run
-5. **🎉 Congratulations!** You just ran your first research code.
+### Step 1: Get Your First Victory (5 minutes) 🏆
 
-### **Step 2: Join the Community (10 minutes)**
-1. Join our [Discord Server](https://discord.gg/averagejoeslab)
-2. Introduce yourself in #introductions
-3. Ask questions in #beginners-help
+1. **Open** [Google Colab](https://colab.research.google.com/) (no installation needed)
+2. **Create** a new notebook
+3. **Type:** `print("Hello Average Joes Lab! I'm starting my research journey!")`
+4. **Press** Shift+Enter to run
+5. **🎉 Congratulations!** You just ran your first research code
+
+### Step 2: Join the Community (10 minutes) 👥
+
+1. **Join** our [Discord Server](https://discord.gg/averagejoeslab)
+2. **Introduce** yourself in `#introductions`
+3. **Ask** questions in `#beginners-help`
 4. **🎉 You're now part of the research community!**
 
-### **Step 3: Read Your First Paper Abstract (15 minutes)**
-1. Go to [Papers With Code](https://paperswithcode.com/)
-2. Search for "LeNet MNIST"
-3. Read just the abstract (first paragraph)
-4. Try to identify: What problem? What solution? What result?
+### Step 3: Read Your First Paper Abstract (15 minutes) 📚
+
+1. **Go to** [Papers With Code](https://paperswithcode.com/)
+2. **Search** for "LeNet MNIST"
+3. **Read** just the abstract (first paragraph)
+4. **Try to identify:** What problem? What solution? What result?
 5. **🎉 You just analyzed research!**
 
-**Feeling confident?** Continue with the full learning path below. **Still nervous?** Repeat these steps until comfortable, then proceed.
+---
+
+**🚀 Feeling confident?** Continue with the full learning path below.  
+**😰 Still nervous?** Repeat these steps until comfortable, then proceed.
 
 ------------------------------------------------------------------------
 
 ## 💻 Hardware & Cost Requirements
 
-### **Minimum Requirements (Free Tier)**
-- **Computer:** Any laptop/desktop with internet
-- **RAM:** 4GB minimum (8GB recommended)
-- **Storage:** 5GB free space
-- **Internet:** Stable connection for cloud computing
+### Minimum Requirements (Free Tier) 💰
 
-### **Cloud Computing (Recommended - FREE)**
-- **Google Colab:** Free GPU access (12-hour sessions)
-- **Kaggle Notebooks:** Free GPU/TPU (30 hours/week)
-- **Hugging Face Spaces:** Free model hosting
+| Component | Requirement | Notes |
+|---|---|---|
+| **Computer** | Any laptop/desktop with internet | Even old machines work! |
+| **RAM** | 4GB minimum (8GB recommended) | For local development |
+| **Storage** | 5GB free space | For downloads and projects |
+| **Internet** | Stable connection | For cloud computing |
 
-### **Cost Breakdown**
-- **Phase 1-2:** $0 (everything free)
-- **Phase 3-4:** $0-20/month (optional paid Colab Pro for longer sessions)
-- **Total for 16 weeks:** $0-80 (completely optional)
+### Cloud Computing (Recommended - FREE) ☁️
 
-### **What You DON'T Need**
-- ❌ Expensive GPU ($1000+ graphics cards)
-- ❌ Powerful desktop computer
-- ❌ University access or credentials
-- ❌ Paid software licenses
+| Platform | What You Get | Limits |
+|---|---|---|
+| **Google Colab** | Free GPU access | 12-hour sessions |
+| **Kaggle Notebooks** | Free GPU/TPU | 30 hours/week |
+| **Hugging Face Spaces** | Free model hosting | Community tier |
+
+### Cost Breakdown 💸
+
+| Phase | Cost | What's Included |
+|---|---|---|
+| **Phase 1-2** | **$0** | Everything free |
+| **Phase 3-4** | **$0-20/month** | Optional Colab Pro for longer sessions |
+| **Total (16 weeks)** | **$0-80** | Completely optional |
+
+### What You DON'T Need ❌
+
+- 🚫 **Expensive GPU** ($1000+ graphics cards)
+- 🚫 **Powerful desktop computer**
+- 🚫 **University access or credentials**
+- 🚫 **Paid software licenses**
+
+> 💡 **Bottom line:** You can complete this entire learning path for **$0**!
 
 ------------------------------------------------------------------------
 
 ## 2. Prerequisites (Zero Knowledge Start)
 
-**Time Investment:** 2-8 weeks depending on your pace and background.
+> **Time Investment:** 2-8 weeks depending on your pace and background
 
-**Learning Strategy:**
-- ✅ **Essential Skills** (must complete): A, B, C, F
-- 🔄 **Helpful Skills** (can learn alongside): D, E
-- 📚 **Study Plan:** 1-2 hours/day, 3-5 days/week
+### Learning Strategy 📋
 
-Every concept has **two free resources** to learn from and an **example practice task**.
+| Priority | Skills | Description |
+|---|---|---|
+| ✅ **Essential** | A, B, C, F | Must complete before Phase 1 |
+| 🔄 **Helpful** | D, E | Can learn alongside main phases |
+
+**📚 Study Plan:** 1-2 hours/day, 3-5 days/week
+
+> Every concept has **two free resources** to learn from and an **example practice task**
 
 ### A. Programming (Python) ✅ ESSENTIAL
 
 **⏱️ Time Needed:** 1-3 weeks (10-30 hours total)
 
-**What is Python?**
-Python is a programming language used to tell computers what to do. It's
-simple, powerful, and the standard for AI/ML.
+#### What is Python?
+Python is a programming language used to tell computers what to do. It's simple, powerful, and the standard for AI/ML.
 
--   Learn: [Python for Everybody --
-    FreeCodeCamp](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
--   Learn: [Python.org Beginner's
-    Guide](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
+#### Learning Resources 📚
+- **[Python for Everybody - FreeCodeCamp](https://www.freecodecamp.org/learn/scientific-computing-with-python/)**
+- **[Python.org Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)**
 
-**Practice Task:**
+#### Practice Task 📝
 Write a Python program that prints: `Hello Average Joes Lab!`
 
-**✅ Success Criteria (You're Ready When You Can):**
-- Create variables and use basic data types (strings, numbers, lists)
-- Write simple functions and use if/else statements
-- Use loops (for/while) to repeat actions
-- Install and import Python libraries (like `numpy`)
-- Debug simple errors by reading error messages
+#### ✅ Success Criteria (You're Ready When You Can)
+- ✓ Create variables and use basic data types (strings, numbers, lists)
+- ✓ Write simple functions and use if/else statements
+- ✓ Use loops (for/while) to repeat actions
+- ✓ Install and import Python libraries (like `numpy`)
+- ✓ Debug simple errors by reading error messages
 
-**🆘 Stuck? Common Issues:**
-- **"Python not installed"** → Use Google Colab instead (no installation needed)
-- **"Syntax errors"** → Check for missing colons `:` and proper indentation
-- **"Can't understand concepts"** → Focus on practice, not theory. Code along with tutorials.
+#### 🆘 Stuck? Common Issues
+| Problem | Solution |
+|---|---|
+| "Python not installed" | Use Google Colab instead (no installation needed) |
+| "Syntax errors" | Check for missing colons `:` and proper indentation |
+| "Can't understand concepts" | Focus on practice, not theory. Code along with tutorials |
 
 ------------------------------------------------------------------------
 
@@ -143,27 +170,28 @@ Write a Python program that prints: `Hello Average Joes Lab!`
 
 **⏱️ Time Needed:** 2-5 hours
 
-**What is Jupyter?**
-Jupyter lets you write code, run it, and explain it all in one place.
-It's the standard tool for reproducible research.
+#### What is Jupyter?
+Jupyter lets you write code, run it, and explain it all in one place. It's the standard tool for reproducible research.
 
--   Learn: [Jupyter Docs -- Try Jupyter](https://jupyter.org/try)
--   Learn: [Jupyter Notebook Tutorial --
-    FreeCodeCamp](https://www.youtube.com/watch?v=HW29067qVWk)
+#### Learning Resources 📚
+- **[Jupyter Docs - Try Jupyter](https://jupyter.org/try)**
+- **[Jupyter Notebook Tutorial - FreeCodeCamp](https://www.youtube.com/watch?v=HW29067qVWk)**
 
-**Practice Task:**
+#### Practice Task 📝
 Open a Jupyter Notebook and write code that adds 2 + 2.
 
-**✅ Success Criteria:**
-- Create and run code cells in Jupyter/Colab
-- Add markdown cells with text and explanations
-- Save and share notebooks
-- Install libraries within notebooks (`!pip install`)
+#### ✅ Success Criteria
+- ✓ Create and run code cells in Jupyter/Colab
+- ✓ Add markdown cells with text and explanations
+- ✓ Save and share notebooks
+- ✓ Install libraries within notebooks (`!pip install`)
 
-**🆘 Stuck? Common Issues:**
-- **"Can't install Jupyter"** → Use Google Colab (jupyter.org/try)
-- **"Cells won't run"** → Check if you're in edit mode vs command mode
-- **"Lost my work"** → Always save frequently (Ctrl+S)
+#### 🆘 Stuck? Common Issues
+| Problem | Solution |
+|---|---|
+| "Can't install Jupyter" | Use Google Colab (jupyter.org/try) |
+| "Cells won't run" | Check if you're in edit mode vs command mode |
+| "Lost my work" | Always save frequently (Ctrl+S) |
 
 ------------------------------------------------------------------------
 
@@ -303,57 +331,71 @@ Read an abstract of a paper and identify: problem, method, result.
 
 ## 🎯 Prerequisites Checkpoint
 
-**Before moving to Phase 1, you should be able to:**
+### Ready for Phase 1? Check These Off! ✓
 
-✅ Write basic Python programs and use Jupyter notebooks  
-✅ Create GitHub repositories and commit code  
-✅ Read research paper abstracts and identify key components  
-✅ Understand that you don't need to know everything to start contributing  
+| Skill | Can You Do This? |
+|---|---|
+| **Python Programming** | ✅ Write basic Python programs and use Jupyter notebooks |
+| **Version Control** | ✅ Create GitHub repositories and commit code |
+| **Research Reading** | ✅ Read research paper abstracts and identify key components |
+| **Growth Mindset** | ✅ Understand that you don't need to know everything to start contributing |
 
-**Estimated Total Time:** 4-12 weeks (depending on your pace and background)
+---
 
-**🚀 Ready to continue?** Great! **Still working on prerequisites?** That's totally normal - take your time.
+**⏱️ Estimated Total Time:** 4-12 weeks (depending on your pace and background)
+
+> **🚀 Ready to continue?** Great!  
+> **📚 Still working on prerequisites?** That's totally normal - take your time.
 
 ------------------------------------------------------------------------
 
 ## 3. The Learning Path Framework
 
-This Learning Path is divided into **4 phases (16 weeks suggested)**.
+> This Learning Path is divided into **4 phases (16 weeks suggested)**
 
-Each phase includes:
-- **Concepts** → what you should learn.
-- **Skills** → what you should be able to do.
-- **Deliverables** → what you must produce.
-- **Example Papers** → famous, beginner-friendly, reproducible with
-clear instructions.
+### What Each Phase Includes 📋
+
+| Component | Description |
+|---|---|
+| **🧠 Concepts** | What you should learn |
+| **🛠️ Skills** | What you should be able to do |
+| **📝 Deliverables** | What you must produce |
+| **📚 Example Papers** | Famous, beginner-friendly, reproducible with clear instructions |
 
 ------------------------------------------------------------------------
 
-### Phase 1: Research Foundations (Weeks 1--4)
+### Phase 1: Research Foundations (Weeks 1-4)
 
-**⏱️ Time Commitment:** 3-5 hours/week  
-**🎯 Goal:** Understand how research works and read your first papers  
-**👥 Community:** Join #phase1-foundations channel in Discord  
+| 📊 Phase Overview | Details |
+|---|---|
+| **⏱️ Time Commitment** | 3-5 hours/week |
+| **🎯 Goal** | Understand how research works and read your first papers |
+| **👥 Community** | Join `#phase1-foundations` channel in Discord |
 
-**Week 1-2: Research Literacy**
-**Concepts:**
+#### Week 1-2: Research Literacy 📚
+
+**🧠 Concepts:**
 - Scientific method, reproducibility, ethics
 - How to find papers (arXiv, Google Scholar, Papers With Code)
 
-**Skills:**
+**🛠️ Skills:**
 - Navigate research databases
 - Read and summarize paper abstracts
 - Identify research questions and methodologies
 
-**Week 3-4: Literature Analysis**
-**Skills:**
+#### Week 3-4: Literature Analysis 🔍
+
+**🛠️ Skills:**
 - Read full research papers (start with conclusions and figures)
 - Write structured paper summaries
 - Compare different approaches to the same problem
 
-**📋 Deliverables:**
-- ✅ **Week 2 Checkpoint:** Summarize 3 paper abstracts (post in Discord for feedback)
-- ✅ **Week 4 Final:** Literature review of 3-5 papers (1-2 pages)
+#### 📋 Deliverables
+
+| Checkpoint | Task | Where to Share |
+|---|---|---|
+| **Week 2** | Summarize 3 paper abstracts | Post in Discord for feedback |
+| **Week 4** | Literature review of 3-5 papers (1-2 pages) | GitHub repository |
 
 **📚 Beginner-Friendly Papers:**
 1. **LeNet (1998)** -- Digit recognition on MNIST
@@ -521,43 +563,55 @@ Here are the tools to practice with (not just learn about):
 
 ## 5. Next Steps Checklist
 
-1.  Join the [AJL Discord](https://discord.gg/averagejoeslab).
-2.  Install Python and Jupyter.
-3.  Run your first notebook: `print("Hello AJL!")`
-4.  Read LeNet and AlexNet papers (LeNet: train from scratch, AlexNet:
-    inference only).
-5.  Write your first literature review.
-6.  Fork the AJL starter repo on GitHub.
-7.  Reproduce ResNet on CIFAR-10 or fine-tune DistilBERT.
-8.  Write your first research proposal.
-9.  Publish your experiment repo.
-10. Share in Discord & mentor a newcomer.
+### Your Action Plan 📋
 
-------------------------------------------------------------------------
+| Step | Task | Phase |
+|---|---|---|
+| 1 | Join the [AJL Discord](https://discord.gg/averagejoeslab) | Quick Start |
+| 2 | Install Python and Jupyter | Prerequisites |
+| 3 | Run your first notebook: `print("Hello AJL!")` | Prerequisites |
+| 4 | Read LeNet and AlexNet papers | Phase 1 |
+| 5 | Write your first literature review | Phase 1 |
+| 6 | Fork the AJL starter repo on GitHub | Phase 2 |
+| 7 | Reproduce ResNet on CIFAR-10 or fine-tune DistilBERT | Phase 2 |
+| 8 | Write your first research proposal | Phase 3 |
+| 9 | Publish your experiment repo | Phase 3 |
+| 10 | Share in Discord & mentor a newcomer | Phase 4 |
 
-🔥 By completing this Learning Path, you'll have:
-- A **portfolio of 3--5 projects**.
-- A **network of collaborators**.
-- The skills to be a **research engineer** ready for industry, open
-science, or independent work.
+---
+
+### 🔥 By Completing This Learning Path, You'll Have:
+
+| Achievement | Description |
+|---|---|
+| **📁 Portfolio** | 3-5 real research projects |
+| **👥 Network** | Collaborators and mentors |
+| **💼 Career Skills** | Research engineer ready for industry, open science, or independent work |
 
 ------------------------------------------------------------------------
 
 ## 🆘 Troubleshooting & FAQ
 
-### **"I'm stuck and don't know what to do next"**
-1. **Check the Discord channels** - others might have the same issue
-2. **Post your specific error** with screenshots in #help-debugging
-3. **Try the "rubber duck" method** - explain your problem out loud
-4. **Take a break** - sometimes stepping away helps
+### "I'm stuck and don't know what to do next" 😕
 
-### **"The code doesn't work / I get errors"**
-**Common Solutions:**
-- **Restart your notebook/Colab session** (fixes 50% of issues)
-- **Check library versions** - use `!pip list` to see what's installed
-- **Copy error messages exactly** when asking for help
-- **Try a different browser** if using Colab
-- **Check your internet connection** for cloud services
+| Step | Action |
+|---|---|
+| 1 | **Check Discord channels** - others might have the same issue |
+| 2 | **Post your specific error** with screenshots in `#help-debugging` |
+| 3 | **Try the "rubber duck" method** - explain your problem out loud |
+| 4 | **Take a break** - sometimes stepping away helps |
+
+### "The code doesn't work / I get errors" 🚫
+
+#### Common Solutions (Try These First!) 🔧
+
+| Problem Type | Solution | Success Rate |
+|---|---|---|
+| **Any error** | Restart your notebook/Colab session | 50% |
+| **Import errors** | Check library versions with `!pip list` | 30% |
+| **Getting help** | Copy error messages exactly when asking | 90% |
+| **Colab issues** | Try a different browser | 20% |
+| **Connection issues** | Check your internet connection | 15% |
 
 ### **"I don't understand the math/theory"**
 **That's totally normal!** 
@@ -606,25 +660,36 @@ science, or independent work.
 
 ## 📞 Community & Support
 
-### **Discord Channels**
-- **#introductions** - Introduce yourself to the community
-- **#beginners-help** - Ask any question, no matter how basic
-- **#phase1-foundations** - Phase 1 participants and discussions
-- **#phase2-technical** - Phase 2 participants and code help
-- **#phase3-research** - Phase 3 participants and project discussions
-- **#phase4-community** - Phase 4 participants and mentorship
-- **#success-stories** - Share your wins, big and small!
-- **#study-groups** - Find study partners and accountability buddies
+### Discord Channels 💬
 
-### **Getting Help**
-1. **Search Discord history** - your question might be answered already
-2. **Be specific** - "X doesn't work" vs "When I run X, I get error Y"
-3. **Share code/screenshots** - helps others help you faster
-4. **Help others** - teaching reinforces your own learning
+| Channel | Purpose | Who Should Join |
+|---|---|---|
+| **`#introductions`** | Introduce yourself to the community | Everyone |
+| **`#beginners-help`** | Ask any question, no matter how basic | New learners |
+| **`#phase1-foundations`** | Phase 1 participants and discussions | Phase 1 students |
+| **`#phase2-technical`** | Phase 2 participants and code help | Phase 2 students |
+| **`#phase3-research`** | Phase 3 participants and project discussions | Phase 3 students |
+| **`#phase4-community`** | Phase 4 participants and mentorship | Phase 4 students |
+| **`#success-stories`** | Share your wins, big and small! | Everyone |
+| **`#study-groups`** | Find study partners and accountability buddies | Everyone |
 
-### **Office Hours**
-- **Weekly community calls** - Sundays 2PM EST
-- **Beginner Q&A sessions** - Wednesdays 7PM EST  
-- **Technical deep-dives** - Fridays 6PM EST
+### Getting Help 🙋‍♂️
 
-Join us - research is better together! 🤝
+| Step | Best Practice | Why It Works |
+|---|---|---|
+| 1 | **Search Discord history** | Your question might be answered already |
+| 2 | **Be specific** | "When I run X, I get error Y" vs "X doesn't work" |
+| 3 | **Share code/screenshots** | Helps others help you faster |
+| 4 | **Help others** | Teaching reinforces your own learning |
+
+### Office Hours 🕰️
+
+| Day | Time | Focus |
+|---|---|---|
+| **Sunday** | 2PM EST | Weekly community calls |
+| **Wednesday** | 7PM EST | Beginner Q&A sessions |
+| **Friday** | 6PM EST | Technical deep-dives |
+
+---
+
+> **Join us - research is better together!** 🤝
