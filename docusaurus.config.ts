@@ -81,6 +81,14 @@ const config: Config = {
     ],
   ],
 
+  // Custom scripts for client-side fixes
+  scripts: [
+    {
+      src: '/js/blogSidebarFix.js',
+      async: true,
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/ajlabs-logo-light.png',

@@ -917,6 +917,9 @@ a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-l
   color: white;
 }
 
+/* JavaScript-based blog sidebar active post fix */
+/* This script runs after DOM is loaded to directly set active post color */
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
