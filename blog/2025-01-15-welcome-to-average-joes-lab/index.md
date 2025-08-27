@@ -6,13 +6,13 @@ tags: [announcements, community, democratization, getting-started, citizen-scien
 image: ./welcome-hero.png
 ---
 
-# Welcome to Average Joes Lab 🔬
+# Welcome to Average Joes Lab
 
 Welcome to **Average Joes Lab** - where ordinary people do extraordinary research! I'm thrilled to introduce you to our mission of democratizing research and pulling it out of the exclusive hands of traditional academia and corporations.
 
 <!--truncate-->
 
-## 🎯 Why Average Joes Lab Exists
+## Why Average Joes Lab Exists
 
 For too long, research has been gatekept by institutions, creating barriers that prevent brilliant minds from contributing to human knowledge simply because they lack the "right" credentials or institutional affiliations. **We're changing that.**
 
@@ -22,7 +22,7 @@ At Average Joes Lab, we believe that:
 - **Knowledge should be free** - Research findings belong to humanity, not behind paywalls
 - **Community beats competition** - Collaborative research produces better outcomes than isolated efforts
 
-## �� What Makes Us Different
+## What Makes Us Different
 
 ### **Open by Default**
 Every piece of research, methodology, and finding from our community is **completely open access**. No paywalls, no institutional barriers, no gatekeeping.
@@ -36,39 +36,39 @@ We don't just theorize - we build, test, and implement. Our research has **real-
 ### **Mentorship & Support**
 New to research? No problem! Our community includes experienced research engineers who provide **mentorship and guidance** to help you succeed.
 
-## 🚀 Our Research Areas
+## Our Research Areas
 
 We're focused on cutting-edge areas where citizen researchers can make meaningful contributions:
 
-### **🤖 AI & Machine Learning Research**
+### **AI & Machine Learning Research**
 - Developing accessible AI methodologies
 - Ethical AI research and implementation
 - Community-driven model development
 - Open-source AI tools and frameworks
 
-### **🔬 Research Methodologies**
+### **Research Methodologies**
 - Democratized research practices
 - Community peer review systems
 - Open science tools and workflows
 - Reproducible research frameworks
 
-### **🌐 Emerging Technologies**
+### **Emerging Technologies**
 - Blockchain and decentralized systems
 - Quantum computing accessibility
 - IoT and edge computing research
 - Sustainable technology solutions
 
-### **🏛️ Open Science Initiatives**
+### **Open Science Initiatives**
 - Breaking down academic barriers
 - Creating accessible research tools
 - Building global research communities
 - Advancing scientific transparency
 
-## 📚 Your Research Journey Starts Here
+## Your Research Journey Starts Here
 
 Whether you're a complete beginner or an experienced researcher looking for a more open environment, we have resources for you:
 
-### **🎓 Research Engineering Learning Path**
+### **Research Engineering Learning Path**
 Our comprehensive **16-week program** takes you from research novice to contributing community member:
 - **Weeks 1-4**: Research foundations and methodology
 - **Weeks 5-8**: Technical skills and tools
@@ -77,17 +77,17 @@ Our comprehensive **16-week program** takes you from research novice to contribu
 
 [**Start Your Research Journey →**](/docs/intro)
 
-### **📄 Open Research Papers**
+### **Open Research Papers**
 Explore our growing collection of **community-generated research** - all freely available and openly licensed.
 
 [**Browse Our Papers →**](/internal-papers)
 
-### **🤝 Join Our Community**
+### **Join Our Community**
 Connect with fellow citizen researchers, find collaborators, and get support for your projects.
 
 [**Join Our Discord →**](https://discord.gg/averagejoeslab)
 
-## 🌟 Success Stories (Coming Soon!)
+## Success Stories (Coming Soon!)
 
 We're just getting started, but we're already seeing incredible contributions from our community members. Stay tuned for stories of:
 - **Career changers** who became research contributors
@@ -95,7 +95,7 @@ We're just getting started, but we're already seeing incredible contributions fr
 - **Collaborative projects** that solved real-world problems
 - **Community innovations** that advanced open science
 
-## 🎯 How You Can Contribute
+## How You Can Contribute
 
 ### **For Beginners**
 1. **Join our Discord community** and introduce yourself
@@ -115,7 +115,7 @@ We're just getting started, but we're already seeing incredible contributions fr
 - **Provide feedback** on research papers and projects
 - **Collaborate** on projects that interest you
 
-## 🔮 What's Coming Next
+## What's Coming Next
 
 We have exciting plans for the future:
 
@@ -137,7 +137,7 @@ We have exciting plans for the future:
 - **Academic collaboration** initiatives
 - **Research impact measurement** and tracking
 
-## 💬 Let's Connect
+## Let's Connect
 
 I'm personally committed to making this vision a reality, and I'd love to hear from you:
 
@@ -148,7 +148,7 @@ I'm personally committed to making this vision a reality, and I'd love to hear f
 
 Join our [Discord community](https://discord.gg/averagejoeslab) and let's start the conversation!
 
-## 🎉 Welcome to the Future of Research
+## Welcome to the Future of Research
 
 **Average Joes Lab** isn't just another research organization - it's a movement. A movement toward:
 - **Accessible research** for everyone
@@ -161,7 +161,7 @@ Whether you're a software engineer curious about AI research, a teacher interest
 
 Research is too important to be left only to researchers in ivory towers. **Every curious mind has the potential to contribute to human knowledge.**
 
-Welcome to Average Joes Lab. Let's democratize research together! 🚀
+Welcome to Average Joes Lab. Let's democratize research together!
 
 ---
 
