@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkaveragejoeslab=self.webpackChunkaveragejoeslab||[]).push([[146],{9328:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Insights, updates, and research from the Average Joes Lab community","blogTitle":"Average Joes Lab Research Blog"}}')}}]);
