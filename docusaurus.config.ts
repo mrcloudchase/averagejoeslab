@@ -8,6 +8,9 @@ const config: Config = {
   title: 'Average Joes Lab',
   tagline: 'Democratizing research for citizen researchers - Open science by ordinary people',
   favicon: 'img/favicon.ico',
+  
+  // Custom title template for browser tabs
+  titleDelimiter: '•',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
