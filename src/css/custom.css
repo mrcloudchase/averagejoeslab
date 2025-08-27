@@ -821,13 +821,30 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #ffffff !important;
 }
 
-/* Blog sidebar links and content */
+/* Blog sidebar links and content - comprehensive selectors */
 [data-theme='dark'] .theme-blog-sidebar a,
 [data-theme='dark'] .sidebar a,
 [data-theme='dark'] .blog-sidebar a,
 [data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a,
-[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+[data-theme='dark'] .theme-blog-sidebar .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a,
+[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a,
+[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a {
   color: #e2e8f0 !important;
+}
+
+/* Light mode blog sidebar links */
+.theme-blog-sidebar a,
+.sidebar a,
+.blog-sidebar a,
+.blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a,
+.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+.theme-blog-sidebar .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+.blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a,
+.blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a,
+.blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a {
+  color: #4a5568 !important;
 }
 
 [data-theme='dark'] .theme-blog-sidebar a:hover,
@@ -838,12 +855,17 @@ html:not([data-theme='dark']) .footer__link-item:hover {
   color: #ffffff !important;
 }
 
-/* Blog sidebar active/selected post - light blue in both modes */
+/* Blog sidebar active/selected post - light blue in both modes - COMPREHENSIVE */
 .theme-blog-sidebar a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
 .sidebar a.active,
 .blog-sidebar a.active,
 .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"] {
+.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"],
+.blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
+.blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
+.blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
+a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
   color: #63b3ed !important;
   font-weight: 600 !important;
 }
@@ -852,9 +874,23 @@ html:not([data-theme='dark']) .footer__link-item:hover {
 [data-theme='dark'] .sidebar a.active,
 [data-theme='dark'] .blog-sidebar a.active,
 [data-theme='dark'] .blogSidebarItem_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
-[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"] {
+[data-theme='dark'] .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module[aria-current="page"],
+[data-theme='dark'] .blogSidebar_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
+[data-theme='dark'] .blogSidebarDesktop_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module a[aria-current="page"],
+[data-theme='dark'] .blogSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-BlogLayout-styles-module a[aria-current="page"],
+[data-theme='dark'] a[aria-current="page"].sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module,
+[data-theme='dark'] .sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
   color: #63b3ed !important;
   font-weight: 600 !important;
+}
+
+/* Additional fallback selectors for active blog post */
+[aria-current="page"] {
+  color: #63b3ed !important;
+}
+
+[data-theme='dark'] [aria-current="page"] {
+  color: #63b3ed !important;
 }
 
 /* Selection styling */
