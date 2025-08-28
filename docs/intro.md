@@ -105,6 +105,24 @@ Our neural network example demonstrates the "learn as you go" approach:
 
 > **Remember**: Every expert started as a beginner. The research engineering methodology teaches you to build knowledge systematically through hands-on work with real problems. You don't need to master everything upfront - you need to be willing to learn what you need as you encounter it.
 
+## 🚀 Get Started with the Template Repository
+
+**[Fork the Research Engineering Starter Template](https://github.com/mrcloudchase/research-engineering-starter)** - A complete repository structure designed to guide you through all 4 phases of the learning path.
+
+### What's Included:
+- **Organized directory structure** for each phase
+- **Detailed README files** with phase-specific guidance
+- **Best practices** for research engineering
+- **Templates and examples** for documentation
+- **Proper .gitignore** for research projects
+- **Links to all learning resources** from this guide
+
+### Quick Start:
+1. **Fork the template** to your GitHub account
+2. **Clone locally** and choose your research paper
+3. **Follow the 4-phase structure** with built-in guidance
+4. **Document your journey** using the organized folders
+
 ## Learning Path Overview
 
 ### Phase 1: Research Foundations (Weeks 1-4)
@@ -385,12 +403,16 @@ Now that you understand the framework and prerequisites, here's how to select yo
 
 ### **Ready to Start Your Research Engineering Journey?**
 
+#### **Get the Template Repository:**
+🚀 **[Fork the Research Engineering Starter Template](https://github.com/mrcloudchase/research-engineering-starter)** - Complete repository structure with guides for all 4 phases
+
 #### **Immediate Next Steps:**
-1. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
-2. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
-3. **Read our [research papers](/internal-papers)** - See what the community is working on
-4. **Choose your first project** - Start with a literature review or paper reproduction based on your interests
-5. **Find a mentor** - Connect with experienced community members for guidance
+1. **[Fork the starter template](https://github.com/mrcloudchase/research-engineering-starter)** - Get organized structure and guidance
+2. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
+3. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
+4. **Read our [research papers](/internal-papers)** - See what the community is working on
+5. **Choose your first project** - Start with a literature review or paper reproduction based on your interests
+6. **Find a mentor** - Connect with experienced community members for guidance
 
 #### **Career Opportunities in Research Engineering:**
 - **Research Scientist** across various industries and institutions
