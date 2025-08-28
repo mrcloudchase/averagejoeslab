@@ -52,6 +52,11 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Complete your first literature review on a topic of interest
 
+**Example for Neural Network Research Path:**
+- Literature review of foundational papers: Perceptron (1958), Multi-layer Perceptrons (1986), and early neural network development
+- Understand the historical context and evolution of the field
+- Identify key concepts, methodologies, and recurring themes
+
 ### Phase 2: Technical Skills (Weeks 5-8)
 **Develop the technical skills for research engineering**
 
@@ -69,91 +74,11 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Implement and reproduce a research paper
 
-## Example Research Papers for Beginners
-
-> **Note:** These neural network papers are provided as concrete examples of beginner-friendly research that can be accomplished independently. However, this learning path applies to **any research field** - you could equally well start with foundational papers in biology, psychology, economics, physics, or any other domain that interests you.
-
-### **Why These Papers Make Great Starting Points:**
-- **Foundational concepts** that are still relevant today
-- **Simple enough** to understand and implement without advanced background
-- **Well-documented** with clear methodologies
-- **Reasonable scope** for independent reproduction
-- **Historical significance** that helps understand field evolution
-
-### **Beginner-Friendly Neural Network Papers:**
-
-#### **1. The Perceptron (1958) - Frank Rosenblatt**
-*"The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"*
-
-**Why Start Here:**
-- **Foundational paper** that introduced the concept of artificial neural networks
-- **Simple algorithm** that can be implemented in ~50 lines of code
-- **Clear mathematical foundation** with basic linear algebra
-- **Historical significance** - launched the field of neural networks
-
-**What You'll Learn:**
-- Basic concepts of artificial neurons and learning
-- Simple classification algorithms
-- How to implement and test a learning algorithm
-
-**Reproduction Scope:** Implement the perceptron algorithm and test on simple datasets (2-3 weeks)
-
-#### **2. Multi-Layer Perceptrons and Backpropagation (1986) - Rumelhart, Hinton & Williams**
-*"Learning Representations by Back-Propagating Errors"*
-
-**Why This Follows Well:**
-- **Builds directly** on the perceptron concept
-- **Introduces key concepts** still used in modern neural networks
-- **Manageable complexity** for beginners
-- **Clear algorithmic steps** that can be implemented step-by-step
-
-**What You'll Learn:**
-- How neural networks learn complex patterns
-- The backpropagation algorithm
-- Multi-layer network architectures
-
-**Reproduction Scope:** Implement backpropagation and train on classic datasets like XOR or MNIST (3-4 weeks)
-
-#### **3. LeNet-5 (1998) - Yann LeCun et al.**
-*"Gradient-Based Learning Applied to Document Recognition"*
-
-**Why This Is Perfect for Phase 2:**
-- **Practical application** to real-world problem (handwritten digits)
-- **Introduces convolutions** - a key concept in modern AI
-- **Reasonable dataset size** (MNIST - 60,000 training images)
-- **Clear experimental setup** and evaluation metrics
-
-**What You'll Learn:**
-- Convolutional neural networks
-- Real-world data preprocessing
-- Model evaluation and validation
-
-**Reproduction Scope:** Implement CNN architecture and achieve >95% accuracy on MNIST (4-6 weeks)
-
-### **Papers for Other Research Fields (Examples):**
-
-#### **Biology/Life Sciences:**
-- **"The Structure of DNA" (1953) - Watson & Crick** - Analyze X-ray crystallography data
-- **"A Mathematical Theory of Evolution" (1930) - Fisher** - Population genetics modeling
-
-#### **Psychology:**
-- **"The Magical Number Seven" (1956) - Miller** - Replicate memory capacity experiments
-- **"Cognitive Load Theory" (1988) - Sweller** - Design and test learning experiments
-
-#### **Economics:**
-- **"Theory of Games and Economic Behavior" (1944) - von Neumann & Morgenstern** - Game theory simulations
-- **"The Market for Lemons" (1970) - Akerlof** - Information asymmetry modeling
-
-#### **Physics:**
-- **"Brownian Motion" (1905) - Einstein** - Simulate particle movement
-- **"Chaos Theory" (1963) - Lorenz** - Implement weather prediction models
-
-### **How to Choose Papers for Your Field:**
-1. **Start with foundational papers** that introduced key concepts
-2. **Look for clear methodologies** that can be reproduced
-3. **Choose manageable scope** - avoid papers requiring massive datasets or specialized equipment
-4. **Find papers with lasting impact** that are still cited today
-5. **Ensure availability of data** or ability to generate synthetic data
+**Example for Neural Network Research Path:**
+- **Week 5-6**: Implement the Perceptron algorithm (1958) - Start with the foundational concept
+- **Week 7-8**: Implement Backpropagation (1986) - Build on perceptron to handle complex patterns
+- Reproduce original results and validate your implementation
+- Document your code and findings for reproducibility
 
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
@@ -172,6 +97,12 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Complete an original research project
 
+**Example for Neural Network Research Path:**
+- **Week 9-10**: Design experiments with LeNet-5 (1998) - Apply CNNs to handwritten digit recognition
+- **Week 11-12**: Conduct original research - Compare different architectures, test on new datasets, or explore variations
+- Achieve >95% accuracy on MNIST and document your experimental process
+- Write up findings in a research report format
+
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
 
@@ -188,6 +119,105 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Building research communities
 
 **Milestone**: Publish your research and mentor another community member
+
+**Example for Neural Network Research Path:**
+- **Week 13-14**: Write a comprehensive paper on your neural network experiments and publish on arXiv or community platform
+- **Week 15-16**: Create educational content (blog post, tutorial, or video) explaining neural networks to beginners
+- Mentor a newcomer through their first perceptron implementation
+- Contribute to open-source neural network educational resources
+
+## Example Research Papers for Beginners
+
+> **Important Note:** The neural network papers below are provided as concrete examples of beginner-friendly research that can be accomplished independently. However, this learning path applies to **any research field** - you could equally well start with foundational papers in biology, psychology, economics, physics, or any other domain that interests you.
+
+### **Why These Papers Make Great Starting Points:**
+- **Foundational concepts** that are still relevant today
+- **Simple enough** to understand and implement without advanced background
+- **Well-documented** with clear methodologies
+- **Reasonable scope** for independent reproduction
+- **Historical significance** that helps understand field evolution
+
+### **Neural Network Research Path Example:**
+
+#### **Phase 1 Paper: The Perceptron (1958) - Frank Rosenblatt**
+*"The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"*
+
+**Why Start Here:**
+- **Foundational paper** that introduced the concept of artificial neural networks
+- **Simple algorithm** that can be implemented in ~50 lines of code
+- **Clear mathematical foundation** with basic linear algebra
+- **Historical significance** - launched the field of neural networks
+
+**Phase 1 Application:**
+- Literature review: Study this paper alongside related work on early neural networks
+- Understand the historical context and theoretical foundations
+- Identify key concepts that influenced later developments
+
+#### **Phase 2 Paper: Multi-Layer Perceptrons and Backpropagation (1986)**
+*"Learning Representations by Back-Propagating Errors" - Rumelhart, Hinton & Williams*
+
+**Why This Follows Well:**
+- **Builds directly** on the perceptron concept
+- **Introduces key concepts** still used in modern neural networks
+- **Manageable complexity** for beginners
+- **Clear algorithmic steps** that can be implemented step-by-step
+
+**Phase 2 Application:**
+- Implement the perceptron algorithm first (Week 5-6)
+- Then implement backpropagation (Week 7-8)
+- Reproduce original results and validate your implementation
+- Document your code and findings for reproducibility
+
+#### **Phase 3 Paper: LeNet-5 (1998) - Yann LeCun et al.**
+*"Gradient-Based Learning Applied to Document Recognition"*
+
+**Why This Is Perfect for Phase 3:**
+- **Practical application** to real-world problem (handwritten digits)
+- **Introduces convolutions** - a key concept in modern AI
+- **Reasonable dataset size** (MNIST - 60,000 training images)
+- **Clear experimental setup** and evaluation metrics
+
+**Phase 3 Application:**
+- Design experiments with LeNet-5 architecture
+- Conduct original research comparing different architectures
+- Test on new datasets or explore architectural variations
+- Achieve >95% accuracy on MNIST and document experimental process
+
+### **Example Paths for Other Research Fields:**
+
+> **Remember:** The same 4-phase framework applies to any field. Here are beginner-friendly starting points for other domains:
+
+#### **Biology/Life Sciences Path:**
+- **Phase 1**: Literature review of "The Structure of DNA" (1953) - Watson & Crick
+- **Phase 2**: Analyze X-ray crystallography data and model DNA structure
+- **Phase 3**: Design experiments comparing different structural analysis methods
+- **Phase 4**: Create educational content on DNA structure discovery
+
+#### **Psychology Research Path:**
+- **Phase 1**: Literature review of "The Magical Number Seven" (1956) - Miller  
+- **Phase 2**: Replicate memory capacity experiments with modern tools
+- **Phase 3**: Design original experiments testing memory limits in different contexts
+- **Phase 4**: Publish findings and mentor others in experimental psychology
+
+#### **Economics Research Path:**
+- **Phase 1**: Literature review of "The Market for Lemons" (1970) - Akerlof
+- **Phase 2**: Build economic models demonstrating information asymmetry
+- **Phase 3**: Design experiments testing market behavior under different information conditions
+- **Phase 4**: Contribute to behavioral economics research and education
+
+#### **Physics Research Path:**
+- **Phase 1**: Literature review of "Brownian Motion" (1905) - Einstein
+- **Phase 2**: Simulate particle movement and validate against theoretical predictions  
+- **Phase 3**: Design experiments exploring variations in particle behavior
+- **Phase 4**: Create physics simulations for educational use
+
+### **How to Choose Papers for Your Field:**
+1. **Start with foundational papers** that introduced key concepts in your field
+2. **Look for clear methodologies** that can be reproduced with available tools
+3. **Choose manageable scope** - avoid papers requiring massive datasets or specialized equipment
+4. **Find papers with lasting impact** that are still cited and relevant today
+5. **Ensure data availability** or ability to generate synthetic data for reproduction
+6. **Consider historical significance** - papers that shaped the field's development
 
 ## Core Skills You'll Develop
 
