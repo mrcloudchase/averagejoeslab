@@ -33,6 +33,78 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Build a portfolio of actual research contributions
 - Develop skills that translate directly to career opportunities
 
+## Prerequisites - Start Where You Are
+
+### **The Reality: You Need Less Than You Think**
+
+Research engineering is more about **methodology and systematic thinking** than having perfect prerequisites. The most important requirements are:
+
+#### **Universal Prerequisites (All Fields):**
+- **Curiosity** - Genuine interest in understanding how things work
+- **Basic computer literacy** - Comfortable with files, software, internet research
+- **High school mathematics** - Algebra and basic statistics (you can learn more as needed)
+- **Willingness to learn** - Persistence when things don't work the first time
+- **Basic programming** - Any language (Python recommended for versatility)
+
+#### **What You DON'T Need to Start:**
+- ❌ Advanced degrees or credentials
+- ❌ Years of domain expertise  
+- ❌ Perfect mathematical background
+- ❌ Expensive equipment or software
+- ❌ Institutional affiliation
+
+### **Field-Specific Variations**
+
+Prerequisites vary by field, but you can **learn as you go**:
+
+#### **Lower Math Requirements:**
+- **Biology, Psychology, History**: Basic statistics, research methods
+- **Digital Humanities**: Minimal math, computational thinking helpful
+
+#### **Medium Math Requirements:**  
+- **Economics, Sociology**: Statistics, basic calculus helpful
+- **Chemistry**: Calculus, some linear algebra for advanced topics
+
+#### **Higher Math Requirements:**
+- **Physics, Engineering**: Calculus, linear algebra, differential equations
+- **Computer Science/AI**: Linear algebra, calculus, probability, discrete math
+
+> **Key Insight**: Even "high math" fields can be approached gradually. You learn the math you need for each specific problem, not everything upfront.
+
+### **Perceptron Example Prerequisites**
+
+Our neural network example demonstrates the "learn as you go" approach:
+
+#### **To Start (Week 1-4):**
+- **Basic algebra** - Understanding variables, equations, simple functions
+- **High school math** - No calculus required initially
+- **Basic programming** - Variables, loops, functions in any language
+- **Curiosity about learning** - How do brains/computers learn patterns?
+
+#### **As You Progress (Week 5-8):**
+- **Linear algebra basics** - Dot products, vectors (learned when implementing perceptron)
+- **Basic statistics** - Accuracy, precision, evaluation metrics (learned when testing)
+- **Python fundamentals** - Learned through hands-on implementation
+
+#### **For Advanced Work (Week 9-12):**
+- **Calculus concepts** - Derivatives for understanding backpropagation (learned when needed)
+- **Probability theory** - For understanding learning algorithms (learned in context)
+- **Advanced statistics** - For rigorous experimental analysis (learned through practice)
+
+#### **Specialization (Week 13+):**
+- **Advanced mathematics** - Only as needed for specific research directions
+- **Domain expertise** - Built through continuous research and community engagement
+
+### **The Learning Strategy: Just-in-Time Knowledge**
+
+1. **Start with genuine interest** in a specific problem or field
+2. **Pick a foundational paper** that seems approachable
+3. **Learn the minimum** math/tools needed for that specific paper  
+4. **Build knowledge incrementally** as you tackle more complex problems
+5. **Join the community** to learn from others on similar journeys
+
+> **Remember**: Every expert started as a beginner. The research engineering methodology teaches you to build knowledge systematically through hands-on work with real problems. You don't need to master everything upfront - you need to be willing to learn what you need as you encounter it.
+
 ## Learning Path Overview
 
 ### Phase 1: Research Foundations (Weeks 1-4)
