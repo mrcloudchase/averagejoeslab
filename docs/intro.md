@@ -69,46 +69,60 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Version control with Git for research
 - Collaborative coding practices
 
-#### Week 7-8: Research Tools and Frameworks
-- Domain-specific tools and frameworks for your field
-- Experiment tracking and management systems
-- Data analysis and validation techniques
-- Research reproducibility tools
+#### Week 7-8: Research Engineering Tools and Methodologies
+- **Experiment Tracking**: Tools for logging experiments, parameters, and results
+- **Version Control for Research**: Managing code, data, and model versions
+- **Reproducible Environments**: Containerization and environment management
+- **Research Validation**: Automated testing and validation pipelines
+- **Domain-specific frameworks**: Tools specific to your research field
 
 **Milestone**: Implement and reproduce a research paper
 
 **Continuing the Perceptron Example:**
 - **Week 5-6**: Implement the perceptron algorithm from scratch (~50 lines of code)
-- **Week 7-8**: Test it on simple datasets (AND, OR logic gates)
+- **Week 7-8**: Apply research engineering practices:
+  - **Experiment Tracking**: Log learning rates, initialization methods, convergence metrics
+  - **Baseline Comparison**: Compare against random classifier performance
+  - **Systematic Testing**: Test on AND, OR, XOR logic gates with proper evaluation
+  - **Hyperparameter Analysis**: Sweep learning rates (0.01, 0.1, 1.0) and document effects
+  - **Reproducible Setup**: Version control code, document exact environment and data
 - **Discovery**: Notice the perceptron fails on XOR - this is a significant limitation!
-- **Research insight**: You've now discovered the same problem that stalled neural network research for years
-- Document your implementation and findings, including the XOR limitation
+- **Research Engineering Insight**: Proper experimental methodology helped you systematically identify the limitation
+- **Documentation**: Create reproducible research report with all experimental details
 
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
 
-#### Week 9-10: Research Project Design
-- Formulating research questions
-- Experimental design and methodology
-- Project planning and management
-- Collaboration and team research
+#### Week 9-10: Research Project Design & Experimental Rigor
+- **Hypothesis Formation**: Clear, testable research questions
+- **Experimental Design**: Controls, variables, and validation methodology
+- **Ablation Planning**: Systematic component analysis strategy
+- **Statistical Planning**: Sample sizes, significance testing, evaluation metrics
+- **Reproducibility Protocol**: Documentation and replication standards
 
-#### Week 11-12: Research Execution
-- Conducting original research
-- Data analysis and interpretation
-- Results documentation and presentation
-- Peer review and feedback incorporation
+#### Week 11-12: Research Execution & Analysis
+- **Systematic Experimentation**: Controlled experiments with proper baselines
+- **Ablation Studies**: Isolate and test individual components
+- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes
+- **Error Analysis**: Failure mode analysis and edge case investigation
+- **Bias Detection**: Identify and mitigate experimental and data biases
 
 **Milestone**: Complete an original research project
 
 **The Research Innovation Flywheel in Action:**
-- **Week 9-10**: Design experiments to solve the XOR problem you discovered
-- **Research question**: "Can we create a neural network that learns XOR?"
-- **Historical discovery**: You'll find that Rosenblatt himself proposed multi-layer networks in his 1962 book "Principles of Neurodynamics"
-- **The real problem**: MLPs could theoretically solve XOR, but no one knew how to train the hidden layers!
-- **Week 11-12**: Experience the training challenge - implement an MLP but struggle with how to adjust hidden layer weights
-- **The breakthrough moment**: This leads you to discover the 1986 Rumelhart, Hinton & Williams backpropagation paper
-- **Research insight**: Sometimes the solution architecture exists, but the practical implementation method is the real breakthrough!
+- **Week 9-10**: Apply research engineering to the XOR problem:
+  - **Hypothesis**: "Multi-layer networks can solve XOR where single-layer perceptrons cannot"
+  - **Experimental Design**: Compare single-layer vs multi-layer performance on XOR
+  - **Ablation Planning**: Test different architectures (2-layer, 3-layer), activation functions, learning rates
+  - **Historical Research**: Discover Rosenblatt's 1962 "Principles of Neurodynamics" proposed MLPs
+  - **The Real Problem**: MLPs could theoretically solve XOR, but no training method existed!
+- **Week 11-12**: Systematic experimentation and analysis:
+  - **Controlled Experiments**: Implement MLP with random weight updates (baseline)
+  - **Ablation Studies**: Test impact of hidden layer size, initialization methods, activation functions
+  - **Error Analysis**: Document which XOR patterns fail and why during training attempts
+  - **Statistical Analysis**: Quantify performance differences and training instability
+  - **Breakthrough Discovery**: Research leads to 1986 Rumelhart, Hinton & Williams backpropagation paper
+- **Research Engineering Insight**: Systematic methodology revealed the training bottleneck that stalled the field for 25 years!
 
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
@@ -148,23 +162,41 @@ The perceptron example above demonstrates how research engineering creates a con
 
 ### **This Same Pattern Works in Any Field:**
 
-**Biology Example:**
-- **Phase 1**: Study Watson & Crick's DNA structure paper (1953)
-- **Phase 2**: Model DNA structure, discover modeling limitations
-- **Phase 3**: Develop better structural analysis methods
-- **Phase 4**: Share tools, mentor others who find new biological questions
+**Biology Example - DNA Structure Research:**
+- **Phase 1**: Literature review of Watson & Crick's DNA structure paper (1953)
+- **Phase 2**: Research Engineering Application:
+  - **Experiment Tracking**: Log X-ray crystallography parameters and results
+  - **Baseline Comparison**: Compare new structural models against existing proposals
+  - **Reproducible Methods**: Document exact crystallography conditions and analysis procedures
+- **Phase 3**: Systematic Experimentation:
+  - **Ablation Studies**: Test impact of different crystallography angles and conditions
+  - **Statistical Analysis**: Quantify model fit quality and measurement uncertainties
+  - **Error Analysis**: Identify which structural features are most/least reliable
+- **Phase 4**: Share validated structural analysis methodology with the community
 
-**Psychology Example:**
+**Psychology Example - Memory Research:**
 - **Phase 1**: Review Miller's "Magical Number Seven" memory paper (1956)
-- **Phase 2**: Replicate experiments, notice individual differences
-- **Phase 3**: Design studies exploring memory variation factors
-- **Phase 4**: Publish findings, mentor others who discover new memory phenomena
+- **Phase 2**: Research Engineering Application:
+  - **Experiment Tracking**: Log participant demographics, test conditions, response times
+  - **Baseline Comparison**: Compare against chance performance and existing memory tests
+  - **Reproducible Protocol**: Standardize testing procedures and environmental conditions
+- **Phase 3**: Systematic Experimentation:
+  - **Ablation Studies**: Test impact of stimulus type, presentation time, interference conditions
+  - **Statistical Analysis**: Power analysis, effect sizes, confidence intervals for memory capacity
+  - **Bias Detection**: Control for participant selection, experimenter effects, cultural factors
+- **Phase 4**: Publish validated memory testing protocols and mentor others in experimental design
 
-**Economics Example:**
+**Economics Example - Market Behavior Research:**
 - **Phase 1**: Study Akerlof's "Market for Lemons" paper (1970)
-- **Phase 2**: Model information asymmetry, find model limitations
-- **Phase 3**: Design experiments testing real market behavior
-- **Phase 4**: Share behavioral insights, guide others to new economic questions
+- **Phase 2**: Research Engineering Application:
+  - **Experiment Tracking**: Log market simulation parameters, participant behaviors, outcomes
+  - **Baseline Comparison**: Compare against perfect information market models
+  - **Reproducible Setup**: Document exact experimental economics protocols and incentive structures
+- **Phase 3**: Systematic Experimentation:
+  - **Ablation Studies**: Test impact of information asymmetry levels, market size, reputation systems
+  - **Statistical Analysis**: Significance testing of market efficiency measures and behavioral patterns
+  - **Error Analysis**: Identify which market conditions lead to failure of theoretical predictions
+- **Phase 4**: Share validated experimental economics methodology and behavioral insights
 
 > **Key Insight**: Every field has foundational papers with limitations that drove further innovation. By experiencing this process yourself, you learn how research really works!
 
@@ -194,31 +226,40 @@ The perceptron example above demonstrates how research engineering creates a con
 4. **Experience the research flywheel** as limitations lead to new questions
 5. **Join the community** and share your journey with others
 
-## Core Skills You'll Develop
+## Core Research Engineering Skills You'll Develop
 
 ### **Research Methodology**
-- Experimental design and hypothesis testing
-- Literature review and synthesis
-- Data collection and analysis
-- Research ethics and integrity
+- **Hypothesis Formation**: Clear, testable research questions
+- **Experimental Design**: Controls, variables, and validation methodology
+- **Literature Review**: Systematic analysis and synthesis of existing work
+- **Research Ethics**: Integrity, bias awareness, and responsible practices
 
-### **Technical Implementation**
-- Programming in languages relevant to your research domain
-- Research-specific tools and frameworks
-- Data visualization and analysis tools
-- Research infrastructure and computational tools
+### **Experimental Rigor**
+- **Ablation Studies**: Systematic component analysis to understand what matters
+- **Baseline Comparisons**: Proper benchmarking against established methods
+- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes
+- **Error Analysis**: Failure mode investigation and edge case understanding
+- **Bias Detection**: Identifying and mitigating experimental and data biases
 
-### **Collaboration and Communication**
-- Working in distributed research teams
-- Presenting research findings effectively
-- Writing clear and compelling research papers
-- Engaging with the research community
+### **Research Engineering Tools**
+- **Experiment Tracking**: Systematic logging of parameters, results, and insights
+- **Version Control**: Managing code, data, and model versions for reproducibility
+- **Reproducible Environments**: Containerization and environment documentation
+- **Automated Validation**: Testing pipelines and continuous integration for research
+- **Domain-Specific Tools**: Frameworks and instruments specific to your field
+
+### **Analysis and Communication**
+- **Data Visualization**: Effective presentation of research findings
+- **Statistical Interpretation**: Understanding uncertainty and significance
+- **Research Documentation**: Clear, reproducible research reports
+- **Peer Collaboration**: Working effectively in distributed research teams
+- **Knowledge Transfer**: Teaching and mentoring others in research practices
 
 ### **Open Science Practices**
-- Reproducible research workflows
-- Open data and code sharing
-- Community-driven peer review
-- Democratized research methodologies
+- **Reproducible Workflows**: End-to-end reproducibility protocols
+- **Open Data and Code**: Transparent sharing of research assets
+- **Community Peer Review**: Collaborative validation and feedback
+- **Research Democratization**: Making research accessible beyond traditional institutions
 
 ## Learning Resources
 
