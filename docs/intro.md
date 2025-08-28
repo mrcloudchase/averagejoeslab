@@ -41,10 +41,10 @@ Research engineering is more about **methodology and systematic thinking** than 
 
 #### **Universal Prerequisites (All Fields):**
 - **Curiosity** - Genuine interest in understanding how things work
-- **Basic computer literacy** - Comfortable with files, software, internet research
-- **High school mathematics** - Algebra and basic statistics (you can learn more as needed)
-- **Willingness to learn** - Persistence when things don't work the first time
-- **Basic programming** - Any language (Python recommended for versatility)
+- **Basic computer literacy** - Comfortable with files, software, internet research - [Digital Literacy Basics](https://www.digitallearn.org/courses/digital-learn-intro-computers)
+- **High school mathematics** - [Algebra basics](https://www.khanacademy.org/math/algebra) and [basic statistics](https://www.khanacademy.org/math/statistics-probability) (you can learn more as needed)
+- **Willingness to learn** - Persistence when things don't work the first time - [Growth Mindset Guide](https://www.mindsetworks.com/science/)
+- **Basic programming** - Any language ([Python recommended](https://www.python.org/about/gettingstarted/) for versatility)
 
 #### **What You DON'T Need to Start:**
 - ❌ Advanced degrees or credentials
@@ -58,16 +58,16 @@ Research engineering is more about **methodology and systematic thinking** than 
 Prerequisites vary by field, but you can **learn as you go**:
 
 #### **Lower Math Requirements:**
-- **Biology, Psychology, History**: Basic statistics, research methods
-- **Digital Humanities**: Minimal math, computational thinking helpful
+- **Biology, Psychology, History**: [Basic statistics](https://www.khanacademy.org/math/statistics-probability), [research methods](https://www.coursera.org/learn/research-methods)
+- **Digital Humanities**: Minimal math, [computational thinking](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6) helpful
 
 #### **Medium Math Requirements:**  
-- **Economics, Sociology**: Statistics, basic calculus helpful
-- **Chemistry**: Calculus, some linear algebra for advanced topics
+- **Economics, Sociology**: [Statistics](https://www.khanacademy.org/math/statistics-probability), [basic calculus](https://www.khanacademy.org/math/calculus-1) helpful
+- **Chemistry**: [Calculus](https://www.khanacademy.org/math/calculus-1), some [linear algebra](https://www.khanacademy.org/math/linear-algebra) for advanced topics
 
 #### **Higher Math Requirements:**
-- **Physics, Engineering**: Calculus, linear algebra, differential equations
-- **Computer Science/AI**: Linear algebra, calculus, probability, discrete math
+- **Physics, Engineering**: [Calculus](https://www.khanacademy.org/math/calculus-1), [linear algebra](https://www.khanacademy.org/math/linear-algebra), [differential equations](https://www.khanacademy.org/math/differential-equations)
+- **Computer Science/AI**: [Linear algebra](https://www.khanacademy.org/math/linear-algebra), [calculus](https://www.khanacademy.org/math/calculus-1), [probability](https://www.khanacademy.org/math/statistics-probability), [discrete math](https://www.khanacademy.org/computing/computer-science/algorithms)
 
 > **Key Insight**: Even "high math" fields can be approached gradually. You learn the math you need for each specific problem, not everything upfront.
 
@@ -76,20 +76,20 @@ Prerequisites vary by field, but you can **learn as you go**:
 Our neural network example demonstrates the "learn as you go" approach:
 
 #### **To Start (Week 1-4):**
-- **Basic algebra** - Understanding variables, equations, simple functions
+- **Basic algebra** - [Understanding variables, equations, simple functions](https://www.khanacademy.org/math/algebra-basics)
 - **High school math** - No calculus required initially
-- **Basic programming** - Variables, loops, functions in any language
-- **Curiosity about learning** - How do brains/computers learn patterns?
+- **Basic programming** - [Variables, loops, functions](https://www.codecademy.com/learn/learn-python-3) in any language
+- **Curiosity about learning** - How do brains/computers learn patterns? - [Introduction to Learning](https://www.coursera.org/learn/learning-how-to-learn)
 
 #### **As You Progress (Week 5-8):**
-- **Linear algebra basics** - Dot products, vectors (learned when implementing perceptron)
-- **Basic statistics** - Accuracy, precision, evaluation metrics (learned when testing)
-- **Python fundamentals** - Learned through hands-on implementation
+- **Linear algebra basics** - [Dot products, vectors](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces) (learned when implementing perceptron)
+- **Basic statistics** - [Accuracy, precision, evaluation metrics](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data) (learned when testing)
+- **Python fundamentals** - [Learned through hands-on implementation](https://automatetheboringstuff.com/)
 
 #### **For Advanced Work (Week 9-12):**
-- **Calculus concepts** - Derivatives for understanding backpropagation (learned when needed)
-- **Probability theory** - For understanding learning algorithms (learned in context)
-- **Advanced statistics** - For rigorous experimental analysis (learned through practice)
+- **Calculus concepts** - [Derivatives for understanding backpropagation](https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules) (learned when needed)
+- **Probability theory** - [For understanding learning algorithms](https://www.khanacademy.org/math/statistics-probability/probability-library) (learned in context)
+- **Advanced statistics** - [For rigorous experimental analysis](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample) (learned through practice)
 
 #### **Specialization (Week 13+):**
 - **Advanced mathematics** - Only as needed for specific research directions
@@ -111,73 +111,73 @@ Our neural network example demonstrates the "learn as you go" approach:
 **Build your research methodology foundation**
 
 #### Week 1-2: Research Fundamentals
-- Scientific method and research design
-- Literature review techniques
-- Research ethics and open science principles
-- Introduction to reproducible research
+- **Scientific method and research design** - [Khan Academy: Scientific Method](https://www.khanacademy.org/science/biology/intro-to-biology/science-of-biology/a/the-science-of-biology)
+- **Literature review techniques** - [MIT Libraries: How to Conduct a Literature Review](https://libguides.mit.edu/c.php?g=175963&p=1158594)
+- **Research ethics and open science principles** - [NIH: Introduction to Research Ethics](https://www.niehs.nih.gov/research/resources/bioethics/whatis/)
+- **Introduction to reproducible research** - [The Turing Way: Guide to Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html)
 
 #### Week 3-4: Data and Analysis
-- Data collection methodologies
-- Statistical analysis fundamentals
-- Research tools and software
-- Documentation and version control
+- **Data collection methodologies** - [Coursera: Research Methods Fundamentals](https://www.coursera.org/learn/research-methods) (audit for free)
+- **Statistical analysis fundamentals** - [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability)
+- **Research tools and software** - [Software Carpentry: Research Computing Skills](https://software-carpentry.org/lessons/)
+- **Documentation and version control** - [Git Handbook by GitHub](https://guides.github.com/introduction/git-handbook/)
 
 **Milestone**: Complete your first literature review on a topic of interest
 
 **Example Research Path - The Perceptron (1958):**
 > *This neural network example demonstrates the framework, but the same approach works for any field - biology, psychology, economics, physics, etc.*
 
-- Literature review of Frank Rosenblatt's "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain" (1958)
-- Study the historical context: What problem was Rosenblatt trying to solve?
-- Understand the theoretical foundation: How does the perceptron learn?
-- Identify the paper's significance: Why was this breakthrough important?
+- Literature review of Frank Rosenblatt's ["The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain" (1958)](https://psycnet.apa.org/record/1959-09865-001)
+- Study the historical context: What problem was Rosenblatt trying to solve? - [History of Neural Networks](https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/History/history1.html)
+- Understand the theoretical foundation: How does the perceptron learn? - [3Blue1Brown: Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- Identify the paper's significance: Why was this breakthrough important? - [MIT: Introduction to Neural Networks](https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-641j-introduction-to-neural-networks-spring-2005/)
 
 ### Phase 2: Technical Skills (Weeks 5-8)
 **Develop the technical skills for research engineering**
 
 #### Week 5-6: Programming for Research
-- Python for research and data analysis
-- Jupyter notebooks and research workflows
-- Version control with Git for research
-- Collaborative coding practices
+- **Python for research and data analysis** - [Python.org Beginner's Guide](https://www.python.org/about/gettingstarted/) | [Automate the Boring Stuff (Free)](https://automatetheboringstuff.com/)
+- **Jupyter notebooks and research workflows** - [Jupyter.org Getting Started](https://jupyter.org/try) | [Real Python: Jupyter Notebook Tutorial](https://realpython.com/jupyter-notebook-introduction/)
+- **Version control with Git for research** - [Git Tutorial by Atlassian](https://www.atlassian.com/git/tutorials) | [GitHub Skills](https://skills.github.com/)
+- **Collaborative coding practices** - [GitHub Flow Guide](https://guides.github.com/introduction/flow/) | [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
 
 #### Week 7-8: Research Engineering Tools and Methodologies
-- **Experiment Tracking**: Tools for logging experiments, parameters, and results
-- **Version Control for Research**: Managing code, data, and model versions
-- **Reproducible Environments**: Containerization and environment management
-- **Research Validation**: Automated testing and validation pipelines
-- **Domain-specific frameworks**: Tools specific to your research field
+- **Experiment Tracking**: Tools for logging experiments, parameters, and results - [MLflow Documentation](https://mlflow.org/docs/latest/index.html) | [Weights & Biases Tutorial](https://docs.wandb.ai/quickstart)
+- **Version Control for Research**: Managing code, data, and model versions - [DVC (Data Version Control)](https://dvc.org/doc/start) | [Git LFS Guide](https://git-lfs.github.io/)
+- **Reproducible Environments**: Containerization and environment management - [Docker Getting Started](https://docs.docker.com/get-started/) | [Conda User Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
+- **Research Validation**: Automated testing and validation pipelines - [pytest Documentation](https://docs.pytest.org/en/stable/) | [GitHub Actions Tutorial](https://docs.github.com/en/actions/quickstart)
+- **Domain-specific frameworks**: Tools specific to your research field - [NumPy Quickstart](https://numpy.org/doc/stable/user/quickstart.html) | [pandas Getting Started](https://pandas.pydata.org/docs/getting_started/index.html)
 
 **Milestone**: Implement and reproduce a research paper
 
 **Continuing the Perceptron Example:**
-- **Week 5-6**: Implement the perceptron algorithm from scratch (~50 lines of code)
+- **Week 5-6**: Implement the perceptron algorithm from scratch (~50 lines of code) - [Neural Networks from Scratch Tutorial](https://nnfs.io/) | [Perceptron Implementation Guide](https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/)
 - **Week 7-8**: Apply research engineering practices:
-  - **Experiment Tracking**: Log learning rates, initialization methods, convergence metrics
-  - **Baseline Comparison**: Compare against random classifier performance
-  - **Systematic Testing**: Test on AND, OR, XOR logic gates with proper evaluation
-  - **Hyperparameter Analysis**: Sweep learning rates (0.01, 0.1, 1.0) and document effects
-  - **Reproducible Setup**: Version control code, document exact environment and data
-- **Discovery**: Notice the perceptron fails on XOR - this is a significant limitation!
+  - **Experiment Tracking**: Log learning rates, initialization methods, convergence metrics - [MLflow Tracking Tutorial](https://mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
+  - **Baseline Comparison**: Compare against random classifier performance - [Scikit-learn Dummy Classifiers](https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators)
+  - **Systematic Testing**: Test on AND, OR, XOR logic gates with proper evaluation - [Logic Gates Dataset](https://archive.ics.uci.edu/ml/datasets/Logic+Gates)
+  - **Hyperparameter Analysis**: Sweep learning rates (0.01, 0.1, 1.0) and document effects - [Hyperparameter Tuning Guide](https://scikit-learn.org/stable/modules/grid_search.html)
+  - **Reproducible Setup**: Version control code, document exact environment and data - [Reproducible Research Guide](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html)
+- **Discovery**: Notice the perceptron fails on XOR - this is a significant limitation! - [XOR Problem Explained](https://towardsdatascience.com/why-is-xor-a-problem-for-neural-networks-8f0c1c4b8e5c)
 - **Research Engineering Insight**: Proper experimental methodology helped you systematically identify the limitation
-- **Documentation**: Create reproducible research report with all experimental details
+- **Documentation**: Create reproducible research report with all experimental details - [Scientific Writing Guide](https://www.nature.com/articles/d41586-019-02918-5)
 
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
 
 #### Week 9-10: Research Project Design & Experimental Rigor
-- **Hypothesis Formation**: Clear, testable research questions
-- **Experimental Design**: Controls, variables, and validation methodology
-- **Ablation Planning**: Systematic component analysis strategy
-- **Statistical Planning**: Sample sizes, significance testing, evaluation metrics
-- **Reproducibility Protocol**: Documentation and replication standards
+- **Hypothesis Formation**: Clear, testable research questions - [Research Question Formulation Guide](https://writingcenter.unc.edu/tips-and-tools/research-questions/) | [PICO Framework](https://guides.library.oregonstate.edu/c.php?g=286121&p=1906399)
+- **Experimental Design**: Controls, variables, and validation methodology - [Experimental Design Basics](https://www.khanacademy.org/math/statistics-probability/designing-studies) | [Randomized Controlled Trials](https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-randomised-controlled-trials)
+- **Ablation Planning**: Systematic component analysis strategy - [Ablation Studies Guide](https://towardsdatascience.com/ablation-studies-in-machine-learning-what-why-and-how-f3e73c3b3b4e) | [Component Analysis Methods](https://www.nature.com/articles/s41598-019-42759-4)
+- **Statistical Planning**: Sample sizes, significance testing, evaluation metrics - [Power Analysis Guide](https://www.statisticssolutions.com/statistical-power-analysis/) | [Effect Size Calculator](https://www.psychometrica.de/effect_size.html)
+- **Reproducibility Protocol**: Documentation and replication standards - [FAIR Data Principles](https://www.go-fair.org/fair-principles/) | [Reproducibility Checklist](https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf)
 
 #### Week 11-12: Research Execution & Analysis
-- **Systematic Experimentation**: Controlled experiments with proper baselines
-- **Ablation Studies**: Isolate and test individual components
-- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes
-- **Error Analysis**: Failure mode analysis and edge case investigation
-- **Bias Detection**: Identify and mitigate experimental and data biases
+- **Systematic Experimentation**: Controlled experiments with proper baselines - [Experimental Controls Guide](https://www.khanacademy.org/science/biology/intro-to-biology/science-of-biology/a/experiments-and-observations) | [A/B Testing Principles](https://www.optimizely.com/optimization-glossary/ab-testing/)
+- **Ablation Studies**: Isolate and test individual components - [Feature Ablation Tutorial](https://christophm.github.io/interpretable-ml-book/feature-importance.html) | [Systematic Component Testing](https://distill.pub/2018/building-blocks/)
+- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes - [Statistical Tests Guide](https://www.scribbr.com/statistics/statistical-tests/) | [Confidence Intervals Explained](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
+- **Error Analysis**: Failure mode analysis and edge case investigation - [Error Analysis Methods](https://machinelearningmastery.com/model-error-analysis/) | [Failure Mode Analysis](https://asq.org/quality-resources/fmea)
+- **Bias Detection**: Identify and mitigate experimental and data biases - [Research Bias Types](https://catalogofbias.org/biases/) | [Bias Mitigation Strategies](https://www.nature.com/articles/d41586-018-05469-3)
 
 **Milestone**: Complete an original research project
 
@@ -186,30 +186,30 @@ Our neural network example demonstrates the "learn as you go" approach:
   - **Hypothesis**: "Multi-layer networks can solve XOR where single-layer perceptrons cannot"
   - **Experimental Design**: Compare single-layer vs multi-layer performance on XOR
   - **Ablation Planning**: Test different architectures (2-layer, 3-layer), activation functions, learning rates
-  - **Historical Research**: Discover Rosenblatt's 1962 "Principles of Neurodynamics" proposed MLPs
-  - **The Real Problem**: MLPs could theoretically solve XOR, but no training method existed!
+  - **Historical Research**: Discover Rosenblatt's 1962 "Principles of Neurodynamics" proposed MLPs - [Principles of Neurodynamics Summary](https://psycnet.apa.org/record/1963-35029-000)
+  - **The Real Problem**: MLPs could theoretically solve XOR, but no training method existed! - [The XOR Problem History](https://towardsdatascience.com/the-xor-problem-in-neural-networks-50006411840b)
 - **Week 11-12**: Systematic experimentation and analysis:
-  - **Controlled Experiments**: Implement MLP with random weight updates (baseline)
-  - **Ablation Studies**: Test impact of hidden layer size, initialization methods, activation functions
-  - **Error Analysis**: Document which XOR patterns fail and why during training attempts
-  - **Statistical Analysis**: Quantify performance differences and training instability
-  - **Breakthrough Discovery**: Research leads to 1986 Rumelhart, Hinton & Williams backpropagation paper
+  - **Controlled Experiments**: Implement MLP with random weight updates (baseline) - [Multi-layer Perceptron Tutorial](https://scikit-learn.org/stable/modules/neural_networks_supervised.html)
+  - **Ablation Studies**: Test impact of hidden layer size, initialization methods, activation functions - [Neural Network Architecture Guide](https://www.deeplearningbook.org/contents/mlp.html)
+  - **Error Analysis**: Document which XOR patterns fail and why during training attempts - [Training Dynamics Analysis](https://distill.pub/2017/momentum/)
+  - **Statistical Analysis**: Quantify performance differences and training instability - [Learning Curves Analysis](https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html)
+  - **Breakthrough Discovery**: Research leads to 1986 Rumelhart, Hinton & Williams backpropagation paper - [Backpropagation Paper](https://www.nature.com/articles/323533a0)
 - **Research Engineering Insight**: Systematic methodology revealed the training bottleneck that stalled the field for 25 years!
 
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
 
 #### Week 13-14: Research Communication
-- Writing research papers and reports
-- Creating research presentations
-- Open science publication practices
-- Community engagement and networking
+- **Writing research papers and reports** - [Nature: How to Write a Research Paper](https://www.nature.com/articles/d41586-019-02918-5) | [Scientific Writing Guide](https://www.sciencemag.org/careers/2016/03/how-seriously-read-scientific-literature)
+- **Creating research presentations** - [Presentation Zen Principles](https://www.presentationzen.com/) | [Academic Presentation Guide](https://www.nature.com/articles/d41586-018-07780-5)
+- **Open science publication practices** - [PLOS ONE Submission Guidelines](https://journals.plos.org/plosone/s/submission-guidelines) | [arXiv Submission Guide](https://arxiv.org/help/submit)
+- **Community engagement and networking** - [Academic Twitter Guide](https://www.nature.com/articles/d41586-019-00535-w) | [Research Networking Tips](https://www.nature.com/articles/d41586-018-06534-3)
 
 #### Week 15-16: Research Leadership
-- Mentoring new researchers
-- Leading collaborative projects
-- Contributing to research tools and frameworks
-- Building research communities
+- **Mentoring new researchers** - [Mentoring Guide for Scientists](https://www.nature.com/articles/d41586-019-02804-9) | [Effective Mentoring Practices](https://www.nationalacademies.org/our-work/the-science-of-effective-mentorship-in-stemm)
+- **Leading collaborative projects** - [Project Management for Researchers](https://www.nature.com/articles/d41586-018-06392-z) | [Team Science Guide](https://www.teamsciencetoolkit.cancer.gov/)
+- **Contributing to research tools and frameworks** - [Open Source Contribution Guide](https://opensource.guide/how-to-contribute/) | [Research Software Engineering](https://www.software.ac.uk/what-research-software-engineering)
+- **Building research communities** - [Community Building Guide](https://www.nature.com/articles/d41586-019-00857-9) | [Scientific Community Management](https://www.cscce.org/resources/)
 
 **Milestone**: Publish your research and mentor another community member
 
@@ -303,37 +303,37 @@ Now that you understand the framework and prerequisites, here's how to select yo
 ## Core Research Engineering Skills You'll Develop
 
 ### **Research Methodology**
-- **Hypothesis Formation**: Clear, testable research questions
-- **Experimental Design**: Controls, variables, and validation methodology
-- **Literature Review**: Systematic analysis and synthesis of existing work
-- **Research Ethics**: Integrity, bias awareness, and responsible practices
+- **Hypothesis Formation**: Clear, testable research questions - [Research Question Guide](https://writingcenter.unc.edu/tips-and-tools/research-questions/)
+- **Experimental Design**: Controls, variables, and validation methodology - [Experimental Design Principles](https://www.khanacademy.org/math/statistics-probability/designing-studies)
+- **Literature Review**: Systematic analysis and synthesis of existing work - [Systematic Review Guide](https://libguides.mit.edu/c.php?g=175963&p=1158594)
+- **Research Ethics**: Integrity, bias awareness, and responsible practices - [Research Ethics Training](https://www.niehs.nih.gov/research/resources/bioethics/whatis/)
 
 ### **Experimental Rigor**
-- **Ablation Studies**: Systematic component analysis to understand what matters
-- **Baseline Comparisons**: Proper benchmarking against established methods
-- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes
-- **Error Analysis**: Failure mode investigation and edge case understanding
-- **Bias Detection**: Identifying and mitigating experimental and data biases
+- **Ablation Studies**: Systematic component analysis to understand what matters - [Ablation Study Guide](https://towardsdatascience.com/ablation-studies-in-machine-learning-what-why-and-how-f3e73c3b3b4e)
+- **Baseline Comparisons**: Proper benchmarking against established methods - [Baseline Methods Guide](https://machinelearningmastery.com/how-to-develop-a-skillful-machine-learning-baseline/)
+- **Statistical Analysis**: Significance testing, confidence intervals, effect sizes - [Statistical Testing Guide](https://www.scribbr.com/statistics/statistical-tests/)
+- **Error Analysis**: Failure mode investigation and edge case understanding - [Error Analysis Methods](https://machinelearningmastery.com/model-error-analysis/)
+- **Bias Detection**: Identifying and mitigating experimental and data biases - [Research Bias Guide](https://catalogofbias.org/biases/)
 
 ### **Research Engineering Tools**
-- **Experiment Tracking**: Systematic logging of parameters, results, and insights
-- **Version Control**: Managing code, data, and model versions for reproducibility
-- **Reproducible Environments**: Containerization and environment documentation
-- **Automated Validation**: Testing pipelines and continuous integration for research
-- **Domain-Specific Tools**: Frameworks and instruments specific to your field
+- **Experiment Tracking**: Systematic logging of parameters, results, and insights - [MLflow Tutorial](https://mlflow.org/docs/latest/tutorials-and-examples/tutorial.html) | [Weights & Biases Guide](https://docs.wandb.ai/quickstart)
+- **Version Control**: Managing code, data, and model versions for reproducibility - [Git Tutorial](https://www.atlassian.com/git/tutorials) | [DVC Guide](https://dvc.org/doc/start)
+- **Reproducible Environments**: Containerization and environment documentation - [Docker Tutorial](https://docs.docker.com/get-started/) | [Conda Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
+- **Automated Validation**: Testing pipelines and continuous integration for research - [pytest Guide](https://docs.pytest.org/en/stable/) | [GitHub Actions](https://docs.github.com/en/actions/quickstart)
+- **Domain-Specific Tools**: Frameworks and instruments specific to your field - [NumPy](https://numpy.org/doc/stable/user/quickstart.html) | [pandas](https://pandas.pydata.org/docs/getting_started/index.html) | [scikit-learn](https://scikit-learn.org/stable/getting_started.html)
 
 ### **Analysis and Communication**
-- **Data Visualization**: Effective presentation of research findings
-- **Statistical Interpretation**: Understanding uncertainty and significance
-- **Research Documentation**: Clear, reproducible research reports
-- **Peer Collaboration**: Working effectively in distributed research teams
-- **Knowledge Transfer**: Teaching and mentoring others in research practices
+- **Data Visualization**: Effective presentation of research findings - [Matplotlib Tutorial](https://matplotlib.org/stable/tutorials/index.html) | [Data Visualization Principles](https://www.storytellingwithdata.com/fundamentals)
+- **Statistical Interpretation**: Understanding uncertainty and significance - [Statistical Interpretation Guide](https://www.nature.com/articles/nmeth.2613) | [P-values Explained](https://www.nature.com/articles/d41586-019-00857-9)
+- **Research Documentation**: Clear, reproducible research reports - [Scientific Writing Guide](https://www.nature.com/articles/d41586-019-02918-5) | [Jupyter Book](https://jupyterbook.org/intro.html)
+- **Peer Collaboration**: Working effectively in distributed research teams - [Remote Collaboration Guide](https://www.nature.com/articles/d41586-020-01328-6) | [Team Science Toolkit](https://www.teamsciencetoolkit.cancer.gov/)
+- **Knowledge Transfer**: Teaching and mentoring others in research practices - [Teaching Guide](https://www.nature.com/articles/d41586-019-02804-9) | [Mentoring Best Practices](https://www.nationalacademies.org/our-work/the-science-of-effective-mentorship-in-stemm)
 
 ### **Open Science Practices**
-- **Reproducible Workflows**: End-to-end reproducibility protocols
-- **Open Data and Code**: Transparent sharing of research assets
-- **Community Peer Review**: Collaborative validation and feedback
-- **Research Democratization**: Making research accessible beyond traditional institutions
+- **Reproducible Workflows**: End-to-end reproducibility protocols - [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html) | [FAIR Data Principles](https://www.go-fair.org/fair-principles/)
+- **Open Data and Code**: Transparent sharing of research assets - [Open Data Guide](https://opendatahandbook.org/) | [GitHub for Research](https://guides.github.com/activities/citable-code/)
+- **Community Peer Review**: Collaborative validation and feedback - [Open Peer Review](https://www.nature.com/articles/d41586-018-06991-0) | [PeerJ Guide](https://peerj.com/about/author-instructions/)
+- **Research Democratization**: Making research accessible beyond traditional institutions - [Citizen Science Guide](https://www.citizenscience.gov/) | [Open Science Framework](https://osf.io/getting-started/)
 
 ## Getting Started: Resources and Projects
 
