@@ -104,10 +104,11 @@ Research Engineering is the bridge between cutting-edge research and practical i
 **The Research Innovation Flywheel in Action:**
 - **Week 9-10**: Design experiments to solve the XOR problem you discovered
 - **Research question**: "Can we create a neural network that learns XOR?"
-- **Week 11-12**: Implement a multi-layer perceptron (MLP) to solve XOR
-- **Original contribution**: Even though MLPs were already invented, you're experiencing the research process
-- **Historical note**: This connects to Rumelhart, Hinton & Williams' 1986 backpropagation paper
-- **Research insight**: You've now experienced how limitations drive innovation!
+- **Historical discovery**: You'll find that Rosenblatt himself proposed multi-layer networks in his 1962 book "Principles of Neurodynamics"
+- **The real problem**: MLPs could theoretically solve XOR, but no one knew how to train the hidden layers!
+- **Week 11-12**: Experience the training challenge - implement an MLP but struggle with how to adjust hidden layer weights
+- **The breakthrough moment**: This leads you to discover the 1986 Rumelhart, Hinton & Williams backpropagation paper
+- **Research insight**: Sometimes the solution architecture exists, but the practical implementation method is the real breakthrough!
 
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
@@ -127,11 +128,12 @@ Research Engineering is the bridge between cutting-edge research and practical i
 **Milestone**: Publish your research and mentor another community member
 
 **Completing the Research Cycle:**
-- **Week 13-14**: Write up your perceptron journey: from literature review to XOR solution
-- **Community contribution**: Create a tutorial showing others how to implement perceptrons
-- **Week 15-16**: Mentor a newcomer through their first perceptron implementation
-- **The flywheel continues**: Your mentee might discover new limitations and innovations!
-- **Next cycle**: You're now ready to tackle more complex papers like LeNet-5 (1998) or modern architectures
+- **Week 13-14**: Write up your complete research journey: from perceptron to the training problem discovery
+- **Key insight to share**: The difference between architectural solutions and practical implementation methods
+- **Community contribution**: Create a tutorial showing the evolution from perceptron → MLP concept → backpropagation training
+- **Week 15-16**: Mentor a newcomer through this same discovery process
+- **The flywheel continues**: Your mentee might explore modern training methods like Adam optimization or discover new architectural limitations!
+- **Next cycle**: You're now ready to tackle papers that built on backpropagation, like LeNet-5 (1998) or explore other "known but untrainable" architectures
 
 ## The Research Engineering Flywheel
 
@@ -165,6 +167,8 @@ The perceptron example above demonstrates how research engineering creates a con
 - **Phase 4**: Share behavioral insights, guide others to new economic questions
 
 > **Key Insight**: Every field has foundational papers with limitations that drove further innovation. By experiencing this process yourself, you learn how research really works!
+
+> **Critical Research Lesson from the Perceptron Journey**: Sometimes the biggest breakthroughs aren't new architectures or theories, but practical methods to implement existing ideas. The MLP architecture existed for ~25 years before anyone figured out how to train it effectively. This pattern repeats throughout research history - the concept exists, but the implementation method is the real innovation.
 
 ### **How to Choose Your Starting Paper:**
 
