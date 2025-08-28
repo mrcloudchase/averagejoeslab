@@ -52,10 +52,13 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Complete your first literature review on a topic of interest
 
-**Example for Neural Network Research Path:**
-- Literature review of foundational papers: Perceptron (1958), Multi-layer Perceptrons (1986), and early neural network development
-- Understand the historical context and evolution of the field
-- Identify key concepts, methodologies, and recurring themes
+**Example Research Path - The Perceptron (1958):**
+> *This neural network example demonstrates the framework, but the same approach works for any field - biology, psychology, economics, physics, etc.*
+
+- Literature review of Frank Rosenblatt's "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain" (1958)
+- Study the historical context: What problem was Rosenblatt trying to solve?
+- Understand the theoretical foundation: How does the perceptron learn?
+- Identify the paper's significance: Why was this breakthrough important?
 
 ### Phase 2: Technical Skills (Weeks 5-8)
 **Develop the technical skills for research engineering**
@@ -74,11 +77,12 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Implement and reproduce a research paper
 
-**Example for Neural Network Research Path:**
-- **Week 5-6**: Implement the Perceptron algorithm (1958) - Start with the foundational concept
-- **Week 7-8**: Implement Backpropagation (1986) - Build on perceptron to handle complex patterns
-- Reproduce original results and validate your implementation
-- Document your code and findings for reproducibility
+**Continuing the Perceptron Example:**
+- **Week 5-6**: Implement the perceptron algorithm from scratch (~50 lines of code)
+- **Week 7-8**: Test it on simple datasets (AND, OR logic gates)
+- **Discovery**: Notice the perceptron fails on XOR - this is a significant limitation!
+- **Research insight**: You've now discovered the same problem that stalled neural network research for years
+- Document your implementation and findings, including the XOR limitation
 
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
@@ -97,11 +101,13 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Complete an original research project
 
-**Example for Neural Network Research Path:**
-- **Week 9-10**: Design experiments with LeNet-5 (1998) - Apply CNNs to handwritten digit recognition
-- **Week 11-12**: Conduct original research - Compare different architectures, test on new datasets, or explore variations
-- Achieve >95% accuracy on MNIST and document your experimental process
-- Write up findings in a research report format
+**The Research Innovation Flywheel in Action:**
+- **Week 9-10**: Design experiments to solve the XOR problem you discovered
+- **Research question**: "Can we create a neural network that learns XOR?"
+- **Week 11-12**: Implement a multi-layer perceptron (MLP) to solve XOR
+- **Original contribution**: Even though MLPs were already invented, you're experiencing the research process
+- **Historical note**: This connects to Rumelhart, Hinton & Williams' 1986 backpropagation paper
+- **Research insight**: You've now experienced how limitations drive innovation!
 
 ### Phase 4: Community Contribution (Weeks 13-16)
 **Contribute to the research community**
@@ -120,104 +126,69 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Publish your research and mentor another community member
 
-**Example for Neural Network Research Path:**
-- **Week 13-14**: Write a comprehensive paper on your neural network experiments and publish on arXiv or community platform
-- **Week 15-16**: Create educational content (blog post, tutorial, or video) explaining neural networks to beginners
-- Mentor a newcomer through their first perceptron implementation
-- Contribute to open-source neural network educational resources
+**Completing the Research Cycle:**
+- **Week 13-14**: Write up your perceptron journey: from literature review to XOR solution
+- **Community contribution**: Create a tutorial showing others how to implement perceptrons
+- **Week 15-16**: Mentor a newcomer through their first perceptron implementation
+- **The flywheel continues**: Your mentee might discover new limitations and innovations!
+- **Next cycle**: You're now ready to tackle more complex papers like LeNet-5 (1998) or modern architectures
 
-## Example Research Papers for Beginners
+## The Research Engineering Flywheel
 
-> **Important Note:** The neural network papers below are provided as concrete examples of beginner-friendly research that can be accomplished independently. However, this learning path applies to **any research field** - you could equally well start with foundational papers in biology, psychology, economics, physics, or any other domain that interests you.
+The perceptron example above demonstrates how research engineering creates a continuous cycle of innovation:
 
-### **Why These Papers Make Great Starting Points:**
-- **Foundational concepts** that are still relevant today
-- **Simple enough** to understand and implement without advanced background
-- **Well-documented** with clear methodologies
-- **Reasonable scope** for independent reproduction
-- **Historical significance** that helps understand field evolution
+**🔄 The Flywheel Process:**
+1. **Literature Review** → Understand existing knowledge
+2. **Implementation** → Discover limitations through hands-on work  
+3. **Original Research** → Address the limitations you found
+4. **Community Sharing** → Teach others, who find new limitations
+5. **Repeat** → Each cycle builds on the previous, driving innovation forward
 
-### **Neural Network Research Path Example:**
+### **This Same Pattern Works in Any Field:**
 
-#### **Phase 1 Paper: The Perceptron (1958) - Frank Rosenblatt**
-*"The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"*
+**Biology Example:**
+- **Phase 1**: Study Watson & Crick's DNA structure paper (1953)
+- **Phase 2**: Model DNA structure, discover modeling limitations
+- **Phase 3**: Develop better structural analysis methods
+- **Phase 4**: Share tools, mentor others who find new biological questions
 
-**Why Start Here:**
-- **Foundational paper** that introduced the concept of artificial neural networks
-- **Simple algorithm** that can be implemented in ~50 lines of code
-- **Clear mathematical foundation** with basic linear algebra
-- **Historical significance** - launched the field of neural networks
+**Psychology Example:**
+- **Phase 1**: Review Miller's "Magical Number Seven" memory paper (1956)
+- **Phase 2**: Replicate experiments, notice individual differences
+- **Phase 3**: Design studies exploring memory variation factors
+- **Phase 4**: Publish findings, mentor others who discover new memory phenomena
 
-**Phase 1 Application:**
-- Literature review: Study this paper alongside related work on early neural networks
-- Understand the historical context and theoretical foundations
-- Identify key concepts that influenced later developments
+**Economics Example:**
+- **Phase 1**: Study Akerlof's "Market for Lemons" paper (1970)
+- **Phase 2**: Model information asymmetry, find model limitations
+- **Phase 3**: Design experiments testing real market behavior
+- **Phase 4**: Share behavioral insights, guide others to new economic questions
 
-#### **Phase 2 Paper: Multi-Layer Perceptrons and Backpropagation (1986)**
-*"Learning Representations by Back-Propagating Errors" - Rumelhart, Hinton & Williams*
+> **Key Insight**: Every field has foundational papers with limitations that drove further innovation. By experiencing this process yourself, you learn how research really works!
 
-**Why This Follows Well:**
-- **Builds directly** on the perceptron concept
-- **Introduces key concepts** still used in modern neural networks
-- **Manageable complexity** for beginners
-- **Clear algorithmic steps** that can be implemented step-by-step
+### **How to Choose Your Starting Paper:**
 
-**Phase 2 Application:**
-- Implement the perceptron algorithm first (Week 5-6)
-- Then implement backpropagation (Week 7-8)
-- Reproduce original results and validate your implementation
-- Document your code and findings for reproducibility
+**What Makes a Paper Beginner-Friendly:**
+- **Foundational importance** - Introduced key concepts still used today
+- **Simple enough to understand** - Clear methodology without requiring advanced background
+- **Implementable scope** - Can be reproduced with available tools and reasonable effort
+- **Historical significance** - Shaped the field's development
+- **Clear limitations** - Has known problems that drove further research
 
-#### **Phase 3 Paper: LeNet-5 (1998) - Yann LeCun et al.**
-*"Gradient-Based Learning Applied to Document Recognition"*
+**Examples of Great Starting Papers by Field:**
+- **Computer Science**: Perceptron (1958), Dijkstra's Algorithm (1959)
+- **Biology**: DNA Structure (1953), Central Dogma (1958)
+- **Psychology**: Classical Conditioning (1927), Cognitive Load Theory (1988)
+- **Economics**: Efficient Market Hypothesis (1970), Game Theory basics (1944)
+- **Physics**: Brownian Motion (1905), Photoelectric Effect (1905)
+- **Chemistry**: Molecular Orbital Theory (1932), Reaction Mechanisms
 
-**Why This Is Perfect for Phase 3:**
-- **Practical application** to real-world problem (handwritten digits)
-- **Introduces convolutions** - a key concept in modern AI
-- **Reasonable dataset size** (MNIST - 60,000 training images)
-- **Clear experimental setup** and evaluation metrics
-
-**Phase 3 Application:**
-- Design experiments with LeNet-5 architecture
-- Conduct original research comparing different architectures
-- Test on new datasets or explore architectural variations
-- Achieve >95% accuracy on MNIST and document experimental process
-
-### **Example Paths for Other Research Fields:**
-
-> **Remember:** The same 4-phase framework applies to any field. Here are beginner-friendly starting points for other domains:
-
-#### **Biology/Life Sciences Path:**
-- **Phase 1**: Literature review of "The Structure of DNA" (1953) - Watson & Crick
-- **Phase 2**: Analyze X-ray crystallography data and model DNA structure
-- **Phase 3**: Design experiments comparing different structural analysis methods
-- **Phase 4**: Create educational content on DNA structure discovery
-
-#### **Psychology Research Path:**
-- **Phase 1**: Literature review of "The Magical Number Seven" (1956) - Miller  
-- **Phase 2**: Replicate memory capacity experiments with modern tools
-- **Phase 3**: Design original experiments testing memory limits in different contexts
-- **Phase 4**: Publish findings and mentor others in experimental psychology
-
-#### **Economics Research Path:**
-- **Phase 1**: Literature review of "The Market for Lemons" (1970) - Akerlof
-- **Phase 2**: Build economic models demonstrating information asymmetry
-- **Phase 3**: Design experiments testing market behavior under different information conditions
-- **Phase 4**: Contribute to behavioral economics research and education
-
-#### **Physics Research Path:**
-- **Phase 1**: Literature review of "Brownian Motion" (1905) - Einstein
-- **Phase 2**: Simulate particle movement and validate against theoretical predictions  
-- **Phase 3**: Design experiments exploring variations in particle behavior
-- **Phase 4**: Create physics simulations for educational use
-
-### **How to Choose Papers for Your Field:**
-1. **Start with foundational papers** that introduced key concepts in your field
-2. **Look for clear methodologies** that can be reproduced with available tools
-3. **Choose manageable scope** - avoid papers requiring massive datasets or specialized equipment
-4. **Find papers with lasting impact** that are still cited and relevant today
-5. **Ensure data availability** or ability to generate synthetic data for reproduction
-6. **Consider historical significance** - papers that shaped the field's development
+**Your Research Journey Starts Here:**
+1. **Pick a field** that genuinely interests you
+2. **Find a foundational paper** using the criteria above
+3. **Follow the 4-phase framework** with your chosen paper
+4. **Experience the research flywheel** as limitations lead to new questions
+5. **Join the community** and share your journey with others
 
 ## Core Skills You'll Develop
 
