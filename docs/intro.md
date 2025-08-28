@@ -10,7 +10,7 @@ Welcome to the **Average Joes Lab Research Engineering Learning Path** - your co
 
 Research Engineering is the bridge between cutting-edge research and practical implementation. As a research engineer, you'll:
 
-- **Design and conduct original research** in AI, ML, and emerging technologies
+- **Design and conduct original research** across any field of interest
 - **Implement research findings** into working prototypes and systems
 - **Collaborate with researchers** to translate ideas into reality
 - **Contribute to open science** through reproducible research practices
@@ -61,10 +61,10 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Version control with Git for research
 - Collaborative coding practices
 
-#### Week 7-8: AI/ML Research Tools
-- Machine learning frameworks (PyTorch, TensorFlow)
-- Experiment tracking and management
-- Model evaluation and validation
+#### Week 7-8: Research Tools and Frameworks
+- Domain-specific tools and frameworks for your field
+- Experiment tracking and management systems
+- Data analysis and validation techniques
 - Research reproducibility tools
 
 **Milestone**: Implement and reproduce a research paper
@@ -112,10 +112,10 @@ Research Engineering is the bridge between cutting-edge research and practical i
 - Research ethics and integrity
 
 ### **Technical Implementation**
-- Programming in Python, R, and other research languages
-- Machine learning and AI frameworks
+- Programming in languages relevant to your research domain
+- Research-specific tools and frameworks
 - Data visualization and analysis tools
-- Research infrastructure and tools
+- Research infrastructure and computational tools
 
 ### **Collaboration and Communication**
 - Working in distributed research teams
@@ -132,16 +132,16 @@ Research Engineering is the bridge between cutting-edge research and practical i
 ## Learning Resources
 
 ### **Free Online Resources**
-- [Papers with Code](https://paperswithcode.com/) - Latest ML papers with implementations
-- [ArXiv](https://arxiv.org/) - Open access research papers
-- [Google Research](https://research.google/) - Research methodologies and papers
-- [Distill](https://distill.pub/) - Interactive machine learning research
+- [ArXiv](https://arxiv.org/) - Open access research papers across all disciplines
+- [Google Scholar](https://scholar.google.com/) - Academic search engine and citation tracking
+- [PLOS ONE](https://journals.plos.org/plosone/) - Open access scientific journal
+- [ResearchGate](https://www.researchgate.net/) - Academic social network and paper sharing
 
 ### **Research Tools**
-- [Jupyter Notebooks](https://jupyter.org/) - Interactive research environment
-- [Weights & Biases](https://wandb.ai/) - Experiment tracking
-- [Hugging Face](https://huggingface.co/) - ML models and datasets
-- [Google Colab](https://colab.research.google.com/) - Free GPU/TPU access
+- [Jupyter Notebooks](https://jupyter.org/) - Interactive research and analysis environment
+- [R/RStudio](https://www.r-project.org/) - Statistical computing and data analysis
+- [Zotero](https://www.zotero.org/) - Reference management and citation tools
+- [OSF (Open Science Framework)](https://osf.io/) - Research project management and sharing
 
 ### **Community Resources**
 - **Discord Server**: Real-time collaboration and support
@@ -158,9 +158,9 @@ Research Engineering is the bridge between cutting-edge research and practical i
 4. **Research Proposal**: Design an original research project
 
 ### **Intermediate Projects**
-1. **Original Research**: Conduct novel research in your area of interest
-2. **Tool Development**: Build tools to support research workflows
-3. **Collaborative Project**: Work with team members on complex research
+1. **Original Research**: Conduct novel research in your chosen field
+2. **Tool Development**: Build tools to support research workflows in your domain
+3. **Collaborative Project**: Work with team members on interdisciplinary research
 4. **Community Contribution**: Contribute to open research initiatives
 
 ### **Advanced Projects**
@@ -187,12 +187,12 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 Research Engineering opens doors to:
 
-- **Research Scientist** at technology companies
-- **Applied Research Engineer** in industry R&D
-- **Independent Researcher** in citizen science initiatives
-- **Research & Development Lead** at innovative companies
-- **Open Source Research Contributor** to global projects
-- **Research Consultant** for emerging technologies
+- **Research Scientist** across various industries and institutions
+- **Applied Research Engineer** in industry R&D departments
+- **Independent Researcher** in citizen science and open research initiatives
+- **Research & Development Lead** at organizations driving innovation
+- **Open Source Research Contributor** to global research projects
+- **Research Consultant** for organizations needing research expertise
 
 ## Success Stories
 
