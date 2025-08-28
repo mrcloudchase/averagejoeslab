@@ -10,55 +10,58 @@ sidebar_position: 1
 
 ---
 
-## 📋 Learning Modules
+## 📋 Learning Phases
 
-This comprehensive guide is organized into 9 interconnected modules. **New to research?** Follow them in order. **Have some experience?** Jump to relevant sections.
+This comprehensive guide follows a **phases approach** aligned with your research engineering journey. **New to research?** Start with Phase 0. **Have experience?** Jump to your appropriate phase.
 
-### 🚀 Quick Access
+### 🚀 Core Learning Phases
 
-| Module | Focus | Time | For You If... |
+| Phase | Focus | Time | For You If... |
 |---|---|---|---|
-| **[01. Introduction](./01-introduction.md)** | What is research engineering? | 10 min | You're completely new |
-| **[02. Quick Start](./02-quick-start.md)** | Get immediate wins | 30 min | You want to try it now |
-| **[03. Setup & Requirements](./03-setup-requirements.md)** | Hardware, costs, setup | 1-2 hours | You need to know what's required |
-| **[04. Prerequisites](./04-prerequisites.md)** | Essential skills | 2-8 weeks | You need to learn basics |
-| **[05. Learning Framework](./05-learning-framework.md)** | 4-phase progression | 16 weeks | You want the full program |
-| **[06. Tools & Resources](./06-tools-resources.md)** | Software and platforms | Reference | You need tool guidance |
-| **[07. Action Plan](./07-action-plan.md)** | Step-by-step checklist | Ongoing | You want clear next steps |
-| **[08. Troubleshooting](./08-troubleshooting.md)** | Common issues & solutions | As needed | You're stuck |
-| **[09. Community](./09-community.md)** | Support and collaboration | Ongoing | You want to connect |
+| **[Phase 0: Getting Started](./phase-0-getting-started.md)** | Foundation, setup, prerequisites | 2-8 weeks | You're completely new to research/programming |
+| **[Phase 1: Research Foundations](./phase-1-research-foundations.md)** | Reading and understanding papers | 4 weeks | You can code but new to research |
+| **[Phase 2: Technical Skills](./phase-2-technical-skills.md)** | Running and modifying research code | 4 weeks | You want to implement research |
+| **[Phase 3: Research Practice](./phase-3-research-practice.md)** | Designing your own experiments | 4 weeks | You want to conduct original research |
+| **[Phase 4: Community Contribution](./phase-4-community-contribution.md)** | Sharing knowledge and mentoring | 4 weeks | You want to help others and publish |
+
+### 🛠️ Support Resources
+
+| Resource | Purpose | When to Use |
+|---|---|---|
+| **[Support: Tools & Resources](./support-tools-resources.md)** | Software, platforms, learning materials | Throughout all phases |
+| **[Support: Troubleshooting](./support-troubleshooting.md)** | Common issues and solutions | When you're stuck |
+| **[Support: Community](./support-community.md)** | Discord, mentorship, collaboration | Ongoing community engagement |
 
 ---
 
-## 🎯 Choose Your Path
+## 🎯 Choose Your Starting Point
 
 ### 🆕 Complete Beginner
 **"I've never coded or read a research paper"**
-1. Start with **[01. Introduction](./01-introduction.md)** to understand what research engineering is
-2. Do the **[02. Quick Start](./02-quick-start.md)** for immediate confidence
-3. Review **[03. Setup & Requirements](./03-setup-requirements.md)** to understand what you need
-4. Work through **[04. Prerequisites](./04-prerequisites.md)** at your own pace
-5. Follow the **[05. Learning Framework](./05-learning-framework.md)** for structured progression
+1. **Start with [Phase 0: Getting Started](./phase-0-getting-started.md)** - Complete foundation
+2. **Follow the phases in order** - Each builds on the previous
+3. **Join the community early** - Get support from day one
+4. **Take your time** - 2-8 weeks for Phase 0 is normal
 
-### 🔧 Some Technical Background
+### 🔧 Some Technical Background  
 **"I can code but I'm new to research"**
-1. Read **[01. Introduction](./01-introduction.md)** for context
-2. Skim **[04. Prerequisites](./04-prerequisites.md)** to identify gaps
-3. Jump to **[05. Learning Framework](./05-learning-framework.md)** Phase 1 or 2
-4. Use **[06. Tools & Resources](./06-tools-resources.md)** as needed
+1. **Skim [Phase 0](./phase-0-getting-started.md)** - Check prerequisites section
+2. **Start with [Phase 1: Research Foundations](./phase-1-research-foundations.md)** - Learn to read papers
+3. **Use support resources** - Tools and troubleshooting as needed
+4. **Engage with community** - Join phase-specific Discord channels
 
 ### 🎓 Research Experience
 **"I know research but want to learn engineering"**
-1. Review **[01. Introduction](./01-introduction.md)** for our approach
-2. Check **[06. Tools & Resources](./06-tools-resources.md)** for technical tools
-3. Start with **[05. Learning Framework](./05-learning-framework.md)** Phase 2 or 3
-4. Engage with **[09. Community](./09-community.md)** to share your expertise
+1. **Review [Phase 0](./phase-0-getting-started.md)** - Understand our approach
+2. **Jump to [Phase 2: Technical Skills](./phase-2-technical-skills.md)** - Start implementing
+3. **Check [Support: Tools](./support-tools-resources.md)** - Get up to speed on platforms
+4. **Share your expertise** - Help others in earlier phases
 
 ### 🆘 Stuck or Confused
 **"I need help or have questions"**
-1. Check **[08. Troubleshooting](./08-troubleshooting.md)** for common issues
-2. Join **[09. Community](./09-community.md)** for support
-3. Use **[07. Action Plan](./07-action-plan.md)** to get back on track
+1. **Check [Support: Troubleshooting](./support-troubleshooting.md)** - Common solutions
+2. **Join [Support: Community](./support-community.md)** - Get help from others
+3. **Find your phase** - Each phase has specific support channels
 
 ---
 
@@ -101,13 +104,13 @@ We carefully select papers and explain exactly what you should do:
 
 ### Recommended Starting Points
 
-**🆕 Brand New?** → **[02. Quick Start](./02-quick-start.md)** (30 minutes for immediate wins)
+**🆕 Brand New?** → **[Phase 0: Getting Started](./phase-0-getting-started.md)** (Complete foundation)
 
-**🎯 Want the Full Program?** → **[01. Introduction](./01-introduction.md)** (comprehensive overview)
+**🎯 Want Quick Wins?** → **Phase 0 → Quick Start section** (30 minutes for immediate confidence)
 
-**🔧 Need Technical Setup?** → **[03. Setup & Requirements](./03-setup-requirements.md)** (hardware and costs)
+**🔧 Ready to Code Research?** → **[Phase 2: Technical Skills](./phase-2-technical-skills.md)** (If you have prerequisites)
 
-**🤝 Want Community?** → **[09. Community](./09-community.md)** (join Discord and connect)
+**🤝 Want Community?** → **[Support: Community](./support-community.md)** (Join Discord and connect)
 
 ---
 

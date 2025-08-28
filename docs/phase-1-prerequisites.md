@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
-# 04. Prerequisites (Zero Knowledge Start)
+# Phase 1: Prerequisites
 
 *Essential skills you need before diving into research*
 
@@ -14,8 +14,8 @@ sidebar_position: 4
 
 | Priority | Skills | Description |
 |---|---|---|
-| ✅ **Essential** | A, B, C, F | Must complete before Phase 1 |
-| 🔄 **Helpful** | D, E | Can learn alongside main phases |
+| ✅ **Essential** | A, B, C, F | Must complete before Phase 2 |
+| 🔄 **Helpful** | D, E | Can learn alongside later phases |
 
 **📚 Study Plan:** 1-2 hours/day, 3-5 days/week
 
@@ -113,7 +113,7 @@ Create a GitHub account, make a repository, and upload your first Python script.
 
 ## D. Math & Statistics 🔄 HELPFUL
 
-**⏱️ Time Needed:** 2-4 weeks (can learn alongside other skills)
+**⏱️ Time Needed:** 2-4 weeks (can learn alongside other phases)
 
 ### What is Statistics?
 Statistics helps us describe and analyze data.
@@ -145,7 +145,7 @@ Linear algebra is math for working with vectors (lists of numbers) and matrices 
 
 ## E. Machine Learning Basics 🔄 HELPFUL
 
-**⏱️ Time Needed:** 2-3 weeks (can learn alongside other skills)
+**⏱️ Time Needed:** 2-3 weeks (can learn alongside other phases)
 
 ### What is Machine Learning?
 Machine learning is teaching computers to learn patterns from data instead of being programmed with rules.
@@ -210,9 +210,9 @@ Read an abstract of a paper and identify: problem, method, result.
 
 ---
 
-## 🎯 Prerequisites Checkpoint
+## 🎯 Phase 1 Checkpoint
 
-### Ready for Phase 1? Check These Off! ✓
+### Ready for Phase 2? Check These Off! ✓
 
 | Skill | Can You Do This? |
 |---|---|
@@ -225,9 +225,10 @@ Read an abstract of a paper and identify: problem, method, result.
 
 **⏱️ Estimated Total Time:** 4-12 weeks (depending on your pace and background)
 
-> **🚀 Ready to continue?** Great! Head to [05. Learning Framework](./05-learning-framework.md)  
+> **🚀 Ready to continue?** Great! Head to [Phase 2: Research Foundations](./phase-2-research-foundations.md)  
 > **📚 Still working on prerequisites?** That's totally normal - take your time.
 
 ---
 
-**Previous:** [03. Setup & Requirements](./03-setup-requirements.md) | **Next:** [05. Learning Framework](./05-learning-framework.md)
+**Previous Phase:** [Phase 0: Getting Started](./phase-0-getting-started.md) | **Next Phase:** [Phase 2: Research Foundations](./phase-2-research-foundations.md)
+

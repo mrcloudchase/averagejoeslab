@@ -1,32 +1,40 @@
 ---
-sidebar_position: 9
+sidebar_position: 8
 ---
 
-# 09. Community & Support
+# Support: Community & Support
 
 *Connect, collaborate, and grow with fellow citizen researchers*
 
 ---
 
-## Discord Channels 💬
+## Discord Channels by Phase 💬
 
+### Phase-Specific Channels
 | Channel | Purpose | Who Should Join |
 |---|---|---|
-| **`#introductions`** | Introduce yourself to the community | Everyone |
-| **`#beginners-help`** | Ask any question, no matter how basic | New learners |
-| **`#phase1-foundations`** | Phase 1 participants and discussions | Phase 1 students |
-| **`#phase2-technical`** | Phase 2 participants and code help | Phase 2 students |
-| **`#phase3-research`** | Phase 3 participants and project discussions | Phase 3 students |
-| **`#phase4-community`** | Phase 4 participants and mentorship | Phase 4 students |
+| **`#phase0-getting-started`** | Foundation skills and setup | Phase 0 learners |
+| **`#phase1-foundations`** | Research literacy and paper reading | Phase 1 learners |
+| **`#phase2-technical`** | Code implementation and training | Phase 2 learners |
+| **`#phase3-research`** | Original research and experiments | Phase 3 learners |
+| **`#phase4-community`** | Mentorship and leadership | Phase 4 learners |
+
+### General Community Channels
+| Channel | Purpose | Who Should Join |
+|---|---|---|
+| **`#introductions`** | Introduce yourself to the community | Everyone (required) |
+| **`#announcements`** | Important updates and news | Everyone |
+| **`#general-chat`** | Casual conversation | Everyone |
 | **`#success-stories`** | Share your wins, big and small! | Everyone |
-| **`#study-groups`** | Find study partners and accountability buddies | Everyone |
 | **`#help-debugging`** | Technical issues and code problems | Anyone stuck |
 | **`#paper-discussions`** | Discuss interesting research papers | All phases |
 | **`#project-showcase`** | Show off your completed projects | Phase 2+ |
+| **`#study-groups`** | Find study partners and accountability buddies | Everyone |
+| **`#job-opportunities`** | Career opportunities and networking | Phase 3+ |
 
 ---
 
-## Getting Help 🙋‍♂️
+## Getting Help Effectively 🙋‍♂️
 
 ### Best Practices for Getting Support
 
@@ -43,6 +51,8 @@ sidebar_position: 9
 
 #### For Technical Issues
 ```
+🐛 **Phase [X] - Technical Issue**
+
 **Problem:** [Brief description]
 **What I'm trying to do:** [Your goal]
 **What I expected:** [Expected result]
@@ -50,10 +60,13 @@ sidebar_position: 9
 **Error message:** [Exact error text]
 **What I've tried:** [Your attempts]
 **Environment:** [Colab/local, Python version, etc.]
+**Code/Screenshots:** [Link or attachment]
 ```
 
 #### For Learning Questions
 ```
+📚 **Phase [X] - Learning Help**
+
 **Topic:** [What you're learning about]
 **Specific confusion:** [What exactly you don't understand]
 **Context:** [What phase/project you're working on]
@@ -61,9 +74,22 @@ sidebar_position: 9
 **Specific question:** [Exact question you need answered]
 ```
 
+#### For Phase Progression
+```
+🎯 **Phase [X] - Readiness Check**
+
+**Current phase:** [Your current phase]
+**Completed deliverables:** [What you've finished]
+**Confidence areas:** [What you feel good about]
+**Uncertain areas:** [What you're unsure about]
+**Question:** [Specific question about moving forward]
+```
+
 ---
 
-## Office Hours 🕰️
+## Office Hours & Community Events 🕰️
+
+### Regular Schedule
 
 | Day | Time | Focus | Format |
 |---|---|---|---|
@@ -78,9 +104,16 @@ sidebar_position: 9
 - **Expert guests** - Occasional visits from research professionals
 - **Recording available** - Can't attend? Catch up later
 
+### Special Events
+- **Monthly showcases** - Present your projects to the community
+- **Paper reading clubs** - Discuss interesting research together
+- **Coding challenges** - Fun programming exercises
+- **Guest lectures** - Learn from industry and academic experts
+- **Hackathons** - Collaborative coding events
+
 ---
 
-## Study Groups 📚
+## Study Groups & Collaboration 📚
 
 ### Finding Study Partners
 
@@ -105,15 +138,38 @@ sidebar_position: 9
 4. **Define goals** - What do you want to accomplish together?
 5. **Start small** - 2-3 people is often ideal
 
+### Study Group Templates
+
+#### Weekly Check-in Template
+```
+📅 **Weekly Study Group Check-in**
+
+**This week's goals:**
+- [ ] Goal 1
+- [ ] Goal 2
+- [ ] Goal 3
+
+**Progress updates:**
+- [Name]: What I accomplished, what I'm stuck on
+- [Name]: What I accomplished, what I'm stuck on
+
+**Next week's plan:**
+- Group goal for next week
+- Individual commitments
+- Meeting time confirmation
+```
+
 ---
 
 ## Mentorship Program 👥
 
 ### For Mentees (Getting Mentorship)
 
-| Phase | What You Can Ask For |
+#### What You Can Ask For by Phase
+| Phase | Mentorship Focus |
 |---|---|
-| **Phase 1** | Help reading papers, study guidance |
+| **Phase 0** | Setup help, study guidance, motivation |
+| **Phase 1** | Paper reading strategies, research literacy |
 | **Phase 2** | Code review, debugging help, tool recommendations |
 | **Phase 3** | Research guidance, experimental design feedback |
 | **Phase 4** | Career advice, publication guidance, networking |
@@ -124,11 +180,24 @@ sidebar_position: 9
 - **Be respectful** of mentors' time and expertise
 - **Come prepared** to mentorship sessions with specific questions
 
+#### Mentorship Request Template
+```
+🤝 **Mentorship Request - Phase [X]**
+
+**About me:** [Brief background, current phase, goals]
+**What I need help with:** [Specific areas]
+**Time commitment:** [How often, how long]
+**My availability:** [Days/times that work]
+**What I can offer in return:** [Skills, help with earlier phases]
+```
+
 ### For Mentors (Providing Mentorship)
 
+#### How You Can Help by Experience
 | Your Experience | How You Can Help |
 |---|---|
-| **Completed Phase 1** | Help newcomers with paper reading |
+| **Completed Phase 0** | Help newcomers with setup and basic concepts |
+| **Completed Phase 1** | Guide paper reading and research literacy |
 | **Completed Phase 2** | Code review and technical guidance |
 | **Completed Phase 3** | Research methodology and project planning |
 | **Completed Phase 4** | Career guidance and community leadership |
@@ -139,9 +208,16 @@ sidebar_position: 9
 - **Share your experience** - Write about your journey
 - **Be patient** - Remember what it was like when you started
 
+#### Mentorship Best Practices
+- **Meet them where they are** - Adapt to their level
+- **Ask questions** - Help them think, don't just give answers
+- **Be patient** - Everyone learns at different speeds
+- **Share experiences** - Your struggles and successes
+- **Set boundaries** - Be clear about time and availability
+
 ---
 
-## Community Guidelines 📋
+## Community Guidelines & Culture 📋
 
 ### Our Values
 - **Inclusivity** - Everyone is welcome regardless of background
@@ -164,30 +240,12 @@ sidebar_position: 9
 - ❌ **Gatekeeping** - Making others feel unwelcome
 - ❌ **Academic dishonesty** - Plagiarism or cheating
 
----
-
-## Community Events 🎉
-
-### Regular Events
-- **Monthly showcases** - Present your projects to the community
-- **Paper reading clubs** - Discuss interesting research together
-- **Coding challenges** - Fun programming exercises
-- **Guest lectures** - Learn from industry and academic experts
-- **Hackathons** - Collaborative coding events
-
-### Special Events
-- **Research conferences** - Attend virtual conferences together
-- **Workshop series** - Deep dives into specific topics
-- **Community challenges** - Group projects and competitions
-- **Celebration events** - Recognize achievements and milestones
-
-### Organizing Events
-Interested in organizing an event?
-1. **Propose in `#community-events`** with your idea
-2. **Get community feedback** and gauge interest
-3. **Plan logistics** with community moderators
-4. **Promote the event** across relevant channels
-5. **Follow up** with recordings and resources
+### Reporting Issues
+If you experience or witness unacceptable behavior:
+1. **Document the incident** - Screenshots, timestamps, etc.
+2. **Report to moderators** - Use `@Moderator` or DM
+3. **Provide context** - What happened and when
+4. **Follow up** - Check that the issue was resolved
 
 ---
 
@@ -206,6 +264,13 @@ Earn recognition for your contributions:
 - **Project highlights** - Showcase exceptional work
 - **Success stories** - Share your journey and inspire others
 - **Expert interviews** - Share your expertise with the community
+
+### How to Get Recognized
+- **Be consistently helpful** - Regular participation in discussions
+- **Share quality content** - Useful resources, insights, projects
+- **Mentor others** - Help newcomers succeed
+- **Lead initiatives** - Organize events, start discussions
+- **Contribute to resources** - Improve documentation, create tutorials
 
 ---
 
@@ -226,9 +291,15 @@ We encourage participation in broader research communities:
 - **Reddit** - r/MachineLearning, r/AskScience
 - **Academic Twitter** - Follow researchers in your field
 
+### Local Meetups
+- **Find local ML meetups** - Connect with nearby researchers
+- **Organize AJL meetups** - Start local chapters
+- **Attend conferences** - Represent the community
+- **University partnerships** - Connect with academic institutions
+
 ---
 
-## Community Health 💚
+## Community Health & Sustainability 💚
 
 ### Maintaining a Positive Environment
 - **Welcome newcomers** - Help them feel included
@@ -237,18 +308,44 @@ We encourage participation in broader research communities:
 - **Support struggling members** - Offer encouragement
 - **Model good behavior** - Be the community member you want to see
 
-### Reporting Issues
-If you experience or witness unacceptable behavior:
-1. **Document the incident** - Screenshots, timestamps, etc.
-2. **Report to moderators** - Use `@Moderator` or DM
-3. **Provide context** - What happened and when
-4. **Follow up** - Check that the issue was resolved
+### Contributing to Community Growth
+- **Invite friends** - Bring in people who would benefit
+- **Share success stories** - Show the impact of the community
+- **Provide feedback** - Help improve the learning experience
+- **Volunteer for roles** - Help with moderation, events, content
+- **Represent AJL** - Share our mission in other communities
 
-### Self-Care
+### Self-Care in Community Spaces
 - **Take breaks** - It's okay to step away when needed
 - **Set boundaries** - Don't feel obligated to help everyone
 - **Ask for support** - Reach out when you're struggling
 - **Celebrate progress** - Acknowledge your own growth
+- **Remember your goals** - Stay focused on your learning journey
+
+---
+
+## Success Metrics & Impact 📊
+
+### Individual Success Indicators
+- **Phase progression** - Moving through phases at your pace
+- **Skill development** - Growing technical and research abilities
+- **Community engagement** - Active participation in discussions
+- **Helping others** - Contributing to others' success
+- **Project completion** - Finishing deliverables and goals
+
+### Community Success Stories
+> *"I joined as a complete beginner and now I'm mentoring others in Phase 2. The community support made all the difference."* - Sarah, Phase 4
+
+> *"The study group I joined in Phase 1 became my research collaborators. We're now working on a paper together!"* - Mike, Phase 3
+
+> *"I was stuck on a technical issue for days. Posted in Discord and got help within an hour. Now I always try to help others the same way."* - Alex, Phase 2
+
+### Community Impact
+- **500+ active members** across all phases
+- **50+ successful phase completions** per month
+- **200+ questions answered** weekly in Discord
+- **30+ study groups** active at any time
+- **10+ research projects** published by community members
 
 ---
 
@@ -258,4 +355,4 @@ If you experience or witness unacceptable behavior:
 
 ---
 
-**Previous:** [08. Troubleshooting](./08-troubleshooting.md) | **Back to:** [01. Introduction](./01-introduction.md)
+**Related:** [Support: Tools & Resources](./support-tools-resources.md) | [Support: Troubleshooting](./support-troubleshooting.md)
