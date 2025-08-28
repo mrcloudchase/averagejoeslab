@@ -98,7 +98,7 @@ Our neural network example demonstrates the "learn as you go" approach:
 ### **The Learning Strategy: Just-in-Time Knowledge**
 
 1. **Start with genuine interest** in a specific problem or field
-2. **Pick a foundational paper** that seems approachable
+2. **Pick a foundational paper** that seems approachable (see guidance below)
 3. **Learn the minimum** math/tools needed for that specific paper  
 4. **Build knowledge incrementally** as you tackle more complex problems
 5. **Join the community** to learn from others on similar journeys
@@ -274,16 +274,18 @@ The perceptron example above demonstrates how research engineering creates a con
 
 > **Critical Research Lesson from the Perceptron Journey**: Sometimes the biggest breakthroughs aren't new architectures or theories, but practical methods to implement existing ideas. The MLP architecture existed for ~25 years before anyone figured out how to train it effectively. This pattern repeats throughout research history - the concept exists, but the implementation method is the real innovation.
 
-### **How to Choose Your Starting Paper:**
+## How to Choose Your Starting Paper
 
-**What Makes a Paper Beginner-Friendly:**
+Now that you understand the framework and prerequisites, here's how to select your first research paper:
+
+### **What Makes a Paper Beginner-Friendly:**
 - **Foundational importance** - Introduced key concepts still used today
 - **Simple enough to understand** - Clear methodology without requiring advanced background
 - **Implementable scope** - Can be reproduced with available tools and reasonable effort
 - **Historical significance** - Shaped the field's development
 - **Clear limitations** - Has known problems that drove further research
 
-**Examples of Great Starting Papers by Field:**
+### **Examples of Great Starting Papers by Field:**
 - **Computer Science**: Perceptron (1958), Dijkstra's Algorithm (1959)
 - **Biology**: DNA Structure (1953), Central Dogma (1958)
 - **Psychology**: Classical Conditioning (1927), Cognitive Load Theory (1988)
@@ -291,7 +293,7 @@ The perceptron example above demonstrates how research engineering creates a con
 - **Physics**: Brownian Motion (1905), Photoelectric Effect (1905)
 - **Chemistry**: Molecular Orbital Theory (1932), Reaction Mechanisms
 
-**Your Research Journey Starts Here:**
+### **Your Research Journey Starts Here:**
 1. **Pick a field** that genuinely interests you
 2. **Find a foundational paper** using the criteria above
 3. **Follow the 4-phase framework** with your chosen paper
@@ -333,64 +335,64 @@ The perceptron example above demonstrates how research engineering creates a con
 - **Community Peer Review**: Collaborative validation and feedback
 - **Research Democratization**: Making research accessible beyond traditional institutions
 
-## Learning Resources
+## Getting Started: Resources and Projects
 
-### **Free Online Resources**
+### **Essential Learning Resources**
+
+#### **Free Online Resources**
 - [ArXiv](https://arxiv.org/) - Open access research papers across all disciplines
 - [Google Scholar](https://scholar.google.com/) - Academic search engine and citation tracking
 - [PLOS ONE](https://journals.plos.org/plosone/) - Open access scientific journal
 - [ResearchGate](https://www.researchgate.net/) - Academic social network and paper sharing
 
-### **Research Tools**
+#### **Research Tools**
 - [Jupyter Notebooks](https://jupyter.org/) - Interactive research and analysis environment
 - [R/RStudio](https://www.r-project.org/) - Statistical computing and data analysis
 - [Zotero](https://www.zotero.org/) - Reference management and citation tools
 - [OSF (Open Science Framework)](https://osf.io/) - Research project management and sharing
 
-### **Community Resources**
-- **Discord Server**: Real-time collaboration and support
-- **GitHub Organization**: Open research projects and code
-- **Research Papers**: Community publications and findings
-- **Mentorship Program**: Connect with experienced researchers
+### **Hands-on Projects by Experience Level**
 
-## Hands-on Projects
-
-### **Beginner Projects**
+#### **Beginner Projects (Weeks 1-8)**
 1. **Literature Review**: Comprehensive review of a research area
 2. **Paper Reproduction**: Implement and validate published research
 3. **Dataset Analysis**: Explore and analyze open datasets
 4. **Research Proposal**: Design an original research project
 
-### **Intermediate Projects**
+#### **Intermediate Projects (Weeks 9-16)**
 1. **Original Research**: Conduct novel research in your chosen field
 2. **Tool Development**: Build tools to support research workflows in your domain
 3. **Collaborative Project**: Work with team members on interdisciplinary research
 4. **Community Contribution**: Contribute to open research initiatives
 
-### **Advanced Projects**
+#### **Advanced Projects (Ongoing)**
 1. **Research Leadership**: Lead a multi-person research project
 2. **Publication**: Publish research in open access venues
 3. **Mentorship**: Guide newcomers through their research journey
 4. **Innovation**: Develop new methodologies or frameworks
 
-## Community Integration
+## Join the Average Joes Lab Community
 
-### **Average Joes Lab Community**
-- **Monthly Research Meetups**: Virtual sessions on latest research
+### **Community Resources and Support**
+- **Discord Server**: Real-time collaboration, Q&A, and peer support
+- **GitHub Organization**: Open research projects and collaborative code
+- **Research Papers**: Community publications and ongoing findings
+- **Mentorship Program**: Connect with experienced research engineers
+- **Monthly Research Meetups**: Virtual sessions on latest research and techniques
 - **Project Collaboration**: Team up on meaningful research initiatives
-- **Skill Sharing**: Learn from and teach community members
-- **Open Source Focus**: All research is open and community-driven
+- **Skill Sharing**: Learn from and teach fellow community members
+- **Open Source Focus**: All research is transparent and community-driven
 
-### **Getting Started**
-1. **Join our [Discord](https://discord.gg/averagejoeslab)** - Connect with the community
+### **Ready to Start Your Research Engineering Journey?**
+
+#### **Immediate Next Steps:**
+1. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
 2. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
 3. **Read our [research papers](/internal-papers)** - See what the community is working on
-4. **Start your first project** - Begin with a literature review or paper reproduction
+4. **Choose your first project** - Start with a literature review or paper reproduction based on your interests
+5. **Find a mentor** - Connect with experienced community members for guidance
 
-## Career Paths
-
-Research Engineering opens doors to:
-
+#### **Career Opportunities in Research Engineering:**
 - **Research Scientist** across various industries and institutions
 - **Applied Research Engineer** in industry R&D departments
 - **Independent Researcher** in citizen science and open research initiatives
@@ -398,18 +400,8 @@ Research Engineering opens doors to:
 - **Open Source Research Contributor** to global research projects
 - **Research Consultant** for organizations needing research expertise
 
-## Success Stories
-
+### **Success Stories**
 *Coming soon: Stories from our community members who have successfully transitioned into research engineering roles through our program.*
-
-## Next Steps
-
-Ready to start your research engineering journey?
-
-1. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
-2. **Choose your first project** - Start with a literature review or paper reproduction
-3. **Find a mentor** - Connect with experienced community members
-4. **Start contributing** - Begin your journey in democratized research
 
 ---
 
