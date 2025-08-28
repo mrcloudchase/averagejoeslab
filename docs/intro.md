@@ -69,6 +69,92 @@ Research Engineering is the bridge between cutting-edge research and practical i
 
 **Milestone**: Implement and reproduce a research paper
 
+## Example Research Papers for Beginners
+
+> **Note:** These neural network papers are provided as concrete examples of beginner-friendly research that can be accomplished independently. However, this learning path applies to **any research field** - you could equally well start with foundational papers in biology, psychology, economics, physics, or any other domain that interests you.
+
+### **Why These Papers Make Great Starting Points:**
+- **Foundational concepts** that are still relevant today
+- **Simple enough** to understand and implement without advanced background
+- **Well-documented** with clear methodologies
+- **Reasonable scope** for independent reproduction
+- **Historical significance** that helps understand field evolution
+
+### **Beginner-Friendly Neural Network Papers:**
+
+#### **1. The Perceptron (1958) - Frank Rosenblatt**
+*"The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"*
+
+**Why Start Here:**
+- **Foundational paper** that introduced the concept of artificial neural networks
+- **Simple algorithm** that can be implemented in ~50 lines of code
+- **Clear mathematical foundation** with basic linear algebra
+- **Historical significance** - launched the field of neural networks
+
+**What You'll Learn:**
+- Basic concepts of artificial neurons and learning
+- Simple classification algorithms
+- How to implement and test a learning algorithm
+
+**Reproduction Scope:** Implement the perceptron algorithm and test on simple datasets (2-3 weeks)
+
+#### **2. Multi-Layer Perceptrons and Backpropagation (1986) - Rumelhart, Hinton & Williams**
+*"Learning Representations by Back-Propagating Errors"*
+
+**Why This Follows Well:**
+- **Builds directly** on the perceptron concept
+- **Introduces key concepts** still used in modern neural networks
+- **Manageable complexity** for beginners
+- **Clear algorithmic steps** that can be implemented step-by-step
+
+**What You'll Learn:**
+- How neural networks learn complex patterns
+- The backpropagation algorithm
+- Multi-layer network architectures
+
+**Reproduction Scope:** Implement backpropagation and train on classic datasets like XOR or MNIST (3-4 weeks)
+
+#### **3. LeNet-5 (1998) - Yann LeCun et al.**
+*"Gradient-Based Learning Applied to Document Recognition"*
+
+**Why This Is Perfect for Phase 2:**
+- **Practical application** to real-world problem (handwritten digits)
+- **Introduces convolutions** - a key concept in modern AI
+- **Reasonable dataset size** (MNIST - 60,000 training images)
+- **Clear experimental setup** and evaluation metrics
+
+**What You'll Learn:**
+- Convolutional neural networks
+- Real-world data preprocessing
+- Model evaluation and validation
+
+**Reproduction Scope:** Implement CNN architecture and achieve >95% accuracy on MNIST (4-6 weeks)
+
+### **Papers for Other Research Fields (Examples):**
+
+#### **Biology/Life Sciences:**
+- **"The Structure of DNA" (1953) - Watson & Crick** - Analyze X-ray crystallography data
+- **"A Mathematical Theory of Evolution" (1930) - Fisher** - Population genetics modeling
+
+#### **Psychology:**
+- **"The Magical Number Seven" (1956) - Miller** - Replicate memory capacity experiments
+- **"Cognitive Load Theory" (1988) - Sweller** - Design and test learning experiments
+
+#### **Economics:**
+- **"Theory of Games and Economic Behavior" (1944) - von Neumann & Morgenstern** - Game theory simulations
+- **"The Market for Lemons" (1970) - Akerlof** - Information asymmetry modeling
+
+#### **Physics:**
+- **"Brownian Motion" (1905) - Einstein** - Simulate particle movement
+- **"Chaos Theory" (1963) - Lorenz** - Implement weather prediction models
+
+### **How to Choose Papers for Your Field:**
+1. **Start with foundational papers** that introduced key concepts
+2. **Look for clear methodologies** that can be reproduced
+3. **Choose manageable scope** - avoid papers requiring massive datasets or specialized equipment
+4. **Find papers with lasting impact** that are still cited today
+5. **Ensure availability of data** or ability to generate synthetic data
+
 ### Phase 3: Research Practice (Weeks 9-12)
 **Apply your skills to real research projects**
 
