@@ -37,7 +37,7 @@ export default function HomepageFeatures(): ReactNode {
                     Begin Learning Path →
                   </Link>
                   <a 
-                    href="https://discord.gg/averagejoeslab" 
+                    href="https://discord.gg/7gzZMAPuGr" 
                     className="button button--secondary button--lg"
                     style={{fontSize: '1.1rem', padding: '0.8rem 2rem'}}
                     target="_blank"

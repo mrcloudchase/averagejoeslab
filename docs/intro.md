@@ -392,12 +392,22 @@ Now that you understand the framework and prerequisites, here's how to select yo
 ## Join the Average Joes Lab Community
 
 ### **Community Resources and Support**
-- **Discord Server**: Real-time collaboration, Q&A, and peer support
+- **Discord Server**: Real-time collaboration, Q&A, and peer support across dedicated channels:
+  - **#research-engineering-path**: Discuss the 4-phase learning journey
+  - **#paper-selection**: Get help choosing your foundational paper
+  - **#phase-1-foundations** through **#phase-4-community**: Phase-specific support
+  - **#paper-discussions**: Share and analyze research papers across all fields
+  - **#statistics-help**: Statistical analysis and experimental design support
+  - **#tools-and-setup**: Research environment and software help
+  - **#troubleshooting**: Technical problem-solving assistance
+  - **#study-groups**: Form collaborative learning groups
+  - **#mentorship**: Connect with mentors and offer guidance
+  - **#research-updates**: Share progress and celebrate milestones
 - **GitHub Organization**: Open research projects and collaborative code
 - **Research Papers**: Community publications and ongoing findings
-- **Mentorship Program**: Connect with experienced research engineers
+- **Mentorship Program**: Connect with experienced research engineers through dedicated Discord channels
 - **Monthly Research Meetups**: Virtual sessions on latest research and techniques
-- **Project Collaboration**: Team up on meaningful research initiatives
+- **Project Collaboration**: Team up on meaningful research initiatives via **#project-collaboration**
 - **Skill Sharing**: Learn from and teach fellow community members
 - **Open Source Focus**: All research is transparent and community-driven
 
@@ -408,7 +418,7 @@ Now that you understand the framework and prerequisites, here's how to select yo
 
 #### **Immediate Next Steps:**
 1. **[Fork the starter template](https://github.com/mrcloudchase/research-engineering-starter)** - Get organized structure and guidance
-2. **[Join our Discord community](https://discord.gg/averagejoeslab)** - Connect with fellow researchers
+2. **[Join our Discord community](https://discord.gg/7gzZMAPuGr)** - Connect with fellow researchers
 3. **Explore [ongoing projects](https://github.com/mrcloudchase/averagejoeslab)** - Find collaboration opportunities
 4. **Read our [research papers](/internal-papers)** - See what the community is working on
 5. **Choose your first project** - Start with a literature review or paper reproduction based on your interests

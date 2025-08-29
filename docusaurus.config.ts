@@ -125,7 +125,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://discord.gg/averagejoeslab',
+          href: 'https://discord.gg/7gzZMAPuGr',
           label: 'Discord',
           position: 'right',
         },
@@ -162,7 +162,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/averagejoeslab',
+              href: 'https://discord.gg/7gzZMAPuGr',
             },
             {
               label: 'GitHub',

@@ -27,7 +27,7 @@ function HomepageHeader() {
               </Link>
               <a
                 className="button button--secondary button--lg"
-                href="https://discord.gg/averagejoeslab"
+                href="https://discord.gg/7gzZMAPuGr"
                 target="_blank"
                 rel="noopener noreferrer">
                 Join Community
@@ -250,7 +250,7 @@ function CommunitySection() {
                 </Link>
                 <a
                   className="button button--secondary button--lg"
-                  href="https://discord.gg/averagejoeslab"
+                  href="https://discord.gg/7gzZMAPuGr"
                   target="_blank"
                   rel="noopener noreferrer">
                   Join Discord

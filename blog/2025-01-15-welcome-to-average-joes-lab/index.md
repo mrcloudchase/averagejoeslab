@@ -85,7 +85,7 @@ Explore our growing collection of **community-generated research** - all freely 
 ### **Join Our Community**
 Connect with fellow citizen researchers, find collaborators, and get support for your projects.
 
-[**Join Our Discord →**](https://discord.gg/averagejoeslab)
+[**Join Our Discord →**](https://discord.gg/7gzZMAPuGr)
 
 ## Success Stories (Coming Soon!)
 
@@ -146,7 +146,7 @@ I'm personally committed to making this vision a reality, and I'd love to hear f
 - **How can we better support citizen researchers?**
 - **What would make you excited to contribute to research?**
 
-Join our [Discord community](https://discord.gg/averagejoeslab) and let's start the conversation!
+Join our [Discord community](https://discord.gg/7gzZMAPuGr) and let's start the conversation!
 
 ## Welcome to the Future of Research
 
@@ -165,7 +165,7 @@ Welcome to Average Joes Lab. Let's democratize research together!
 
 ---
 
-*Ready to start your research journey? [Join our community](https://discord.gg/averagejoeslab) and [explore our Research Engineering Learning Path](/docs/intro).*
+*Ready to start your research journey? [Join our community](https://discord.gg/7gzZMAPuGr) and [explore our Research Engineering Learning Path](/docs/intro).*
 
 **Chase Dovey**  
 *Founder & Research Engineer, Average Joes Lab*
