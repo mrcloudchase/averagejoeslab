@@ -4,6 +4,17 @@ sidebar_position: 1
 
 # Research Engineering Learning Path
 
+:::info Beta Notice
+This Research Engineering Learning Path is currently in **beta**. We're actively improving and refining the content based on community feedback and real-world usage.
+
+**Help us improve:**
+- **Share feedback** in our [Discord community](https://discord.gg/7gzZMAPuGr) - use #research-engineering-path channel
+- **Submit improvements** by opening a pull request to the [GitHub repository](https://github.com/mrcloudchase/chasingcloudcareers-learn)
+- **Report issues** or suggest enhancements through GitHub Issues
+
+Your input helps make this learning path better for everyone in the community!
+:::
+
 Welcome to the **Average Joes Lab Research Engineering Learning Path** - your comprehensive guide to becoming a research engineer and contributing to democratized research.
 
 ## What is Research Engineering?
