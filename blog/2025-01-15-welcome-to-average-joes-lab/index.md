@@ -168,4 +168,4 @@ Welcome to Average Joes Lab. Let's democratize research together!
 *Ready to start your research journey? [Join our community](https://discord.gg/7gzZMAPuGr) and [explore our Research Engineering Learning Path](/docs/intro).*
 
 **Chase Dovey**  
-*Founder & Research Engineer, Average Joes Lab*
+*Founder & Head Research Engineer, Average Joes Lab*
