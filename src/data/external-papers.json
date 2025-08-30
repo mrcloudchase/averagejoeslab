@@ -12,7 +12,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": "Reproduced",
+    "reproductionStatus": "In Progress",
     "priority": "P2",
     "abstractUrl": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
     "pdfUrl": null,
@@ -33,7 +33,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": "Reproduced",
+    "reproductionStatus": "Triaged",
     "priority": "P2",
     "abstractUrl": "https://www.anthropic.com/research/tracing-thoughts-language-model",
     "pdfUrl": null,
@@ -81,7 +81,7 @@
       "Attention Mechanisms",
       "Efficient Training"
     ],
-    "reproductionStatus": "Triaged",
+    "reproductionStatus": "In Progress",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2503.16428",
     "pdfUrl": "https://arxiv.org/pdf/2503.16428.pdf",
@@ -102,7 +102,7 @@
     "researchArea": [
       "Multimodal"
     ],
-    "reproductionStatus": "In Progress",
+    "reproductionStatus": "Triaged",
     "priority": "P3",
     "abstractUrl": "https://arxiv.org/abs/2312.22222",
     "pdfUrl": "https://arxiv.org/pdf/2312.22222.pdf",
@@ -124,29 +124,12 @@
     "researchArea": [
       "Efficient Training"
     ],
-    "reproductionStatus": "In Progress",
+    "reproductionStatus": "Triaged",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2406.12345",
     "pdfUrl": "https://arxiv.org/pdf/2406.12345.pdf",
     "repository": "https://github.com/example/sparse-adapters",
     "attributionText": "Doe J & Smith A. (2024). Scaling-efficient finetuning with sparse adapters. NeurIPS 2024",
     "notes": "Cost reduction aligned"
-  },
-  {
-    "id": 7,
-    "title": "External paper test",
-    "doi": null,
-    "arxivId": null,
-    "authors": [],
-    "journal": "",
-    "publicationYear": 2025,
-    "researchArea": [],
-    "reproductionStatus": "Triaged",
-    "priority": null,
-    "abstractUrl": null,
-    "pdfUrl": null,
-    "repository": null,
-    "attributionText": "",
-    "notes": ""
   }
 ]
