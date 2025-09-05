@@ -25,15 +25,28 @@ async function debugNotionConnection() {
       });
       console.log('✅ Internal database accessible:', internalResponse.title?.[0]?.plain_text || 'Untitled');
       
-      // Test query
-      const queryResponse = await notion.databases.query({
+      // Test query without sorting
+      const basicQuery = await notion.databases.query({
         database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID,
         page_size: 1
       });
-      console.log('📄 Internal database has', queryResponse.results.length, 'pages (showing first 1)');
-      if (queryResponse.results.length > 0) {
-        console.log('🔍 Internal database properties:', Object.keys(queryResponse.results[0].properties));
+      console.log('📄 Internal database has', basicQuery.results.length, 'pages (basic query)');
+      if (basicQuery.results.length > 0) {
+        console.log('🔍 Internal database properties:', Object.keys(basicQuery.results[0].properties));
       }
+      
+      // Test query WITH sorting (same as sync script)
+      console.log('🔄 Testing query with Publication Date sorting...');
+      const sortedQuery = await notion.databases.query({
+        database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID,
+        sorts: [
+          {
+            property: 'Publication Date',
+            direction: 'descending'
+          }
+        ]
+      });
+      console.log('📄 Internal database with sorting has', sortedQuery.results.length, 'pages');
       
     } catch (error) {
       console.log('❌ Internal database error:', error.message);
@@ -47,15 +60,28 @@ async function debugNotionConnection() {
       });
       console.log('✅ External database accessible:', externalResponse.title?.[0]?.plain_text || 'Untitled');
       
-      // Test query
-      const queryResponse = await notion.databases.query({
+      // Test query without sorting
+      const basicQuery = await notion.databases.query({
         database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID,
         page_size: 1
       });
-      console.log('📄 External database has', queryResponse.results.length, 'pages (showing first 1)');
-      if (queryResponse.results.length > 0) {
-        console.log('🔍 External database properties:', Object.keys(queryResponse.results[0].properties));
+      console.log('📄 External database has', basicQuery.results.length, 'pages (basic query)');
+      if (basicQuery.results.length > 0) {
+        console.log('🔍 External database properties:', Object.keys(basicQuery.results[0].properties));
       }
+      
+      // Test query WITH sorting (same as sync script)
+      console.log('🔄 Testing query with Publication_Year sorting...');
+      const sortedQuery = await notion.databases.query({
+        database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID,
+        sorts: [
+          {
+            property: 'Publication_Year',
+            direction: 'descending'
+          }
+        ]
+      });
+      console.log('📄 External database with sorting has', sortedQuery.results.length, 'pages');
       
     } catch (error) {
       console.log('❌ External database error:', error.message);
