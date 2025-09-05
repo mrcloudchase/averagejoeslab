@@ -45,6 +45,14 @@ jobs:
         run: |
           npm install @notionhq/client@4.0.2
 
+      - name: Debug Notion connection
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_INTERNAL_PAPERS_DB_ID: ${{ secrets.NOTION_INTERNAL_PAPERS_DB_ID }}
+          NOTION_EXTERNAL_PAPERS_DB_ID: ${{ secrets.NOTION_EXTERNAL_PAPERS_DB_ID }}
+        run: |
+          node debug-notion.js
+
       - name: Sync papers from Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
