@@ -43,7 +43,7 @@ jobs:
 
       - name: Install sync dependencies
         run: |
-          npm install @notionhq/client
+          npm install @notionhq/client@5.0.0
 
       - name: Sync papers from Notion
         env:
