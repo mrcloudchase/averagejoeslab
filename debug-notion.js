@@ -28,9 +28,12 @@ async function debugNotionConnection() {
       // Test query
       const queryResponse = await notion.databases.query({
         database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID,
-        page_size: 5
+        page_size: 1
       });
-      console.log('📄 Internal database has', queryResponse.results.length, 'pages (showing first 5)');
+      console.log('📄 Internal database has', queryResponse.results.length, 'pages (showing first 1)');
+      if (queryResponse.results.length > 0) {
+        console.log('🔍 Internal database properties:', Object.keys(queryResponse.results[0].properties));
+      }
       
     } catch (error) {
       console.log('❌ Internal database error:', error.message);
@@ -47,9 +50,12 @@ async function debugNotionConnection() {
       // Test query
       const queryResponse = await notion.databases.query({
         database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID,
-        page_size: 5
+        page_size: 1
       });
-      console.log('📄 External database has', queryResponse.results.length, 'pages (showing first 5)');
+      console.log('📄 External database has', queryResponse.results.length, 'pages (showing first 1)');
+      if (queryResponse.results.length > 0) {
+        console.log('🔍 External database properties:', Object.keys(queryResponse.results[0].properties));
+      }
       
     } catch (error) {
       console.log('❌ External database error:', error.message);
