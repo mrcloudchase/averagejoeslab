@@ -13,33 +13,20 @@ async function syncInternalPapersFromNotion() {
   try {
     console.log('🔄 Fetching internal papers from Notion database...');
     
-    // Use search API with page filter for v5.0.0
-    const response = await notion.search({
-      filter: {
-        value: 'page',
-        property: 'object'
-      },
-      sort: {
-        direction: 'descending',
-        timestamp: 'last_edited_time'
-      }
+    // TEMPORARY DEBUG: Remove sorting to test if that's the issue
+    const response = await notion.databases.query({
+      database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID
+      // sorts: [
+      //   {
+      //     property: 'Publication Date',
+      //     direction: 'descending'
+      //   }
+      // ]
     });
 
-    // Filter to get pages from our specific internal database
-    const allPagesFromDatabase = response.results.filter(
-      page => page.parent?.database_id === process.env.NOTION_INTERNAL_PAPERS_DB_ID
-    );
+    console.log(`📄 Found ${response.results.length} papers in Notion`);
 
-    // Use the filtered pages as our response
-    const filteredResponse = {
-      results: allPagesFromDatabase,
-      has_more: false,
-      next_cursor: null
-    };
-
-    console.log(`📄 Found ${filteredResponse.results.length} papers in Notion`);
-
-    const papers = filteredResponse.results.map((page, index) => {
+    const papers = response.results.map((page, index) => {
       const properties = page.properties;
       
       // Extract title from 'Name' property (matches CSV schema exactly)
@@ -153,29 +140,20 @@ async function syncExternalPapersFromNotion() {
   try {
     console.log('🔄 Fetching external papers from Notion database...');
     
-    // Use search API with page filter for v5.0.0
-    const response = await notion.search({
-      filter: {
-        value: 'page',
-        property: 'object'
-      }
+    // TEMPORARY DEBUG: Remove sorting to test if that's the issue
+    const response = await notion.databases.query({
+      database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID
+      // sorts: [
+      //   {
+      //     property: 'Publication_Year',
+      //     direction: 'descending'
+      //   }
+      // ]
     });
 
-    // Filter to get pages from our specific external database
-    const allPagesFromDatabase = response.results.filter(
-      page => page.parent?.database_id === process.env.NOTION_EXTERNAL_PAPERS_DB_ID
-    );
+    console.log(`📄 Found ${response.results.length} external papers in Notion`);
 
-    // Use the filtered pages as our response
-    const filteredResponse = {
-      results: allPagesFromDatabase,
-      has_more: false,
-      next_cursor: null
-    };
-
-    console.log(`📄 Found ${filteredResponse.results.length} external papers in Notion`);
-
-    const externalPapers = filteredResponse.results.map((page, index) => {
+    const externalPapers = response.results.map((page, index) => {
       const properties = page.properties;
       
       // Extract title (CSV: Title)
