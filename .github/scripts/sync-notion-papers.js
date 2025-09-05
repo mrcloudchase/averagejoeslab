@@ -13,10 +13,10 @@ async function syncInternalPapersFromNotion() {
   try {
     console.log('🔄 Fetching internal papers from Notion database...');
     
-    // Use search API with database filter for v5.0.0
+    // Use search API with page filter for v5.0.0
     const response = await notion.search({
       filter: {
-        value: 'database',
+        value: 'page',
         property: 'object'
       },
       sort: {
@@ -25,21 +25,8 @@ async function syncInternalPapersFromNotion() {
       }
     });
 
-    // Filter results to only include pages from our specific database
-    const databasePages = response.results.filter(
-      page => page.parent?.database_id === process.env.NOTION_INTERNAL_PAPERS_DB_ID
-    );
-
-    // Get all pages from the database using search with page filter
-    const pagesResponse = await notion.search({
-      filter: {
-        value: 'page',
-        property: 'object'
-      }
-    });
-
-    // Filter to get pages from our specific database
-    const allPagesFromDatabase = pagesResponse.results.filter(
+    // Filter to get pages from our specific internal database
+    const allPagesFromDatabase = response.results.filter(
       page => page.parent?.database_id === process.env.NOTION_INTERNAL_PAPERS_DB_ID
     );
 
