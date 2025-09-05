@@ -13,15 +13,14 @@ async function syncInternalPapersFromNotion() {
   try {
     console.log('🔄 Fetching internal papers from Notion database...');
     
-    // TEMPORARY DEBUG: Remove sorting to test if that's the issue
     const response = await notion.databases.query({
-      database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID
-      // sorts: [
-      //   {
-      //     property: 'Publication Date',
-      //     direction: 'descending'
-      //   }
-      // ]
+      database_id: process.env.NOTION_INTERNAL_PAPERS_DB_ID,
+      sorts: [
+        {
+          property: 'Publication Date',
+          direction: 'descending'
+        }
+      ]
     });
 
     console.log(`📄 Found ${response.results.length} papers in Notion`);
@@ -140,15 +139,14 @@ async function syncExternalPapersFromNotion() {
   try {
     console.log('🔄 Fetching external papers from Notion database...');
     
-    // TEMPORARY DEBUG: Remove sorting to test if that's the issue
     const response = await notion.databases.query({
-      database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID
-      // sorts: [
-      //   {
-      //     property: 'Publication_Year',
-      //     direction: 'descending'
-      //   }
-      // ]
+      database_id: process.env.NOTION_EXTERNAL_PAPERS_DB_ID,
+      sorts: [
+        {
+          property: 'Publication_Year',
+          direction: 'descending'
+        }
+      ]
     });
 
     console.log(`📄 Found ${response.results.length} external papers in Notion`);
