@@ -1,21 +1,19 @@
 [
   {
     "id": 1,
-    "name": "Ethical Frameworks for Citizen Science Research",
-    "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
-    "authors": [
-      "Emma Schwarz"
-    ],
-    "doi": null,
+    "name": "Behavioral Analysis of Collaborative Research Networks",
+    "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
+    "authors": [],
+    "doi": "10.1000/182",
     "focusAreas": [
       "Behavioral",
-      "Security"
+      "Optimization"
     ],
-    "githubRepo": null,
-    "notes": "Important foundational work needed",
-    "publicationDate": "2025-09-05",
+    "githubRepo": "https://github.com/mrcloudchase/collaborative-networks",
+    "notes": "First published paper from the lab",
+    "publicationDate": "2025-09-12",
     "status": "Proposed",
-    "arxivId": null
+    "arxivId": "arXiv:2409.12345"
   },
   {
     "id": 2,
@@ -28,30 +26,82 @@
     "focusAreas": [
       "Optimization"
     ],
-    "githubRepo": null,
+    "githubRepo": "https://github.com/mrcloudchase/distributed-ai-training",
     "notes": "Active development with 5 contributors",
-    "publicationDate": "2025-09-05",
+    "publicationDate": "2025-08-30",
     "status": "Proposed",
     "arxivId": null
   },
   {
     "id": 3,
-    "name": "Behavioral Analysis of Collaborative Research Networks",
-    "abstract": "A comprehensive study of how researchers collaborate in decentralized, open research networks. We analyze communication patterns, knowledge sharing behaviors, and factors that contribute to successful research outcomes.",
-    "authors": [],
-    "doi": "10.1000/182",
-    "focusAreas": [
-      "Behavioral",
-      "Optimization"
+    "name": "Test Paper",
+    "abstract": "This is a test paper abstract",
+    "authors": [
+      "Chase Dovey",
+      "Emma Schwarz"
     ],
+    "doi": null,
+    "focusAreas": [],
     "githubRepo": null,
-    "notes": "First published paper from the lab",
-    "publicationDate": "2025-09-05",
-    "status": "Proposed",
-    "arxivId": "arXiv:2409.12345"
+    "notes": "Some fake notes",
+    "publicationDate": "2025-08-24",
+    "status": "In Progress",
+    "arxivId": null
   },
   {
     "id": 4,
+    "name": "Ethical Frameworks for Citizen Science Research",
+    "abstract": "Developing comprehensive ethical guidelines for research conducted outside traditional institutional review boards. Addresses consent, data privacy, and research integrity in open science contexts.",
+    "authors": [
+      "Emma Schwarz"
+    ],
+    "doi": null,
+    "focusAreas": [
+      "Behavioral",
+      "Security"
+    ],
+    "githubRepo": null,
+    "notes": "Important foundational work needed",
+    "publicationDate": "2025-07-15",
+    "status": "Proposed",
+    "arxivId": null
+  },
+  {
+    "id": 5,
+    "name": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
+    "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
+    "authors": [
+      "Chase Dovey"
+    ],
+    "doi": null,
+    "focusAreas": [
+      "Optimization",
+      "Behavioral"
+    ],
+    "githubRepo": "https://github.com/mrcloudchase/democratizing-ai-research",
+    "notes": "Ongoing community research project",
+    "publicationDate": "2024-12-15",
+    "status": "Proposed",
+    "arxivId": null
+  },
+  {
+    "id": 6,
+    "name": "Interpretable Machine Learning for Independent Researchers",
+    "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
+    "authors": [],
+    "doi": null,
+    "focusAreas": [
+      "Interoperability",
+      "Optimization"
+    ],
+    "githubRepo": null,
+    "notes": "Seeking collaborators for this research",
+    "publicationDate": "2024-11-20",
+    "status": "Published",
+    "arxivId": "arXiv:2409.12345"
+  },
+  {
+    "id": 7,
     "name": "Security Considerations in Open Research Environments",
     "abstract": "This paper examines security challenges and best practices for conducting research in open, collaborative environments. We address data protection, intellectual property, and ethical considerations for citizen researchers.",
     "authors": [
@@ -63,43 +113,22 @@
       "Security",
       "Behavioral"
     ],
-    "githubRepo": null,
+    "githubRepo": "https://github.com/mrcloudchase/open-research-security",
     "notes": "Under community peer review",
-    "publicationDate": "2025-09-05",
+    "publicationDate": "2024-10-24",
     "status": "Proposed",
     "arxivId": null
   },
   {
-    "id": 5,
-    "name": "Interpretable Machine Learning for Independent Researchers",
-    "abstract": "An exploration of interpretability techniques that can be implemented by researchers without access to large computational resources. We focus on practical methods for understanding model behavior in resource-constrained environments.",
+    "id": 8,
+    "name": "Another paper",
+    "abstract": "another abstract",
     "authors": [],
     "doi": null,
-    "focusAreas": [
-      "Interpretability",
-      "Optimization"
-    ],
+    "focusAreas": [],
     "githubRepo": null,
-    "notes": "Seeking collaborators for this research",
-    "publicationDate": "2025-09-05",
-    "status": "Proposed",
-    "arxivId": "arXiv:2409.12345"
-  },
-  {
-    "id": 6,
-    "name": "Democratizing AI Research Methodologies: A Framework for Citizen Scientists",
-    "abstract": "This paper presents a comprehensive framework for enabling citizen scientists to conduct meaningful AI research outside traditional academic institutions. We propose accessible methodologies that maintain scientific rigor while removing institutional barriers.",
-    "authors": [
-      "Chase Dovey"
-    ],
-    "doi": null,
-    "focusAreas": [
-      "Optimization",
-      "Behavioral"
-    ],
-    "githubRepo": null,
-    "notes": "Ongoing community research project",
-    "publicationDate": "2025-09-05",
+    "notes": "",
+    "publicationDate": "2025-08-28",
     "status": "Proposed",
     "arxivId": null
   }

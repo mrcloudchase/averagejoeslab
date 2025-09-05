@@ -1,29 +1,6 @@
 [
   {
     "id": 1,
-    "title": "Effective Prompt Extraction from Language Models",
-    "doi": "10.48550/arXiv.2307.06865",
-    "arxivId": null,
-    "authors": [
-      "Yiming Zhang",
-      "Nicholas Carlini",
-      "Daphne Ippolito"
-    ],
-    "journal": "",
-    "publicationYear": 2024,
-    "researchArea": [
-      "Security"
-    ],
-    "reproductionStatus": "Triaged",
-    "priority": "P0",
-    "abstractUrl": null,
-    "pdfUrl": "https://arxiv.org/abs/2307.06865v3",
-    "repository": "https://github.com/y0mingzhang/prompt-extraction",
-    "attributionText": "",
-    "notes": ""
-  },
-  {
-    "id": 2,
     "title": "On the Biology of a Large Language Model",
     "doi": null,
     "arxivId": null,
@@ -35,7 +12,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": "In Progress",
+    "reproductionStatus": "Reproduced",
     "priority": "P2",
     "abstractUrl": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
     "pdfUrl": null,
@@ -44,7 +21,7 @@
     "notes": "Mechanistic interpretability research"
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Tracing the thoughts of a large language model",
     "doi": null,
     "arxivId": null,
@@ -56,7 +33,7 @@
     "researchArea": [
       "Interpretability"
     ],
-    "reproductionStatus": "Triaged",
+    "reproductionStatus": "Reproduced",
     "priority": "P2",
     "abstractUrl": "https://www.anthropic.com/research/tracing-thoughts-language-model",
     "pdfUrl": null,
@@ -65,28 +42,7 @@
     "notes": "Monitor for opportunities"
   },
   {
-    "id": 4,
-    "title": "Multimodal pretraining for medical imaging",
-    "doi": "10.48550/arXiv.2312.22222",
-    "arxivId": null,
-    "authors": [
-      "Zhang L et al"
-    ],
-    "journal": "ICLR",
-    "publicationYear": 2024,
-    "researchArea": [
-      "Multimodal"
-    ],
-    "reproductionStatus": "Triaged",
-    "priority": "P3",
-    "abstractUrl": "https://arxiv.org/abs/2312.22222",
-    "pdfUrl": "https://arxiv.org/pdf/2312.22222.pdf",
-    "repository": null,
-    "attributionText": "Zhang L et al. (2024). Multimodal pretraining for medical imaging. ICLR 2024",
-    "notes": "Out of scope - privacy concerns"
-  },
-  {
-    "id": 5,
+    "id": 3,
     "title": "Agentic RAG with uncertainty routing",
     "doi": "10.48550/arXiv.2501.01234",
     "arxivId": null,
@@ -108,29 +64,7 @@
     "notes": "Wait for code release"
   },
   {
-    "id": 6,
-    "title": "Scaling-efficient finetuning with sparse adapters",
-    "doi": "10.48550/arXiv.2406.12345",
-    "arxivId": null,
-    "authors": [
-      "Doe J",
-      "Smith A"
-    ],
-    "journal": "NeurIPS",
-    "publicationYear": 2024,
-    "researchArea": [
-      "Efficient Training"
-    ],
-    "reproductionStatus": "Triaged",
-    "priority": "P0",
-    "abstractUrl": "https://arxiv.org/abs/2406.12345",
-    "pdfUrl": "https://arxiv.org/pdf/2406.12345.pdf",
-    "repository": "https://github.com/example/sparse-adapters",
-    "attributionText": "Doe J & Smith A. (2024). Scaling-efficient finetuning with sparse adapters. NeurIPS 2024",
-    "notes": "Cost reduction aligned"
-  },
-  {
-    "id": 7,
+    "id": 4,
     "title": "XAttention: Block Sparse Attention with Antidiagonal Scoring",
     "doi": "10.48550/arXiv.2503.16428",
     "arxivId": null,
@@ -147,12 +81,72 @@
       "Attention Mechanisms",
       "Efficient Training"
     ],
-    "reproductionStatus": "In Progress",
+    "reproductionStatus": "Triaged",
     "priority": "P0",
     "abstractUrl": "https://arxiv.org/abs/2503.16428",
     "pdfUrl": "https://arxiv.org/pdf/2503.16428.pdf",
     "repository": "https://github.com/mit-han-lab/x-attention",
     "attributionText": "Xu R et al. (2025). XAttention: Block Sparse Attention with Antidiagonal Scoring. arXiv:2503.16428",
     "notes": "High priority reproduction target"
+  },
+  {
+    "id": 5,
+    "title": "Multimodal pretraining for medical imaging",
+    "doi": "10.48550/arXiv.2312.22222",
+    "arxivId": null,
+    "authors": [
+      "Zhang L et al"
+    ],
+    "journal": "ICLR",
+    "publicationYear": 2024,
+    "researchArea": [
+      "Multimodal"
+    ],
+    "reproductionStatus": "In Progress",
+    "priority": "P3",
+    "abstractUrl": "https://arxiv.org/abs/2312.22222",
+    "pdfUrl": "https://arxiv.org/pdf/2312.22222.pdf",
+    "repository": null,
+    "attributionText": "Zhang L et al. (2024). Multimodal pretraining for medical imaging. ICLR 2024",
+    "notes": "Out of scope - privacy concerns"
+  },
+  {
+    "id": 6,
+    "title": "Scaling-efficient finetuning with sparse adapters",
+    "doi": "10.48550/arXiv.2406.12345",
+    "arxivId": null,
+    "authors": [
+      "Doe J",
+      "Smith A"
+    ],
+    "journal": "NeurIPS",
+    "publicationYear": 2024,
+    "researchArea": [
+      "Efficient Training"
+    ],
+    "reproductionStatus": "In Progress",
+    "priority": "P0",
+    "abstractUrl": "https://arxiv.org/abs/2406.12345",
+    "pdfUrl": "https://arxiv.org/pdf/2406.12345.pdf",
+    "repository": "https://github.com/example/sparse-adapters",
+    "attributionText": "Doe J & Smith A. (2024). Scaling-efficient finetuning with sparse adapters. NeurIPS 2024",
+    "notes": "Cost reduction aligned"
+  },
+  {
+    "id": 7,
+    "title": "External paper test",
+    "doi": null,
+    "arxivId": null,
+    "authors": [],
+    "journal": "",
+    "publicationYear": 2025,
+    "researchArea": [],
+    "reproductionStatus": "Triaged",
+    "priority": null,
+    "abstractUrl": null,
+    "pdfUrl": null,
+    "repository": null,
+    "attributionText": "",
+    "notes": ""
   }
 ]
